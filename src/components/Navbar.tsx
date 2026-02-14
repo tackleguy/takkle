@@ -25,6 +25,12 @@ export default function Navbar() {
               NIL Rules Checker
             </Link>
             <Link
+              href="/nil-rules"
+              className="text-sm text-text-secondary hover:text-text-primary transition-colors"
+            >
+              NIL Rules by State
+            </Link>
+            <Link
               href="/guides"
               className="text-sm text-text-secondary hover:text-text-primary transition-colors"
             >
@@ -78,6 +84,13 @@ export default function Navbar() {
               onClick={() => setMobileOpen(false)}
             >
               NIL Rules Checker
+            </Link>
+            <Link
+              href="/nil-rules"
+              className="block px-3 py-2 text-sm text-text-secondary hover:text-text-primary transition-colors"
+              onClick={() => setMobileOpen(false)}
+            >
+              NIL Rules by State
             </Link>
             <Link
               href="/guides"
