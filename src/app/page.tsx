@@ -1,12 +1,7 @@
-"use client";
-
-import { useState } from "react";
 import StateSelector from "@/components/StateSelector";
-import StateResult from "@/components/StateResult";
-import { getStatusCounts, type StateData } from "@/data/states";
+import { getStatusCounts } from "@/data/states";
 
 export default function HomePage() {
-  const [selectedState, setSelectedState] = useState<StateData | null>(null);
   const counts = getStatusCounts();
 
   return (
@@ -95,23 +90,11 @@ export default function HomePage() {
       </section>
 
       {/* State Selector */}
-      <section className="pb-8 px-4">
+      <section className="pb-16 px-4">
         <div className="mx-auto max-w-6xl">
-          <StateSelector
-            onSelect={setSelectedState}
-            selectedSlug={selectedState?.slug}
-          />
+          <StateSelector />
         </div>
       </section>
-
-      {/* Results */}
-      {selectedState && (
-        <section className="pb-16 px-4" id="results">
-          <div className="mx-auto max-w-3xl">
-            <StateResult state={selectedState} />
-          </div>
-        </section>
-      )}
 
       {/* Disclaimer */}
       <section className="pb-16 px-4">

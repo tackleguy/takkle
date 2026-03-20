@@ -1,17 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { states, getStatusColor, type StateData } from "@/data/states";
+import Link from "next/link";
+import { states, getStatusColor, getStatusLabel } from "@/data/states";
 
-interface StateSelectorProps {
-  onSelect: (state: StateData) => void;
-  selectedSlug?: string;
-}
-
-export default function StateSelector({
-  onSelect,
-  selectedSlug,
-}: StateSelectorProps) {
+export default function StateSelector() {
   const [search, setSearch] = useState("");
 
   const filtered = states.filter(
@@ -34,21 +27,23 @@ export default function StateSelector({
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3">
         {filtered.map((state) => (
-          <button
+          <Link
             key={state.slug}
-            onClick={() => onSelect(state)}
-            className={`flex items-center gap-2 px-3 py-2.5 rounded-lg border transition-all text-left text-sm ${
-              selectedSlug === state.slug
-                ? "border-accent bg-accent/10 text-text-primary"
-                : "border-border bg-bg-card hover:bg-bg-card-hover text-text-secondary hover:text-text-primary"
-            }`}
+            href={`/nil-rules/${state.slug}`}
+            className="flex items-center gap-2 px-3 py-2.5 rounded-lg border border-border bg-bg-card hover:bg-bg-card-hover hover:border-accent/40 text-text-secondary hover:text-text-primary transition-all text-left text-sm group"
           >
             <span
               className="w-2.5 h-2.5 rounded-full shrink-0"
               style={{ backgroundColor: getStatusColor(state.status) }}
             />
-            <span className="truncate">{state.name}</span>
-          </button>
+            <span className="truncate flex-1">{state.name}</span>
+            <span
+              className="text-[10px] opacity-0 group-hover:opacity-100 transition-opacity shrink-0"
+              style={{ color: getStatusColor(state.status) }}
+            >
+              {getStatusLabel(state.status)}
+            </span>
+          </Link>
         ))}
       </div>
 
