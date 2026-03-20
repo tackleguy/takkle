@@ -239,8 +239,6 @@ export default async function StatePage({ params }: PageProps) {
           <div className="mb-12">
             <EmailCapture
               stateName={state.name}
-              stateSlug={state.slug}
-              source="state-page"
             />
           </div>
 

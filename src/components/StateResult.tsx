@@ -109,7 +109,7 @@ export default function StateResult({
         )}
 
         {/* Email capture */}
-        <EmailCapture stateName={state.name} stateSlug={state.slug} source="tool" />
+        <EmailCapture stateName={state.name} />
 
         {/* Full page link */}
         {showFullLink && (
