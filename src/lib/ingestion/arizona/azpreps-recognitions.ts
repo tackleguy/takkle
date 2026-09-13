@@ -118,10 +118,18 @@ const AIA_POS: Record<string, string> = {
   "long snappers": "ATH",
   "long snapper": "ATH",
   "return specialists": "ATH",
+  "receivers/tight ends": "WR",
+  "kickoff returner": "ATH",
+  "punt returner": "ATH",
+  placekicker: "K",
+  "defensive utility/flex player": "ATH",
+  "offensive utility/flex player": "ATH",
+  "long snapper": "ATH",
 };
 
 function mapAiaPosition(raw: string): string | undefined {
   const key = raw.trim().toLowerCase().replace(/\s+/g, " ");
+  if (/conference|player of the year|coach/i.test(key)) return undefined;
   if (AIA_POS[key]) return AIA_POS[key];
   return normalizePosition(raw);
 }

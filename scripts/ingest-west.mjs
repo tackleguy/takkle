@@ -100,11 +100,19 @@ function normPos(raw) {
     linebacker: "LB",
     "running backs": "RB",
     "wide receivers": "WR",
+    "receivers/tight ends": "WR",
     quarterbacks: "QB",
     kickers: "K",
+    placekicker: "K",
     punters: "P",
+    "kickoff returner": "ATH",
+    "punt returner": "ATH",
+    "long snapper": "ATH",
+    "defensive utility/flex player": "ATH",
+    "offensive utility/flex player": "ATH",
   };
-  return map[p] || map[String(raw).trim().toLowerCase()] || p.toUpperCase().slice(0, 3);
+  if (/conference|player of the year|coach/i.test(p)) return null;
+  return map[p] || map[String(raw).trim().toLowerCase()] || null;
 }
 
 function decodeHtml(s) {
@@ -224,7 +232,11 @@ const AIA_YEARS = [
 ];
 
 function parseCalHi(html, spec) {
-  if (/Gold Club members only|This is a post for our Gold Club/i.test(html)) {
+  // Pages often mention Gold Club for 2nd/3rd teams while still listing public 1st-team content.
+  const fullyPaywalled =
+    /Gold Club members only|This is a post for our Gold Club/i.test(html) &&
+    !/FIRST TEAM ALL-STATE|1st Team/i.test(html);
+  if (fullyPaywalled) {
     return { players: [], paywalled: true };
   }
   const text = html
@@ -232,27 +244,34 @@ function parseCalHi(html, spec) {
     .replace(/<style[\s\S]*?<\/style>/gi, " ")
     .replace(/<br\s*\/?>/gi, "\n")
     .replace(/<\/p>/gi, "\n")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&#8217;/g, "'")
+    .replace(/&amp;/g, "&")
     .replace(/<[^>]+>/g, " ")
     .replace(/\s+/g, " ");
   const players = [];
   const seen = new Set();
-  const loose =
-    /([A-Z][A-Za-z.'\-]+(?:\s+[A-Z][A-Za-z.'\-]+)+)\s+\(([^)]{3,50})\)(?:\s*,?\s*(?:\d-\d{1,2})?(?:\s*,?\s*\d{2,3})?\s*,?\s*(Sr|Jr|So|Fr|Senior|Junior|Soph\.?|Sophomore|Freshman))?/g;
-  let m;
-  while ((m = loose.exec(text))) {
-    if (/click here|cal-hi|photo|gold club|follow @/i.test(m[0])) continue;
-    const name = m[1].trim();
-    const school = m[2].replace(/,.*$/, "").trim();
-    const { firstName, lastName } = splitName(name);
-    if (!firstName || !lastName || school.length < 2) continue;
-    const g = m[3] ? GRADE_MAP[m[3].toLowerCase().replace(/\./g, "")] : null;
+  const add = (nameRaw, schoolRaw, posRaw, classTok) => {
+    if (/click here|cal-hi|photo|gold club|follow @|first team|second team|third team/i.test(nameRaw))
+      return;
+    if (/^(left|right|elite|previously announced)$/i.test(schoolRaw)) return;
+    const school = schoolRaw.replace(/,.*$/, "").trim();
+    const { firstName, lastName } = splitName(nameRaw.trim());
+    if (!firstName || !lastName || school.length < 2) return;
+    if (/^[A-Z]{1,4}$/.test(firstName) && !posRaw) {
+      // Position leaked into name — handled by detailed regex
+    }
+    // Drop caption junk: "Ohio State. WR …" style leftovers
+    if (/^(Ohio|X\.com|Washington|Oregon|SMU|CalHiSports)\.?$/i.test(firstName)) return;
+    if (/\b(WR|OL|RB|QB|DL|LB|DB|TE|PK|ATH)\b/.test(firstName)) return;
+    const g = classTok ? GRADE_MAP[classTok.toLowerCase().replace(/\./g, "")] : null;
     const key = `${firstName}|${lastName}|${school}|${spec.seasonEnd}`.toLowerCase();
-    if (seen.has(key)) continue;
+    if (seen.has(key)) return;
     seen.add(key);
     players.push({
       firstName,
       lastName,
-      position: null,
+      position: normPos(posRaw),
       classYear: g ? classFromGrade(g, spec.seasonEnd) : null,
       schoolName: school,
       stateCode: "CA",
@@ -263,6 +282,22 @@ function parseCalHi(html, spec) {
       sourceState: "CA",
       sourceSchool: school,
     });
+  };
+
+  // "WR Chris Henry Jr. (Mater Dei, Santa Ana) 6-5, 200, Sr."
+  const detailed =
+    /(?:^|[.\s])([A-Z]{1,4}|Quarterback|Running Back|Wide Receiver|Tight End|Linebacker|Cornerback|Safety|Kicker|Punter|Athlete|OL|DL|DB|LB|RB|WR|TE|QB|PK)\s+([A-Z][A-Za-z.'\-]+(?:\s+[A-Z][A-Za-z.'\-]+)+)\s+\(([^)]+)\)\s+(?:\d-\d{1,2},\s*)?(?:\d{2,3},\s*)?(Sr|Jr|So|Fr|Senior|Junior|Sophomore|Freshman)\.?/gi;
+  let m;
+  while ((m = detailed.exec(text))) {
+    add(m[2], m[3], m[1], m[4]);
+  }
+  // Medium-school style fallback with grade token preferred
+  const loose =
+    /([A-Z][A-Za-z.'\-]+(?:\s+[A-Z][A-Za-z.'\-]+)+)\s+\(([^)]{3,50})\)(?:\s*,?\s*(?:\d-\d{1,2})?(?:\s*,?\s*\d{2,3})?\s*,?\s*(Sr|Jr|So|Fr|Senior|Junior|Soph\.?|Sophomore|Freshman))/g;
+  while ((m = loose.exec(text))) {
+    if (/click here|cal-hi|photo|gold club|follow @/i.test(m[0])) continue;
+    if (/^[A-Z]{2,4}$/.test(m[1])) continue;
+    add(m[1], m[2], null, m[3]);
   }
   return { players, paywalled: false };
 }
