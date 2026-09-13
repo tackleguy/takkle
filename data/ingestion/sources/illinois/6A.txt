@@ -1,0 +1,173 @@
+Class
+g
+Mike Kohl
+2025 IHSFCA ALL-STATE TEAM
+6A
+Player
+Pos
+YR
+HT
+WT
+SCHOOL
+COACH
+6A
+Jayden
+Armstrong
+WR
+12
+6'0
+175
+Joliet Catholic Academy
+Jake Jaworski
+6A
+Jake
+Cestone
+WR/WR/WR
+12
+6'1
+175
+Nazareth Academy
+Tim Racki
+6A
+Chris
+Chang
+WR/LB
+12
+6'2
+195
+Lake Zurich
+Ron Planz
+6A
+Cornell
+Conely
+WR/DB
+12
+5'9
+165
+Simeon Career Academy
+Sinque Turner
+6A
+Richard
+Conley
+QB/P
+12
+5'10
+160
+Romeoville High School
+Justin Trovato
+6A
+Derrin
+Couch
+QB/P
+12
+6'2
+205
+Crete-Monee
+John Konecki
+6A
+LyZale
+Edmon
+WR/DB
+12
+5'11
+175
+Bradley Bourbonnais Community Hi
+6A
+Myson
+Johnson - Cook
+RB
+11
+6'2
+236
+East St Louis Sr. High School
+Darren Sunkett
+6A
+Colten
+Knoedler
+QB
+12
+6'1
+189
+Glenwood High School
+David Hay
+6A
+Aidan
+Nuno
+DL/OL
+12
+6'0
+270
+Burlington Central
+Brian Iossi
+6A
+Kortez
+Rupert
+WR
+12
+6'1
+165
+East St Louis Sr. High School
+Darren Sunkett
+6A
+Owen
+Shea
+DL
+12
+6'4
+240
+Antioch
+Brian Glashagel
+6A
+Todd
+Smith
+OL/DL
+12
+6'6
+305
+Quincy Senior High School
+Rick Little
+6A
+Noah
+Sur
+K/P
+12
+6'0
+185
+Fenwick High School
+Matt Battaglia
+6A
+Mack
+Sutter
+TE
+12
+6'6
+230
+Dunlap High School
+Brett Cazalet
+6A
+Tommy
+Thies
+DB/HB
+12
+6'0
+195
+Fenwick High School
+Matt Battaglia
+6A
+Cecil
+Tousant
+DL
+12
+5'11
+260
+Glenbard South
+Ryan Crissey
+6A
+Owen
+Yorke
+RB
+12
+5'11
+195
+Wheaton Warrenville South
+Sean Norris

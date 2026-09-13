@@ -1,0 +1,172 @@
+Class
+2025 IHSFCA ALL-STATE TEAM
+1A
+Player
+Pos
+YR
+HT
+WT
+SCHOOL
+COACH
+1A
+Bronc
+Bogner
+DB
+12
+5'10
+160
+Triopia High School
+Cody Winkelman
+1A
+Evan
+Cox
+LB/RB
+12
+5'11
+190
+Dwight Township High School
+Luke Standiford
+1A
+Gannon
+Dunker
+OL/DL
+11
+6'1
+270
+Lena-Winslow
+Ric Arand
+1A
+Walker
+Enos
+OL/DL
+11
+6'1
+300
+Oakwood High School
+Cameron Lee
+1A
+Jarrod
+Fulcher
+DL/OL
+11
+6'2
+240
+Heyworth High School
+Scott Godfrey
+1A
+Trey
+Fullerton
+LB/RB/P
+12
+6'0
+215
+Brown County High School
+Tom Little
+1A
+Maddux
+Heitzler
+QB/DB
+12
+5'9
+150
+Annawan-Wethersfield
+Tony Gripp
+1A
+Gage
+Honn
+RB/K
+12
+5'10
+175
+Athens High School
+Ryan Knox
+1A
+Luke
+Karras
+LB/RB
+12
+6'3
+220
+Casey-Westfield High School
+Jeff Fritchtnitch
+1A
+Jeremiah
+Luke
+OL/DL
+12
+5'11
+215
+Stockton High School
+Sean Downey
+1A
+Charlie
+Matthews
+DL/OL
+11
+6'2
+225
+Hardin Calhoun High School
+Aaron Elmore
+1A
+Deegan
+Prater
+QB/DB/K
+12
+6'1
+195
+Dupo High School
+Zachary Klaustermeier
+1A
+Rylan
+Reimolds
+RB/LB
+12
+5'11
+180
+Rushville-Industry
+Brian Lafferty
+1A
+Curtis
+Rigg
+RB/DB
+12
+5'11
+150
+Camp Point Central High School
+Brad Dixon
+1A
+Brady
+Shule
+QB
+12
+6'4
+190
+Clifton Central High School
+Jeff Perzee
+1A
+Charlie
+Stumpf
+WR
+12
+6'3
+200
+Carrollton High School
+Rodney Flowers
+1A
+Logan
+Ward
+LB/OL
+12
+5'10
+210
+GCMS High School
+Chad Augspurger
+1A
+Aiden
+Wild
+RB
+12
+6'2
+210
+Lena-Winslow
+Ric Arand

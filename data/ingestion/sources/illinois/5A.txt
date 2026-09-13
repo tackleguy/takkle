@@ -1,0 +1,173 @@
+Class
+f
+2025 IHSFCA ALL-STATE TEAM
+5A
+Player
+Pos
+YR
+HT
+WT
+SCHOOL
+COACH
+5A
+Logan
+Abrams
+RB/LB
+12
+6'3
+230
+Cary-Grove
+Brad Seaburg
+5A
+Jordan
+Beck
+DL/TE
+12
+6'4
+215
+Mascoutah High School
+Aaron Hilgendor
+5A
+Ben
+Bucher
+RB/DB
+12
+6'1
+200
+Belvidere North High School
+Jeff Beck
+5A
+Jake
+Buckley
+OL/DL
+12
+6'3
+265
+Kaneland High School
+Mike Thorgesen
+5A
+Daniel
+Chopp
+QB
+12
+5'11
+165
+Oak Forest
+Zac Sadek
+5A
+Xavier
+Coleman
+WR/DB
+12
+6'2
+200
+Providence Catholic
+Tyler Plantz
+5A
+Will
+Freeman
+RB/LB
+12
+6'0
+210
+Washington Community High School
+Todd Stevens
+5A
+Angelo
+Kay
+OL/DL
+12
+6'3
+250
+Prairie Ridge
+Mike Frericks
+5A
+Darrell
+Mattison
+DB/WR
+11
+6'2
+165
+Morgan Park
+Chris James
+5A
+Pharoah
+McThune
+DL
+12
+6'4
+235
+King College Prep HS
+Abdullah Asad
+5A
+Dario
+Milivojevic
+WR/DB
+12
+5'11
+180
+St. Francis
+Bob McMillen
+5A
+Erick
+Roman
+LB/RB
+12
+6'0
+215
+Belvidere North High School
+Jeff Beck
+5A
+Jackson
+Rudolph
+RB/LB
+12
+6'1
+225
+Wauconda High School
+Chris Prostka
+5A
+Alexander
+Sarantos
+LB/TE
+12
+6'0
+200
+Vernon Hills High School
+Bill Bellecomo
+5A
+Brody
+Scheffler
+QB
+12
+6'1
+185
+Springfield High School
+Jon Hebb
+5A
+Bryce
+Tencza
+OL
+12
+6'4
+300
+Providence Catholic
+Tyler Plantz
+5A
+Jaylen
+Torres
+DL/OL
+12
+5'11
+305
+St. Francis
+Bob McMillen
+5A
+Luke
+Vanderwiel
+QB/DB
+12
+5'8
+190
+Prairie Ridge
+Mike Frericks

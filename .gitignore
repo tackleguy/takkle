@@ -60,3 +60,9 @@ next-env.d.ts
 /data/ingestion/_c*.sql
 /data/ingestion/_p*.sql
 /data/ingestion/_mcp_batch.json
+
+# Temp East/West apply batches
+/data/ingestion/.east-apply/
+/data/ingestion/.west-apply/
+/data/ingestion/.chsaa-apply/
+/scripts/tmp/

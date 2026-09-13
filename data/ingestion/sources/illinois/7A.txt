@@ -1,0 +1,172 @@
+Class
+2025 IHSFCA ALL-STATE TEAM
+7A
+Player
+Pos
+YR
+HT
+WT
+SCHOOL
+COACH
+7A
+Lucas
+Andresen
+RB/WR/TE
+12
+6'3
+215
+Lincoln-Way Central
+Dave Woodburn
+7A
+Murphy
+Brennan
+LB/TE
+12
+6'2
+215
+Normal Community High School
+Jason Drengwitz
+7A
+Ahmad
+Buchanan
+RB/DB
+12
+6'0
+195
+Richards (Oak Lawn)
+Anthony Sheehan
+7A
+Nate
+Cichy
+WR
+12
+6'2
+190
+Prospect
+Dan DeBoeuf
+7A
+Caden
+Dumelle
+RB/LB
+12
+5'10
+205
+Jacobs High School
+Brian Zimmerman
+7A
+Nicholas
+Hankins Jr
+DB/WR
+12
+6'2
+195
+Belleville West
+Ken Turner
+7A
+Zach
+Hermanson
+K/P
+12
+5'11
+175
+Lincoln-Way West
+Luke Lokanc
+7A
+Maximus
+Hetlet
+LB/RB
+12
+5'11
+210
+Glenbard West
+Chad Hetlet
+7A
+Devyon
+Hill-Lowmax
+WR
+12
+6'5
+190
+Edwardsville H.S.
+Kelsey Pickering
+7A
+Tyler
+Hvorcik
+LB/TE/P
+12
+6'2
+220
+Glenbard North High School
+Ryan Wilkens
+7A
+Kenyonte
+Louis
+QB
+12
+6'0
+195
+Kenwood Academy
+Chris Goffer
+7A
+Ryan
+Myers
+OL/DL
+12
+6'5
+290
+Batavia HS
+Dennis Piron
+7A
+Carter
+Naranjo
+QB/RB
+12
+5'9
+180
+West Chicago High School
+Adam Chavez
+7A
+Jake
+Nawrot
+QB
+11
+6'5
+205
+John Hersey High School
+Tom Nelson
+7A
+Drew
+Phelps
+LB/QB/WR
+12
+6'0
+185
+Moline High School
+Mike Morrissey
+7A
+Keaton
+Reinke
+WR/LB
+12
+6'4
+205
+St. Charles North
+Robert Pomazak
+7A
+Aiden 
+Solecki
+DL/OL
+12
+6'5
+265
+Downers Grove North 
+Joe Horeni 
+7A
+Will
+Vala
+TE/DL
+12
+6'3
+220
+Downers Grove North 
+Joe Horeni 

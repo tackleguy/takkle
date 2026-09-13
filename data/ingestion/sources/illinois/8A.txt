@@ -1,0 +1,172 @@
+Class
+2025 IHSFCA ALL-STATE TEAM
+8A
+Player
+Pos
+YR
+HT
+WT
+SCHOOL
+COACH
+8A
+Zach
+Becker
+TE/DL/LB
+12
+6'3
+210
+Stevenson
+Brent Becker
+8A
+Colton
+Benaitis
+DB
+12
+6'2
+185
+Lockport Township
+George Czart
+8A
+Quentin
+Burrell
+WR/DB
+11
+6'3
+200
+Mount Carmel (Chicago)
+Jordan Lynch
+8A
+Riley
+Contreras
+QB/DB
+12
+6'0
+185
+Hinsdale Central High School
+Brian Griffin
+8A
+Henry
+Duda
+RB
+12
+6'1
+200
+York
+Don Gelsomino
+8A
+Owen
+Fors
+OL/DL
+12
+6'4
+300
+Barrington High School
+Joe Sanchez
+8A
+Gabe
+Hill
+DL
+12
+6'2
+295
+Naperville North
+Sean Drendel
+8A
+T.J.
+Lewis
+RB
+11
+5'10
+220
+Bolingbrook HS
+Titcus Pettigrew
+8A
+Gavin
+Mueller
+TE
+12
+6'6
+255
+South Elgin High School
+Pat Pistorio
+8A
+Johnny
+O'Brien
+QB
+12
+6'3
+205
+Fremd
+Lou Sponsel
+8A
+Jonathan
+Rulo
+DL/OL
+12
+6'2
+295
+Belleville East
+Michael Harrison
+8A
+Matthew
+Schlenhardt
+LB
+11
+6'0
+224
+Maine South
+David Inserra
+8A
+Rico
+Schrieber
+OL
+12
+6'7
+315
+Marist
+Mike Fitzgerald
+8A
+Aaron
+Stewart
+RB
+12
+5'8
+190
+Warren Township High School
+Bryan McNulty
+8A
+Mariano
+Velasco
+DB/WR
+12
+6'2
+180
+Oswego High School
+Brian Cooney
+8A
+Parker
+Ward
+WR
+12
+5'9
+175
+Glenbrook South HS
+Dave Schoenwetter
+8A
+Maxwell
+Warner
+RB/DB
+12
+5'11
+193
+Whitney M. Young Magnet HS
+Dan Finger
+8A
+Jonas
+Williams
+QB
+12
+6'3
+210
+Lincoln-Way East
+Rob Zvonar

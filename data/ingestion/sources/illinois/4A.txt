@@ -1,0 +1,172 @@
+Class
+2025 IHSFCA ALL-STATE TEAM
+4A
+Player
+Pos
+YR
+HT
+WT
+SCHOOL
+COACH
+4A
+Israel
+Abrams
+QB
+11
+6'3
+190
+Lombard Montini
+Mike Bukovsky
+4A
+Isaac
+Alexander
+RB/DB
+12
+5'10
+196
+Lombard Montini
+Mike Bukovsky
+4A
+Cam
+Brinkman
+QB
+11
+6'1
+175
+Sacred Heart-Griffin High School
+John Allison
+4A
+Connor
+Broughton
+DL
+12
+6'3
+230
+Rochester High School
+Derek Leonard
+4A
+Donald
+Collier
+DB/WR/RB
+11
+5'11
+180
+Cahokia High
+Darien Donald
+4A
+Gavyn
+Cothern
+QB/DB
+12
+6'0
+170
+Richland County (Olney)
+Luke Carmody
+4A
+Jaiduan
+Cranford
+RB/DB
+12
+5'9
+190
+Metamora Township High School
+Nick Delinski
+4A
+Caeden
+Curran
+HB/LB
+12
+6'0
+195
+Morris Community High School
+Alan Thorson
+4A
+Cole
+Davis
+RB/LB
+12
+5'10
+195
+Breese Central
+Brian Short
+4A
+Jacob
+Harvey
+WR/DB
+12
+6'2
+190
+Mt. Zion
+Patrick Etherton
+4A
+Andrew
+Johnson
+LB/QB
+12
+5'8
+170
+Carterville High School
+Brett Diel
+4A
+Landon
+Knigge
+RB
+12
+5'9
+190
+Dixon High School
+Jared Shaner
+4A
+Drake
+May
+LB/RB
+11
+5'11
+185
+Macomb
+Tanner Horrell
+4A
+Derez
+Sayles
+RB
+12
+5'9
+180
+Waterloo
+Dan Rose
+4A
+Kaiden
+Stout
+RB
+12
+6'3
+185
+Rochester High School
+Derek Leonard
+4A
+Roman
+Villalobos
+RB/LB
+12
+6'0
+195
+Rochelle Township High School
+Kyle Kissack
+4A
+Drew
+Ward
+WR/DB/K
+12
+6'1
+180
+Sacred Heart-Griffin High School
+John Allison
+4A
+Kye
+Weinzierl
+LB/DB/RB
+12
+6'1
+191
+Geneseo High School
+Matt Furlong

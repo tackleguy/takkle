@@ -1,0 +1,172 @@
+Class
+2025 IHSFCA ALL-STATE TEAM
+2A
+Player
+Pos
+YR
+HT
+WT
+SCHOOL
+COACH
+2A
+Owen
+Adams
+QB/LB/P
+11
+6'3
+195
+El Paso Gridley
+Tanner Benedict
+2A
+Will
+Birchen
+LB/LB/LB
+12
+5'10
+210
+Eastland-Pearl City
+Jared McNutt
+2A
+Johnathan
+Brown
+QB
+12
+6'1
+205
+DuQuoin
+Logan Spain
+2A
+Ethan
+Colvis
+LB/RB
+12
+6'1
+205
+Chester High School
+Billy Belton
+2A
+Easton
+Frederick
+RB/LB
+12
+5'9
+170
+Arthur Lovington Atwood Hammond
+Ryan Jefferson
+2A
+Jack
+Gronewold
+WR/DB
+12
+6'3
+215
+Farmington Central
+Toby Vallas
+2A
+Asa
+Johnson
+QB
+12
+6'4
+210
+Aurora Christian
+David Beebe
+2A
+Ryan
+Kettman
+RB/DB
+12
+6'3
+185
+Wilmington High School
+Jeff Reents
+2A
+Cash
+Lynch
+WR/DB
+12
+5'10
+150
+Pana
+Mark Ramsey
+2A
+Owen
+McGinnis
+LB/RB
+12
+5'10
+175
+Toledo Cumberland
+Lucas Watkins
+2A
+Ethan
+Miller
+OL/DL
+12
+6'1
+205
+Westville High School
+Guy Goodlove
+2A
+Logan
+Moore
+OL/DL/P
+12
+6'1
+220
+Johnston City High School
+Marshall Mummert
+2A
+Zach
+Ohlund
+OL/LB
+12
+5'10
+235
+Wilmington High School
+Jeff Reents
+2A
+Cullen
+Schwigen
+QB
+11
+6'3
+200
+Rockridge
+Sam Graves
+2A
+Andrew
+Shelby
+DL/OL
+12
+6'3
+240
+Flora High School
+Brian Tackitt
+2A
+Ryne
+Sheppard
+QB/LB
+12
+5'11
+185
+Maroa Forsyth
+Josh Jostes
+2A
+Cam
+Shriey
+RB
+12
+6'1
+190
+Seneca
+Terry Maxwell
+2A
+Zach
+Smith
+WR
+12
+5'10
+180
+Maroa Forsyth
+Josh Jostes

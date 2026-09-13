@@ -34,10 +34,83 @@ export const INGESTION_SOURCE_REGISTRY = [
     notes: "CHSAANow.com public all-state HTML tables",
   },
   {
+    name: "UHSAA Academic All-State Football",
+    state: "UT",
+    status: "permitted",
+    notes: "Official UHSAA academic all-state PDF charts; seniors (classYear=seasonEnd)",
+  },
+  {
     name: "Texas Sports Writers Association All-State Football",
     state: "TX",
     status: "permitted",
     notes: "Multi-year HTML allstatefootball{YY}.php",
+  },
+  {
+    name: "OSAA (Oregon)",
+    state: "OR",
+    status: "blocked",
+    notes: "Cloudflare challenge / HTTP 403 on association pages",
+  },
+  {
+    name: "NIAA (Nevada)",
+    state: "NV",
+    status: "blocked",
+    notes: "CloudFront 403",
+  },
+  {
+    name: "WIAA (Washington)",
+    state: "WA",
+    status: "blocked",
+    notes: "HTTP 405 on athletics paths; no public all-state HTML found",
+  },
+  {
+    name: "IDHSAA (Idaho)",
+    state: "ID",
+    status: "blocked",
+    notes: "HTTP 403 on records paths",
+  },
+
+  {
+    name: "Illinois High School Football Coaches Association All-State",
+    state: "IL",
+    status: "permitted",
+    notes: "Official IHSFCA PDF all-state + HM lists via TeamLinkt CDN",
+  },
+  {
+    name: "Indiana Football Coaches Association All-State",
+    state: "IN",
+    status: "permitted",
+    notes: "Official IFCA HTML all-state tables (senior/junior by class)",
+  },
+  {
+    name: "Pennsylvania Football Writers All-State",
+    state: "PA",
+    status: "permitted",
+    notes: "Public writers lists hosted on High School Football America",
+  },
+  {
+    name: "South Carolina Football Coaches Association All-State",
+    state: "SC",
+    status: "permitted",
+    notes: "SCFCA selections mirrored by local public media",
+  },
+  {
+    name: "HighSchoolOT All-State (NC)",
+    state: "NC",
+    status: "blocked",
+    notes: "robots.txt Disallow:/ for User-agent: *",
+  },
+  {
+    name: "VHSL.org (VA)",
+    state: "VA",
+    status: "blocked",
+    notes: "robots.txt Disallow:/ for User-agent: *",
+  },
+  {
+    name: "nj.com / MLive all-state mirrors",
+    state: null,
+    status: "blocked",
+    notes: "WAF/JS challenge HTTP 403",
   },
   {
     name: "Manual CSV import",
