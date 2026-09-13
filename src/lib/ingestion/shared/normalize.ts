@@ -1,4 +1,8 @@
-import type { DuplicateMatch, NormalizedPlayerRecord } from "./types";
+import type {
+  DuplicateMatch,
+  IngestionRunSummary,
+  NormalizedPlayerRecord,
+} from "../types";
 
 const POSITION_MAP: Record<string, string> = {
   qb: "QB",
@@ -127,7 +131,7 @@ export function shouldAutoMerge(match: DuplicateMatch): boolean {
 export function emptyRunSummary(
   adapterKey: string,
   stateCode?: string,
-): import("./types").IngestionRunSummary {
+): IngestionRunSummary {
   return {
     adapterKey,
     stateCode,

@@ -67,7 +67,7 @@ export function parseOpsmaText(
   const seen = new Set<string>();
 
   const entryRe =
-    /([A-Z][A-Za-z.'\-]+(?:\s+[A-Z][A-Za-z.'\-]+)+),\s*([A-Za-z0-9 .'\-\/]+?),\s*(?:\d-\d{1,2},?\s*)?(?:\d{2,3},?\s*)?(sr|jr|so|fr|soph|senior|junior|sophomore|freshman)\.?/gi;
+    /([A-Z][A-Za-z.'\-]+(?:\s+[A-Z][A-Za-z.'\-]+)+),\s*([A-Za-z][A-Za-z0-9 .'\-\/]*?),\s*(?:\d-\d{1,2},?\s*)?(?:\d{2,3},?\s*)?(sr|jr|so|fr|soph|senior|junior|sophomore|freshman)\.?/gi;
 
   let m: RegExpExecArray | null;
   while ((m = entryRe.exec(flat)) !== null) {
@@ -132,7 +132,7 @@ async function fetchPdfText(url: string): Promise<string | null> {
         const m = inner.match(/\(([\s\S]*)\)\s*Tj/);
         if (m) chunks.push(m[1].replace(/\\([nrt\\()])/g, "$1"));
       }
-      const tjArr = body.match(/\[(.*?)\]\s*TJ/gs) || [];
+      const tjArr = body.match(/\[([\s\S]*?)\]\s*TJ/g) || [];
       for (const block of tjArr) {
         for (const part of block.match(/\((?:\\.|[^\\)])*\)/g) || []) {
           chunks.push(part.slice(1, -1).replace(/\\([nrt\\()])/g, "$1"));
