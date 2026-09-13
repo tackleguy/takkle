@@ -472,8 +472,8 @@ CLASS 1A SENIOR ALL-STATE TEAM
 
 QB - Tytus Lehman, South Adams
 WR - Derek McKean, South Adams
-LB &#8211; Nathan Plattner, South Adams
-DB &#8211; Hayden McNeeley, Fremont
+LB - Nathan Plattner, South Adams
+DB - Hayden McNeeley, Fremont
 
 
 
@@ -497,10 +497,10 @@ OL - Nate Geerken, senior, Adams Central
 OL - Jack Huelsenbeck, senior, Churubusco
 TE - Jake Warstler, Eastside
 DL - Cam Fravel, Adams Central
-DL &#8211; Sam Pittman, Eastside
-LB &#8211; Griffin Morgan, Bluffton
-DB &#8211; Joey Everett, Adams Central
-AT-LARGE &#8211; Weston Ott, Churubusco
+DL - Sam Pittman, Eastside
+LB - Griffin Morgan, Bluffton
+DB - Joey Everett, Adams Central
+AT-LARGE - Weston Ott, Churubusco
 
 
 
@@ -583,8 +583,8 @@ CLASS 5A JUNIOR ALL-STATE TEAM
 
 
 OL/DL - Derrion Goodwin, junior, North Side
-OL &#8211; Grady Nelson, junior, Warsaw
-RB &#8211; Caleb Kiengele, junior, North Side
+OL - Grady Nelson, junior, Warsaw
+RB - Caleb Kiengele, junior, North Side
 
 
 
@@ -595,7 +595,7 @@ CLASS 6A JUNIOR ALL-STATE TEAM
 
 
 QB - Gabe Frisinger, junior, Carroll
-LB &#8211; Eli Neuhouser, junior, Carroll
+LB - Eli Neuhouser, junior, Carroll
 
 
 
@@ -606,7 +606,7 @@ CLASS 6A SENIOR ALL-STATE TEAM
 
 
 WR - Jaidon Vanpelt, Carroll
-OL &#8211; Andrew Rudolph, Carroll
+OL - Andrew Rudolph, Carroll
 K - Mang Tung, Snider
 DL - Evan Brubaker, Carroll
 DL - Sterling Swihart, Homestead

@@ -473,8 +473,8 @@ INDIANA MR. FOOTBALL POSITION WINNERS
 
 
 
-TE &#8211; Brock Schott, senior, Leo
-LB &#8211; Kimar Nelson, senior, Wayne
+TE - Brock Schott, senior, Leo
+LB - Kimar Nelson, senior, Wayne
 
 
 
@@ -485,7 +485,7 @@ CLASS 1A SENIOR ALL-STATE TEAM
 
 
 WR - Caiden Neuenschwander, South Adams
-DL &#8211; Luke Bauman, South Adams
+DL - Luke Bauman, South Adams
 
 
 
@@ -496,7 +496,7 @@ CLASS 1A JUNIOR ALL-STATE TEAM
 
 
 AT-LARGE - Tytus Lehman, junior, South Adams
-LB &#8211; Nathan Plattner, junior, South Adams
+LB - Nathan Plattner, junior, South Adams
 
 
 
@@ -507,9 +507,9 @@ CLASS 2A SENIOR ALL-STATE TEAM
 
 
 OL - Kris Levitz, Prairie Heights
-RB &#8211; Adam Hrschy, Adams Central
-DL &#8211; Matt Heiser, Adams Central
-LB &#8211; Max Kaehr, Adams Central
+RB - Adam Hrschy, Adams Central
+DL - Matt Heiser, Adams Central
+LB - Max Kaehr, Adams Central
 
 
 
@@ -519,10 +519,10 @@ CLASS 2A JUNIOR ALL-STATE TEAM
 
 
 
-OL &#8211; Nate Geerken, junior, Adams Central
-AT-LARGE &#8211; Jamison Roach, sophomore, Adams Central
-DL &#8211; Cam Fravel, junior, Adams Central
-AT-LARGE &#8211; Weston Ott, junior, Churubusco
+OL - Nate Geerken, junior, Adams Central
+AT-LARGE - Jamison Roach, sophomore, Adams Central
+DL - Cam Fravel, junior, Adams Central
+AT-LARGE - Weston Ott, junior, Churubusco
 
 
 
@@ -533,13 +533,13 @@ CLASS 3A SENIOR ALL-STATE TEAM
 
 
 OL - Noah Eash, West Noble
-OL &#8211; Charlie Riddle, Heritage
-RB &#8211; Seth Pruitt, West Noble
-DL &#8211; Jordan Eash, West Noble
-LB &#8211; Carson Mickem, Lakeland
-DB &#8211; Calder Hefty, Garrett
-DB &#8211; Jacob Felger, Bishop Luers
-DB &#8211; Braden Walter, Heritage
+OL - Charlie Riddle, Heritage
+RB - Seth Pruitt, West Noble
+DL - Jordan Eash, West Noble
+LB - Carson Mickem, Lakeland
+DB - Calder Hefty, Garrett
+DB - Jacob Felger, Bishop Luers
+DB - Braden Walter, Heritage
 
 
 
@@ -550,11 +550,11 @@ CLASS 3A JUNIOR ALL-STATE TEAM
 
 
 OL - Aiden Hunt, junior, Garrett
-QB &#8211; Brayden Holbrook, junior, Lakeland
-K &#8211; Neftali Silva, sophomore, West Noble
-DL &#8211; Ayle Taylor, junior, Bishop Luers
-DL &#8211; Jarron Taylor, junior, Bishop Luers
-DB &#8211; Dee Hogue, junior, Bishop Luers
+QB - Brayden Holbrook, junior, Lakeland
+K - Neftali Silva, sophomore, West Noble
+DL - Ayle Taylor, junior, Bishop Luers
+DL - Jarron Taylor, junior, Bishop Luers
+DB - Dee Hogue, junior, Bishop Luers
 
 
 
@@ -565,14 +565,14 @@ CLASS 4A SENIOR ALL-STATE TEAM
 
 
 WR - Stratton Fuller, Columbia City
-OL &#8211; James Miller, East Noble, senior
-OL &#8211; Nic Ley, senior, DeKalb
-K &#8211; Johan Von Sandersleben, Huntington North
-DL &#8211; Tommy Poiry, Bishop Dwenger
-DL &#8211; Tristan Roberts, Leo
-DL &#8211; Sullivan Stahl, Huntington North
-DB &#8211; Logan Hatton, East Noble
-DB &#8211; Landin Hoeppner, Leo
+OL - James Miller, East Noble, senior
+OL - Nic Ley, senior, DeKalb
+K - Johan Von Sandersleben, Huntington North
+DL - Tommy Poiry, Bishop Dwenger
+DL - Tristan Roberts, Leo
+DL - Sullivan Stahl, Huntington North
+DB - Logan Hatton, East Noble
+DB - Landin Hoeppner, Leo
 
 
 
@@ -582,11 +582,11 @@ CLASS 4A JUNIOR ALL-STATE TEAM
 
 
 
-OL &#8211; Andrew Trahin, junior, Bishop Dwenger
-OL &#8211; Hunter Shire, junior, East Noble
-K &#8211; Lucas Nguyen, junior, Bishop Dwenger
-LB &#8211; Dylan Tippmann, junior, Bishop Dwenger
-DB &#8211; Gavin Smith, junior, Columbia City
+OL - Andrew Trahin, junior, Bishop Dwenger
+OL - Hunter Shire, junior, East Noble
+K - Lucas Nguyen, junior, Bishop Dwenger
+LB - Dylan Tippmann, junior, Bishop Dwenger
+DB - Gavin Smith, junior, Columbia City
 
 
 
@@ -596,12 +596,12 @@ CLASS 5A SENIOR ALL-STATE TEAM
 
 
 
-WR &#8211; Ethan Egolf, Warsaw
-QB &#8211; Drew Sullivan, Warsaw
-DL &#8211; James Early, North Side
-LB &#8211; Josh Masasu, North Side
-DB &#8211; Tristen Newsome, North Side
-P &#8211; Mason Smythe, Warsaw
+WR - Ethan Egolf, Warsaw
+QB - Drew Sullivan, Warsaw
+DL - James Early, North Side
+LB - Josh Masasu, North Side
+DB - Tristen Newsome, North Side
+P - Mason Smythe, Warsaw
 
 
 
@@ -622,9 +622,9 @@ CLASS 6A SENIOR ALL-STATE TEAM
 
 
 OL - Will Davis, Homestead
-DL &#8211; Adam Blakey, Snider
-LB &#8211; Landen Fry, Snider
-DB &#8211; Jamarion Kolagbodi, Snider
+DL - Adam Blakey, Snider
+LB - Landen Fry, Snider
+DB - Jamarion Kolagbodi, Snider
 
 Share this:
 

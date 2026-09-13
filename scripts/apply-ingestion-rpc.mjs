@@ -140,6 +140,28 @@ async function main() {
       process.env.DS_AIA || "a1a00000-3650-4a11-9a11-000000000001",
     "CHSAA All-State Football":
       process.env.DS_CHSAA || "c0a00000-c45a-4c45-9c45-000000000001",
+    "UHSAA Academic All-State Football":
+      process.env.DS_UHSAA || "075a0000-a11a-475a-9a11-000000000001",
+    "Illinois High School Football Coaches Association All-State":
+      process.env.DS_IHSFCA || "c9cfb7d6-2cbf-52cd-9e1b-727956ee486a",
+    "Indiana Football Coaches Association All-State":
+      process.env.DS_IFCA || "7d2ca14e-ffc0-540f-b09e-b5d2cdbe2716",
+    "Pennsylvania Football Writers All-State":
+      process.env.DS_PAFW || "bf217de3-98a0-5ca3-8b13-7f311f81148a",
+    "South Carolina Football Coaches Association All-State":
+      process.env.DS_SCFCA || "6305d250-9982-5aad-8d47-9bfcf8019a17",
+    "Florida HS Football (floridahsfootball.com)":
+      process.env.DS_FLHSFB || "8de1bf61-a988-4f6b-9997-1899528d1939",
+    "Tennessee Sports Writers Association All-State":
+      process.env.DS_TNWA || "a11a0000-7e5a-4e5a-9e5a-000000000001",
+    "Louisiana Football Coaches Association All-State":
+      process.env.DS_LFCA || "a11a0000-1aca-41ac-91ac-000000000001",
+    "Georgia Athletic Coaches Association All-State":
+      process.env.DS_GACA || "a11a0000-9aca-49ac-99ac-000000000001",
+    "Yahoo Sports Illinois All-State Football":
+      process.env.DS_YAHOO_IL || "a11a0000-9a40-49a4-99a4-000000000001",
+    "Michigan High School Football Coaches Association All-State":
+      process.env.DS_MHSFCA || "a11a0000-a15a-4a15-9a15-000000000001",
   };
 
   const PB = 100;

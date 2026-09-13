@@ -95,6 +95,43 @@ export const INGESTION_SOURCE_REGISTRY = [
     notes: "SCFCA selections mirrored by local public media",
   },
   {
+    name: "Florida HS Football (floridahsfootball.com)",
+    state: "FL",
+    status: "permitted",
+    notes:
+      "Direct site paywalled; ingest via High School Football America public mirrors only",
+  },
+  {
+    name: "Tennessee Sports Writers Association All-State",
+    state: "TN",
+    status: "permitted",
+    notes: "Public HSFA mirrors of Tennessee writers all-state lists",
+  },
+  {
+    name: "Louisiana Football Coaches Association All-State",
+    state: "LA",
+    status: "permitted",
+    notes: "Public HSFA mirrors; LHSAA site robots Disallow:/",
+  },
+  {
+    name: "Georgia Athletic Coaches Association All-State",
+    state: "GA",
+    status: "permitted",
+    notes: "Public HSFA mirrors of GACA all-state lists",
+  },
+  {
+    name: "Yahoo Sports Illinois All-State Football",
+    state: "IL",
+    status: "permitted",
+    notes: "Public Yahoo Sports complete Illinois all-state articles",
+  },
+  {
+    name: "Michigan High School Football Coaches Association All-State",
+    state: "MI",
+    status: "permitted",
+    notes: "Public HSFA mirrors of MHSFCA all-state lists",
+  },
+  {
     name: "HighSchoolOT All-State (NC)",
     state: "NC",
     status: "blocked",

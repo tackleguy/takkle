@@ -192,7 +192,8 @@ function htmlToText(html) {
     .replace(/&nbsp;/g, " ")
     .replace(/&amp;/g, "&")
     .replace(/&quot;/g, '"')
-    .replace(/&#8217;|&apos;/g, "'")
+    .replace(/&#8217;|&apos;|&#x27;/gi, "'")
+    .replace(/&#8211;|&#8212;|&ndash;|&mdash;/gi, "-")
     .replace(/[“”]/g, '"')
     .replace(/[–—]/g, "-")
     .replace(/\r/g, "");
@@ -740,6 +741,400 @@ async function fetchScfca(outSources) {
   return { players, errors, blocked };
 }
 
+/**
+ * Dash lists: "QB – Name, School, Sr., 6-1, 205" / "OL - Name, School" / MVP variants
+ */
+function parseDashPosLists(
+  text,
+  { stateCode, seasonEndYear, sourceUrl, sourceName, sourceType = "media_public" },
+) {
+  const players = [];
+  const seen = new Set();
+  const posAlt =
+    "QB|RB|WR|TE|OL|DL|LB|DB|K|P|ATH|FB|C|G|T|DE|DT|CB|S|FS|SS|OT|OG|OC|ILB|OLB|NT|PK|AP";
+  const simpleRe = new RegExp(
+    `^(${posAlt})\\s*[-–]\\s*([A-Z][A-Za-z.'\\-]+(?:\\s+[A-Z][A-Za-z.'\\-]+)*(?:\\s+Jr\\.?)?),\\s*(.+?)(?:,\\s*(Sr|Jr|So|Fr)\\.?)?(?:,\\s*\\d-\\d{1,2},\\s*\\d{2,3})?\\*?$`,
+    "i",
+  );
+  const noCommaRe = new RegExp(
+    `^(${posAlt})\\s*[-–]\\s*([A-Z][A-Za-z.'\\-]+(?:\\s+[A-Z][A-Za-z.'\\-]+)+)\\s+([A-Z][A-Za-z0-9 .'\\-/&]{2,})$`,
+    "i",
+  );
+
+  for (const raw of text.split("\n")) {
+    let line = raw
+      .replace(/&nbsp;/gi, " ")
+      .replace(/\s+/g, " ")
+      .replace(/[–—]/g, "-")
+      .trim();
+    if (!line || line.length > 160) continue;
+    if (/coach of the year|player of the year|honorable mention only/i.test(line))
+      continue;
+
+    let pos;
+    let name;
+    let school;
+    let gradeTok;
+
+    let m = line.match(simpleRe);
+    if (m) {
+      pos = m[1];
+      name = m[2];
+      school = m[3];
+      gradeTok = m[4];
+    } else {
+      m = line.match(noCommaRe);
+      if (m) {
+        pos = m[1];
+        name = m[2];
+        school = m[3];
+      } else {
+        m = line.match(
+          /^(?:Offensive|Defensive)\s+MVP\s*-\s*([A-Z][A-Za-z.'\-]+(?:\s+[A-Z][A-Za-z.'\-]+)+)(?:,\s*([A-Z]{1,4}))?,\s*(.+)$/i,
+        );
+        if (m) {
+          name = m[1];
+          pos = m[2];
+          school = m[3];
+        }
+      }
+    }
+    if (!name || !school) continue;
+    name = normalizeName(name);
+    school = normalizeName(school).replace(/\*+$/, "").trim();
+    if (school.length < 2) continue;
+    if (/^(sr|jr|so|fr)\.?$/i.test(school)) continue;
+    const { firstName, lastName } = splitDisplayName(name);
+    if (!firstName || !lastName) continue;
+    const key = `${firstName}|${lastName}|${school}|${seasonEndYear}`.toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    const g = gradeTok ? GRADE_MAP[gradeTok.toLowerCase().replace(/\./g, "")] : undefined;
+    const p = makePlayer({
+      firstName,
+      lastName,
+      schoolName: school,
+      stateCode,
+      position: pos,
+      gradeLevel: g,
+      classYear: g ? classFromGrade(g, seasonEndYear) : undefined,
+      seasonYear: seasonEndYear,
+      sourceUrl,
+      sourceName,
+      sourceType,
+    });
+    if (p) players.push(p);
+  }
+  return players;
+}
+
+/** Yahoo IL: "Jacob Bell, Sr., QB, 6-2, 205, Naperville North" */
+function parseYahooIllinois(text, seasonEndYear, sourceUrl) {
+  const players = [];
+  const seen = new Set();
+  const re =
+    /^([A-Z][A-Za-z.'\-]+(?:\s+[A-Z][A-Za-z.'\-]+)+),\s*(Sr|Jr|So|Fr)\.?,\s*([A-Z]{1,4}(?:\/[A-Z]{1,4})*),\s*\d-\d{1,2},\s*\d{2,3},\s*(.+)$/;
+  for (const raw of text.split("\n")) {
+    const line = raw
+      .replace(/&#x27;|&apos;/g, "'")
+      .replace(/&amp;/g, "&")
+      .replace(/\s+/g, " ")
+      .trim();
+    const m = line.match(re);
+    if (!m) continue;
+    const name = normalizeName(m[1]);
+    const g = GRADE_MAP[m[2].toLowerCase()];
+    const pos = m[3].split("/")[0];
+    const school = normalizeName(m[4]);
+    const { firstName, lastName } = splitDisplayName(name);
+    const key = `${firstName}|${lastName}|${school}`.toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    const p = makePlayer({
+      firstName,
+      lastName,
+      schoolName: school,
+      stateCode: "IL",
+      position: pos,
+      gradeLevel: g,
+      classYear: g ? classFromGrade(g, seasonEndYear) : undefined,
+      seasonYear: seasonEndYear,
+      sourceUrl,
+      sourceName: "Yahoo Sports Illinois All-State Football",
+      sourceType: "media_public",
+    });
+    if (p) players.push(p);
+  }
+  return players;
+}
+
+/** HSFA IHSFCA: "Evan Roper, LB, Barrington, Sr." */
+function parseIhsfcaMedia(text, seasonEndYear, sourceUrl) {
+  const players = [];
+  const seen = new Set();
+  const re =
+    /^([A-Z][A-Za-z.'\-]+(?:\s+[A-Z][A-Za-z.'\-]+)+),\s*([A-Z]{1,4}(?:\/[A-Z]{1,4})*),\s*(.+?),\s*(Sr|Jr|So|Fr)\.?$/;
+  for (const raw of text.split("\n")) {
+    const line = raw.replace(/\s+/g, " ").trim();
+    const m = line.match(re);
+    if (!m) continue;
+    const name = normalizeName(m[1]);
+    const pos = m[2].split("/")[0];
+    const school = normalizeName(m[3]);
+    const g = GRADE_MAP[m[4].toLowerCase()];
+    const { firstName, lastName } = splitDisplayName(name);
+    const key = `${firstName}|${lastName}|${school}`.toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    const p = makePlayer({
+      firstName,
+      lastName,
+      schoolName: school,
+      stateCode: "IL",
+      position: pos,
+      gradeLevel: g,
+      classYear: g ? classFromGrade(g, seasonEndYear) : undefined,
+      seasonYear: seasonEndYear,
+      sourceUrl,
+      sourceName: "Illinois High School Football Coaches Association All-State",
+    });
+    if (p) players.push(p);
+  }
+  return players;
+}
+
+/** TN 2024 semicolon clumps: "Miles Reding, Kirkwood, So.; Will Jones, Maryville, So." */
+function parseTnSemicolonLists(text, seasonEndYear, sourceUrl) {
+  const players = [];
+  const seen = new Set();
+  const chunkRe =
+    /([A-Z][A-Za-z.'\-]+(?:\s+[A-Z][A-Za-z.'\-]+)+),\s*([^,;]+?),\s*(Sr|Jr|So|Fr)\.?/g;
+  for (const raw of text.split("\n")) {
+    const line = raw.replace(/&nbsp;/gi, " ").replace(/\s+/g, " ").trim();
+    if (!line.includes(",")) continue;
+    let m;
+    while ((m = chunkRe.exec(line)) !== null) {
+      const name = normalizeName(m[1]);
+      const school = normalizeName(m[2]);
+      const g = GRADE_MAP[m[3].toLowerCase()];
+      if (/coach|player of the year|all-state/i.test(name)) continue;
+      const { firstName, lastName } = splitDisplayName(name);
+      const key = `${firstName}|${lastName}|${school}`.toLowerCase();
+      if (seen.has(key)) continue;
+      seen.add(key);
+      const p = makePlayer({
+        firstName,
+        lastName,
+        schoolName: school,
+        stateCode: "TN",
+        gradeLevel: g,
+        classYear: g ? classFromGrade(g, seasonEndYear) : undefined,
+        seasonYear: seasonEndYear,
+        sourceUrl,
+        sourceName: "Tennessee Sports Writers Association All-State",
+        sourceType: "media_public",
+      });
+      if (p) players.push(p);
+    }
+  }
+  return players;
+}
+
+/** MI: "Tre Redding – Wide Receiver – Warren Michigan Collegiate" */
+function parseMiNamePosSchool(text, seasonEndYear, sourceUrl) {
+  const players = [];
+  const seen = new Set();
+  const posWord = {
+    quarterback: "QB",
+    "running back": "RB",
+    "wide receiver": "WR",
+    "tight end": "TE",
+    "offensive line": "OL",
+    "offensive lineman": "OL",
+    "defensive line": "DL",
+    "defensive lineman": "DL",
+    linebacker: "LB",
+    "defensive back": "DB",
+    athlete: "ATH",
+    kicker: "K",
+    punter: "P",
+  };
+  const re =
+    /^([A-Z][A-Za-z.'\-]+(?:\s+[A-Z][A-Za-z.'\-]+)+)\s*[-–]\s*([A-Za-z ]+?)\s*[-–]\s*(.+)$/;
+  for (const raw of text.split("\n")) {
+    const line = raw
+      .replace(/&#8211;|&ndash;/g, "-")
+      .replace(/\s+/g, " ")
+      .trim();
+    const m = line.match(re);
+    if (!m) continue;
+    const name = normalizeName(m[1]);
+    const posRaw = m[2].trim().toLowerCase();
+    const school = normalizeName(m[3]);
+    const pos = posWord[posRaw] || normalizePosition(posRaw);
+    if (!pos) continue;
+    const { firstName, lastName } = splitDisplayName(name);
+    const key = `${firstName}|${lastName}|${school}`.toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    const p = makePlayer({
+      firstName,
+      lastName,
+      schoolName: school,
+      stateCode: "MI",
+      position: pos,
+      seasonYear: seasonEndYear,
+      sourceUrl,
+      sourceName: "Michigan High School Football Coaches Association All-State",
+      sourceType: "state_association",
+    });
+    if (p) players.push(p);
+  }
+  return players;
+}
+
+async function fetchHsfaExpansion(outSources) {
+  const errors = [];
+  const blocked = [];
+  const players = [];
+  const specs = [
+    // Florida mirrors (floridahsfootball.com paywalled; HSFA public mirrors OK)
+    ...[
+      ["https://highschoolfootballamerica.com/florida-class-2a-all-state-high-school-football-team-from-floridahsfootball-com/", 2022],
+      ["https://highschoolfootballamerica.com/floridahsfootball-com-releases-1a-all-state-high-school-football-teams/", 2022],
+      ["https://highschoolfootballamerica.com/floridahsfootball-com-announces-4a-all-state-high-school-football-team/", 2022],
+      ["https://highschoolfootballamerica.com/2021-floridahsfootball-com-5a-all-state-high-school-football-team/", 2022],
+      ["https://highschoolfootballamerica.com/2021-6a-florida-all-state-high-school-football-team-from-floridahsfootball-com/", 2022],
+      ["https://highschoolfootballamerica.com/floridahsfootball-com-announces-2021-class-7a-all-state-high-school-football-team/", 2022],
+      ["https://highschoolfootballamerica.com/2021-florida-8a-all-state-high-school-football-team-from-floridahsfootball-comt/", 2022],
+      ["https://highschoolfootballamerica.com/2021-florida-class-3a-all-state-high-school-football-team-from-floridahsfootball-com/", 2022],
+      ["https://highschoolfootballamerica.com/floridahsfootball-coms-2020-class-1a-all-state-high-school-football-team/", 2021],
+      ["https://highschoolfootballamerica.com/floridahsfootball-coms-2020-class-2a-high-school-football-all-state-team/", 2021],
+      ["https://highschoolfootballamerica.com/floridahsfootball-coms-independent-all-state-high-school-football-team/", 2021],
+    ].map(([url, seasonEnd]) => ({
+      stateCode: "FL",
+      seasonEnd,
+      url,
+      sourceName: "Florida HS Football (floridahsfootball.com)",
+      sourceType: "media_public",
+      parser: "dash",
+    })),
+    {
+      stateCode: "TN",
+      seasonEnd: 2024,
+      url: "https://highschoolfootballamerica.com/tennessee-sports-writers-association-2023-all-state-high-school-football-teams/",
+      sourceName: "Tennessee Sports Writers Association All-State",
+      sourceType: "media_public",
+      parser: "dash",
+    },
+    {
+      stateCode: "TN",
+      seasonEnd: 2020,
+      url: "https://highschoolfootballamerica.com/2019-tennessee-sports-writers-association-all-state-high-school-football-teams/",
+      sourceName: "Tennessee Sports Writers Association All-State",
+      sourceType: "media_public",
+      parser: "dash",
+    },
+    {
+      stateCode: "TN",
+      seasonEnd: 2025,
+      url: "https://highschoolfootballamerica.com/tennessee-sports-writers-association-releases-2024-all-state-high-school-football-teams/",
+      sourceName: "Tennessee Sports Writers Association All-State",
+      sourceType: "media_public",
+      parser: "tn_semi",
+    },
+    {
+      stateCode: "LA",
+      seasonEnd: 2025,
+      url: "https://highschoolfootballamerica.com/louisiana-football-coaches-association-announce-2024-all-state-high-school-football-teams/",
+      sourceName: "Louisiana Football Coaches Association All-State",
+      sourceType: "state_association",
+      parser: "dash",
+    },
+    {
+      stateCode: "GA",
+      seasonEnd: 2024,
+      url: "https://highschoolfootballamerica.com/georgia-athletic-coaches-association-all-state-high-school-football-teams/",
+      sourceName: "Georgia Athletic Coaches Association All-State",
+      sourceType: "state_association",
+      parser: "dash",
+    },
+    {
+      stateCode: "IL",
+      seasonEnd: 2022,
+      url: "https://highschoolfootballamerica.com/2021-illinois-high-school-football-coaches-association-all-state-teams/",
+      sourceName: "Illinois High School Football Coaches Association All-State",
+      sourceType: "state_association",
+      parser: "il_media",
+    },
+    {
+      stateCode: "MI",
+      seasonEnd: 2022,
+      url: "https://highschoolfootballamerica.com/2021-michigan-high-school-football-coaches-association-all-state-teams/",
+      sourceName: "Michigan High School Football Coaches Association All-State",
+      sourceType: "state_association",
+      parser: "mi",
+    },
+  ];
+
+  for (const spec of specs) {
+    const got = await fetchText(spec.url);
+    if (got.blocked) {
+      blocked.push(`${spec.url} (${got.notes})`);
+      continue;
+    }
+    if (!got.ok || !got.text) {
+      errors.push(`${spec.stateCode} ${got.notes || "fetch fail"} ${spec.url}`);
+      continue;
+    }
+    const slug = slugify(spec.url).slice(-70);
+    writeFileSync(
+      join(outSources, `${spec.stateCode}-${spec.seasonEnd}-${slug}.txt`),
+      got.text,
+    );
+    let parsed = [];
+    if (spec.parser === "dash") {
+      parsed = parseDashPosLists(got.text, {
+        stateCode: spec.stateCode,
+        seasonEndYear: spec.seasonEnd,
+        sourceUrl: spec.url,
+        sourceName: spec.sourceName,
+        sourceType: spec.sourceType,
+      });
+    } else if (spec.parser === "tn_semi") {
+      parsed = parseTnSemicolonLists(got.text, spec.seasonEnd, spec.url);
+    } else if (spec.parser === "il_media") {
+      parsed = parseIhsfcaMedia(got.text, spec.seasonEnd, spec.url);
+    } else if (spec.parser === "mi") {
+      parsed = parseMiNamePosSchool(got.text, spec.seasonEnd, spec.url);
+    }
+    console.log(
+      `  HSFA ${spec.stateCode} ${spec.seasonEnd}: ${parsed.length} (${spec.parser})`,
+    );
+    if (!parsed.length) errors.push(`${spec.url} parsed 0`);
+    players.push(...parsed);
+    await new Promise((r) => setTimeout(r, 400));
+  }
+  return { players, errors, blocked };
+}
+
+async function fetchYahooIllinois(outSources) {
+  const errors = [];
+  const blocked = [];
+  const url =
+    "https://sports.yahoo.com/complete-list-2024-illinois-high-090804953.html";
+  const got = await fetchText(url);
+  if (got.blocked) return { players: [], errors, blocked: [`${url} (${got.notes})`] };
+  if (!got.ok || !got.text) {
+    return { players: [], errors: [`Yahoo IL ${got.notes}`], blocked };
+  }
+  writeFileSync(join(outSources, "yahoo-il-2024.txt"), got.text);
+  const players = parseYahooIllinois(got.text, 2025, url);
+  console.log(`  Yahoo IL 2024: ${players.length}`);
+  if (!players.length) errors.push("Yahoo IL parsed 0");
+  return { players, errors, blocked };
+}
+
 async function fetchOutsideTheHuddleIfca(outSources) {
   // Mirror of IFCA class lists — useful backup / prior year
   const errors = [];
@@ -849,6 +1244,17 @@ async function main() {
   mkdirSync(join(ROOT, "data/ingestion/sources/southcarolina"), {
     recursive: true,
   });
+  mkdirSync(join(ROOT, "data/ingestion/sources/florida"), { recursive: true });
+  mkdirSync(join(ROOT, "data/ingestion/sources/tennessee"), {
+    recursive: true,
+  });
+  mkdirSync(join(ROOT, "data/ingestion/sources/louisiana"), {
+    recursive: true,
+  });
+  mkdirSync(join(ROOT, "data/ingestion/sources/georgia"), { recursive: true });
+  mkdirSync(join(ROOT, "data/ingestion/sources/michigan"), {
+    recursive: true,
+  });
 
   const summary = {
     adapterKey: "east-midwest-se",
@@ -864,7 +1270,8 @@ async function main() {
       "nj.com — WAF/JS challenge (403)",
       "MLive (MI) — WAF/JS challenge (403)",
       "IndyStar / USA Today network — AI bot blocks; use IFCA.net instead",
-      "FHSAA / floridahsfootball — paywall or robots Disallow",
+      "floridahsfootball.com — membership paywall on all-state articles; use HSFA mirrors",
+      "LHSAA online — robots Disallow:/",
       "CFBD_API_KEY unauthorized (401) — skipped",
     ],
     byState: {},
@@ -906,7 +1313,47 @@ async function main() {
   summary.blockedSources.push(...sc.blocked);
   summary.byState.SC = { playersRaw: sc.players.length };
 
-  const all = [...il.players, ...inPlayers, ...pa.players, ...sc.players];
+  console.log("Fetching HSFA expansion (FL/TN/LA/GA/IL/MI)...");
+  const hsfa = await fetchHsfaExpansion(
+    join(ROOT, "data/ingestion/sources/florida"),
+  );
+  // snapshots also written under florida/; copy-friendly by state prefix in filename
+  summary.errors.push(...hsfa.errors);
+  summary.blockedSources.push(...hsfa.blocked);
+
+  console.log("Fetching Yahoo Illinois all-state...");
+  const yahoo = await fetchYahooIllinois(
+    join(ROOT, "data/ingestion/sources/illinois"),
+  );
+  summary.errors.push(...yahoo.errors);
+  summary.blockedSources.push(...yahoo.blocked);
+
+  const hsfaBy = {};
+  for (const p of [...hsfa.players, ...yahoo.players]) {
+    hsfaBy[p.stateCode] = (hsfaBy[p.stateCode] || 0) + 1;
+  }
+  Object.assign(summary.byState, {
+    FL: { playersRaw: hsfaBy.FL || 0 },
+    TN: { playersRaw: hsfaBy.TN || 0 },
+    LA: { playersRaw: hsfaBy.LA || 0 },
+    GA: { playersRaw: (hsfaBy.GA || 0) },
+    MI: { playersRaw: hsfaBy.MI || 0 },
+    IL: {
+      playersRaw:
+        (summary.byState.IL?.playersRaw || 0) +
+        (hsfaBy.IL || 0) +
+        yahoo.players.length,
+    },
+  });
+
+  const all = [
+    ...il.players,
+    ...inPlayers,
+    ...pa.players,
+    ...sc.players,
+    ...hsfa.players,
+    ...yahoo.players,
+  ];
   const deduped = dedupePlayers(all);
   summary.duplicatesDetected = deduped.duplicatesDetected;
   summary.playersDiscovered = all.length;
