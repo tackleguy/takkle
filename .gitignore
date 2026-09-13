@@ -55,3 +55,8 @@ next-env.d.ts
 /data/cfbd/players-chunk-*.json
 /data/cfbd/manifest.json
 .cursor/
+
+# Temp MCP apply batches
+/data/ingestion/_c*.sql
+/data/ingestion/_p*.sql
+/data/ingestion/_mcp_batch.json

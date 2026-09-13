@@ -32,18 +32,20 @@ export {
 
 export { isUrlAllowed, fetchRobotsTxt, USER_AGENT } from "./shared/robots";
 export { loadNcesSchools } from "./shared/nces";
+export { INGESTION_SOURCE_REGISTRY } from "./source-registry";
 
 export { runCaliforniaAdapter } from "./california";
 export { runTexasAdapter } from "./texas";
 export { runFloridaAdapter } from "./florida";
 export { runGeorgiaAdapter } from "./georgia";
 export { runOhioAdapter } from "./ohio";
+export { runAlabamaAdapter } from "./alabama";
 
 import type { NormalizedPlayerRecord } from "./types";
 import { applyIngestionCap as _cap } from "./cap";
 
 export { applyIngestionCap } from "./cap";
-export { parsePlayerCsv } from "./csv";
+export { parsePlayerCsv, validateCsvPreview } from "./csv";
 
 export function filterToCap(
   players: NormalizedPlayerRecord[],

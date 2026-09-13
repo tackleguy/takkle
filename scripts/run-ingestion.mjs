@@ -37,7 +37,7 @@ const USER_AGENT =
 
 function parseArgs(argv) {
   const args = {
-    states: ["CA", "TX", "FL", "GA", "OH"],
+    states: ["CA", "TX", "FL", "GA", "OH", "AL"],
     schoolLimit: null,
     playersOnly: false,
     schoolsOnly: false,
@@ -433,6 +433,292 @@ async function fetchTswaPlayers() {
   return { players, errors, blocked: [] };
 }
 
+const GRADE_MAP_SE = {
+  sr: 12, senior: 12, jr: 11, junior: 11, so: 10, soph: 10, sophomore: 10, fr: 9, freshman: 9,
+};
+
+function parseOpsmaText(text, seasonEnd = 2025, sourceUrl) {
+  const flat = decodeHtml(String(text).replace(/\n/g, " "));
+  const players = [];
+  const seen = new Set();
+  const entryRe =
+    /([A-Z][A-Za-z.'\-]+(?:\s+[A-Z][A-Za-z.'\-]+)+),\s*([A-Za-z][A-Za-z0-9 .'\-\/]*?),\s*(?:\d-\d{1,2},?\s*)?(?:\d{2,3},?\s*)?(sr|jr|so|fr|soph|senior|junior|sophomore|freshman)\.?/gi;
+  let m;
+  while ((m = entryRe.exec(flat))) {
+    const name = m[1].replace(/\s+/g, " ").trim();
+    const school = m[2].replace(/\s+/g, " ").trim();
+    const g = GRADE_MAP_SE[m[3].toLowerCase().replace(/\./g, "")];
+    const { firstName, lastName } = splitName(name);
+    if (!firstName || !lastName || school.length < 2) continue;
+    if (/coach|player of the year/i.test(name)) continue;
+    const key = `${firstName}|${lastName}|${school}`.toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    players.push({
+      firstName,
+      lastName,
+      position: null,
+      classYear: g ? classFromGrade(g, seasonEnd) : null,
+      schoolName: school,
+      stateCode: "OH",
+      seasonYear: seasonEnd,
+      sourceUrl,
+      sourceName: "Ohio Prep Sports Media Association All-Ohio Football",
+      sourceType: "state_association",
+      sourceState: "OH",
+      sourceSchool: school,
+    });
+  }
+  return players;
+}
+
+async function fetchOhioPlayers() {
+  const url =
+    "https://ohsaaweb.blob.core.windows.net/files/Sports/Football/2024/2024-fb-all-ohio.pdf";
+  const snap = join(ROOT, "data/ingestion/sources/ohio/2024-opsma-all-ohio.txt");
+  if (!existsSync(snap)) {
+    return { players: [], errors: ["OH OPSMA snapshot missing"], blocked: [] };
+  }
+  try {
+    const res = await fetch(url, { headers: { "User-Agent": USER_AGENT } });
+    console.log(`  OPSMA PDF status ${res.status}; parsing provenance snapshot`);
+  } catch (e) {
+    console.log(`  OPSMA PDF fetch note: ${e.message}`);
+  }
+  const players = parseOpsmaText(readFileSync(snap, "utf8"), 2025, url);
+  console.log(`  OPSMA All-Ohio: ${players.length} players`);
+  return { players, errors: players.length ? [] : ["OPSMA parsed 0"], blocked: [] };
+}
+
+function parseGpbText(text, seasonEnd = 2025, sourceUrl) {
+  const players = [];
+  const seen = new Set();
+  const gradeMap = { senior: 12, junior: 11, sophomore: 10, freshman: 9 };
+  for (const raw of String(text).split("\n")) {
+    const line = raw.replace(/\s+/g, " ").trim();
+    const sized = line.match(
+      /^([A-Z][A-Za-z."'\-]+(?:\s+[A-Z][A-Za-z."'\-]+)+)\s*-\s*([A-Za-z0-9 .'\-\/]+?)\s*-\s*\d-\d{1,2},\s*\d{2,3},\s*(Senior|Junior|Sophomore|Freshman)\b/i,
+    );
+    if (sized) {
+      const name = sized[1].replace(/"/g, "").trim();
+      const school = sized[2].trim();
+      const g = gradeMap[sized[3].toLowerCase()];
+      const { firstName, lastName } = splitName(name);
+      if (!firstName || !lastName) continue;
+      if (/coach|outstanding|caption|credit|gpb/i.test(name)) continue;
+      const key = `${firstName}|${lastName}|${school}`.toLowerCase();
+      if (seen.has(key)) continue;
+      seen.add(key);
+      players.push({
+        firstName,
+        lastName,
+        position: null,
+        classYear: g ? classFromGrade(g, seasonEnd) : null,
+        schoolName: school,
+        stateCode: "GA",
+        seasonYear: seasonEnd,
+        sourceUrl,
+        sourceName: "GPB Sports All-State Football",
+        sourceType: "state_association",
+        sourceState: "GA",
+        sourceSchool: school,
+      });
+      continue;
+    }
+    const hm = line.match(/^Honorable Mention:\s*(.+)$/i);
+    if (!hm) continue;
+    for (const part of hm[1].split(";")) {
+      const mm = part.trim().match(/^([^,]+),\s*(.+)$/);
+      if (!mm) continue;
+      const { firstName, lastName } = splitName(mm[1]);
+      const school = mm[2].trim();
+      if (!firstName || !lastName) continue;
+      const key = `${firstName}|${lastName}|${school}`.toLowerCase();
+      if (seen.has(key)) continue;
+      seen.add(key);
+      players.push({
+        firstName,
+        lastName,
+        position: null,
+        classYear: null,
+        schoolName: school,
+        stateCode: "GA",
+        seasonYear: seasonEnd,
+        sourceUrl,
+        sourceName: "GPB Sports All-State Football",
+        sourceType: "state_association",
+        sourceState: "GA",
+        sourceSchool: school,
+      });
+    }
+  }
+  return players;
+}
+
+async function fetchGeorgiaPlayers() {
+  const url = "https://www.gpb.org/blogs/gpb-sports-blog/2024/12/24/2024-gpb-all-state-team";
+  const snap = join(ROOT, "data/ingestion/sources/georgia/2024-gpb-all-state.txt");
+  let text = existsSync(snap) ? readFileSync(snap, "utf8") : "";
+  try {
+    const robots = await fetchRobots("https://www.gpb.org");
+    if (robots.body && !robotsAllows(robots.body, "/blogs/")) {
+      return {
+        players: parseGpbText(text, 2025, url),
+        errors: [],
+        blocked: ["gpb.org robots blocked /blogs/ — used snapshot"],
+      };
+    }
+    const res = await fetch(url, { headers: { "User-Agent": USER_AGENT } });
+    if (res.ok) {
+      const html = await res.text();
+      const live = decodeHtml(html.replace(/<br\s*\/?>/gi, "\n").replace(/<\/p>/gi, "\n"));
+      if (parseGpbText(live, 2025, url).length >= 10) text = live;
+    }
+  } catch (e) {
+    console.log(`  GPB fetch note: ${e.message}`);
+  }
+  const players = parseGpbText(text, 2025, url);
+  console.log(`  GPB All-State: ${players.length} players`);
+  return { players, errors: players.length ? [] : ["GPB parsed 0"], blocked: [] };
+}
+
+function parseAswaText(text, seasonEnd, sourceUrl) {
+  const players = [];
+  const seen = new Set();
+  const lineRe =
+    /^(?:QB|RB|WR|TE|OL|DL|LB|DB|K|P|ATH|UTL|FLEX|KR|PR|AP):\s*([^,\n]+),\s*([^,\n]+),\s*(Jr\.?|Sr\.?|So\.?|Fr\.?|Junior|Senior|Sophomore|Freshman)\b/gim;
+  let m;
+  while ((m = lineRe.exec(text))) {
+    const pos = m[0].slice(0, m[0].indexOf(":")).toUpperCase();
+    const { firstName, lastName } = splitName(m[1].trim());
+    const school = m[2].trim();
+    const tok = m[3].toLowerCase().replace(/\./g, "");
+    const g = GRADE_MAP_SE[tok] || GRADE_MAP_SE[tok.slice(0, 2)];
+    if (!firstName || !lastName || school.length < 2) continue;
+    const key = `${firstName}|${lastName}|${school}|${seasonEnd}`.toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    players.push({
+      firstName,
+      lastName,
+      position: normPos(pos),
+      classYear: g ? classFromGrade(g, seasonEnd) : null,
+      schoolName: school,
+      stateCode: "AL",
+      seasonYear: seasonEnd,
+      sourceUrl,
+      sourceName: "Alabama Sports Writers Association All-State Football",
+      sourceType: "state_association",
+      sourceState: "AL",
+      sourceSchool: school,
+    });
+  }
+  const hmRe =
+    /([A-Z][A-Za-z.'\-]+(?:\s+[A-Z][A-Za-z.'\-]+)+),\s*([A-Za-z0-9 .'\-\/]+),\s*(Jr\.|Sr\.|So\.|Fr\.)/g;
+  while ((m = hmRe.exec(text))) {
+    const { firstName, lastName } = splitName(m[1]);
+    const school = m[2].trim();
+    const g = GRADE_MAP_SE[m[3].toLowerCase().replace(/\./g, "")];
+    if (!firstName || !lastName) continue;
+    if (/coach|football|all-state|class /i.test(m[1])) continue;
+    const key = `${firstName}|${lastName}|${school}|${seasonEnd}`.toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    players.push({
+      firstName,
+      lastName,
+      position: null,
+      classYear: g ? classFromGrade(g, seasonEnd) : null,
+      schoolName: school,
+      stateCode: "AL",
+      seasonYear: seasonEnd,
+      sourceUrl,
+      sourceName: "Alabama Sports Writers Association All-State Football",
+      sourceType: "state_association",
+      sourceState: "AL",
+      sourceSchool: school,
+    });
+  }
+  return players;
+}
+
+async function fetchAlabamaPlayers() {
+  const lists = [
+    {
+      seasonEnd: 2026,
+      url: "https://www.floridatoday.com/story/sports/high-school/football/2025/12/20/alabama-all-state-high-school-football-aswa-ahsaa-aisa/87829172007/",
+      snap: join(ROOT, "data/ingestion/sources/alabama/2025-aswa-all-state.txt"),
+    },
+    {
+      seasonEnd: 2023,
+      url: "https://www.si.com/college/alabama/aswa/2022-aswa-all-state-football-teams-coaches-year",
+      snap: join(ROOT, "data/ingestion/sources/alabama/2022-aswa-all-state.txt"),
+    },
+  ];
+  const all = [];
+  const errors = [];
+  for (const spec of lists) {
+    let text = existsSync(spec.snap) ? readFileSync(spec.snap, "utf8") : "";
+    try {
+      const res = await fetch(spec.url, { headers: { "User-Agent": USER_AGENT } });
+      if (res.ok) {
+        const html = await res.text();
+        const live = decodeHtml(html.replace(/<br\s*\/?>/gi, "\n").replace(/<\/p>/gi, "\n"));
+        if (parseAswaText(live, spec.seasonEnd, spec.url).length > 50) text = live;
+      }
+    } catch (e) {
+      errors.push(`${spec.url}: ${e.message}`);
+    }
+    const parsed = parseAswaText(text, spec.seasonEnd, spec.url);
+    console.log(`  ASWA ${spec.seasonEnd}: ${parsed.length} players`);
+    all.push(...parsed);
+  }
+  return { players: all, errors, blocked: [] };
+}
+
+function loadFloridaCsvPlayers() {
+  const dir = join(ROOT, "data/ingestion/sources/florida");
+  if (!existsSync(dir)) return { players: [], errors: [] };
+  const { readdirSync } = require("node:fs");
+  const players = [];
+  const errors = [];
+  for (const f of readdirSync(dir).filter((x) => x.endsWith(".csv"))) {
+    const lines = readFileSync(join(dir, f), "utf8").trim().split(/\r?\n/);
+    if (lines.length < 2) continue;
+    const headers = lines[0].split(",").map((h) => h.trim().toLowerCase());
+    const idx = (n) => headers.indexOf(n);
+    for (let i = 1; i < lines.length; i++) {
+      if (!lines[i].trim()) continue;
+      const cols = lines[i].split(",").map((c) => c.trim().replace(/^"|"$/g, ""));
+      const firstName = cols[idx("first_name")];
+      const lastName = cols[idx("last_name")];
+      const school = cols[idx("school")] || cols[idx("school_name")];
+      const state = (cols[idx("state")] || cols[idx("state_code")] || "").toUpperCase();
+      const sourceUrl = cols[idx("source_url")] || cols[idx("url")];
+      if (!firstName || !lastName || !school || state !== "FL" || !sourceUrl) {
+        errors.push(`${f}:${i + 1} skipped (need FL + source_url)`);
+        continue;
+      }
+      players.push({
+        firstName,
+        lastName,
+        position: normPos(cols[idx("position")]),
+        classYear: Number(cols[idx("class_year")] || cols[idx("class")]) || null,
+        schoolName: school,
+        stateCode: "FL",
+        seasonYear:
+          Number(cols[idx("season_year")] || cols[idx("season")]) || new Date().getFullYear(),
+        sourceUrl,
+        sourceName: cols[idx("source_name")] || "Manual CSV import",
+        sourceType: "csv_import",
+        sourceState: "FL",
+        sourceSchool: school,
+      });
+    }
+  }
+  return { players, errors };
+}
+
 function loadNces(states, limitPerState) {
   const full = join(ROOT, "data/nces/schools.json");
   const sample = join(ROOT, "src/data/seed/schools-nces-sample.json");
@@ -715,12 +1001,44 @@ async function main() {
       summary.errors.push(...tx.errors);
       summary.byState.TX = { playersRaw: tx.players.length };
     }
-    for (const st of ["FL", "GA", "OH"]) {
-      if (!args.states.includes(st)) continue;
-      summary.byState[st] = {
-        playersRaw: 0,
-        note: "School directory only — player automation unavailable; use CSV",
+    if (args.states.includes("OH")) {
+      console.log("Fetching OPSMA All-Ohio...");
+      const oh = await fetchOhioPlayers();
+      allPlayers.push(...oh.players);
+      summary.errors.push(...oh.errors);
+      summary.blockedSources.push(...oh.blocked);
+      summary.byState.OH = { playersRaw: oh.players.length };
+    }
+    if (args.states.includes("GA")) {
+      console.log("Fetching GPB All-State...");
+      const ga = await fetchGeorgiaPlayers();
+      allPlayers.push(...ga.players);
+      summary.errors.push(...ga.errors);
+      summary.blockedSources.push(...ga.blocked);
+      summary.blockedSources.push("GHSA.net unstable/500 — partnership/CSV for full dumps");
+      summary.byState.GA = { playersRaw: ga.players.length };
+    }
+    if (args.states.includes("FL")) {
+      console.log("Loading Florida CSV (association sites paywalled/robots-blocked)...");
+      const fl = loadFloridaCsvPlayers();
+      allPlayers.push(...fl.players);
+      summary.errors.push(...fl.errors);
+      summary.blockedSources.push(
+        "floridahsfootball.com all-state — membership paywall",
+        "fhsaa.org — robots Disallow:/",
+        "FL: use data/ingestion/sources/florida/*.csv or CFBD_API_KEY",
+      );
+      summary.byState.FL = {
+        playersRaw: fl.players.length,
+        note: "CSV/CFBD only — commercial all-state paywalled",
       };
+    }
+    if (args.states.includes("AL")) {
+      console.log("Fetching ASWA All-State (stretch)...");
+      const al = await fetchAlabamaPlayers();
+      allPlayers.push(...al.players);
+      summary.errors.push(...al.errors);
+      summary.byState.AL = { playersRaw: al.players.length };
     }
   }
 
@@ -751,7 +1069,11 @@ async function main() {
   const dataSourceIdByName = new Map([
     ["NCES Common Core of Data (CCD)", uuidFromKey("ds:nces")],
     ["CIF Southern Section All-CIF Football", uuidFromKey("ds:cifss-allcif")],
+    ["Cal-Hi Sports All-State Football", uuidFromKey("ds:calhisports")],
     ["Texas Sports Writers Association All-State Football", uuidFromKey("ds:tswa")],
+    ["Ohio Prep Sports Media Association All-Ohio Football", uuidFromKey("ds:opsma-oh")],
+    ["GPB Sports All-State Football", uuidFromKey("ds:gpb-ga")],
+    ["Alabama Sports Writers Association All-State Football", uuidFromKey("ds:aswa-al")],
     ["Manual CSV import", uuidFromKey("ds:csv")],
   ]);
 
@@ -763,7 +1085,11 @@ SELECT v.id::uuid, v.name, v.source_type, v.base_url, v.robots_allowed, v.licens
 FROM (VALUES
   (${sqlStr(dataSourceIdByName.get("NCES Common Core of Data (CCD)"))}, 'NCES Common Core of Data (CCD)', 'nces_ccd', 'https://nces.ed.gov/ccd/files.asp', true, 'public domain', NULL, 'permitted'),
   (${sqlStr(dataSourceIdByName.get("CIF Southern Section All-CIF Football"))}, 'CIF Southern Section All-CIF Football', 'state_association', 'https://cifss.org/allcifss/', true, 'public honor rolls', 'CA', 'permitted'),
+  (${sqlStr(dataSourceIdByName.get("Cal-Hi Sports All-State Football"))}, 'Cal-Hi Sports All-State Football', 'media_public', 'https://www.calhisports.com/cal-hi-sports-archives/', true, 'public media lists (non-paywalled)', 'CA', 'permitted'),
   (${sqlStr(dataSourceIdByName.get("Texas Sports Writers Association All-State Football"))}, 'Texas Sports Writers Association All-State Football', 'state_association', 'https://txswa.org/', true, 'public media lists', 'TX', 'permitted'),
+  (${sqlStr(dataSourceIdByName.get("Ohio Prep Sports Media Association All-Ohio Football"))}, 'Ohio Prep Sports Media Association All-Ohio Football', 'state_association', 'https://ohsaaweb.blob.core.windows.net/files/Sports/Football/2024/2024-fb-all-ohio.pdf', true, 'public OPSMA honor roll PDF via OHSAA', 'OH', 'permitted'),
+  (${sqlStr(dataSourceIdByName.get("GPB Sports All-State Football"))}, 'GPB Sports All-State Football', 'state_association', 'https://www.gpb.org/blogs/gpb-sports-blog/2024/12/24/2024-gpb-all-state-team', true, 'public GPB media honor roll', 'GA', 'permitted'),
+  (${sqlStr(dataSourceIdByName.get("Alabama Sports Writers Association All-State Football"))}, 'Alabama Sports Writers Association All-State Football', 'state_association', 'https://www.aswa.org/', true, 'public ASWA media selections', 'AL', 'permitted'),
   (${sqlStr(dataSourceIdByName.get("Manual CSV import"))}, 'Manual CSV import', 'csv_import', NULL, false, 'operator permitted', NULL, 'permitted')
 ) AS v(id, name, source_type, base_url, robots_allowed, license_notes, state_code, permission_status)
 WHERE NOT EXISTS (SELECT 1 FROM takkle.data_sources d WHERE d.name = v.name OR d.id = v.id::uuid);

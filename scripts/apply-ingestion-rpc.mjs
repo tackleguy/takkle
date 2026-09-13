@@ -60,9 +60,34 @@ async function rpc(name, payload) {
 async function main() {
   const runDir =
     process.argv[2] ||
-    join(ROOT, "data/ingestion/run-2026-09-12T21-16-50-627Z");
-  const schools = JSON.parse(readFileSync(join(runDir, "schools.json"), "utf8"));
+    join(ROOT, "data/ingestion/run-2026-09-13T00-21-42-543Z");
+  let schools = existsSync(join(runDir, "schools.json"))
+    ? JSON.parse(readFileSync(join(runDir, "schools.json"), "utf8"))
+    : [];
   const players = JSON.parse(readFileSync(join(runDir, "players.json"), "utf8"));
+
+  // Derive association schools from players when schools.json is empty (players-only runs)
+  if (!schools.length && players.length) {
+    const seen = new Map();
+    for (const p of players) {
+      const slug = `${slugify(p.schoolName)}-${p.stateCode.toLowerCase()}`;
+      if (seen.has(slug)) continue;
+      const id = uuidFromKey(`assoc-school:${p.stateCode}:${slugify(p.schoolName)}`);
+      seen.set(slug, {
+        id,
+        name: p.schoolName,
+        slug,
+        city: null,
+        stateCode: p.stateCode,
+        ncesId: null,
+        websiteUrl: null,
+        sourceUrl: p.sourceUrl,
+        sourceType: p.sourceType,
+        sourceName: p.sourceName,
+      });
+    }
+    schools = [...seen.values()];
+  }
 
   console.log(`Schools: ${schools.length}, Players: ${players.length}`);
 
@@ -97,8 +122,16 @@ async function main() {
   const ds = {
     "CIF Southern Section All-CIF Football":
       process.env.DS_CIFSS || "d68f9dfa-9234-4277-9a91-22fbcea4b035",
+    "Cal-Hi Sports All-State Football":
+      process.env.DS_CALHI || "e8c91b35-45fd-5ca1-91ba-10da792293f8",
     "Texas Sports Writers Association All-State Football":
       process.env.DS_TSWA || "987a6889-e210-4015-aab7-339f18787f63",
+    "Ohio Prep Sports Media Association All-Ohio Football":
+      process.env.DS_OPSMA || "f149a003-3e2c-4a55-8bcc-3498db6f94f6",
+    "GPB Sports All-State Football":
+      process.env.DS_GPB || "8a0af6fb-1846-48fe-be0a-9ec96f90f978",
+    "Alabama Sports Writers Association All-State Football":
+      process.env.DS_ASWA || "3eecb867-64ea-4e30-8d8b-8889c4cc042c",
     "Manual CSV import":
       process.env.DS_CSV || "81a7db23-a197-483f-86f8-df205417defa",
     "NCES Common Core of Data (CCD)":

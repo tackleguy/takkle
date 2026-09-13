@@ -27,13 +27,16 @@ export function parsePlayerCsv(csv: string): {
       ""
     ).toUpperCase();
     const sourceUrl = cols[idx("source_url")] || cols[idx("url")] || undefined;
+    const sourceName =
+      cols[idx("source_name")] || cols[idx("source")] || "Manual CSV import";
 
     if (!firstName || !lastName || !schoolName || !stateCode) {
       errors.push(`Row ${i + 2}: missing required first_name/last_name/school/state`);
       return;
     }
     if (!sourceUrl) {
-      errors.push(`Row ${i + 2}: source_url recommended for provenance`);
+      errors.push(`Row ${i + 2}: source_url required for provenance (skipped)`);
+      return;
     }
 
     const heightRaw = cols[idx("height")] || "";
@@ -59,8 +62,8 @@ export function parsePlayerCsv(csv: string): {
       stateCode,
       seasonYear,
       sourceUrl,
-      sourceName: cols[idx("source_name")] || "Manual CSV import",
-      sourceType: "csv_import",
+      sourceName,
+      sourceType: cols[idx("source_type")] || "csv_import",
       sourceState: stateCode,
       sourceSchool: normalizeName(schoolName),
     });
