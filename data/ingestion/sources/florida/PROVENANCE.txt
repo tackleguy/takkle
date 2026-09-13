@@ -1,0 +1,8 @@
+Florida player automation status:
+BLOCKED / partnership required:
+  - floridahsfootball.com all-state teams (Paid Memberships Pro paywall)
+  - FHSAA.org (robots User-agent:* Disallow:/)
+  - MaxPreps / commercial score sites (robots/WAF)
+PERMITTED paths:
+  - Operator CSV import (data/ingestion/sources/florida/*.csv) with source_url provenance
+  - CFBD recruiting API when CFBD_API_KEY is set (licensed; not full rosters)

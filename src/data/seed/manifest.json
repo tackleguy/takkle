@@ -1,0 +1,16 @@
+{
+  "version": "2026.1",
+  "generatedAt": "2026-09-12T20:49:44.202Z",
+  "playerCount": 3000,
+  "schoolCount": 50,
+  "chunks": [
+    "players-chunk-0.json",
+    "players-chunk-1.json",
+    "players-chunk-2.json",
+    "players-chunk-3.json",
+    "players-chunk-4.json",
+    "players-chunk-5.json"
+  ],
+  "featuredSlug": "john-smith-qb-2028-miami-central-fl",
+  "isSynthetic": true
+}

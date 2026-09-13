@@ -1,0 +1,11 @@
+# Takkle — local Supabase CLI config (optional)
+# Project uses schema `takkle` alongside any existing public tables.
+
+[api]
+enabled = true
+schemas = ["public", "takkle", "graphql_public"]
+extra_search_path = ["public", "takkle", "extensions"]
+max_rows = 1000
+
+[db]
+major_version = 15

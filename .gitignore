@@ -38,3 +38,20 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# NCES CCD downloads + full school dumps (regenerate via scripts/import-nces-schools.mjs)
+/data/nces/raw/
+/data/nces/schools.json
+/data/nces/schools.sql
+
+# Ingestion run artifacts (JSON/SQL batches); regenerate via npm run ingest:permitted
+/data/ingestion/run-*/
+/data/ingestion/_apply_*.sql
+/data/ingestion/g_*.sql
+
+# CFBD recruiting downloads + full player dumps (regenerate via scripts/import-cfbd-recruits.mjs)
+/data/cfbd/raw/
+/data/cfbd/players.json
+/data/cfbd/players-chunk-*.json
+/data/cfbd/manifest.json
+.cursor/

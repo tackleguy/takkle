@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Metadata } from "next";
-import { states, getStatusColor, getStatusLabel } from "@/data/states";
+import StateSelector from "@/components/StateSelector";
+import { states, getStatusColor, getStatusLabel, getStatusCounts } from "@/data/states";
 
 export const metadata: Metadata = {
   title: "High School NIL Rules by State (2026) | Takkle",
@@ -26,6 +27,7 @@ export const metadata: Metadata = {
 };
 
 export default function NILRulesIndex() {
+  const counts = getStatusCounts();
   const permitted = states.filter((s) => s.status === "permitted");
   const prohibited = states.filter((s) => s.status === "prohibited");
   const limited = states.filter((s) => s.status === "limited");
@@ -74,10 +76,27 @@ export default function NILRulesIndex() {
           <h1 className="text-3xl sm:text-4xl font-bold font-[family-name:var(--font-heading)] mb-4">
             High School NIL Rules by State
           </h1>
-          <p className="text-lg text-text-secondary mb-12">
+          <p className="text-lg text-text-secondary mb-8">
             Select your state to see a full breakdown of NIL rules, restrictions,
             and what your athlete can and can&apos;t do.
           </p>
+
+          {/* NIL Rules Checker — moved from homepage */}
+          <div className="mb-12 rounded-xl border border-border bg-bg-card p-6">
+            <h2 className="text-xl font-bold font-[family-name:var(--font-display)] text-text-primary mb-2">
+              NIL Rules Checker
+            </h2>
+            <p className="text-sm text-text-secondary mb-4">
+              Find out in seconds whether your state permits high school NIL deals.
+            </p>
+            <div className="flex flex-wrap gap-4 mb-6 text-sm text-text-secondary">
+              <span><strong className="text-status-permitted">{counts.permitted}</strong> permit</span>
+              <span><strong className="text-status-prohibited">{counts.prohibited}</strong> prohibit</span>
+              <span><strong className="text-status-limited">{counts.limited}</strong> limited</span>
+              <span><strong className="text-status-unclear">{counts.unclear}</strong> unclear</span>
+            </div>
+            <StateSelector />
+          </div>
 
           {/* Permitted */}
           <div className="mb-10">

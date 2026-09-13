@@ -1,0 +1,42 @@
+{
+  "version": "1",
+  "generatedAt": "2026-09-12T21:02:11.746Z",
+  "schoolYear": "2024-25",
+  "source": {
+    "schoolYear": "2024-25",
+    "label": "2024-25 CCD preliminary school directory (file 029)",
+    "zipUrl": "https://nces.ed.gov/ccd/Data/zip/ccd_sch_029_2425_w_0a_051425.zip",
+    "catalogUrl": "https://nces.ed.gov/ccd/files.asp",
+    "listingUrl": "https://nces.ed.gov/ccd/psu_rev.asp",
+    "license": "U.S. government work produced by NCES; generally public domain. Cite NCES CCD."
+  },
+  "zipUrl": "https://nces.ed.gov/ccd/Data/zip/ccd_sch_029_2425_w_0a_051425.zip",
+  "csvFile": "ccd_sch_029_2425_w_0a_051425.csv",
+  "filters": {
+    "levels": [
+      "High",
+      "Secondary"
+    ],
+    "operationalOnly": true,
+    "states": null,
+    "limit": null
+  },
+  "counts": {
+    "sourceRows": 101333,
+    "schoolsImported": 24071,
+    "sampleSize": 250,
+    "skippedClosed": 1898,
+    "skippedNonHs": 75364,
+    "skippedState": 0
+  },
+  "outputs": {
+    "full": "data/nces/schools.json",
+    "sample": "src/data/seed/schools-nces-sample.json",
+    "sql": null
+  },
+  "notes": [
+    "Full JSON is gitignored — regenerate locally with this script.",
+    "Synthetic seed schools.json remains the backbone for demo players.",
+    "Set TAKKLE_SCHOOLS_SOURCE=nces to load the NCES sample in app school helpers."
+  ]
+}

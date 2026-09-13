@@ -1,110 +1,136 @@
-import StateSelector from "@/components/StateSelector";
-import { getStatusCounts } from "@/data/states";
+import Link from "next/link";
+import Button from "@/components/ui/Button";
+import PlayerCard from "@/components/player/PlayerCard";
+import TackleScoreDisplay from "@/components/ui/TackleScoreDisplay";
+import SyntheticNotice from "@/components/ui/SyntheticNotice";
+import { getFeaturedPlayer, getRisingPlayers, getTrendingPlayers } from "@/lib/players";
 
 export default function HomePage() {
-  const counts = getStatusCounts();
+  const featured = getFeaturedPlayer();
+  const trending = getTrendingPlayers(4);
+  const rising = getRisingPlayers(4);
 
   return (
     <>
-      {/* JSON-LD for WebApplication */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebApplication",
-            name: "Takkle NIL Rules Checker",
-            description:
-              "Free tool to check high school NIL rules for all 50 states and D.C.",
-            url: "https://takkle.com",
-            applicationCategory: "EducationalApplication",
-            operatingSystem: "All",
-            offers: {
-              "@type": "Offer",
-              price: "0",
-              priceCurrency: "USD",
-            },
-          }),
-        }}
-      />
-
-      {/* Hero */}
-      <section className="py-16 sm:py-24 px-4">
-        <div className="mx-auto max-w-4xl text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-[family-name:var(--font-heading)] leading-tight">
-            Can Your High School Athlete{" "}
-            <span className="text-accent">Get NIL Deals?</span>
+      {/* Hero — first viewport: brand + headline + sentence + CTAs + atmosphere */}
+      <section className="hero-atmosphere field-lights relative overflow-hidden px-4 pt-16 pb-20 sm:pt-24 sm:pb-28">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-turf/30 to-transparent" />
+        </div>
+        <div className="relative mx-auto max-w-4xl text-center">
+          <p className="font-[family-name:var(--font-display)] text-5xl sm:text-7xl tracking-[0.15em] text-accent mb-6">
+            TAKKLE
+          </p>
+          <h1 className="font-[family-name:var(--font-display)] text-4xl sm:text-5xl lg:text-6xl tracking-wide text-text-primary leading-tight">
+            Build your recruiting profile. Show your game. Get discovered.
           </h1>
-          <p className="mt-4 text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto">
-            Find out in 10 seconds. Select your state for a clear breakdown of
-            what your athlete can and can&apos;t do.
+          <p className="mt-5 text-lg text-text-secondary max-w-2xl mx-auto">
+            Your player-first recruiting identity — film, stats, Tackle Score™, and recruiter discovery.
           </p>
-
-          {/* Stats bar */}
-          <div className="mt-8 flex flex-wrap justify-center gap-4 sm:gap-8">
-            <div className="flex items-center gap-2">
-              <span className="w-3 h-3 rounded-full bg-status-permitted" />
-              <span className="text-sm text-text-secondary">
-                <span className="font-semibold text-text-primary">
-                  {counts.permitted}
-                </span>{" "}
-                Permit NIL
-              </span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="w-3 h-3 rounded-full bg-status-prohibited" />
-              <span className="text-sm text-text-secondary">
-                <span className="font-semibold text-text-primary">
-                  {counts.prohibited}
-                </span>{" "}
-                Prohibit NIL
-              </span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="w-3 h-3 rounded-full bg-status-limited" />
-              <span className="text-sm text-text-secondary">
-                <span className="font-semibold text-text-primary">
-                  {counts.limited}
-                </span>{" "}
-                Limited
-              </span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="w-3 h-3 rounded-full bg-status-unclear" />
-              <span className="text-sm text-text-secondary">
-                <span className="font-semibold text-text-primary">
-                  {counts.unclear}
-                </span>{" "}
-                Unclear
-              </span>
-            </div>
-          </div>
-
-          {/* Updated badge */}
-          <div className="mt-4">
-            <span className="inline-flex items-center px-3 py-1 rounded-full bg-bg-card border border-border text-xs text-text-muted">
-              Updated February 2026 &middot; All 50 States + D.C.
-            </span>
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button href="/onboarding" size="lg">
+              Claim Profile
+            </Button>
+            <Button href="/discover" variant="outline" size="lg">
+              Find Players
+            </Button>
           </div>
         </div>
       </section>
 
-      {/* State Selector */}
-      <section className="pb-16 px-4">
+      {/* Tackle Score teaser */}
+      {featured && (
+        <section className="px-4 py-16 border-t border-border">
+          <div className="mx-auto max-w-6xl">
+            <div className="grid gap-8 lg:grid-cols-2 items-center">
+              <div>
+                <p className="text-xs uppercase tracking-[0.2em] text-text-muted mb-2">Featured profile</p>
+                <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl text-text-primary">
+                  {featured.displayName}
+                </h2>
+                <p className="mt-2 text-text-secondary">
+                  {featured.position} · Class of {featured.classYear} · {featured.school.name}
+                </p>
+                <div className="mt-6">
+                  <TackleScoreDisplay
+                    score={featured.tackleScore.score}
+                    confidence={featured.tackleScore.confidence}
+                    size="lg"
+                  />
+                </div>
+                {featured.rankings?.length ? (
+                  <ul className="mt-4 flex flex-wrap gap-3 text-sm text-text-secondary">
+                    {featured.rankings.slice(0, 4).map((r) => (
+                      <li key={`${r.scope}-${r.scopeKey}`} className="rounded-md border border-border px-3 py-1">
+                        <span className="text-accent font-semibold">#{r.rank}</span> {r.label}
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
+                <div className="mt-6">
+                  <Button href={`/site/player/${featured.slug}`} variant="secondary">
+                    View full dossier
+                  </Button>
+                </div>
+              </div>
+              <div className="rounded-xl border border-border bg-field p-6">
+                <p className="text-sm text-text-secondary leading-relaxed">
+                  Tackle Score™ is Takkle&apos;s proprietary 1.0–10.0 evaluation — no star ratings.
+                  Film evaluation, production, athleticism, and competition level combine into one
+                  transparent score with confidence levels.
+                </p>
+                <SyntheticNotice compact />
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Trending & Rising */}
+      <section className="px-4 py-16 bg-field/50">
         <div className="mx-auto max-w-6xl">
-          <StateSelector />
+          <SyntheticNotice />
+          <div className="mt-6 grid gap-10 lg:grid-cols-2">
+            <div>
+              <h2 className="font-[family-name:var(--font-display)] text-2xl text-text-primary mb-4">
+                Trending Players
+              </h2>
+              <div className="grid gap-3">
+                {trending.map((p) => (
+                  <PlayerCard key={p.id} player={p} />
+                ))}
+              </div>
+            </div>
+            <div>
+              <h2 className="font-[family-name:var(--font-display)] text-2xl text-text-primary mb-4">
+                Rising This Week
+              </h2>
+              <div className="grid gap-3">
+                {rising.map((p) => (
+                  <PlayerCard key={p.id} player={p} />
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Disclaimer */}
-      <section className="pb-16 px-4">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="text-xs text-text-muted">
-            This information is for educational purposes only and is not legal
-            advice. NIL rules change frequently. Always verify current rules with
-            your state&apos;s athletic association and consult a qualified
-            attorney for specific legal guidance.
-          </p>
+      {/* NIL Rules banner */}
+      <section className="px-4 py-12">
+        <div className="mx-auto max-w-4xl">
+          <div className="rounded-xl border border-status-limited/30 bg-status-limited/5 p-6 sm:p-8 text-center">
+            <h2 className="font-[family-name:var(--font-display)] text-2xl text-text-primary">
+              High School NIL Rules
+            </h2>
+            <p className="mt-2 text-text-secondary max-w-xl mx-auto">
+              NIL rules vary by state. Check what your athlete can and can&apos;t do before pursuing deals.
+            </p>
+            <div className="mt-6">
+              <Button href="/nil-rules" variant="outline">
+                Check High School NIL Rules
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
     </>

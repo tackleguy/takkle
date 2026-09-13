@@ -1,0 +1,21 @@
+{
+  "version": "1",
+  "generatedAt": "2026-09-12T21:13:21.571Z",
+  "playerCount": 0,
+  "schoolCount": 0,
+  "chunks": [],
+  "featuredSlug": null,
+  "isSynthetic": false,
+  "source": {
+    "name": "CollegeFootballData",
+    "sourceType": "cfbd_recruiting",
+    "sourceUrl": "https://collegefootballdata.com",
+    "apiUrl": "https://api.collegefootballdata.com/recruiting/players",
+    "dataOrigin": "licensed",
+    "license": "CFBD API — commercial use in websites/apps allowed; private cache OK; do not republish as a mirror/dump API. Cite CollegeFootballData."
+  },
+  "notes": [
+    "Empty CFBD fixture — run npm run import:cfbd-recruits with CFBD_API_KEY set.",
+    "Coverage: CFBD recruiting lists ranked/known prospects, not full varsity rosters."
+  ]
+}

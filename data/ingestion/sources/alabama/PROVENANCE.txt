@@ -1,0 +1,6 @@
+source_name: Alabama Sports Writers Association All-State Football
+source_urls:
+  - https://www.floridatoday.com/story/sports/high-school/football/2025/12/20/alabama-all-state-high-school-football-aswa-ahsaa-aisa/87829172007/
+  - https://www.si.com/college/alabama/aswa/2022-aswa-all-state-football-teams-coaches-year
+permission: Public ASWA selections republished by news outlets; robots allow general crawlers on these hosts for article paths.
+fetched: 2026-09-12

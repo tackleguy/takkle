@@ -1,12 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg-primary: #0A0F1C;
+  --color-bg-primary: #070B14;
+  --color-field: #0E1624;
   --color-bg-card: #111827;
-  --color-bg-card-hover: #1E293B;
-  --color-accent: #F97316;
-  --color-accent-hover: #EA580C;
-  --color-text-primary: #E2E8F0;
+  --color-bg-card-hover: #1a2332;
+  --color-accent: #FF6A00;
+  --color-accent-hover: #e85f00;
+  --color-turf: #1FAF6B;
+  --color-text-primary: #F5F0E8;
   --color-text-secondary: #94A3B8;
   --color-text-muted: #64748B;
   --color-status-permitted: #059669;
@@ -14,20 +16,36 @@
   --color-status-limited: #D97706;
   --color-status-unclear: #7C3AED;
   --color-border: #1E293B;
-  --font-heading: "Outfit", sans-serif;
+  --font-display: "Bebas Neue", sans-serif;
+  --font-body: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 body {
   background-color: var(--color-bg-primary);
   color: var(--color-text-primary);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--font-body);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
 }
 
 ::selection {
   background-color: var(--color-accent);
   color: white;
+}
+
+/* Night-game field atmosphere */
+.hero-atmosphere {
+  background:
+    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(255, 106, 0, 0.08), transparent),
+    radial-gradient(ellipse 60% 40% at 80% 20%, rgba(31, 175, 107, 0.05), transparent),
+    linear-gradient(180deg, var(--color-bg-primary) 0%, var(--color-field) 100%);
+}
+
+.field-lights {
+  background-image:
+    radial-gradient(circle at 20% 10%, rgba(255, 255, 255, 0.03) 0%, transparent 8%),
+    radial-gradient(circle at 80% 10%, rgba(255, 255, 255, 0.03) 0%, transparent 8%);
 }

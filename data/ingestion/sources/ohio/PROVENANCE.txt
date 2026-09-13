@@ -1,0 +1,5 @@
+source_name: Ohio Prep Sports Media Association All-Ohio Football
+source_url: https://ohsaaweb.blob.core.windows.net/files/Sports/Football/2024/2024-fb-all-ohio.pdf
+publisher: OHSAA / OPSMA
+permission: Public association honor roll PDF hosted by OHSAA; robots allow /news-media/; blob PDF is publicly linked from OHSAA announcements.
+fetched: 2026-09-12

@@ -1,0 +1,5 @@
+source_name: GPB Sports All-State Football
+source_url: https://www.gpb.org/blogs/gpb-sports-blog/2024/12/24/2024-gpb-all-state-team
+publisher: Georgia Public Broadcasting
+permission: Public media honor roll; robots Allow:/ for *; Content-Signal ai-train=no (directory indexing / reference use).
+fetched: 2026-09-12
