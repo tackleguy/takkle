@@ -17,7 +17,7 @@ const SEED = 42;
 
 const STATES = ["CA", "TX", "FL", "GA", "OH"];
 const POSITIONS = ["QB", "RB", "WR", "TE", "OL", "DL", "LB", "DB", "K", "P", "ATH"];
-const CLASS_YEARS = [2025, 2026, 2027, 2028, 2029];
+const CLASS_YEARS = [2027, 2028, 2029, 2030, 2031];
 
 const FIRST_NAMES = [
   "James", "Michael", "Marcus", "Jayden", "Tyler", "Brandon", "DeShawn", "Cameron",

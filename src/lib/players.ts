@@ -9,6 +9,7 @@ import chunk2 from "@/data/seed/players-chunk-2.json";
 import chunk3 from "@/data/seed/players-chunk-3.json";
 import chunk4 from "@/data/seed/players-chunk-4.json";
 import chunk5 from "@/data/seed/players-chunk-5.json";
+import { isRecruitClassYear } from "@/lib/recruiting/class-years";
 import type {
   Player,
   PlayerSearchFilters,
@@ -194,7 +195,10 @@ export function searchPlayers(
   page = 1,
   pageSize = 24,
 ): PlayerSearchResult {
-  const filtered = getAllPlayers().filter((p) => matchesFilters(p, filters));
+  const filtered = getAllPlayers().filter((p) => {
+    if (!isRecruitClassYear(p.classYear)) return false;
+    return matchesFilters(p, filters);
+  });
   const start = (page - 1) * pageSize;
   return {
     players: filtered.slice(start, start + pageSize),
@@ -208,7 +212,7 @@ export function getRankings(
   filters: RankingFilters,
   limit = 50,
 ): Player[] {
-  let pool = getAllPlayers();
+  let pool = getAllPlayers().filter((p) => isRecruitClassYear(p.classYear));
 
   if (filters.stateCode) {
     pool = pool.filter((p) => p.stateCode === filters.stateCode);

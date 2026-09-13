@@ -1,11 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import Button from "@/components/ui/Button";
-import { searchPlayers } from "@/lib/players";
 import { computeTackleScore } from "@/lib/scoring/tackle-score";
 import TackleScoreDisplay from "@/components/ui/TackleScoreDisplay";
-import SyntheticNotice from "@/components/ui/SyntheticNotice";
+import ClaimProfileSearch, {
+  type ClaimProfileSelection,
+} from "@/components/onboarding/ClaimProfileSearch";
 
 const STEPS = [
   "Your name",
@@ -23,12 +24,14 @@ export default function OnboardingWizard() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [school, setSchool] = useState("");
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedSlug, setSelectedSlug] = useState<string | null>(null);
+  const [selected, setSelected] = useState<ClaimProfileSelection | null>(null);
 
-  const matches = searchQuery.length >= 2
-    ? searchPlayers({ query: searchQuery }, 1, 5).players
-    : [];
+  const suggestedQuery = useMemo(() => {
+    const name = `${firstName} ${lastName}`.trim();
+    if (name.length >= 2) return name;
+    if (school.trim().length >= 2) return school.trim();
+    return "";
+  }, [firstName, lastName, school]);
 
   const previewScore = computeTackleScore({
     filmEvaluation: 7,
@@ -104,32 +107,15 @@ export default function OnboardingWizard() {
           <>
             <h2 className="font-[family-name:var(--font-display)] text-2xl">Find your profile</h2>
             <p className="mt-2 text-sm text-text-secondary">
-              Search our database for an existing player record to claim.
+              Search the live player database, scroll the matches, and tap{" "}
+              <span className="text-text-primary">Is this you?</span>
             </p>
-            <input
-              className="mt-4 w-full rounded-lg border border-border bg-field px-4 py-3 text-text-primary"
-              placeholder="Search by name..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+            <ClaimProfileSearch
+              className="mt-4"
+              selectedSlug={selected?.slug ?? null}
+              initialQuery={suggestedQuery}
+              onSelect={(player) => setSelected(player)}
             />
-            <SyntheticNotice compact />
-            <ul className="mt-4 space-y-2">
-              {matches.map((p) => (
-                <li key={p.id}>
-                  <button
-                    type="button"
-                    onClick={() => setSelectedSlug(p.slug)}
-                    className={`w-full rounded-lg border px-4 py-3 text-left text-sm transition-colors ${
-                      selectedSlug === p.slug
-                        ? "border-accent bg-accent/10"
-                        : "border-border hover:border-accent/40"
-                    }`}
-                  >
-                    {p.displayName} — {p.position}, {p.school.name}
-                  </button>
-                </li>
-              ))}
-            </ul>
           </>
         )}
 
@@ -139,10 +125,20 @@ export default function OnboardingWizard() {
             <p className="mt-2 text-text-secondary">
               Confirm this is your recruiting profile. player_id is separate from your login account.
             </p>
-            {selectedSlug ? (
-              <p className="mt-4 rounded-lg border border-turf/40 bg-turf/10 px-4 py-3 text-sm">
-                Selected: {selectedSlug}
-              </p>
+            {selected ? (
+              <div className="mt-4 rounded-lg border border-turf/40 bg-turf/10 px-4 py-3 text-sm">
+                <p className="font-[family-name:var(--font-display)] text-xl text-text-primary">
+                  {selected.displayName}
+                </p>
+                <p className="mt-1 text-text-secondary">
+                  {[selected.position, selected.classYear ? `Class of ${selected.classYear}` : null]
+                    .filter(Boolean)
+                    .join(" · ")}
+                </p>
+                <p className="text-text-muted">
+                  {[selected.schoolName, selected.stateCode].filter(Boolean).join(" · ")}
+                </p>
+              </div>
             ) : (
               <p className="mt-4 text-sm text-text-muted">No profile selected — go back to search.</p>
             )}
@@ -183,7 +179,10 @@ export default function OnboardingWizard() {
             <div className="mt-4 space-y-2">
               {["Season Highlights — suggested match 92%", "Game vs Central — suggested match 78%"].map(
                 (label) => (
-                  <label key={label} className="flex items-center gap-3 rounded-lg border border-border px-4 py-3 text-sm">
+                  <label
+                    key={label}
+                    className="flex items-center gap-3 rounded-lg border border-border px-4 py-3 text-sm"
+                  >
                     <input type="checkbox" className="accent-accent" />
                     {label}
                   </label>
@@ -214,7 +213,9 @@ export default function OnboardingWizard() {
             Back
           </Button>
           {step < STEPS.length - 1 ? (
-            <Button onClick={next}>Continue</Button>
+            <Button onClick={next} disabled={step === 2 && !selected}>
+              Continue
+            </Button>
           ) : (
             <Button href="/auth/signup">Create account</Button>
           )}

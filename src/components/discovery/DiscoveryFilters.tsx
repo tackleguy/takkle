@@ -2,10 +2,10 @@
 
 import { useRouter, useSearchParams } from "next/navigation";
 import type { FootballPosition } from "@/types/recruiting";
+import { RECRUIT_CLASS_YEARS } from "@/lib/recruiting/class-years";
 
 const STATES = ["CA", "TX", "FL", "GA", "OH"];
 const POSITIONS: FootballPosition[] = ["QB", "RB", "WR", "TE", "OL", "DL", "LB", "DB", "K", "P", "ATH"];
-const CLASS_YEARS = [2025, 2026, 2027, 2028, 2029];
 
 export default function DiscoveryFilters() {
   const router = useRouter();
@@ -70,8 +70,8 @@ export default function DiscoveryFilters() {
           value={params.get("class") ?? ""}
           onChange={(e) => update("class", e.target.value)}
         >
-          <option value="">All classes</option>
-          {CLASS_YEARS.map((y) => (
+          <option value="">2027–2031</option>
+          {RECRUIT_CLASS_YEARS.map((y) => (
             <option key={y} value={y}>{y}</option>
           ))}
         </select>

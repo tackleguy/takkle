@@ -2,33 +2,41 @@
 
 import { useRouter, useSearchParams } from "next/navigation";
 import type { FootballPosition, RankingScope } from "@/types/recruiting";
+import {
+  DEFAULT_RECRUIT_CLASS,
+  RECRUIT_CLASS_YEARS,
+} from "@/lib/recruiting/class-years";
+import { RANKING_POSITIONS } from "@/lib/scoring/research-rankings";
 
 const SCOPES: { value: RankingScope; label: string }[] = [
+  { value: "position", label: "By Position" },
   { value: "national", label: "National" },
   { value: "state", label: "State" },
-  { value: "position", label: "Position" },
   { value: "class", label: "Class" },
 ];
 
 const STATES = ["CA", "TX", "FL", "GA", "OH"];
-const POSITIONS: FootballPosition[] = ["QB", "RB", "WR", "TE", "OL", "DL", "LB", "DB", "K", "P", "ATH"];
-const CLASS_YEARS = [2025, 2026, 2027, 2028, 2029];
 
 export default function RankingsFilters() {
   const router = useRouter();
   const params = useSearchParams();
 
-  function update(key: string, value: string) {
+  function update(updates: Record<string, string | null>) {
     const next = new URLSearchParams(params.toString());
-    if (value) next.set(key, value);
-    else next.delete(key);
+    for (const [key, value] of Object.entries(updates)) {
+      if (value) next.set(key, value);
+      else next.delete(key);
+    }
     router.push(`/rankings?${next.toString()}`);
   }
 
   const selectClass =
     "rounded-lg border border-border bg-field px-3 py-2 text-sm text-text-primary focus:border-accent focus:outline-none";
 
-  const scope = (params.get("scope") ?? "national") as RankingScope;
+  const scope = (params.get("scope") ?? "position") as RankingScope;
+  const position = params.get("position") ?? "QB";
+  const classYear = params.get("class") ?? String(DEFAULT_RECRUIT_CLASS);
+  const state = params.get("state") ?? "CA";
 
   return (
     <div className="flex flex-wrap gap-3">
@@ -36,7 +44,17 @@ export default function RankingsFilters() {
         <button
           key={value}
           type="button"
-          onClick={() => update("scope", value)}
+          onClick={() => {
+            if (value === "position") {
+              update({ scope: value, position, class: classYear });
+            } else if (value === "state") {
+              update({ scope: value, state });
+            } else if (value === "class") {
+              update({ scope: value, class: classYear });
+            } else {
+              update({ scope: value });
+            }
+          }}
           className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors ${
             scope === value
               ? "bg-accent text-white"
@@ -46,19 +64,48 @@ export default function RankingsFilters() {
           {label}
         </button>
       ))}
-      {scope === "state" && (
-        <select className={selectClass} value={params.get("state") ?? "FL"} onChange={(e) => update("state", e.target.value)}>
-          {STATES.map((s) => <option key={s} value={s}>{s}</option>)}
+
+      {(scope === "position" || scope === "class") && (
+        <select
+          className={selectClass}
+          value={classYear}
+          onChange={(e) => update({ class: e.target.value, scope })}
+        >
+          {RECRUIT_CLASS_YEARS.map((y) => (
+            <option key={y} value={y}>
+              Class of {y}
+            </option>
+          ))}
         </select>
       )}
+
       {scope === "position" && (
-        <select className={selectClass} value={params.get("position") ?? "QB"} onChange={(e) => update("position", e.target.value)}>
-          {POSITIONS.map((p) => <option key={p} value={p}>{p}</option>)}
+        <select
+          className={selectClass}
+          value={position}
+          onChange={(e) =>
+            update({ position: e.target.value as FootballPosition, scope: "position" })
+          }
+        >
+          {RANKING_POSITIONS.map((p) => (
+            <option key={p} value={p}>
+              {p}
+            </option>
+          ))}
         </select>
       )}
-      {scope === "class" && (
-        <select className={selectClass} value={params.get("class") ?? "2028"} onChange={(e) => update("class", e.target.value)}>
-          {CLASS_YEARS.map((y) => <option key={y} value={y}>{y}</option>)}
+
+      {scope === "state" && (
+        <select
+          className={selectClass}
+          value={state}
+          onChange={(e) => update({ state: e.target.value, scope: "state" })}
+        >
+          {STATES.map((s) => (
+            <option key={s} value={s}>
+              {s}
+            </option>
+          ))}
         </select>
       )}
     </div>

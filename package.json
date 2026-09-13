@@ -11,7 +11,8 @@
     "import:nces-schools": "node scripts/import-nces-schools.mjs",
     "import:cfbd-recruits": "node scripts/import-cfbd-recruits.mjs",
     "ingest:permitted": "node scripts/run-ingestion.mjs",
-    "ingest:apply": "node scripts/apply-ingestion-rpc.mjs"
+    "ingest:apply": "node scripts/apply-ingestion-rpc.mjs",
+    "rankings:compute": "node scripts/compute-rankings.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.6.1",

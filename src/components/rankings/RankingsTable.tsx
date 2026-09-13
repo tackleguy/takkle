@@ -1,13 +1,26 @@
 import Link from "next/link";
-import type { Player } from "@/types/recruiting";
+import type { RankedPlayerRow } from "@/lib/rankings";
 import { formatTackleScore } from "@/lib/scoring/tackle-score";
 
 interface RankingsTableProps {
-  players: Player[];
-  startRank?: number;
+  rows: RankedPlayerRow[];
 }
 
-export default function RankingsTable({ players, startRank = 1 }: RankingsTableProps) {
+export default function RankingsTable({ rows }: RankingsTableProps) {
+  if (rows.length === 0) {
+    return (
+      <div className="rounded-xl border border-border bg-bg-card px-6 py-12 text-center">
+        <p className="font-[family-name:var(--font-display)] text-2xl text-text-primary">
+          No ranked players yet
+        </p>
+        <p className="mt-2 text-sm text-text-muted">
+          Rankings cover recruiting classes 2027–2031 by position. Add film and stats to raise
+          confidence beyond honor-roll research signals.
+        </p>
+      </div>
+    );
+  }
+
   return (
     <div className="overflow-hidden rounded-xl border border-border">
       <table className="w-full text-sm">
@@ -22,13 +35,14 @@ export default function RankingsTable({ players, startRank = 1 }: RankingsTableP
           </tr>
         </thead>
         <tbody>
-          {players.map((player, i) => (
+          {rows.map(({ rank, score, isRising, player }) => (
             <tr
               key={player.id}
               className="border-b border-border/60 bg-bg-card transition-colors hover:bg-bg-card-hover"
             >
               <td className="px-4 py-3 font-[family-name:var(--font-display)] text-lg text-text-muted">
-                {startRank + i}
+                {rank}
+                {isRising && <span className="ml-1 text-turf text-xs">↑</span>}
               </td>
               <td className="px-4 py-3">
                 <Link
@@ -44,11 +58,18 @@ export default function RankingsTable({ players, startRank = 1 }: RankingsTableP
               <td className="px-4 py-3 hidden sm:table-cell text-text-secondary">
                 {player.school.name}, {player.stateCode}
               </td>
-              <td className="px-4 py-3 hidden md:table-cell text-text-secondary">{player.position}</td>
-              <td className="px-4 py-3 hidden md:table-cell text-text-secondary">{player.classYear}</td>
+              <td className="px-4 py-3 hidden md:table-cell text-text-secondary">
+                {player.position}
+              </td>
+              <td className="px-4 py-3 hidden md:table-cell text-text-secondary">
+                {player.classYear}
+              </td>
               <td className="px-4 py-3 text-right">
                 <span className="font-[family-name:var(--font-display)] text-xl text-accent">
-                  {formatTackleScore(player.tackleScore.score)}
+                  {score != null ? formatTackleScore(score) : "—"}
+                </span>
+                <span className="block text-[10px] uppercase tracking-wide text-text-muted">
+                  Limited data
                 </span>
               </td>
             </tr>

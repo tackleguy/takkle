@@ -2,14 +2,22 @@ import { Suspense } from "react";
 import type { Metadata } from "next";
 import RankingsFilters from "@/components/rankings/RankingsFilters";
 import RankingsTable from "@/components/rankings/RankingsTable";
-import SyntheticNotice from "@/components/ui/SyntheticNotice";
-import { getRankings } from "@/lib/players";
+import { getLiveRankings } from "@/lib/rankings";
+import {
+  DEFAULT_RECRUIT_CLASS,
+  RECRUIT_CLASS_MAX,
+  RECRUIT_CLASS_MIN,
+  isRecruitClassYear,
+} from "@/lib/recruiting/class-years";
 import type { FootballPosition, RankingScope } from "@/types/recruiting";
 
 export const metadata: Metadata = {
   title: "Rankings",
-  description: "National, state, position, and class rankings powered by Tackle Score™.",
+  description:
+    "Position rankings for recruiting classes 2027–2031 powered by research-informed Tackle Score™.",
 };
+
+export const dynamic = "force-dynamic";
 
 interface PageProps {
   searchParams: Promise<Record<string, string | undefined>>;
@@ -17,26 +25,30 @@ interface PageProps {
 
 export default async function RankingsPage({ searchParams }: PageProps) {
   const params = await searchParams;
-  const scope = (params.scope ?? "national") as RankingScope;
+  const scope = (params.scope ?? "position") as RankingScope;
+  const classYearRaw = params.class ? Number(params.class) : DEFAULT_RECRUIT_CLASS;
+  const classYear = isRecruitClassYear(classYearRaw) ? classYearRaw : DEFAULT_RECRUIT_CLASS;
+  const position = (params.position ?? "QB") as FootballPosition;
+  const stateCode = params.state ?? "CA";
 
-  const players = getRankings(
+  const { rows, source, version } = await getLiveRankings(
     {
       scope,
-      stateCode: params.state,
-      position: params.position as FootballPosition | undefined,
-      classYear: params.class ? Number(params.class) : undefined,
+      stateCode: scope === "state" ? stateCode : undefined,
+      position: scope === "position" ? position : undefined,
+      classYear: scope === "position" || scope === "class" ? classYear : undefined,
     },
     50,
   );
 
   const title =
     scope === "national"
-      ? "National Rankings"
+      ? "National Rankings (2027–2031)"
       : scope === "state"
-        ? `${params.state ?? "FL"} State Rankings`
-        : scope === "position"
-          ? `${params.position ?? "QB"} Rankings`
-          : `Class of ${params.class ?? "2028"} Rankings`;
+        ? `${stateCode} State Rankings`
+        : scope === "class"
+          ? `Class of ${classYear} Rankings`
+          : `${position} Rankings · Class of ${classYear}`;
 
   return (
     <div className="px-4 py-10 sm:py-14">
@@ -45,11 +57,14 @@ export default async function RankingsPage({ searchParams }: PageProps) {
           {title}
         </h1>
         <p className="mt-2 text-text-secondary">
-          Rankings based on Tackle Score™ — no star ratings.
+          Position-first rankings for recruiting classes {RECRUIT_CLASS_MIN}–{RECRUIT_CLASS_MAX}.
+          Built from permitted association honor rolls and competition depth — film grades added
+          when evaluations exist. No star ratings.
         </p>
         <p className="mt-2 text-sm text-text-muted">
-          Rankings coming as player evaluations are completed. Imported roster honor-roll
-          players start as Not Yet Rated until film and evaluations exist.
+          Methodology: evaluate within position (production proxies from All-State / All-CIF /
+          All-Ohio), state competition tier, multi-source consistency, and underclass recruiting
+          signal. Confidence remains Limited until film is confirmed. Source: {source} · {version}
         </p>
 
         <div className="mt-8">
@@ -59,11 +74,7 @@ export default async function RankingsPage({ searchParams }: PageProps) {
         </div>
 
         <div className="mt-6">
-          <SyntheticNotice />
-        </div>
-
-        <div className="mt-6">
-          <RankingsTable players={players} />
+          <RankingsTable rows={rows} />
         </div>
       </div>
     </div>
