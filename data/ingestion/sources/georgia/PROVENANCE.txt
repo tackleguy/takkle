@@ -3,3 +3,8 @@ source_url: https://www.gpb.org/blogs/gpb-sports-blog/2024/12/24/2024-gpb-all-st
 publisher: Georgia Public Broadcasting
 permission: Public media honor roll; robots Allow:/ for *; Content-Signal ai-train=no (directory indexing / reference use).
 fetched: 2026-09-12
+
+Additional years (2026-09-13):
+  - https://www.gpb.org/blogs/gpb-sports-blog/2023/12/23/2023-gpb-all-state-all-star-team
+  - https://www.gpb.org/blogs/gpb-sports-blog/2025/12/22/gpb-all-state-football-team
+permission: gpb.org robots Allow:/ ; public media honor rolls.

@@ -1,11 +1,9 @@
 /**
  * Ohio Prep Sports Media Association (OPSMA) All-Ohio Football.
- * Primary: public PDF hosted by OHSAA.
- * https://ohsaaweb.blob.core.windows.net/files/Sports/Football/2024/2024-fb-all-ohio.pdf
- * Also mirrored on OHSAA news pages under /news-media/articles/ (robots-allowed).
+ * Public PDFs hosted by OHSAA on Azure blob (robots-friendly).
  */
 
-import { readFileSync, existsSync } from "node:fs";
+import { readFileSync, existsSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import { isUrlAllowed, USER_AGENT } from "../shared/robots";
 import {
@@ -17,8 +15,43 @@ import {
 import type { NormalizedPlayerRecord } from "../types";
 
 export const OPSMA_SOURCE_NAME = "Ohio Prep Sports Media Association All-Ohio Football";
-export const OPSMA_PDF_2024 =
-  "https://ohsaaweb.blob.core.windows.net/files/Sports/Football/2024/2024-fb-all-ohio.pdf";
+
+export interface OpsmaYearSpec {
+  seasonEndYear: number;
+  url: string;
+  snapshot: string;
+}
+
+/** Multi-year public OPSMA PDFs (probed 2026-09-13). */
+export const OPSMA_YEAR_SPECS: OpsmaYearSpec[] = [
+  {
+    seasonEndYear: 2022,
+    url: "https://ohsaaweb.blob.core.windows.net/files/Sports/Football/2021/2021OPSWAAll_OhioFB.pdf",
+    snapshot: "2021-opsma-all-ohio.txt",
+  },
+  {
+    seasonEndYear: 2023,
+    url: "https://ohsaaweb.blob.core.windows.net/files/Sports/Football/2022/2022OPSWAAll_OhioFB.pdf",
+    snapshot: "2022-opsma-all-ohio.txt",
+  },
+  {
+    seasonEndYear: 2024,
+    url: "https://ohsaaweb.blob.core.windows.net/files/Sports/Football/2023/2023_football_all-ohio.pdf",
+    snapshot: "2023-opsma-all-ohio.txt",
+  },
+  {
+    seasonEndYear: 2025,
+    url: "https://ohsaaweb.blob.core.windows.net/files/Sports/Football/2024/2024-fb-all-ohio.pdf",
+    snapshot: "2024-opsma-all-ohio.txt",
+  },
+  {
+    seasonEndYear: 2026,
+    url: "https://ohsaaweb.blob.core.windows.net/files/Sports/Football/2025/2025-opsma-football-all-ohio.pdf",
+    snapshot: "2025-opsma-all-ohio.txt",
+  },
+];
+
+export const OPSMA_PDF_2024 = OPSMA_YEAR_SPECS.find((s) => s.seasonEndYear === 2025)!.url;
 
 const GRADE_MAP: Record<string, number> = {
   sr: 12,
@@ -78,7 +111,7 @@ export function parseOpsmaText(
     if (!firstName || !lastName || school.length < 2) continue;
     if (/coach|player of the year/i.test(name)) continue;
 
-    const key = `${firstName}|${lastName}|${school}`.toLowerCase();
+    const key = `${firstName}|${lastName}|${school}|${seasonEndYear}`.toLowerCase();
     if (seen.has(key)) continue;
     seen.add(key);
 
@@ -119,7 +152,6 @@ async function fetchPdfText(url: string): Promise<string | null> {
     });
     if (!res.ok) return null;
     const buf = Buffer.from(await res.arrayBuffer());
-    // Minimal PDF stream text extraction (good enough for OHSAA All-Ohio layout).
     const raw = buf.toString("latin1");
     const chunks: string[] = [];
     const streamRe = /stream\r?\n([\s\S]*?)endstream/g;
@@ -128,8 +160,7 @@ async function fetchPdfText(url: string): Promise<string | null> {
       const body = sm[1];
       const tj = body.match(/\((?:\\.|[^\\)])*\)\s*Tj/g) || [];
       for (const t of tj) {
-        const inner = t.replace(/^\)|\)$/g, "").replace(/\)$/, "");
-        const m = inner.match(/\(([\s\S]*)\)\s*Tj/);
+        const m = t.match(/\(([\s\S]*)\)\s*Tj/);
         if (m) chunks.push(m[1].replace(/\\([nrt\\()])/g, "$1"));
       }
       const tjArr = body.match(/\[([\s\S]*?)\]\s*TJ/g) || [];
@@ -146,40 +177,65 @@ async function fetchPdfText(url: string): Promise<string | null> {
   }
 }
 
-function loadSnapshot(rootDir: string): string | null {
-  const path = join(rootDir, "data/ingestion/sources/ohio/2024-opsma-all-ohio.txt");
+function loadSnapshot(rootDir: string, snapshot: string): string | null {
+  const path = join(rootDir, "data/ingestion/sources/ohio", snapshot);
   if (!existsSync(path)) return null;
-  return readFileSync(path, "utf8");
+  const text = readFileSync(path, "utf8");
+  return text.trim().length > 100 ? text : null;
 }
 
 export async function fetchOpsmaAllOhio(options?: {
   rootDir?: string;
+  years?: OpsmaYearSpec[];
 }): Promise<{ players: NormalizedPlayerRecord[]; errors: string[]; blocked: string[] }> {
   const errors: string[] = [];
   const blocked: string[] = [];
   const rootDir = options?.rootDir ?? process.cwd();
+  const years = options?.years ?? OPSMA_YEAR_SPECS;
+  const all: NormalizedPlayerRecord[] = [];
 
-  // Blob host has no robots.txt typically — check anyway; news pages are allowed.
-  const decision = await isUrlAllowed(OPSMA_PDF_2024);
-  if (!decision.allowed) {
-    blocked.push(`${OPSMA_PDF_2024} (${decision.notes})`);
-  }
+  for (const spec of years) {
+    const decision = await isUrlAllowed(spec.url);
+    let text: string | null = null;
 
-  let text: string | null = null;
-  if (decision.allowed) {
-    text = await fetchPdfText(OPSMA_PDF_2024);
-    if (!text) errors.push(`${OPSMA_PDF_2024} PDF text extract empty; using local snapshot if present`);
-  }
+    if (!decision.allowed) {
+      blocked.push(`${spec.url} (${decision.notes})`);
+    } else {
+      text = await fetchPdfText(spec.url);
+      if (!text) errors.push(`${spec.url} PDF stream extract empty; using snapshot if present`);
+    }
 
-  if (!text) {
-    text = loadSnapshot(rootDir);
+    if (!text || parseOpsmaText(text, spec.seasonEndYear, spec.url).length < 50) {
+      text = loadSnapshot(rootDir, spec.snapshot) ?? text;
+    }
+
     if (!text) {
-      errors.push("No OPSMA All-Ohio text available (PDF extract + snapshot failed)");
-      return { players: [], errors, blocked };
+      errors.push(`OPSMA ${spec.seasonEndYear}: no text`);
+      continue;
+    }
+
+    const parsed = parseOpsmaText(text, spec.seasonEndYear, spec.url);
+    if (parsed.length === 0) errors.push(`${spec.url} parsed 0`);
+    else console.log(`  OPSMA ${spec.seasonEndYear}: ${parsed.length} players`);
+    all.push(...parsed);
+    await new Promise((r) => setTimeout(r, 200));
+  }
+
+  // Load any extra snapshots not already covered
+  const dir = join(rootDir, "data/ingestion/sources/ohio");
+  if (existsSync(dir)) {
+    for (const f of readdirSync(dir)) {
+      if (!f.endsWith(".txt") || f === "PROVENANCE.txt") continue;
+      if (years.some((y) => y.snapshot === f)) continue;
+      const yearMatch = f.match(/^(20\d{2})/);
+      if (!yearMatch) continue;
+      const seasonEndYear = Number(yearMatch[1]) + 1;
+      const snap = loadSnapshot(rootDir, f);
+      if (!snap) continue;
+      const parsed = parseOpsmaText(snap, seasonEndYear, `local://${f}`);
+      all.push(...parsed);
     }
   }
 
-  const players = parseOpsmaText(text, 2025, OPSMA_PDF_2024);
-  if (players.length === 0) errors.push("OPSMA parsed 0 players");
-  return { players, errors, blocked };
+  return { players: all, errors, blocked };
 }

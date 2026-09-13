@@ -26,7 +26,7 @@ export async function fetchCfbdRecruitsForStates(
     };
   }
 
-  const years = options?.years ?? [2025, 2026, 2027, 2028, 2029];
+  const years = options?.years ?? [2027, 2028, 2029, 2030, 2031];
   const want = new Set(states.map((s) => s.toUpperCase()));
   const players: NormalizedPlayerRecord[] = [];
   const errors: string[] = [];

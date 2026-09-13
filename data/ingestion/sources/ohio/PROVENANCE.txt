@@ -3,3 +3,10 @@ source_url: https://ohsaaweb.blob.core.windows.net/files/Sports/Football/2024/20
 publisher: OHSAA / OPSMA
 permission: Public association honor roll PDF hosted by OHSAA; robots allow /news-media/; blob PDF is publicly linked from OHSAA announcements.
 fetched: 2026-09-12
+
+Additional OPSMA PDFs (2026-09-13):
+  - https://ohsaaweb.blob.core.windows.net/files/Sports/Football/2021/2021OPSWAAll_OhioFB.pdf
+  - https://ohsaaweb.blob.core.windows.net/files/Sports/Football/2022/2022OPSWAAll_OhioFB.pdf
+  - https://ohsaaweb.blob.core.windows.net/files/Sports/Football/2023/2023_football_all-ohio.pdf
+  - https://ohsaaweb.blob.core.windows.net/files/Sports/Football/2025/2025-opsma-football-all-ohio.pdf
+permission: Public OHSAA-hosted OPSMA honor-roll PDFs on Azure blob (no robots.txt Restrict on blob host).

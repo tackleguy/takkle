@@ -31,6 +31,16 @@ export const ASWA_DEFAULT_LISTS: AswaListSpec[] = [
     snapshot: "2025-aswa-all-state.txt",
   },
   {
+    seasonEndYear: 2025,
+    url: "https://www.al.com/highschoolsports/2024/12/see-who-made-the-aswa-all-state-football-team-for-2024.html",
+    snapshot: "2024-aswa-all-state.txt",
+  },
+  {
+    seasonEndYear: 2024,
+    url: "https://www.al.com/highschoolsports/2023/12/meet-the-2023-aswa-all-state-high-school-football-team.html",
+    snapshot: "2023-aswa-all-state.txt",
+  },
+  {
     seasonEndYear: 2023,
     url: "https://www.si.com/college/alabama/aswa/2022-aswa-all-state-football-teams-coaches-year",
     snapshot: "2022-aswa-all-state.txt",
@@ -71,9 +81,9 @@ export function parseAswaText(
   const players: NormalizedPlayerRecord[] = [];
   const seen = new Set<string>();
 
-  // QB: Trent Seaborn, Thompson, Jr., 6-1, 205
+  // QB: Trent Seaborn, Thompson, Jr., 6-1, 205 (allow leading whitespace from news mirrors)
   const lineRe =
-    /^(?:QB|RB|WR|TE|OL|DL|LB|DB|K|P|ATH|UTL|FLEX|KR|PR|AP|UTILITY):\s*([^,\n]+),\s*([^,\n]+),\s*(Jr\.?|Sr\.?|So\.?|Fr\.?|Junior|Senior|Sophomore|Freshman)\b/gim;
+    /^\s*(?:QB|RB|WR|TE|OL|DL|LB|DB|K|P|ATH|UTL|FLEX|KR|PR|AP|UTILITY):\s*([^,\n]+),\s*([^,\n]+),\s*(Jr\.?|Sr\.?|So\.?|Fr\.?|Junior|Senior|Sophomore|Freshman)\b/gim;
 
   let m: RegExpExecArray | null;
   while ((m = lineRe.exec(text)) !== null) {

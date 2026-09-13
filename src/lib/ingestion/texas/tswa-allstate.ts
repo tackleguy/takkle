@@ -15,8 +15,13 @@ import type { NormalizedPlayerRecord } from "../types";
 export const TSWA_SOURCE_NAME = "Texas Sports Writers Association All-State Football";
 export const TSWA_BASE = "https://txswa.org/";
 
-/** Two-digit season end years with usable HTML lists (probed). */
+/** Two-digit season end years with usable HTML lists (probed). 17–19 are 404. */
 export const TSWA_YEAR_SPECS: { yy: string; seasonEndYear: number }[] = [
+  { yy: "06", seasonEndYear: 2007 },
+  { yy: "07", seasonEndYear: 2008 },
+  { yy: "08", seasonEndYear: 2009 },
+  { yy: "09", seasonEndYear: 2010 },
+  { yy: "10", seasonEndYear: 2011 },
   { yy: "11", seasonEndYear: 2012 },
   { yy: "12", seasonEndYear: 2013 },
   { yy: "13", seasonEndYear: 2014 },

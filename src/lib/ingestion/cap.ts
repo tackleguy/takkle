@@ -1,5 +1,5 @@
 /** Global automated onboarding review cap (shared across states). */
-export const INGESTION_PLAYER_CAP = 10000;
+export const INGESTION_PLAYER_CAP = Number(process.env.INGESTION_PLAYER_CAP || 25000);
 
 export function applyIngestionCap(
   discovered: number,

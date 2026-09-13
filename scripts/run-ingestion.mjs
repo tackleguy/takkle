@@ -226,7 +226,7 @@ function parseCifss(html, spec) {
   return players;
 }
 
-const INGESTION_PLAYER_CAP = 10000;
+const INGESTION_PLAYER_CAP = Number(process.env.INGESTION_PLAYER_CAP || 25000);
 
 const CIFSS_LISTS = [
   { seasonLabel: "2025-26", seasonEnd: 2026, url: "https://cifss.org/allcifss/2025-26-football-11/" },
@@ -249,6 +249,11 @@ const CALHI_LISTS = [
 ];
 
 const TSWA_YEARS = [
+  { yy: "06", seasonEnd: 2007 },
+  { yy: "07", seasonEnd: 2008 },
+  { yy: "08", seasonEnd: 2009 },
+  { yy: "09", seasonEnd: 2010 },
+  { yy: "10", seasonEnd: 2011 },
   { yy: "11", seasonEnd: 2012 },
   { yy: "12", seasonEnd: 2013 },
   { yy: "13", seasonEnd: 2014 },
@@ -473,21 +478,46 @@ function parseOpsmaText(text, seasonEnd = 2025, sourceUrl) {
 }
 
 async function fetchOhioPlayers() {
-  const url =
-    "https://ohsaaweb.blob.core.windows.net/files/Sports/Football/2024/2024-fb-all-ohio.pdf";
-  const snap = join(ROOT, "data/ingestion/sources/ohio/2024-opsma-all-ohio.txt");
-  if (!existsSync(snap)) {
-    return { players: [], errors: ["OH OPSMA snapshot missing"], blocked: [] };
+  const specs = [
+    {
+      seasonEnd: 2022,
+      url: "https://ohsaaweb.blob.core.windows.net/files/Sports/Football/2021/2021OPSWAAll_OhioFB.pdf",
+      snap: join(ROOT, "data/ingestion/sources/ohio/2021-opsma-all-ohio.txt"),
+    },
+    {
+      seasonEnd: 2023,
+      url: "https://ohsaaweb.blob.core.windows.net/files/Sports/Football/2022/2022OPSWAAll_OhioFB.pdf",
+      snap: join(ROOT, "data/ingestion/sources/ohio/2022-opsma-all-ohio.txt"),
+    },
+    {
+      seasonEnd: 2024,
+      url: "https://ohsaaweb.blob.core.windows.net/files/Sports/Football/2023/2023_football_all-ohio.pdf",
+      snap: join(ROOT, "data/ingestion/sources/ohio/2023-opsma-all-ohio.txt"),
+    },
+    {
+      seasonEnd: 2025,
+      url: "https://ohsaaweb.blob.core.windows.net/files/Sports/Football/2024/2024-fb-all-ohio.pdf",
+      snap: join(ROOT, "data/ingestion/sources/ohio/2024-opsma-all-ohio.txt"),
+    },
+    {
+      seasonEnd: 2026,
+      url: "https://ohsaaweb.blob.core.windows.net/files/Sports/Football/2025/2025-opsma-football-all-ohio.pdf",
+      snap: join(ROOT, "data/ingestion/sources/ohio/2025-opsma-all-ohio.txt"),
+    },
+  ];
+  const players = [];
+  const errors = [];
+  for (const spec of specs) {
+    if (!existsSync(spec.snap)) {
+      errors.push(`OH OPSMA snapshot missing: ${spec.snap}`);
+      continue;
+    }
+    const parsed = parseOpsmaText(readFileSync(spec.snap, "utf8"), spec.seasonEnd, spec.url);
+    console.log(`  OPSMA ${spec.seasonEnd}: ${parsed.length} players`);
+    if (!parsed.length) errors.push(`OPSMA ${spec.seasonEnd} parsed 0`);
+    players.push(...parsed);
   }
-  try {
-    const res = await fetch(url, { headers: { "User-Agent": USER_AGENT } });
-    console.log(`  OPSMA PDF status ${res.status}; parsing provenance snapshot`);
-  } catch (e) {
-    console.log(`  OPSMA PDF fetch note: ${e.message}`);
-  }
-  const players = parseOpsmaText(readFileSync(snap, "utf8"), 2025, url);
-  console.log(`  OPSMA All-Ohio: ${players.length} players`);
-  return { players, errors: players.length ? [] : ["OPSMA parsed 0"], blocked: [] };
+  return { players, errors, blocked: [] };
 }
 
 function parseGpbText(text, seasonEnd = 2025, sourceUrl) {
@@ -506,7 +536,35 @@ function parseGpbText(text, seasonEnd = 2025, sourceUrl) {
       const { firstName, lastName } = splitName(name);
       if (!firstName || !lastName) continue;
       if (/coach|outstanding|caption|credit|gpb/i.test(name)) continue;
-      const key = `${firstName}|${lastName}|${school}`.toLowerCase();
+      const key = `${firstName}|${lastName}|${school}|${seasonEnd}`.toLowerCase();
+      if (seen.has(key)) continue;
+      seen.add(key);
+      players.push({
+        firstName,
+        lastName,
+        position: null,
+        classYear: g ? classFromGrade(g, seasonEnd) : null,
+        schoolName: school,
+        stateCode: "GA",
+        seasonYear: seasonEnd,
+        sourceUrl,
+        sourceName: "GPB Sports All-State Football",
+        sourceType: "state_association",
+        sourceState: "GA",
+        sourceSchool: school,
+      });
+      continue;
+    }
+    const dashGrade = line.match(
+      /^([A-Z][A-Za-z."'\-]+(?:\s+[A-Z][A-Za-z."'\-]+)+)\s*-\s*([A-Za-z0-9 .'\-\/]+?)\s*-\s*(Senior|Junior|Sophomore|Freshman)\b/i,
+    );
+    if (dashGrade) {
+      const name = dashGrade[1].replace(/"/g, "").trim();
+      const school = dashGrade[2].trim();
+      const g = gradeMap[dashGrade[3].toLowerCase()];
+      const { firstName, lastName } = splitName(name);
+      if (!firstName || !lastName) continue;
+      const key = `${firstName}|${lastName}|${school}|${seasonEnd}`.toLowerCase();
       if (seen.has(key)) continue;
       seen.add(key);
       players.push({
@@ -533,7 +591,7 @@ function parseGpbText(text, seasonEnd = 2025, sourceUrl) {
       const { firstName, lastName } = splitName(mm[1]);
       const school = mm[2].trim();
       if (!firstName || !lastName) continue;
-      const key = `${firstName}|${lastName}|${school}`.toLowerCase();
+      const key = `${firstName}|${lastName}|${school}|${seasonEnd}`.toLowerCase();
       if (seen.has(key)) continue;
       seen.add(key);
       players.push({
@@ -556,37 +614,51 @@ function parseGpbText(text, seasonEnd = 2025, sourceUrl) {
 }
 
 async function fetchGeorgiaPlayers() {
-  const url = "https://www.gpb.org/blogs/gpb-sports-blog/2024/12/24/2024-gpb-all-state-team";
-  const snap = join(ROOT, "data/ingestion/sources/georgia/2024-gpb-all-state.txt");
-  let text = existsSync(snap) ? readFileSync(snap, "utf8") : "";
-  try {
-    const robots = await fetchRobots("https://www.gpb.org");
-    if (robots.body && !robotsAllows(robots.body, "/blogs/")) {
-      return {
-        players: parseGpbText(text, 2025, url),
-        errors: [],
-        blocked: ["gpb.org robots blocked /blogs/ — used snapshot"],
-      };
+  const lists = [
+    {
+      seasonEnd: 2024,
+      url: "https://www.gpb.org/blogs/gpb-sports-blog/2023/12/23/2023-gpb-all-state-all-star-team",
+      snap: join(ROOT, "data/ingestion/sources/georgia/2023-gpb-all-state.txt"),
+    },
+    {
+      seasonEnd: 2025,
+      url: "https://www.gpb.org/blogs/gpb-sports-blog/2024/12/24/2024-gpb-all-state-team",
+      snap: join(ROOT, "data/ingestion/sources/georgia/2024-gpb-all-state.txt"),
+    },
+    {
+      seasonEnd: 2026,
+      url: "https://www.gpb.org/blogs/gpb-sports-blog/2025/12/22/gpb-all-state-football-team",
+      snap: join(ROOT, "data/ingestion/sources/georgia/2025-gpb-all-state.txt"),
+    },
+  ];
+  const players = [];
+  const errors = [];
+  const blocked = [];
+  for (const spec of lists) {
+    let text = existsSync(spec.snap) ? readFileSync(spec.snap, "utf8") : "";
+    try {
+      const res = await fetch(spec.url, { headers: { "User-Agent": USER_AGENT } });
+      if (res.ok) {
+        const html = await res.text();
+        const live = decodeHtml(html.replace(/<br\s*\/?>/gi, "\n").replace(/<\/p>/gi, "\n"));
+        if (parseGpbText(live, spec.seasonEnd, spec.url).length >= 5) text = live;
+      }
+    } catch (e) {
+      console.log(`  GPB ${spec.seasonEnd} fetch note: ${e.message}`);
     }
-    const res = await fetch(url, { headers: { "User-Agent": USER_AGENT } });
-    if (res.ok) {
-      const html = await res.text();
-      const live = decodeHtml(html.replace(/<br\s*\/?>/gi, "\n").replace(/<\/p>/gi, "\n"));
-      if (parseGpbText(live, 2025, url).length >= 10) text = live;
-    }
-  } catch (e) {
-    console.log(`  GPB fetch note: ${e.message}`);
+    const parsed = parseGpbText(text, spec.seasonEnd, spec.url);
+    console.log(`  GPB ${spec.seasonEnd}: ${parsed.length} players`);
+    if (!parsed.length) errors.push(`GPB ${spec.seasonEnd} parsed 0`);
+    players.push(...parsed);
   }
-  const players = parseGpbText(text, 2025, url);
-  console.log(`  GPB All-State: ${players.length} players`);
-  return { players, errors: players.length ? [] : ["GPB parsed 0"], blocked: [] };
+  return { players, errors, blocked };
 }
 
 function parseAswaText(text, seasonEnd, sourceUrl) {
   const players = [];
   const seen = new Set();
   const lineRe =
-    /^(?:QB|RB|WR|TE|OL|DL|LB|DB|K|P|ATH|UTL|FLEX|KR|PR|AP):\s*([^,\n]+),\s*([^,\n]+),\s*(Jr\.?|Sr\.?|So\.?|Fr\.?|Junior|Senior|Sophomore|Freshman)\b/gim;
+    /^\s*(?:QB|RB|WR|TE|OL|DL|LB|DB|K|P|ATH|UTL|FLEX|KR|PR|AP):\s*([^,\n]+),\s*([^,\n]+),\s*(Jr\.?|Sr\.?|So\.?|Fr\.?|Junior|Senior|Sophomore|Freshman)\b/gim;
   let m;
   while ((m = lineRe.exec(text))) {
     const pos = m[0].slice(0, m[0].indexOf(":")).toUpperCase();
@@ -648,6 +720,16 @@ async function fetchAlabamaPlayers() {
       seasonEnd: 2026,
       url: "https://www.floridatoday.com/story/sports/high-school/football/2025/12/20/alabama-all-state-high-school-football-aswa-ahsaa-aisa/87829172007/",
       snap: join(ROOT, "data/ingestion/sources/alabama/2025-aswa-all-state.txt"),
+    },
+    {
+      seasonEnd: 2025,
+      url: "https://www.al.com/highschoolsports/2024/12/see-who-made-the-aswa-all-state-football-team-for-2024.html",
+      snap: join(ROOT, "data/ingestion/sources/alabama/2024-aswa-all-state.txt"),
+    },
+    {
+      seasonEnd: 2024,
+      url: "https://www.al.com/highschoolsports/2023/12/meet-the-2023-aswa-all-state-high-school-football-team.html",
+      snap: join(ROOT, "data/ingestion/sources/alabama/2023-aswa-all-state.txt"),
     },
     {
       seasonEnd: 2023,
