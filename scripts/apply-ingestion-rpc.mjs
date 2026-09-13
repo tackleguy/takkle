@@ -64,7 +64,21 @@ async function main() {
   let schools = existsSync(join(runDir, "schools.json"))
     ? JSON.parse(readFileSync(join(runDir, "schools.json"), "utf8"))
     : [];
-  const players = JSON.parse(readFileSync(join(runDir, "players.json"), "utf8"));
+  const playersRaw = JSON.parse(readFileSync(join(runDir, "players.json"), "utf8"));
+  // Default: class 2027–2031 only. Opt out with --allow-all-classes.
+  const RECRUIT_MIN = 2027;
+  const RECRUIT_MAX = 2031;
+  const allowAll = process.argv.includes("--allow-all-classes");
+  const players = allowAll
+    ? playersRaw
+    : playersRaw.filter(
+        (p) => p.classYear != null && p.classYear >= RECRUIT_MIN && p.classYear <= RECRUIT_MAX,
+      );
+  if (!allowAll && players.length !== playersRaw.length) {
+    console.log(
+      `Recruit window filter: kept ${players.length}/${playersRaw.length} (class ${RECRUIT_MIN}–${RECRUIT_MAX})`,
+    );
+  }
 
   // Derive association schools from players when schools.json is empty (players-only runs)
   if (!schools.length && players.length) {
@@ -179,7 +193,7 @@ async function main() {
         `player:${p.stateCode}:${slugify(p.schoolName)}:${slugify(p.firstName)}:${slugify(p.lastName)}:${p.classYear || "x"}`,
       );
       const slug =
-        `${slugify(p.firstName)}-${slugify(p.lastName)}-${(p.position || "ath").toLowerCase()}-${p.classYear || p.seasonYear}-${slugify(p.schoolName)}-${p.stateCode.toLowerCase()}`.slice(
+        `${slugify(p.firstName)}-${slugify(p.lastName)}-${(p.position || "ath").toLowerCase()}-${p.classYear || p.seasonYear || "x"}-${slugify(p.schoolName)}-${p.stateCode.toLowerCase()}-${playerId.slice(0, 8)}`.slice(
           0,
           120,
         );
