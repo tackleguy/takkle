@@ -380,21 +380,18 @@ async function fetchCalHiPlayers() {
 function parseTswa(html, seasonEnd = 2025, sourceUrl = "https://txswa.org/allstatefootball24.php") {
   const text = decodeHtml(html.replace(/<br\s*\/?>/gi, "\n").replace(/<\/p>/gi, "\n"));
   const gradeMap = { sr: 12, senior: 12, jr: 11, junior: 11, so: 10, soph: 10, sophomore: 10, fr: 9, freshman: 9 };
-  const entryRe =
-    /([A-Z][A-Za-z.'\-]+(?:\s+[A-Z][A-Za-z.'\-]+)+),\s*([A-Za-z0-9 .'\-\/]+?),\s*(?:\d-\d{1,2},?\s*)?(?:\d{2,3},?\s*)?(sr|jr|so|fr|soph|senior|junior|sophomore|freshman)\.?/g;
   const players = [];
   const seen = new Set();
-  let m;
-  while ((m = entryRe.exec(text))) {
-    const name = m[1].trim();
-    const school = m[2].trim();
-    const g = gradeMap[m[3].toLowerCase().replace(/\./g, "")];
+  const add = (nameRaw, schoolRaw, gradeToken) => {
+    const name = nameRaw.trim();
+    const school = schoolRaw.trim();
+    const g = gradeMap[String(gradeToken).toLowerCase().replace(/\./g, "")];
     const { firstName, lastName } = splitName(name);
-    if (!firstName || !lastName || school.length < 2) continue;
-    if (/coach|player of the year/i.test(name)) continue;
+    if (!firstName || !lastName || school.length < 2) return;
+    if (/coach|player of the year/i.test(name)) return;
     const classYear = g ? classFromGrade(g, seasonEnd) : null;
     const key = `${firstName}|${lastName}|${school}|${classYear || ""}`.toLowerCase();
-    if (seen.has(key)) continue;
+    if (seen.has(key)) return;
     seen.add(key);
     players.push({
       firstName,
@@ -410,7 +407,16 @@ function parseTswa(html, seasonEnd = 2025, sourceUrl = "https://txswa.org/allsta
       sourceState: "TX",
       sourceSchool: school,
     });
-  }
+  };
+  // Newer: Name, School, [ht,] [wt,] sr.
+  const entryRe =
+    /([A-Z][A-Za-z.'\-]+(?:\s+[A-Z][A-Za-z.'\-]+)+),\s*([A-Za-z0-9 .'\-\/]+?),\s*(?:\d-\d{1,2},?\s*)?(?:\d{2,3},?\s*)?(sr|jr|so|fr|soph|senior|junior|sophomore|freshman)\.?/gi;
+  let m;
+  while ((m = entryRe.exec(text))) add(m[1], m[2], m[3]);
+  // Older: Sr. Name, School, 6-0, 180
+  const gradeFirstRe =
+    /\b(Sr|Jr|So|Fr|Soph)\.\s+([A-Z][A-Za-z.'\-]+(?:\s+[A-Z][A-Za-z.'\-]+)+),\s*([A-Za-z0-9 .'\-\/]+?)(?=,|\s+\d-|\s*$)/gi;
+  while ((m = gradeFirstRe.exec(text))) add(m[2], m[3], m[1]);
   return players;
 }
 

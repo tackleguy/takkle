@@ -71,7 +71,8 @@ function parseClassYear(token: string, seasonEndYear: number): number | undefine
 
 /**
  * TSWA lines look like:
- * "Guards – Henry Fenuku, North Crowley, 6-4, 295, sr.; Jared Risinger, ..."
+ * Newer: "Guards – Henry Fenuku, North Crowley, 6-4, 295, sr.; Jared Risinger, ..."
+ * Older: "Sr. Chris Francis, Cedar Hill, 6-0, 210"
  */
 export function parseTswaHtml(
   html: string,
@@ -82,24 +83,20 @@ export function parseTswaHtml(
   const players: NormalizedPlayerRecord[] = [];
   const seen = new Set<string>();
 
-  const entryRe =
-    /([A-Z][A-Za-z.'\-]+(?:\s+[A-Z][A-Za-z.'\-]+)+),\s*([A-Za-z0-9 .'\-\/]+?),\s*(?:\d-\d{1,2},?\s*)?(?:\d{2,3},?\s*)?(sr|jr|so|fr|soph|senior|junior|sophomore|freshman)\.?/g;
-
-  let m: RegExpExecArray | null;
-  while ((m = entryRe.exec(text)) !== null) {
-    const name = normalizeName(m[1]);
-    const school = normalizeName(m[2]);
-    const classYear = parseClassYear(m[3], seasonEndYear);
+  const add = (nameRaw: string, schoolRaw: string, gradeToken: string, idx: number) => {
+    const name = normalizeName(nameRaw);
+    const school = normalizeName(schoolRaw);
+    const classYear = parseClassYear(gradeToken, seasonEndYear);
     const { firstName, lastName } = splitDisplayName(name);
-    if (!firstName || !lastName || school.length < 2) continue;
-    if (/coach/i.test(name) || /player of the year/i.test(name)) continue;
+    if (!firstName || !lastName || school.length < 2) return;
+    if (/coach/i.test(name) || /player of the year/i.test(name)) return;
 
     const key = `${firstName}|${lastName}|${school}|${classYear ?? ""}`.toLowerCase();
-    if (seen.has(key)) continue;
+    if (seen.has(key)) return;
     seen.add(key);
 
-    const windowStart = Math.max(0, m.index - 120);
-    const window = text.slice(windowStart, m.index).toLowerCase();
+    const windowStart = Math.max(0, idx - 120);
+    const window = text.slice(windowStart, idx).toLowerCase();
     let position: string | undefined;
     const posHints = [
       "quarterback",
@@ -163,8 +160,23 @@ export function parseTswaHtml(
       sourceType: "state_association",
       sourceState: "TX",
       sourceSchool: school,
-      raw: { classToken: m[3] },
+      raw: { classToken: gradeToken },
     });
+  };
+
+  // Newer format: Name, School, [ht,] [wt,] sr.
+  const entryRe =
+    /([A-Z][A-Za-z.'\-]+(?:\s+[A-Z][A-Za-z.'\-]+)+),\s*([A-Za-z0-9 .'\-\/]+?),\s*(?:\d-\d{1,2},?\s*)?(?:\d{2,3},?\s*)?(sr|jr|so|fr|soph|senior|junior|sophomore|freshman)\.?/gi;
+  let m: RegExpExecArray | null;
+  while ((m = entryRe.exec(text)) !== null) {
+    add(m[1], m[2], m[3], m.index);
+  }
+
+  // Older format: Sr. Name, School, 6-0, 180
+  const gradeFirstRe =
+    /\b(Sr|Jr|So|Fr|Soph)\.\s+([A-Z][A-Za-z.'\-]+(?:\s+[A-Z][A-Za-z.'\-]+)+),\s*([A-Za-z0-9 .'\-\/]+?)(?=,|\s+\d-|\s*$)/gi;
+  while ((m = gradeFirstRe.exec(text)) !== null) {
+    add(m[2], m[3], m[1], m.index);
   }
 
   return players;
