@@ -3,6 +3,10 @@
  * Public All-Conference / All-Region honor rolls — not full rosters.
  * robots.txt: User-agent * Crawl-Delay: 10
  * https://azpreps365.com/recognitions/football/6a
+ *
+ * NOTE: AIA recognition HTML exposes name / school / position only — no grade
+ * or class year. classYear stays null unless enriched from another permitted source.
+ * Adapters filter to class 2027–2031, so raw AIA rows are dropped until CFBD/CSV supplies classYear.
  */
 
 import { isUrlAllowed, USER_AGENT } from "../shared/robots";
@@ -124,7 +128,6 @@ const AIA_POS: Record<string, string> = {
   placekicker: "K",
   "defensive utility/flex player": "ATH",
   "offensive utility/flex player": "ATH",
-  "long snapper": "ATH",
 };
 
 function mapAiaPosition(raw: string): string | undefined {

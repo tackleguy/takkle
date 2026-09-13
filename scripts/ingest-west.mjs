@@ -1,13 +1,15 @@
 #!/usr/bin/env node
 /**
- * CA/West permitted ingestion: Cal-Hi expansion + CHSAA (CO) + AIA (AZ).
+ * CA/West permitted ingestion: Cal-Hi + CHSAA (CO) + AIA (AZ) + UHSAA (UT).
  * Does not touch TX/SE adapters. Writes players.json for apply-ingestion-rpc.
  *
  * Usage:
  *   node scripts/ingest-west.mjs
+ *   node scripts/ingest-west.mjs --batch2          # Cal-Hi historical + UHSAA only
+ *   node scripts/ingest-west.mjs --calhi-historical
  *   node scripts/ingest-west.mjs --skip-aia
+ *   node scripts/ingest-west.mjs --skip-uhsaa
  *   node scripts/ingest-west.mjs --aia-conferences-only
- *   node scripts/ingest-west.mjs --skip-calhi
  */
 import { createHash } from "node:crypto";
 import { mkdirSync, writeFileSync } from "node:fs";
@@ -19,12 +21,29 @@ const ROOT = join(__dirname, "..");
 const USER_AGENT =
   "TakkleIngestionBot/1.0 (+https://takkle.com; permitted public sources only)";
 
+/** Hard recruiting window — alumni / null class years are never written. */
+const RECRUIT_CLASS_MIN = 2027;
+const RECRUIT_CLASS_MAX = 2031;
+
 const args = {
   skipAia: process.argv.includes("--skip-aia"),
   aiaConferencesOnly: process.argv.includes("--aia-conferences-only"),
   skipCalhi: process.argv.includes("--skip-calhi"),
   skipChsaa: process.argv.includes("--skip-chsaa"),
+  /** UHSAA academic all-state = graduating seniors → outside 2027–2031 until a 2027 season exists. */
+  skipUhsaa: process.argv.includes("--skip-uhsaa") || !process.argv.includes("--include-uhsaa"),
+  /** Only pull Cal-Hi seasons ≤2021 (already-applied recent lists skipped). */
+  calhiHistoricalOnly: process.argv.includes("--calhi-historical"),
+  /** Fast path: Cal-Hi historical + UHSAA only (no AIA/CHSAA). */
+  batch2: process.argv.includes("--batch2"),
+  /** Allow alumni/null class years (debug only). Default: recruit window only. */
+  allowAllClasses: process.argv.includes("--allow-all-classes"),
 };
+
+function inRecruitWindow(p) {
+  const y = p.classYear;
+  return y != null && y >= RECRUIT_CLASS_MIN && y <= RECRUIT_CLASS_MAX;
+}
 
 function slugify(input) {
   return String(input)
@@ -126,6 +145,7 @@ function decodeHtml(s) {
     .trim();
 }
 
+/** Seasons that can still yield class 2027+ underclassmen (Fr/So/Jr by season). */
 const CALHI_LISTS = [
   { seasonEnd: 2026, url: "https://www.calhisports.com/2026/02/06/all-state-fb-2025-1st-team-offense/" },
   { seasonEnd: 2026, url: "https://www.calhisports.com/2026/02/06/all-state-fb-2025-1st-team-defense/" },
@@ -136,15 +156,44 @@ const CALHI_LISTS = [
   { seasonEnd: 2024, url: "https://www.calhisports.com/2024/02/03/all-state-fb-2023-1st-team-offense/" },
   { seasonEnd: 2024, url: "https://www.calhisports.com/2024/02/03/all-state-fb-2023-1st-team-defense/" },
   { seasonEnd: 2024, url: "https://www.calhisports.com/2024/01/27/all-state-fb-2023-medium-schools/" },
-  { seasonEnd: 2023, url: "https://www.calhisports.com/2023/02/08/all-state-fb-2022-1st-team-offense/" },
-  { seasonEnd: 2023, url: "https://www.calhisports.com/2023/02/08/all-state-fb-2022-1st-team-defense/" },
-  { seasonEnd: 2023, url: "https://www.calhisports.com/2023/02/02/all-state-fb-2022-medium-schools/" },
-  { seasonEnd: 2022, url: "https://www.calhisports.com/2022/02/06/all-state-fb-2021-1st-team-offense/" },
-  { seasonEnd: 2022, url: "https://www.calhisports.com/2022/02/06/all-state-fb-2021-1st-team-defense/" },
-  { seasonEnd: 2022, url: "https://www.calhisports.com/2022/01/29/all-state-fb-2021-medium-schools/" },
-  { seasonEnd: 2022, url: "https://www.calhisports.com/2022/01/25/all-state-fb-2021-small-schools/" },
 ];
 
+/** Pre-2024 archives cannot produce class 2027+ (even freshmen graduate ≤2026). */
+const CALHI_HISTORICAL_ONLY = [];
+
+const UHSAA_LISTS = [
+  { seasonEnd: 2026, url: "https://www.uhsaa.org/academicallstate/2025-26/Fall/25FB.pdf" },
+  { seasonEnd: 2025, url: "https://www.uhsaa.org/academicallstate/2024-25/Fall/24FB.pdf" },
+  { seasonEnd: 2024, url: "https://www.uhsaa.org/academicallstate/2023-24/23FB.pdf" },
+  { seasonEnd: 2023, url: "https://www.uhsaa.org/academicallstate/2022-23/22FB.pdf" },
+  { seasonEnd: 2022, url: "https://www.uhsaa.org/academicallstate/2021-22/21FB.pdf" },
+  { seasonEnd: 2021, url: "https://www.uhsaa.org/academicallstate/2020-21/2020%20Football%20Chart%20to%20Post.pdf" },
+  { seasonEnd: 2020, url: "https://www.uhsaa.org/academicallstate/2019-20/2019%20Football%20Chart%20to%20Post.pdf" },
+  { seasonEnd: 2019, url: "https://www.uhsaa.org/academicallstate/2018%20Football%20Chart%20to%20Post.pdf" },
+];
+
+const UHSAA_SCHOOLS = [
+  "Intermountain Christian", "American Leadership", "Layton Christian", "Providence Hall",
+  "Judge Memorial", "Summit Academy", "Gunnison Valley", "Crimson Cliffs", "Maple Mountain",
+  "Mountain Crest", "Mountain Ridge", "Mountain View", "North Sanpete", "Pleasant Grove",
+  "Spanish Fork", "American Fork", "Copper Hills", "Corner Canyon", "Desert Hills",
+  "Green Canyon", "Northridge", "North Sevier", "North Summit", "Salem Hills", "Snow Canyon",
+  "South Sevier", "South Summit", "Canyon View", "Cedar Valley", "Juan Diego", "Pine View",
+  "Wasatch Academy", "West Field", "West Jordan", "Woods Cross", "Bonneville", "Box Elder",
+  "Bountiful", "Clearfield", "Enterprise", "Farmington", "Grantsville", "Herriman", "Hillcrest",
+  "Hurricane", "Monticello", "Park City", "Richfield", "Ridgeline", "Sky View", "Springville",
+  "Stansbury", "Timpanogos", "Viewmont", "Water Canyon", "Bryce Valley", "Bear River",
+  "Ben Lomond", "Cottonwood", "Maeser Prep", "Merit Academy", "Waterford", "Altamont",
+  "Bingham", "Brighton", "Duchesne", "Highland", "Kearns", "Olympus", "Parowan", "Payson",
+  "Riverton", "San Juan", "Skyridge", "Skyline", "Syracuse", "Taylorsville", "Timpview",
+  "Westlake", "Beaver", "Carbon", "Cyprus", "Delta", "Dixie", "Emery", "Fremont", "Granger",
+  "Hunter", "Jordan", "Kanab", "Layton", "Logan", "Manti", "Milford", "Millard", "Morgan",
+  "Murray", "Ogden", "Orem", "Provo", "Tabiona", "Tooele", "Uintah", "Union", "Wasatch",
+  "Weber", "Wayne", "Alta", "Cedar", "Davis", "East", "Grand", "Juab", "Lehi", "Manila",
+  "Piute", "Rich", "Roy", "West",
+].sort((a, b) => b.length - a.length);
+
+/** CHSAA seasons that can yield class 2027+ underclassmen. */
 const CHSAA_LISTS = [
   {
     seasonEnd: 2026,
@@ -157,14 +206,6 @@ const CHSAA_LISTS = [
   {
     seasonEnd: 2024,
     url: "https://chsaanow.com/news/2023/12/13/all-state-football-teams-for-the-2023-season",
-  },
-  {
-    seasonEnd: 2023,
-    url: "https://chsaanow.com/news/2022/12/16/all-state-football-teams-for-the-2022-season",
-  },
-  {
-    seasonEnd: 2022,
-    url: "https://chsaanow.com/news/2021/12/16/all-state-football-teams-for-the-2021-season",
   },
 ];
 
@@ -302,11 +343,12 @@ function parseCalHi(html, spec) {
   return { players, paywalled: false };
 }
 
-async function fetchCalHi() {
+async function fetchCalHi(listOverride) {
   const players = [];
   const errors = [];
   const blocked = [];
-  for (const spec of CALHI_LISTS) {
+  const lists = listOverride || CALHI_LISTS;
+  for (const spec of lists) {
     try {
       const res = await fetch(spec.url, { headers: { "User-Agent": USER_AGENT } });
       if (!res.ok) {
@@ -322,12 +364,132 @@ async function fetchCalHi() {
         console.log(`  Cal-Hi ${spec.seasonEnd}: ${parsed.players.length} from ${spec.url}`);
         players.push(...parsed.players);
       }
-      await new Promise((r) => setTimeout(r, 10000));
+      // Cal-Hi crawl-delay is heavy; historical batch uses 3s, full uses 10s
+      await new Promise((r) => setTimeout(r, args.calhiHistoricalOnly || args.batch2 ? 3000 : 10000));
     } catch (e) {
       errors.push(`${spec.url}: ${e.message}`);
     }
   }
   return { players, errors, blocked };
+}
+
+function parseUhsaaLine(line) {
+  const out = [];
+  // Collapse dotted leader charts ("Name .... School") into plain text.
+  let rest = line.replace(/\.{2,}/g, " ").replace(/\s+/g, " ").trim();
+  const nameOk = /^[A-Z][a-zA-Z.'\-]+(?:\s+[A-Z][a-zA-Z.'\-]+){1,3}$/;
+  while (rest) {
+    rest = rest.trim();
+    if (!rest) break;
+    let best = null;
+    for (const school of UHSAA_SCHOOLS) {
+      const idx = rest.indexOf(school);
+      if (idx <= 0) continue;
+      const before = rest.slice(0, idx).trim().replace(/^[,.\-\s]+|[,.\-\s]+$/g, "");
+      const after = rest.slice(idx + school.length);
+      const boundaryOk =
+        idx + school.length === rest.length || /\s/.test(rest[idx + school.length] || "");
+      if (!before || !boundaryOk || !nameOk.test(before)) continue;
+      // Prefer leftmost school; at the same index prefer longest (Westlake > West).
+      if (
+        !best ||
+        idx < best.idx ||
+        (idx === best.idx && school.length > best.len)
+      ) {
+        best = { name: before, school, after, idx, len: school.length };
+      }
+    }
+    if (!best) break;
+    out.push({ name: best.name, school: best.school });
+    rest = best.after.trim().replace(/^[,.\-\s]+/, "");
+  }
+  return out;
+}
+
+function parseUhsaaText(text, spec) {
+  const players = [];
+  const seen = new Set();
+  const skip =
+    /Academic All-State|ACTIVITIES ASSOCIATION|^\d{4}-\d{2}|Football|^\dA$|8-Player|cont\.|Chart to Post|UTAH HIGH SCHOOL/i;
+  for (const raw of text.split(/\r?\n/)) {
+    const line = raw.trim();
+    if (!line || skip.test(line)) continue;
+    for (const pair of parseUhsaaLine(line)) {
+      const { firstName, lastName } = splitName(pair.name);
+      if (!firstName || !lastName) continue;
+      const school = pair.school.trim();
+      const key = `${firstName}|${lastName}|${school}|${spec.seasonEnd}`.toLowerCase();
+      if (seen.has(key)) continue;
+      seen.add(key);
+      players.push({
+        firstName,
+        lastName,
+        position: null,
+        classYear: spec.seasonEnd,
+        schoolName: school,
+        stateCode: "UT",
+        seasonYear: spec.seasonEnd,
+        sourceUrl: spec.url,
+        sourceName: "UHSAA Academic All-State Football",
+        sourceType: "state_association",
+        sourceState: "UT",
+        sourceSchool: school,
+      });
+    }
+  }
+  return players;
+}
+
+async function fetchUhsaa() {
+  const { spawnSync } = await import("node:child_process");
+  const { writeFileSync: wfs, unlinkSync, readFileSync: rfs } = await import("node:fs");
+  const { tmpdir } = await import("node:os");
+  const players = [];
+  const errors = [];
+  for (const spec of UHSAA_LISTS) {
+    try {
+      const res = await fetch(spec.url, {
+        headers: { "User-Agent": USER_AGENT, Accept: "application/pdf" },
+        redirect: "follow",
+      });
+      if (!res.ok) {
+        errors.push(`${spec.url} HTTP ${res.status}`);
+        continue;
+      }
+      const buf = Buffer.from(await res.arrayBuffer());
+      const pdfPath = join(tmpdir(), `uhsaa-${spec.seasonEnd}.pdf`);
+      const txtPath = join(tmpdir(), `uhsaa-${spec.seasonEnd}.txt`);
+      wfs(pdfPath, buf);
+      const py = spawnSync(
+        "python3",
+        [
+          "-c",
+          `from pypdf import PdfReader\nr=PdfReader(${JSON.stringify(pdfPath)})\nopen(${JSON.stringify(txtPath)},'w').write('\\n'.join((p.extract_text() or '') for p in r.pages))`,
+        ],
+        { encoding: "utf8" },
+      );
+      if (py.status !== 0) {
+        errors.push(`${spec.url} pdf extract: ${py.stderr || py.stdout}`);
+        try {
+          unlinkSync(pdfPath);
+        } catch {}
+        continue;
+      }
+      const text = rfs(txtPath, "utf8");
+      const parsed = parseUhsaaText(text, spec);
+      console.log(`  UHSAA ${spec.seasonEnd}: ${parsed.length} from ${spec.url}`);
+      if (!parsed.length) errors.push(`${spec.url} parsed 0`);
+      players.push(...parsed);
+      try {
+        unlinkSync(pdfPath);
+        unlinkSync(txtPath);
+      } catch {}
+      await new Promise((r) => setTimeout(r, 800));
+    } catch (e) {
+      errors.push(`${spec.url}: ${e.message}`);
+    }
+  }
+  return { players, errors, blocked: [] };
 }
 
 function parseChsaa(html, spec) {
@@ -489,6 +651,14 @@ function dedupe(players) {
 }
 
 async function main() {
+  if (args.batch2) {
+    args.skipAia = true;
+    args.skipChsaa = true;
+    args.calhiHistoricalOnly = true;
+    // Historical Cal-Hi / UHSAA seniors cannot yield 2027–2031; keep skipped.
+    args.skipUhsaa = true;
+  }
+
   const stamp = new Date().toISOString().replace(/[:.]/g, "-");
   const outDir = join(ROOT, "data/ingestion", `run-west-${stamp}`);
   mkdirSync(outDir, { recursive: true });
@@ -506,12 +676,25 @@ async function main() {
   }
 
   if (!args.skipCalhi) {
-    console.log("Fetching Cal-Hi Sports public lists (CA)...");
-    const ca = await fetchCalHi();
+    const calhiLists = args.calhiHistoricalOnly ? CALHI_HISTORICAL_ONLY : CALHI_LISTS;
+    console.log(
+      args.calhiHistoricalOnly
+        ? `Fetching Cal-Hi historical public lists (CA, ${calhiLists.length} pages)...`
+        : "Fetching Cal-Hi Sports public lists (CA)...",
+    );
+    const ca = await fetchCalHi(calhiLists);
     all.push(...ca.players);
     summary.errors.push(...ca.errors);
     summary.blocked.push(...ca.blocked);
     summary.bySource.calhi = ca.players.length;
+  }
+
+  if (!args.skipUhsaa) {
+    console.log("Fetching UHSAA Academic All-State Football (UT)...");
+    const ut = await fetchUhsaa();
+    all.push(...ut.players);
+    summary.errors.push(...ut.errors);
+    summary.bySource.uhsaa = ut.players.length;
   }
 
   if (!args.skipAia) {
@@ -526,10 +709,13 @@ async function main() {
     summary.bySource.aia = az.players.length;
   }
 
-  const { players, duplicatesDetected } = dedupe(all);
+  const { players: deduped, duplicatesDetected } = dedupe(all);
   summary.duplicatesDetected = duplicatesDetected;
   summary.playersDiscovered = all.length;
+  const players = args.allowAllClasses ? deduped : deduped.filter(inRecruitWindow);
+  summary.playersOutsideWindow = deduped.length - players.length;
   summary.playersDeduped = players.length;
+  summary.recruitWindow = { min: RECRUIT_CLASS_MIN, max: RECRUIT_CLASS_MAX };
   summary.classYears = {};
   for (const p of players) {
     const y = p.classYear ?? "null";
@@ -543,6 +729,7 @@ async function main() {
       {
         outDir,
         players: players.length,
+        droppedOutsideRecruitWindow: summary.playersOutsideWindow,
         bySource: summary.bySource,
         classYears: summary.classYears,
         errors: summary.errors.length,

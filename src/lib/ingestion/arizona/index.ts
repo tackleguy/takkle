@@ -1,5 +1,5 @@
 import { loadNcesSchools } from "../shared/nces";
-import { emptyRunSummary } from "../shared/normalize";
+import { emptyRunSummary, filterRecruitClassPlayers } from "../shared/normalize";
 import { fetchAiaRecognitions } from "./azpreps-recognitions";
 import { fetchCfbdRecruitsForStates } from "../shared/cfbd-state";
 import type { StateAdapterResult } from "../types";
@@ -33,7 +33,8 @@ export async function runArizonaAdapter(options?: {
     else summary.duplicatesDetected += 1;
   }
 
-  const players = [...byKey.values()];
+  // AIA honor rolls omit class year → filtered out unless CFBD (or another source) supplies 2027–2031.
+  const players = filterRecruitClassPlayers([...byKey.values()]);
   summary.playersDiscovered = players.length;
   summary.sourcesFailing = summary.errors.length + summary.blockedSources.length;
   summary.lastSuccessfulAt = new Date().toISOString();

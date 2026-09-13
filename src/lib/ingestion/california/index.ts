@@ -1,5 +1,5 @@
 import { loadNcesSchools } from "../shared/nces";
-import { emptyRunSummary } from "../shared/normalize";
+import { emptyRunSummary, filterRecruitClassPlayers } from "../shared/normalize";
 import { CIFSS_PDF_ONLY_NOTES, fetchCifssPlayers } from "./cifss-allcif";
 import { fetchCalHiSportsPlayers } from "./calhisports-allstate";
 import type { StateAdapterResult } from "../types";
@@ -42,9 +42,12 @@ export async function runCaliforniaAdapter(options?: {
     }
   }
 
+  const playersKept = filterRecruitClassPlayers([...byKey.values()]);
+  summary.playersDiscovered = playersKept.length;
+
   return {
     schools,
-    players: [...byKey.values()],
+    players: playersKept,
     summary,
   };
 }
