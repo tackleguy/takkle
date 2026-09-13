@@ -38,6 +38,8 @@ export const RESEARCH_WEIGHTS_NO_FILM: ScoreWeightConfig = {
 
 const SOURCE_TIER: Record<string, number> = {
   "CIF Southern Section All-CIF Football": 8.4,
+  "AIA AZPreps365 Football Recognitions": 8.0,
+  "CHSAA All-State Football": 8.2,
   "Cal-Hi Sports All-State Football": 8.6,
   "Texas Sports Writers Association All-State Football": 8.7,
   "Ohio Prep Sports Media Association All-Ohio Football": 8.2,

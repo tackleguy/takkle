@@ -22,6 +22,18 @@ export const INGESTION_SOURCE_REGISTRY = [
     notes: "Public pages only; Gold Club paywalled posts blocked",
   },
   {
+    name: "AIA AZPreps365 Football Recognitions",
+    state: "AZ",
+    status: "permitted",
+    notes: "Official AIA All-Conference/All-Region HTML; Crawl-Delay 10",
+  },
+  {
+    name: "CHSAA All-State Football",
+    state: "CO",
+    status: "permitted",
+    notes: "CHSAANow.com public all-state HTML tables",
+  },
+  {
     name: "Texas Sports Writers Association All-State Football",
     state: "TX",
     status: "permitted",

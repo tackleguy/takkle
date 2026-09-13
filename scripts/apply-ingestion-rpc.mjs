@@ -136,6 +136,10 @@ async function main() {
       process.env.DS_CSV || "81a7db23-a197-483f-86f8-df205417defa",
     "NCES Common Core of Data (CCD)":
       process.env.DS_NCES || "2d367e8a-5967-4a80-a1ef-c0c530eea078",
+    "AIA AZPreps365 Football Recognitions":
+      process.env.DS_AIA || "a1a00000-3650-4a11-9a11-000000000001",
+    "CHSAA All-State Football":
+      process.env.DS_CHSAA || "c0a00000-c45a-4c45-9c45-000000000001",
   };
 
   const PB = 100;

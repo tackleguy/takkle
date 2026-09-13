@@ -21,7 +21,10 @@ export interface CalHiListSpec {
   label: string;
 }
 
-/** Public (non–Gold Club) pages only. */
+/**
+ * Public (non–Gold Club) pages only.
+ * Prefer recent seasons; 2nd/3rd-team posts are often paywalled and are omitted.
+ */
 export const CALHISPORTS_DEFAULT_LISTS: CalHiListSpec[] = [
   {
     seasonEndYear: 2026,
@@ -62,6 +65,46 @@ export const CALHISPORTS_DEFAULT_LISTS: CalHiListSpec[] = [
     seasonEndYear: 2024,
     label: "2023 1st team defense",
     url: "https://www.calhisports.com/2024/02/03/all-state-fb-2023-1st-team-defense/",
+  },
+  {
+    seasonEndYear: 2024,
+    label: "2023 medium schools",
+    url: "https://www.calhisports.com/2024/01/27/all-state-fb-2023-medium-schools/",
+  },
+  {
+    seasonEndYear: 2023,
+    label: "2022 1st team offense",
+    url: "https://www.calhisports.com/2023/02/08/all-state-fb-2022-1st-team-offense/",
+  },
+  {
+    seasonEndYear: 2023,
+    label: "2022 1st team defense",
+    url: "https://www.calhisports.com/2023/02/08/all-state-fb-2022-1st-team-defense/",
+  },
+  {
+    seasonEndYear: 2023,
+    label: "2022 medium schools",
+    url: "https://www.calhisports.com/2023/02/02/all-state-fb-2022-medium-schools/",
+  },
+  {
+    seasonEndYear: 2022,
+    label: "2021 1st team offense",
+    url: "https://www.calhisports.com/2022/02/06/all-state-fb-2021-1st-team-offense/",
+  },
+  {
+    seasonEndYear: 2022,
+    label: "2021 1st team defense",
+    url: "https://www.calhisports.com/2022/02/06/all-state-fb-2021-1st-team-defense/",
+  },
+  {
+    seasonEndYear: 2022,
+    label: "2021 medium schools",
+    url: "https://www.calhisports.com/2022/01/29/all-state-fb-2021-medium-schools/",
+  },
+  {
+    seasonEndYear: 2022,
+    label: "2021 small schools",
+    url: "https://www.calhisports.com/2022/01/25/all-state-fb-2021-small-schools/",
   },
 ];
 
