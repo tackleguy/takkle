@@ -4,9 +4,11 @@ import Link from "next/link";
 import { useState } from "react";
 import Button from "@/components/ui/Button";
 
-const LINKS = [
+const LINKS: { href: string; label: string; highlight?: boolean }[] = [
   { href: "/discover", label: "Discover" },
   { href: "/rankings", label: "Rankings" },
+  { href: "/nil/scores", label: "NIL Scores" },
+  { href: "/cfb/scores", label: "CFB Scores" },
   { href: "/college", label: "College", highlight: true },
   { href: "/guides", label: "Player Guides" },
 ];

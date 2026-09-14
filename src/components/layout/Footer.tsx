@@ -45,11 +45,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/nil-rules" className="text-sm text-text-secondary hover:text-accent transition-colors">
-                  High School NIL Rules
-                </Link>
-              </li>
-              <li>
                 <Link href="/guides" className="text-sm text-text-secondary hover:text-accent transition-colors">
                   Player Guides
                 </Link>
@@ -67,12 +62,22 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link href="/discover" className="text-sm text-text-secondary hover:text-accent transition-colors">
-                  Transfer Portal
+                  Their Teams
                 </Link>
               </li>
               <li>
                 <Link href="/rankings" className="text-sm text-text-secondary hover:text-accent transition-colors">
                   College Rankings
+                </Link>
+              </li>
+              <li>
+                <Link href="/nil/scores" className="text-sm text-text-secondary hover:text-accent transition-colors">
+                  NIL Scores
+                </Link>
+              </li>
+              <li>
+                <Link href="/cfb/scores" className="text-sm text-text-secondary hover:text-accent transition-colors">
+                  CFB Scores
                 </Link>
               </li>
               <li>
@@ -87,8 +92,8 @@ export default function Footer() {
         <div className="mt-8 pt-8 border-t border-border space-y-3">
           <p className="text-xs text-text-muted text-center max-w-3xl mx-auto">
             <strong className="text-text-secondary">Eligibility is school-specific.</strong> The
-            college calculator is an educational estimate. Confirm remaining seasons and transfer
-            status with your compliance office. High school NIL still varies by state.
+            college calculator is an educational estimate. Confirm remaining seasons, NIL
+            disclosure, and transfer status with your compliance office.
           </p>
           <p className="text-xs text-text-muted text-center">
             This information is for educational purposes only and is not legal advice. Consult a

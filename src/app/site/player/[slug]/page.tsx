@@ -87,8 +87,8 @@ export default async function PlayerProfilePage({ params }: PageProps) {
         <div className="mt-4 flex flex-wrap items-center gap-3 text-sm">
           <span className="text-text-muted">Share:</span>
           <code className="rounded bg-bg-card px-2 py-1 text-xs text-text-secondary">{shareUrl}</code>
-          <Link href="/nil-rules" className="ml-auto text-accent hover:underline text-sm">
-            High School NIL Rules →
+          <Link href="/guides" className="ml-auto text-accent hover:underline text-sm">
+            Player Guides →
           </Link>
         </div>
 

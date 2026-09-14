@@ -171,13 +171,17 @@ export default function PlayerProfileSections({ player }: PlayerProfileSectionsP
       </Section>
 
       <div className="rounded-xl border border-status-limited/30 bg-status-limited/5 p-4 text-sm text-text-secondary">
-        <p className="font-medium text-text-primary">High School NIL Notice</p>
+        <p className="font-medium text-text-primary">College NIL Notice</p>
         <p className="mt-1">
-          NIL rules vary by state and change frequently.{" "}
-          <Link href="/nil-rules" className="text-accent hover:underline">
-            Check your state&apos;s High School NIL Rules
+          Disclose deals with your compliance office. Read{" "}
+          <Link href="/guides/how-to-get-nil-deals-college" className="text-accent hover:underline">
+            college NIL guides
           </Link>{" "}
-          before pursuing deals.
+          and estimate remaining seasons with the{" "}
+          <Link href="/college" className="text-accent hover:underline">
+            eligibility calculator
+          </Link>
+          .
         </p>
       </div>
     </div>

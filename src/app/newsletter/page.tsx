@@ -3,13 +3,13 @@ import Link from "next/link";
 import EmailCapture from "@/components/EmailCapture";
 
 export const metadata: Metadata = {
-  title: "Newsletter — Stay Ahead of the NIL Game | Takkle",
+  title: "Newsletter — College Football + NIL Updates | Takkle",
   description:
-    "Get weekly updates on NIL rule changes, opportunities, and resources for parents of high school athletes. Free newsletter from Takkle.",
+    "Get weekly updates on college football, their teams, NIL opportunities, and resources for athletes. Free newsletter from Takkle.",
   openGraph: {
-    title: "Newsletter — Stay Ahead of the NIL Game | Takkle",
+    title: "Newsletter — College Football + NIL Updates | Takkle",
     description:
-      "Weekly NIL updates for parents of high school athletes. Rule changes, opportunities, and expert advice.",
+      "Weekly updates on college athletes, their teams, and NIL opportunities.",
     url: "https://takkle.com/newsletter",
     siteName: "Takkle",
     type: "website",
@@ -17,8 +17,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Takkle Newsletter",
-    description:
-      "Weekly NIL updates for parents of high school athletes.",
+    description: "Weekly updates on college athletes, their teams, and NIL opportunities.",
   },
   alternates: {
     canonical: "https://takkle.com/newsletter",
@@ -71,22 +70,21 @@ export default function NewsletterPage() {
 
           <h1 className="text-4xl sm:text-5xl font-bold font-[family-name:var(--font-heading)] leading-tight">
             Stay Ahead of the{" "}
-            <span className="text-accent">NIL Game</span>
+            <span className="text-accent">College Game</span>
           </h1>
           <p className="mt-4 text-lg text-text-secondary max-w-xl mx-auto">
-            Get weekly updates on NIL rule changes, new opportunities, and
-            expert resources for parents of high school athletes. Completely
-            free.
+            Weekly trends for athletes and their teams, NIL opportunities, and player resources
+            for college football athletes. Completely free.
           </p>
 
           <div className="mt-8 space-y-6">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
               <div className="bg-bg-card border border-border rounded-xl p-4">
                 <div className="text-accent text-lg font-bold mb-1">
-                  Rule Updates
+                  Eligibility
                 </div>
                 <p className="text-sm text-text-secondary">
-                  Be the first to know when your state changes its NIL rules.
+                  Stay current on roster movement and eligibility timing.
                 </p>
               </div>
               <div className="bg-bg-card border border-border rounded-xl p-4">
@@ -102,7 +100,7 @@ export default function NewsletterPage() {
                   Opportunities
                 </div>
                 <p className="text-sm text-text-secondary">
-                  Hear about new NIL platforms, camps, and deals for HS
+                  Hear about NIL platforms, collectives, and deals for college
                   athletes.
                 </p>
               </div>

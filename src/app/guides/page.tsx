@@ -5,11 +5,11 @@ import { guides } from "@/data/guides";
 export const metadata: Metadata = {
   title: "Player Guides: NIL, Taxes, Contracts & More | Takkle",
   description:
-    "Free guides for athletes. Learn about NIL deals, taxes, contracts, personal branding, and nutrition.",
+    "Free guides for college athletes. Learn about NIL deals, taxes, contracts, personal branding, and nutrition.",
   openGraph: {
     title: "Player Guides: NIL, Taxes, Contracts & More | Takkle",
     description:
-      "Free guides for athletes covering NIL deals, taxes, contracts, and more.",
+      "Free guides for college athletes covering NIL deals, taxes, contracts, and more.",
     url: "https://takkle.com/guides",
     siteName: "Takkle",
     type: "website",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Player Guides | Takkle",
     description:
-      "Free guides for athletes covering NIL deals, taxes, contracts, and more.",
+      "Free guides for college athletes covering NIL deals, taxes, contracts, and more.",
   },
   alternates: {
     canonical: "https://takkle.com/guides",
@@ -70,8 +70,8 @@ export default function GuidesPage() {
             Player Guides
           </h1>
           <p className="text-lg text-text-secondary mb-12">
-            Everything athletes need to know about NIL, from getting started to
-            managing taxes and contracts.
+            Everything college athletes need to know about NIL, eligibility,
+            taxes, contracts, branding, and performance.
           </p>
 
           <div className="space-y-6">

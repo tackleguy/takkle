@@ -18,9 +18,13 @@ export default function OnboardingPage() {
           Your player record is separate from your login. Find, claim, verify, and build your dossier.
         </p>
         <p className="mt-2 text-sm text-text-muted">
-          College Transfer Portal + NIL Portal surface —{" "}
-          <Link href="/nil-rules" className="text-accent hover:underline">
-            NIL rules overview
+          College athletes and their teams —{" "}
+          <Link href="/guides" className="text-accent hover:underline">
+            Player Guides
+          </Link>
+          {" · "}
+          <Link href="/college" className="text-accent hover:underline">
+            Eligibility
           </Link>
         </p>
       </div>

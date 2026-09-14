@@ -2,7 +2,7 @@ import { formatTackleScore, confidenceLabel } from "@/lib/scoring/tackle-score";
 import type { ScoreConfidence } from "@/types/recruiting";
 
 interface TackleScoreDisplayProps {
-  score: number;
+  score: number | null | undefined;
   confidence?: ScoreConfidence;
   size?: "sm" | "md" | "lg" | "hero";
   showLabel?: boolean;
@@ -34,11 +34,13 @@ export default function TackleScoreDisplay({
         >
           {formatTackleScore(score)}
         </span>
-        <span className="text-sm text-text-muted">/10</span>
+        {score != null && !Number.isNaN(score) ? (
+          <span className="text-sm text-text-muted">/10</span>
+        ) : null}
       </div>
-      {confidence && (
+      {confidence && score != null ? (
         <span className="mt-1 text-xs text-text-muted">{confidenceLabel(confidence)}</span>
-      )}
+      ) : null}
     </div>
   );
 }

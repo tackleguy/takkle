@@ -14,7 +14,12 @@ const SCOPES: { value: RankingScope; label: string }[] = [
   { value: "class", label: "Class" },
 ];
 
-export default function RankingsFilters() {
+interface RankingsFiltersProps {
+  /** Defaults to `/rankings`; use `/nil/scores` for the NIL leaderboard. */
+  basePath?: string;
+}
+
+export default function RankingsFilters({ basePath = "/rankings" }: RankingsFiltersProps) {
   const router = useRouter();
   const params = useSearchParams();
 
@@ -25,7 +30,7 @@ export default function RankingsFilters() {
       else next.delete(key);
     }
     next.delete("state");
-    router.push(`/rankings?${next.toString()}`);
+    router.push(`${basePath}?${next.toString()}`);
   }
 
   const selectClass =

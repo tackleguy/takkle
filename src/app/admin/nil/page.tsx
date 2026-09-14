@@ -5,9 +5,17 @@ export default function AdminNilPage() {
     <div>
       <h2 className="font-[family-name:var(--font-display)] text-3xl text-text-primary">NIL Settings</h2>
       <p className="mt-2 text-text-secondary">
-        NIL resource links and state content are managed separately. Public resource:{" "}
-        <Link href="/nil-rules" className="text-accent hover:underline">
-          High School NIL Rules
+        Public NIL Scores:{" "}
+        <Link href="/nil/scores" className="text-accent hover:underline">
+          /nil/scores
+        </Link>
+        {" · "}
+        <Link href="/college" className="text-accent hover:underline">
+          College Eligibility
+        </Link>
+        {" · "}
+        <Link href="/guides" className="text-accent hover:underline">
+          Player Guides
         </Link>
       </p>
     </div>

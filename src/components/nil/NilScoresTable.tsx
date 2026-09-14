@@ -1,22 +1,22 @@
 import Link from "next/link";
-import type { RankedPlayerRow } from "@/lib/rankings";
-import { formatTackleScore } from "@/lib/scoring/tackle-score";
+import type { NilRankedRow } from "@/lib/nil-rankings";
+import { formatNilScore } from "@/lib/scoring/nil-provisional";
 import { playerSchoolLine, playerSchoolName } from "@/lib/player-display";
 
-interface RankingsTableProps {
-  rows: RankedPlayerRow[];
+interface NilScoresTableProps {
+  rows: NilRankedRow[];
 }
 
-export default function RankingsTable({ rows }: RankingsTableProps) {
+export default function NilScoresTable({ rows }: NilScoresTableProps) {
   if (rows.length === 0) {
     return (
       <div className="rounded-xl border border-border bg-bg-card px-6 py-12 text-center">
         <p className="font-[family-name:var(--font-display)] text-2xl text-text-primary">
-          No ranked players yet
+          No NIL scores yet
         </p>
         <p className="mt-2 text-sm text-text-muted">
-          No ranked college players yet for this filter. Provisional Tackle Scores come from
-          division, conference, and roster signals until film grades land.
+          Provisional NIL Scores come from division, conference reach, position visibility, and
+          their teams until verified brand data lands.
         </p>
       </div>
     );
@@ -32,18 +32,17 @@ export default function RankingsTable({ rows }: RankingsTableProps) {
             <th className="px-4 py-3 hidden sm:table-cell">Their Team</th>
             <th className="px-4 py-3 hidden md:table-cell">Pos</th>
             <th className="px-4 py-3 hidden md:table-cell">Class</th>
-            <th className="px-4 py-3 text-right">Tackle Score™</th>
+            <th className="px-4 py-3 text-right">NIL Score</th>
           </tr>
         </thead>
         <tbody>
-          {rows.map(({ rank, score, isRising, player }) => (
+          {rows.map(({ rank, score, player }) => (
             <tr
               key={player.id}
               className="border-b border-border/60 bg-bg-card transition-colors hover:bg-bg-card-hover"
             >
               <td className="px-4 py-3 font-[family-name:var(--font-display)] text-lg text-text-muted">
                 {rank}
-                {isRising && <span className="ml-1 text-turf text-xs">↑</span>}
               </td>
               <td className="px-4 py-3">
                 <Link
@@ -70,7 +69,7 @@ export default function RankingsTable({ rows }: RankingsTableProps) {
               </td>
               <td className="px-4 py-3 text-right">
                 <span className="font-[family-name:var(--font-display)] text-xl text-accent">
-                  {score != null ? formatTackleScore(score) : "—"}
+                  {formatNilScore(score)}
                 </span>
                 <span className="block text-[10px] uppercase tracking-wide text-text-muted">
                   Limited data

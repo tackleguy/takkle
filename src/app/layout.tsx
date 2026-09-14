@@ -13,23 +13,23 @@ const bebasNeue = Bebas_Neue({
 
 export const metadata: Metadata = {
   title: {
-    default: "Takkle — High School Football Recruiting",
+    default: "Takkle — College Football Recruiting",
     template: "%s | Takkle",
   },
   description:
-    "Build your recruiting profile. Show your game. Get discovered. Tackle Score™ rankings, film, and recruiter discovery for high school football.",
+    "Build your recruiting profile. Show your game. Get discovered. Tackle Score™ rankings, film, and discovery for college athletes and their teams.",
   metadataBase: new URL("https://takkle.com"),
   openGraph: {
-    title: "Takkle — High School Football Recruiting",
+    title: "Takkle — College Football Recruiting",
     description:
-      "Player-first recruiting platform with Tackle Score™, film, and recruiter discovery.",
+      "Player-first college recruiting with Tackle Score™, film, and discovery for athletes and their teams.",
     url: "https://takkle.com",
     siteName: "Takkle",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Takkle — High School Football Recruiting",
+    title: "Takkle — College Football Recruiting",
     description: "Build your recruiting profile. Show your game. Get discovered.",
   },
   robots: {
@@ -49,7 +49,7 @@ export default function RootLayout({
         {/*
           THESIS: Player recruiting identity as official-visit dossier — not a stats warehouse.
           OWN-WORLD: Night field #070B14/#0E1624, orange #FF6A00, turf #1FAF6B; Bebas display digits.
-          STORY: Claim profile → film → Tackle Score™ → rankings → discovery; NIL Rules stay linked.
+          STORY: Claim profile → film → Tackle Score™ → rankings → discovery; College + Player Guides linked.
           FIRST VIEWPORT: TAKKLE brand, one headline, one sentence, Claim + Find CTAs, field lights.
           FORM: Official visit dossier (seed 3724acb6 idx4) raised with digit-bank score + film window.
           FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance

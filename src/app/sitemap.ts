@@ -1,5 +1,4 @@
 import { MetadataRoute } from "next";
-import { getAllSlugs } from "@/data/states";
 import { getAllGuideSlugs } from "@/data/guides";
 import { getAllPlayerSlugs } from "@/lib/players";
 
@@ -12,19 +11,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/rankings`, lastModified: new Date(), changeFrequency: "daily", priority: 0.9 },
     { url: `${baseUrl}/onboarding`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/college`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
-    { url: `${baseUrl}/nil-rules`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    { url: `${baseUrl}/nil/scores`, lastModified: new Date(), changeFrequency: "daily", priority: 0.85 },
+    { url: `${baseUrl}/cfb/scores`, lastModified: new Date(), changeFrequency: "hourly", priority: 0.85 },
     { url: `${baseUrl}/guides`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
     { url: `${baseUrl}/newsletter`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
     { url: `${baseUrl}/auth/login`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
     { url: `${baseUrl}/auth/signup`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
   ];
-
-  const statePages: MetadataRoute.Sitemap = getAllSlugs().map((slug) => ({
-    url: `${baseUrl}/nil-rules/${slug}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly" as const,
-    priority: 0.9,
-  }));
 
   const guidePages: MetadataRoute.Sitemap = getAllGuideSlugs().map((slug) => ({
     url: `${baseUrl}/guides/${slug}`,
@@ -42,5 +35,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     }));
 
-  return [...staticPages, ...statePages, ...guidePages, ...playerPages];
+  return [...staticPages, ...guidePages, ...playerPages];
 }

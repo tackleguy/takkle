@@ -110,16 +110,17 @@ export default function CollegePage() {
           <p className="mt-4 text-xs text-text-muted leading-relaxed max-w-3xl">
             Educational estimate only — not official NCAA or school compliance advice. Transfer
             rules, graduate eligibility, and conference policies can change your situation. Confirm
-            with your compliance office before making roster or portal decisions.
+            with your compliance office before making roster or team decisions.
           </p>
 
           <div className="mt-12 grid gap-6 sm:grid-cols-2">
             <div className="border-t border-border pt-6">
               <h2 className="font-[family-name:var(--font-display)] text-2xl text-text-primary tracking-wide">
-                Transfer Portal + NIL Portal
+                Athletes & Their Teams
               </h2>
               <p className="mt-2 text-sm text-text-secondary">
-                Browse FBS and FCS athletes with Tackle Score™, eligibility year, and portal status.
+                Browse FBS and FCS athletes with Tackle Score™, NIL Score, eligibility year, and
+                their teams.
               </p>
               <div className="mt-4 flex flex-wrap gap-3">
                 <Button href="/discover" size="sm">
@@ -128,18 +129,21 @@ export default function CollegePage() {
                 <Button href="/rankings" variant="outline" size="sm">
                   College rankings
                 </Button>
+                <Button href="/nil/scores" variant="ghost" size="sm">
+                  NIL Scores
+                </Button>
               </div>
             </div>
             <div className="border-t border-border pt-6">
               <h2 className="font-[family-name:var(--font-display)] text-2xl text-text-primary tracking-wide">
-                High School NIL Rules
+                Player Guides
               </h2>
               <p className="mt-2 text-sm text-text-secondary">
-                State-by-state NIL status for high school athletes still lives at its own resource.
+                NIL deals, taxes, contracts, personal branding, and nutrition for college athletes.
               </p>
               <div className="mt-4">
-                <Button href="/nil-rules" variant="ghost" size="sm">
-                  Check HS NIL rules →
+                <Button href="/guides" variant="ghost" size="sm">
+                  Browse Player Guides →
                 </Button>
               </div>
             </div>

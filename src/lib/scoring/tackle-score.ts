@@ -91,7 +91,8 @@ export function computeTackleScore(
   return { score, confidence, components };
 }
 
-export function formatTackleScore(score: number): string {
+export function formatTackleScore(score: number | null | undefined): string {
+  if (score == null || Number.isNaN(score)) return "—";
   return score.toFixed(1);
 }
 

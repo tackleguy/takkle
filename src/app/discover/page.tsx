@@ -9,7 +9,7 @@ import type { FootballPosition } from "@/types/recruiting";
 export const metadata: Metadata = {
   title: "Discover Players",
   description:
-    "Search NCAA D1 FBS/FCS football athletes for Transfer Portal and NIL Portal discovery.",
+    "Search NCAA D1 FBS/FCS football athletes and their teams for recruiting and NIL discovery.",
 };
 
 export const dynamic = "force-dynamic";
@@ -40,8 +40,8 @@ export default async function DiscoverPage({ searchParams }: PageProps) {
           Discover Players
         </h1>
         <p className="mt-2 text-text-secondary max-w-2xl">
-          Transfer Portal + NIL Portal discovery for FBS and FCS athletes — filter by school,
-          position, eligibility year, and Tackle Score™.
+          Discover FBS and FCS athletes and their teams — filter by school, position, eligibility
+          year, and Tackle Score™.
         </p>
 
         <div className="mt-8">
