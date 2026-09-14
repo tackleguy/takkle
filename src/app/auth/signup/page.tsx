@@ -41,6 +41,8 @@ export default function SignupPage() {
             <option value="player">I am a player</option>
             <option value="parent">I am a parent/guardian</option>
             <option value="recruiter">I am a recruiter</option>
+            <option value="coach">I am a coach</option>
+            <option value="business">I am a business</option>
           </select>
           <Button type="submit" className="w-full" disabled={!supabaseReady}>
             Create account

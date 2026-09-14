@@ -7,6 +7,7 @@ import {
   getLiveRisingPlayers,
   getLiveTrendingPlayers,
 } from "@/lib/live-players";
+import { playerSchoolLine } from "@/lib/player-display";
 
 export const dynamic = "force-dynamic";
 
@@ -61,7 +62,7 @@ export default async function HomePage() {
                   {featured.displayName}
                 </h2>
                 <p className="mt-2 text-text-secondary">
-                  {featured.position} · Class of {featured.classYear} · {featured.school.name}
+                  {featured.position} · Class of {featured.classYear} · {playerSchoolLine(featured)}
                 </p>
                 <div className="mt-6">
                   <TackleScoreDisplay

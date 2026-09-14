@@ -32,8 +32,8 @@ function seedFallback(query: string, state: string | null, limit: number): Claim
     jerseyNumber: p.jerseyNumber ?? null,
     status: p.status,
     verificationStatus: null,
-    schoolName: p.school?.name ?? null,
-    schoolCity: p.school?.city ?? null,
+    schoolName: p.collegeName ?? p.school?.name ?? null,
+    schoolCity: null,
     source: "seed" as const,
   }));
 }
@@ -143,7 +143,7 @@ export async function GET(request: Request) {
           (school as { name?: string } | null)?.name ??
           (row.source_school as string) ??
           null,
-        schoolCity: (school as { city?: string } | null)?.city ?? null,
+        schoolCity: null,
         source: "supabase" as const,
       };
     });

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { RankedPlayerRow } from "@/lib/rankings";
 import { formatTackleScore } from "@/lib/scoring/tackle-score";
+import { playerSchoolLine, playerSchoolName } from "@/lib/player-display";
 
 interface RankingsTableProps {
   rows: RankedPlayerRow[];
@@ -52,11 +53,14 @@ export default function RankingsTable({ rows }: RankingsTableProps) {
                   {player.displayName}
                 </Link>
                 <span className="sm:hidden block text-xs text-text-muted">
-                  {player.school.name}
+                  {playerSchoolLine(player)}
                 </span>
               </td>
               <td className="px-4 py-3 hidden sm:table-cell text-text-secondary">
-                {player.school.name}, {player.stateCode}
+                {playerSchoolName(player)}
+                {player.conference ? (
+                  <span className="block text-xs text-text-muted">{player.conference}</span>
+                ) : null}
               </td>
               <td className="px-4 py-3 hidden md:table-cell text-text-secondary">
                 {player.position}

@@ -8,7 +8,7 @@ const LINKS = [
   { href: "/discover", label: "Discover" },
   { href: "/rankings", label: "Rankings" },
   { href: "/college", label: "College", highlight: true },
-  { href: "/guides", label: "Parent Guides" },
+  { href: "/guides", label: "Player Guides" },
 ];
 
 export default function Navbar() {

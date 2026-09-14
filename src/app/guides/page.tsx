@@ -3,22 +3,22 @@ import { Metadata } from "next";
 import { guides } from "@/data/guides";
 
 export const metadata: Metadata = {
-  title: "Parent Guides: NIL, Taxes, Contracts & More | Takkle",
+  title: "Player Guides: NIL, Taxes, Contracts & More | Takkle",
   description:
-    "Free guides for parents of high school athletes. Learn about NIL deals, taxes, contracts, personal branding, and nutrition.",
+    "Free guides for athletes. Learn about NIL deals, taxes, contracts, personal branding, and nutrition.",
   openGraph: {
-    title: "Parent Guides: NIL, Taxes, Contracts & More | Takkle",
+    title: "Player Guides: NIL, Taxes, Contracts & More | Takkle",
     description:
-      "Free guides for parents of high school athletes covering NIL deals, taxes, contracts, and more.",
+      "Free guides for athletes covering NIL deals, taxes, contracts, and more.",
     url: "https://takkle.com/guides",
     siteName: "Takkle",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Parent Guides | Takkle",
+    title: "Player Guides | Takkle",
     description:
-      "Free guides for parents of high school athletes covering NIL deals, taxes, contracts, and more.",
+      "Free guides for athletes covering NIL deals, taxes, contracts, and more.",
   },
   alternates: {
     canonical: "https://takkle.com/guides",
@@ -44,7 +44,7 @@ export default function GuidesPage() {
               {
                 "@type": "ListItem",
                 position: 2,
-                name: "Guides",
+                name: "Player Guides",
                 item: "https://takkle.com/guides",
               },
             ],
@@ -62,15 +62,15 @@ export default function GuidesPage() {
                 </Link>
               </li>
               <li>/</li>
-              <li className="text-text-secondary">Guides</li>
+              <li className="text-text-secondary">Player Guides</li>
             </ol>
           </nav>
 
           <h1 className="text-3xl sm:text-4xl font-bold font-[family-name:var(--font-heading)] mb-4">
-            Parent Guides
+            Player Guides
           </h1>
           <p className="text-lg text-text-secondary mb-12">
-            Everything parents need to know about NIL, from getting started to
+            Everything athletes need to know about NIL, from getting started to
             managing taxes and contracts.
           </p>
 

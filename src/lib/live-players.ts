@@ -50,12 +50,14 @@ function mapSchool(
     (sourceName && !placeholder.has(sourceName.toLowerCase()) && sourceName) ||
     "College TBD";
 
+  // For college athletes, school.city often holds hometown — omit it.
+  const isCollege = Boolean(college && !placeholder.has(college.toLowerCase()));
   return {
     id: raw?.id ?? "unknown",
     name,
     slug: raw?.slug ?? "unknown",
-    city: raw?.city ?? "",
-    stateCode: raw?.state_code ?? stateCode,
+    city: isCollege ? "" : (raw?.city ?? ""),
+    stateCode: isCollege ? (raw?.state_code ?? "") : (raw?.state_code ?? stateCode),
     isSynthetic: false,
   };
 }

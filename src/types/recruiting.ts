@@ -5,6 +5,8 @@ export type AccountType =
   | "parent"
   | "recruiter"
   | "school"
+  | "business"
+  | "coach"
   | "admin";
 
 export type PlayerStatus =

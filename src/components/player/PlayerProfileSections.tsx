@@ -5,6 +5,7 @@ import TackleScoreDisplay from "@/components/ui/TackleScoreDisplay";
 import SyntheticNotice from "@/components/ui/SyntheticNotice";
 import Badge from "@/components/ui/Badge";
 import { formatTackleScore } from "@/lib/scoring/tackle-score";
+import { playerSchoolName } from "@/lib/player-display";
 import Link from "next/link";
 
 interface PlayerProfileSectionsProps {
@@ -26,6 +27,7 @@ export default function PlayerProfileSections({ player }: PlayerProfileSectionsP
   const heightFt = Math.floor(player.heightInches / 12);
   const heightIn = Math.round(player.heightInches % 12);
   const m = player.measurements[0];
+  const school = playerSchoolName(player);
 
   return (
     <div className="space-y-6">
@@ -34,11 +36,15 @@ export default function PlayerProfileSections({ player }: PlayerProfileSectionsP
       <Section title="About">
         <p className="text-text-secondary leading-relaxed">
           {player.bio ??
-            `${player.displayName} is a ${player.position} at ${player.school.name} (Class of ${player.classYear}).`}
+            `${player.displayName} is a ${player.position} at ${school} (Class of ${player.classYear}).`}
         </p>
         <div className="mt-4 flex flex-wrap gap-2">
           <Badge>{player.status.replace(/_/g, " ")}</Badge>
-          <Badge tone="turf">{player.stateCode}</Badge>
+          {player.conference ? (
+            <Badge tone="turf">{player.conference}</Badge>
+          ) : player.division ? (
+            <Badge tone="turf">{player.division.toUpperCase()}</Badge>
+          ) : null}
           {player.jerseyNumber && <Badge>#{player.jerseyNumber}</Badge>}
         </div>
       </Section>

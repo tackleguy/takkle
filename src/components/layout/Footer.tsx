@@ -51,7 +51,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/guides" className="text-sm text-text-secondary hover:text-accent transition-colors">
-                  Parent Guides
+                  Player Guides
                 </Link>
               </li>
               <li>

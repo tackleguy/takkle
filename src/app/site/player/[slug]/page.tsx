@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllPlayerSlugs } from "@/lib/players";
 import { getLivePlayerBySlug } from "@/lib/live-players";
+import { playerSchoolLine, playerSchoolName } from "@/lib/player-display";
 import PlayerProfileSections from "@/components/player/PlayerProfileSections";
 import TackleScoreDisplay from "@/components/ui/TackleScoreDisplay";
 import FilmWindow from "@/components/film/FilmWindow";
@@ -26,12 +27,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { player } = await getLivePlayerBySlug(slug);
   if (!player) return {};
 
+  const school = playerSchoolName(player);
   return {
     title: `${player.displayName} — ${player.position} Class of ${player.classYear}`,
-    description: `${player.displayName} recruiting profile at ${player.school.name}. Tackle Score™ ${player.tackleScore.score}.`,
+    description: `${player.displayName} recruiting profile at ${school}. Tackle Score™ ${player.tackleScore.score}.`,
     openGraph: {
       title: `${player.displayName} | Takkle`,
-      description: `Tackle Score™ ${player.tackleScore.score} — ${player.school.name}`,
+      description: `Tackle Score™ ${player.tackleScore.score} — ${school}`,
     },
   };
 }
@@ -61,9 +63,7 @@ export default async function PlayerProfilePage({ params }: PageProps) {
                   <p className="mt-2 text-lg text-text-secondary">
                     {player.position} · Class of {player.classYear}
                   </p>
-                  <p className="text-text-muted">
-                    {player.school.name} · {player.school.city}, {player.stateCode}
-                  </p>
+                  <p className="text-text-muted">{playerSchoolLine(player)}</p>
                   <div className="mt-3 flex flex-wrap gap-2">
                     <Badge tone="turf">{player.status.replace(/_/g, " ")}</Badge>
                     <Badge>{heightFt}&apos;{heightIn}&quot; · {player.weightLbs} lbs</Badge>

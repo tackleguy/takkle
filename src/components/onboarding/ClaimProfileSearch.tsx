@@ -220,9 +220,7 @@ export default function ClaimProfileSearch({
             ]
               .filter(Boolean)
               .join(" · ");
-            const schoolLine = [p.schoolName, p.schoolCity, p.stateCode]
-              .filter(Boolean)
-              .join(", ");
+            const schoolLine = p.schoolName || "College TBD";
 
             return (
               <li key={p.id} role="option" aria-selected={selected}>

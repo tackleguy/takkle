@@ -105,7 +105,7 @@ export default async function GuidePage({ params }: PageProps) {
               {
                 "@type": "ListItem",
                 position: 2,
-                name: "Guides",
+                name: "Player Guides",
                 item: "https://takkle.com/guides",
               },
               {
@@ -135,7 +135,7 @@ export default async function GuidePage({ params }: PageProps) {
                   href="/guides"
                   className="hover:text-accent transition-colors"
                 >
-                  Guides
+                  Player Guides
                 </Link>
               </li>
               <li>/</li>

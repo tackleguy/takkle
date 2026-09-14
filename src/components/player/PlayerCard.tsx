@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Player } from "@/types/recruiting";
 import TackleScoreDisplay from "@/components/ui/TackleScoreDisplay";
 import SyntheticNotice from "@/components/ui/SyntheticNotice";
+import { playerSchoolLine } from "@/lib/player-display";
 
 interface PlayerCardProps {
   player: Player;
@@ -25,9 +26,7 @@ export default function PlayerCard({ player, showSynthetic = true }: PlayerCardP
           <p className="mt-0.5 text-sm text-text-secondary">
             {player.position} · Class of {player.classYear}
           </p>
-          <p className="text-sm text-text-muted truncate">
-            {player.school.name} · {player.school.city}, {player.stateCode}
-          </p>
+          <p className="text-sm text-text-muted truncate">{playerSchoolLine(player)}</p>
         </div>
         <TackleScoreDisplay score={player.tackleScore.score} size="sm" showLabel={false} />
       </div>
