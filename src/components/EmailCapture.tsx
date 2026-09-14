@@ -14,10 +14,10 @@ export default function EmailCapture({
 }: EmailCaptureProps) {
   const defaultHeadline = stateName
     ? `Want the Full ${stateName} NIL Playbook?`
-    : "Get Your Free NIL Playbook";
+    : "Get Your Free College NIL Playbook";
   const defaultDescription = stateName
-    ? `Get a free guide covering everything parents need to know about NIL rules in ${stateName}.`
-    : "Get a free guide covering everything parents need to know about high school NIL rules.";
+    ? `Get a free guide covering NIL deals, taxes, and compliance tips for athletes in ${stateName}.`
+    : "Get a free guide covering NIL deals, taxes, and contracts for college athletes.";
 
   return (
     <div className="bg-bg-card-hover border border-border rounded-xl p-6">

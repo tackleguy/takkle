@@ -149,7 +149,7 @@ export default function OnboardingWizard() {
           <>
             <h2 className="font-[family-name:var(--font-display)] text-2xl">Verify identity</h2>
             <p className="mt-2 text-text-secondary">
-              Upload roster proof, school email, or parent verification. No facial recognition for minors.
+              Upload roster proof or school email for verification. No facial recognition required.
             </p>
             <div className="mt-6 rounded-lg border border-dashed border-border bg-field p-8 text-center text-sm text-text-muted">
               Verification upload placeholder
