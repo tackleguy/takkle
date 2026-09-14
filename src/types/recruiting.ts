@@ -181,6 +181,16 @@ export interface PlayerProvenance {
   note?: string;
 }
 
+export type CompetitionLevel = "hs" | "college";
+export type CollegeDivision = "fbs" | "fcs";
+export type TransferPortalStatus =
+  | "not_in_portal"
+  | "entered"
+  | "withdrawn"
+  | "committed"
+  | "enrolled"
+  | "unknown";
+
 /** Public player profile — id is player_id, never auth user_id. */
 export interface Player {
   id: string;
@@ -199,6 +209,16 @@ export interface Player {
   status: PlayerStatus;
   bio?: string;
   hometownCity?: string;
+  /** hs = dormant inventory; college = Transfer/NIL portal surface (FBS/FCS). */
+  competitionLevel?: CompetitionLevel;
+  division?: CollegeDivision | null;
+  collegeName?: string | null;
+  conference?: string | null;
+  eligibilityYear?: number | null;
+  transferPortalStatus?: TransferPortalStatus | null;
+  portalEntryDate?: string | null;
+  transferFromSchool?: string | null;
+  transferToSchool?: string | null;
   isSynthetic: boolean;
   isFeatured?: boolean;
   tackleScore: TackleScore;

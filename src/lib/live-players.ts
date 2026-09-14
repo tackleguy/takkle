@@ -1,9 +1,5 @@
-import {
-  DEFAULT_RECRUIT_CLASS,
-  RECRUIT_CLASS_MAX,
-  RECRUIT_CLASS_MIN,
-  isRecruitClassYear,
-} from "@/lib/recruiting/class-years";
+import { DEFAULT_RECRUIT_CLASS } from "@/lib/recruiting/class-years";
+import { ACTIVE_COMPETITION_LEVEL } from "@/lib/competition-level";
 import { RANKING_VERSION } from "@/lib/scoring/research-rankings";
 import { createTakkleClient, isTakkleConfigured } from "@/lib/takkle-client";
 import {
@@ -14,18 +10,23 @@ import {
   searchPlayers as searchSeedPlayers,
 } from "@/lib/players";
 import type {
+  CollegeDivision,
+  CompetitionLevel,
   FootballPosition,
   Player,
   PlayerSearchFilters,
   PlayerSearchResult,
   School,
   ScoreConfidence,
+  TransferPortalStatus,
 } from "@/types/recruiting";
 
 const PLAYER_SELECT = `
   id, first_name, last_name, display_name, slug, position, class_year,
   school_id, state_code, height_inches, weight_lbs, jersey_number,
   status, is_synthetic, source_name, source_url, source_school, hometown_city,
+  competition_level, division, college_name, conference, eligibility_year,
+  transfer_portal_status, portal_entry_date, transfer_from_school, transfer_to_school,
   schools ( id, name, slug, city, state_code )
 `;
 
@@ -33,14 +34,17 @@ function mapSchool(
   raw: { id?: string; name?: string; slug?: string; city?: string; state_code?: string } | null,
   stateCode: string,
   sourceSchool?: string | null,
+  collegeName?: string | null,
 ): School {
   const placeholder = new Set(["unknown", "wl", "n/a", "tbd", "?", ""]);
   const rawName = raw?.name?.trim() ?? "";
   const sourceName = sourceSchool?.trim() ?? "";
+  const college = collegeName?.trim() ?? "";
   const name =
+    (college && !placeholder.has(college.toLowerCase()) && college) ||
     (rawName && !placeholder.has(rawName.toLowerCase()) && rawName) ||
     (sourceName && !placeholder.has(sourceName.toLowerCase()) && sourceName) ||
-    "High school TBD";
+    "College TBD";
 
   return {
     id: raw?.id ?? "unknown",
@@ -74,6 +78,7 @@ function toPlayer(
       schoolRaw as School & { state_code?: string },
       stateCode,
       row.source_school as string | null | undefined,
+      row.college_name as string | null | undefined,
     ),
     stateCode,
     heightInches: Number(row.height_inches ?? 0) || 0,
@@ -81,6 +86,15 @@ function toPlayer(
     jerseyNumber: (row.jersey_number as number) ?? undefined,
     status: (row.status as Player["status"]) ?? "unclaimed",
     hometownCity: (row.hometown_city as string) ?? undefined,
+    competitionLevel: (row.competition_level as CompetitionLevel) ?? ACTIVE_COMPETITION_LEVEL,
+    division: (row.division as CollegeDivision | null) ?? null,
+    collegeName: (row.college_name as string | null) ?? null,
+    conference: (row.conference as string | null) ?? null,
+    eligibilityYear: (row.eligibility_year as number | null) ?? null,
+    transferPortalStatus: (row.transfer_portal_status as TransferPortalStatus | null) ?? null,
+    portalEntryDate: (row.portal_entry_date as string | null) ?? null,
+    transferFromSchool: (row.transfer_from_school as string | null) ?? null,
+    transferToSchool: (row.transfer_to_school as string | null) ?? null,
     isSynthetic: Boolean(row.is_synthetic),
     tackleScore: {
       score,
@@ -106,8 +120,8 @@ function toPlayer(
 export type LivePlayersSource = "supabase" | "seed";
 
 /**
- * Prefer live takkle.players (real HS recruits). Fall back to local seed only when
- * Supabase credentials are missing or the query fails.
+ * Prefer live takkle.players (college FBS/FCS). HS rows are dormant.
+ * Fall back to local seed only when Supabase credentials are missing or the query fails.
  */
 export async function searchLivePlayers(
   filters: PlayerSearchFilters = {},
@@ -127,15 +141,14 @@ export async function searchLivePlayers(
       .from("players")
       .select(PLAYER_SELECT, { count: "exact" })
       .eq("is_synthetic", false)
-      .gte("class_year", RECRUIT_CLASS_MIN)
-      .lte("class_year", RECRUIT_CLASS_MAX)
+      .eq("competition_level", ACTIVE_COMPETITION_LEVEL)
       .order("last_name", { ascending: true })
       .order("first_name", { ascending: true })
       .range(from, to);
 
     if (filters.stateCode) query = query.eq("state_code", filters.stateCode);
     if (filters.position) query = query.eq("position", filters.position);
-    if (filters.classYear && isRecruitClassYear(filters.classYear)) {
+    if (filters.classYear && Number.isFinite(filters.classYear)) {
       query = query.eq("class_year", filters.classYear);
     }
     if (filters.status) query = query.eq("status", filters.status);
@@ -151,6 +164,7 @@ export async function searchLivePlayers(
           `first_name.ilike.${pattern}`,
           `last_name.ilike.${pattern}`,
           `source_school.ilike.${pattern}`,
+          `college_name.ilike.${pattern}`,
           `slug.ilike.${pattern}`,
         ].join(","),
       );
@@ -235,6 +249,7 @@ export async function getLivePlayerBySlug(
       .select(PLAYER_SELECT)
       .eq("slug", slug)
       .eq("is_synthetic", false)
+      .eq("competition_level", ACTIVE_COMPETITION_LEVEL)
       .maybeSingle();
 
     if (error || !data) {
@@ -243,10 +258,6 @@ export async function getLivePlayerBySlug(
     }
 
     const player = toPlayer(data as Record<string, unknown>);
-    if (!isRecruitClassYear(player.classYear)) {
-      return { player: null, source: "supabase" };
-    }
-
     const [withScore] = await attachNationalScores(client, [player]);
     return { player: withScore ?? player, source: "supabase" };
   } catch (err) {
@@ -264,7 +275,7 @@ async function playersFromRisingRankings(limit: number): Promise<Player[]> {
     .select(
       `
       rank, score, is_rising, previous_rank,
-      players (
+      players!inner (
         ${PLAYER_SELECT}
       )
     `,
@@ -273,8 +284,8 @@ async function playersFromRisingRankings(limit: number): Promise<Player[]> {
     .eq("scope_key", "national")
     .eq("ranking_version", RANKING_VERSION)
     .eq("is_rising", true)
-    .gte("class_year", RECRUIT_CLASS_MIN)
-    .lte("class_year", RECRUIT_CLASS_MAX)
+    .eq("players.competition_level", ACTIVE_COMPETITION_LEVEL)
+    .eq("players.is_synthetic", false)
     .order("rank", { ascending: true })
     .limit(limit * 3);
 
@@ -284,8 +295,9 @@ async function playersFromRisingRankings(limit: number): Promise<Player[]> {
   for (const row of data) {
     const raw = Array.isArray(row.players) ? row.players[0] : row.players;
     if (!raw || (raw as { is_synthetic?: boolean }).is_synthetic) continue;
-    const cy = (raw as { class_year?: number }).class_year;
-    if (!isRecruitClassYear(cy)) continue;
+    if ((raw as { competition_level?: string }).competition_level !== ACTIVE_COMPETITION_LEVEL) {
+      continue;
+    }
     out.push(toPlayer(raw as Record<string, unknown>, Number(row.score ?? 0)));
     if (out.length >= limit) break;
   }
@@ -301,7 +313,7 @@ async function playersFromNationalRankings(limit: number): Promise<Player[]> {
     .select(
       `
       rank, score,
-      players (
+      players!inner (
         ${PLAYER_SELECT}
       )
     `,
@@ -309,19 +321,18 @@ async function playersFromNationalRankings(limit: number): Promise<Player[]> {
     .eq("ranking_scope", "national")
     .eq("scope_key", "national")
     .eq("ranking_version", RANKING_VERSION)
-    .gte("class_year", RECRUIT_CLASS_MIN)
-    .lte("class_year", RECRUIT_CLASS_MAX)
+    .eq("players.competition_level", ACTIVE_COMPETITION_LEVEL)
+    .eq("players.is_synthetic", false)
     .order("rank", { ascending: true })
     .limit(limit * 3);
 
   if (error || !data?.length) {
-    // Fallback: plain player list when rankings are empty for national scope
+    // Fallback: plain college roster list when rankings are empty
     const { data: rows } = await client
       .from("players")
       .select(PLAYER_SELECT)
       .eq("is_synthetic", false)
-      .gte("class_year", RECRUIT_CLASS_MIN)
-      .lte("class_year", RECRUIT_CLASS_MAX)
+      .eq("competition_level", ACTIVE_COMPETITION_LEVEL)
       .order("last_name", { ascending: true })
       .limit(limit);
     return (rows ?? []).map((row) => toPlayer(row as Record<string, unknown>));
@@ -331,8 +342,9 @@ async function playersFromNationalRankings(limit: number): Promise<Player[]> {
   for (const row of data) {
     const raw = Array.isArray(row.players) ? row.players[0] : row.players;
     if (!raw || (raw as { is_synthetic?: boolean }).is_synthetic) continue;
-    const cy = (raw as { class_year?: number }).class_year;
-    if (!isRecruitClassYear(cy)) continue;
+    if ((raw as { competition_level?: string }).competition_level !== ACTIVE_COMPETITION_LEVEL) {
+      continue;
+    }
     out.push(toPlayer(raw as Record<string, unknown>, Number(row.score ?? 0)));
     if (out.length >= limit) break;
   }

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Claim Your Profile",
-  description: "Find and claim your high school football recruiting profile on Takkle.",
+  description: "Find and claim your collegiate football profile on Takkle (FBS/FCS).",
 };
 
 export default function OnboardingPage() {
@@ -18,9 +18,9 @@ export default function OnboardingPage() {
           Your player record is separate from your login. Find, claim, verify, and build your dossier.
         </p>
         <p className="mt-2 text-sm text-text-muted">
-          NIL rules vary by state —{" "}
+          College Transfer Portal + NIL Portal surface —{" "}
           <Link href="/nil-rules" className="text-accent hover:underline">
-            check High School NIL Rules
+            NIL rules overview
           </Link>
         </p>
       </div>

@@ -1,18 +1,17 @@
-import {
-  DEFAULT_RECRUIT_CLASS,
-  RECRUIT_CLASS_MAX,
-  RECRUIT_CLASS_MIN,
-  isRecruitClassYear,
-} from "@/lib/recruiting/class-years";
+import { DEFAULT_RECRUIT_CLASS, isRecruitClassYear } from "@/lib/recruiting/class-years";
+import { ACTIVE_COMPETITION_LEVEL } from "@/lib/competition-level";
 import { RANKING_VERSION } from "@/lib/scoring/research-rankings";
 import { createTakkleClient } from "@/lib/takkle-client";
 import type {
+  CollegeDivision,
+  CompetitionLevel,
   FootballPosition,
   Player,
   RankingFilters,
   RankingScope,
   School,
   ScoreConfidence,
+  TransferPortalStatus,
 } from "@/types/recruiting";
 import { getRankings as getSeedRankings } from "@/lib/players";
 
@@ -32,7 +31,6 @@ function scopeKeyFor(filters: RankingFilters): { scope: RankingScope; scopeKey: 
     const y = filters.classYear ?? DEFAULT_RECRUIT_CLASS;
     return { scope, scopeKey: String(y) };
   }
-  // position (default): prefer position:class when both set
   const pos = filters.position ?? "QB";
   if (filters.classYear && isRecruitClassYear(filters.classYear)) {
     return { scope: "position", scopeKey: `${pos}:${filters.classYear}` };
@@ -40,12 +38,21 @@ function scopeKeyFor(filters: RankingFilters): { scope: RankingScope; scopeKey: 
   return { scope: "position", scopeKey: pos };
 }
 
-function mapSchool(raw: { id?: string; name?: string; slug?: string; city?: string; state_code?: string } | null, stateCode: string): School {
+function mapSchool(
+  raw: { id?: string; name?: string; slug?: string; city?: string; state_code?: string } | null,
+  stateCode: string,
+  collegeName?: string | null,
+): School {
   const rawName = raw?.name?.trim() ?? "";
+  const college = collegeName?.trim() ?? "";
   const placeholder = new Set(["unknown", "wl", "n/a", "tbd", "?"]);
+  const name =
+    (college && !placeholder.has(college.toLowerCase()) && college) ||
+    (rawName && !placeholder.has(rawName.toLowerCase()) && rawName) ||
+    "College TBD";
   return {
     id: raw?.id ?? "unknown",
-    name: rawName && !placeholder.has(rawName.toLowerCase()) ? rawName : "High school TBD",
+    name,
     slug: raw?.slug ?? "unknown",
     city: raw?.city ?? "",
     stateCode: raw?.state_code ?? stateCode,
@@ -65,12 +72,25 @@ function toPlayer(row: Record<string, unknown>, score: number, confidence: Score
     position: ((row.position as string) || "ATH") as FootballPosition,
     classYear: (row.class_year as number) ?? DEFAULT_RECRUIT_CLASS,
     schoolId: (row.school_id as string) ?? "",
-    school: mapSchool(schoolRaw as School & { state_code?: string }, stateCode),
+    school: mapSchool(
+      schoolRaw as School & { state_code?: string },
+      stateCode,
+      row.college_name as string | null | undefined,
+    ),
     stateCode,
     heightInches: Number(row.height_inches ?? 0) || 0,
     weightLbs: Number(row.weight_lbs ?? 0) || 0,
     jerseyNumber: (row.jersey_number as number) ?? undefined,
     status: (row.status as Player["status"]) ?? "unclaimed",
+    competitionLevel: (row.competition_level as CompetitionLevel) ?? ACTIVE_COMPETITION_LEVEL,
+    division: (row.division as CollegeDivision | null) ?? null,
+    collegeName: (row.college_name as string | null) ?? null,
+    conference: (row.conference as string | null) ?? null,
+    eligibilityYear: (row.eligibility_year as number | null) ?? null,
+    transferPortalStatus: (row.transfer_portal_status as TransferPortalStatus | null) ?? null,
+    portalEntryDate: (row.portal_entry_date as string | null) ?? null,
+    transferFromSchool: (row.transfer_from_school as string | null) ?? null,
+    transferToSchool: (row.transfer_to_school as string | null) ?? null,
     isSynthetic: Boolean(row.is_synthetic),
     tackleScore: {
       score,
@@ -94,7 +114,7 @@ function toPlayer(row: Record<string, unknown>, score: number, confidence: Score
 }
 
 /**
- * Live rankings from takkle.player_rankings for recruiting classes 2027–2031.
+ * Live rankings for college (FBS/FCS) athletes. HS inventory is dormant.
  * Falls back to seed only when Supabase is unavailable.
  */
 export async function getLiveRankings(
@@ -112,7 +132,7 @@ export async function getLiveRankings(
             : undefined,
       },
       limit,
-    ).filter((p) => isRecruitClassYear(p.classYear));
+    );
     return {
       rows: seed.map((player, i) => ({
         rank: i + 1,
@@ -137,10 +157,12 @@ export async function getLiveRankings(
       is_rising,
       previous_rank,
       ranking_version,
-      players (
+      players!inner (
         id, first_name, last_name, display_name, slug, position, class_year,
         school_id, state_code, height_inches, weight_lbs, jersey_number,
         status, is_synthetic, source_name, source_url,
+        competition_level, division, college_name, conference, eligibility_year,
+        transfer_portal_status, portal_entry_date, transfer_from_school, transfer_to_school,
         schools ( id, name, slug, city, state_code )
       )
     `,
@@ -148,18 +170,55 @@ export async function getLiveRankings(
     .eq("ranking_scope", scope)
     .eq("scope_key", scopeKey)
     .eq("ranking_version", RANKING_VERSION)
-    .gte("class_year", RECRUIT_CLASS_MIN)
-    .lte("class_year", RECRUIT_CLASS_MAX)
+    .eq("players.competition_level", ACTIVE_COMPETITION_LEVEL)
+    .eq("players.is_synthetic", false)
     .order("rank", { ascending: true })
     .limit(limit);
 
   if (error || !ranks?.length) {
-    // Fallback: try position-only if position:class was empty
     if (scope === "position" && scopeKey.includes(":")) {
       const posOnly = scopeKey.split(":")[0];
-      return getLiveRankings({ ...filters, classYear: undefined, position: posOnly as FootballPosition, scope: "position" }, limit);
+      return getLiveRankings(
+        {
+          ...filters,
+          classYear: undefined,
+          position: posOnly as FootballPosition,
+          scope: "position",
+        },
+        limit,
+      );
     }
-    return { rows: [], source: "supabase", version: RANKING_VERSION };
+
+    let rosterQuery = client
+      .from("players")
+      .select(
+        `
+        id, first_name, last_name, display_name, slug, position, class_year,
+        school_id, state_code, height_inches, weight_lbs, jersey_number,
+        status, is_synthetic, source_name, source_url,
+        competition_level, division, college_name, conference, eligibility_year,
+        transfer_portal_status, portal_entry_date, transfer_from_school, transfer_to_school,
+        schools ( id, name, slug, city, state_code )
+      `,
+      )
+      .eq("competition_level", ACTIVE_COMPETITION_LEVEL)
+      .eq("is_synthetic", false)
+      .order("last_name", { ascending: true })
+      .limit(limit);
+
+    if (filters.position) rosterQuery = rosterQuery.eq("position", filters.position);
+    if (filters.stateCode) rosterQuery = rosterQuery.eq("state_code", filters.stateCode);
+    if (filters.classYear) rosterQuery = rosterQuery.eq("class_year", filters.classYear);
+
+    const { data: roster } = await rosterQuery;
+    const rows: RankedPlayerRow[] = (roster ?? []).map((raw, i) => ({
+      rank: i + 1,
+      score: null,
+      isRising: false,
+      previousRank: null,
+      player: toPlayer(raw as Record<string, unknown>, 0, "limited"),
+    }));
+    return { rows, source: "supabase", version: RANKING_VERSION };
   }
 
   const rows: RankedPlayerRow[] = [];
@@ -167,8 +226,9 @@ export async function getLiveRankings(
     const playerRaw = Array.isArray(r.players) ? r.players[0] : r.players;
     if (!playerRaw) continue;
     if ((playerRaw as { is_synthetic?: boolean }).is_synthetic) continue;
-    const cy = (playerRaw as { class_year?: number }).class_year;
-    if (!isRecruitClassYear(cy)) continue;
+    if ((playerRaw as { competition_level?: string }).competition_level !== ACTIVE_COMPETITION_LEVEL) {
+      continue;
+    }
     const score = Number(r.score ?? 0);
     rows.push({
       rank: r.rank as number,

@@ -5,8 +5,6 @@ import RankingsTable from "@/components/rankings/RankingsTable";
 import { getLiveRankings } from "@/lib/rankings";
 import {
   DEFAULT_RECRUIT_CLASS,
-  RECRUIT_CLASS_MAX,
-  RECRUIT_CLASS_MIN,
   isRecruitClassYear,
 } from "@/lib/recruiting/class-years";
 import type { FootballPosition, RankingScope } from "@/types/recruiting";
@@ -14,7 +12,7 @@ import type { FootballPosition, RankingScope } from "@/types/recruiting";
 export const metadata: Metadata = {
   title: "Rankings",
   description:
-    "Position rankings for recruiting classes 2027–2031 powered by research-informed Tackle Score™.",
+    "FBS/FCS Transfer Portal rankings powered by research-informed Tackle Score™.",
 };
 
 export const dynamic = "force-dynamic";
@@ -43,12 +41,12 @@ export default async function RankingsPage({ searchParams }: PageProps) {
 
   const title =
     scope === "national"
-      ? "National Rankings (2027–2031)"
+      ? "National College Rankings"
       : scope === "state"
-        ? `${stateCode} State Rankings`
+        ? `${stateCode} College Rankings`
         : scope === "class"
-          ? `Class of ${classYear} Rankings`
-          : `${position} Rankings · Class of ${classYear}`;
+          ? `Eligibility ${classYear} Rankings`
+          : `${position} Rankings · College`;
 
   return (
     <div className="px-4 py-10 sm:py-14">
@@ -57,14 +55,12 @@ export default async function RankingsPage({ searchParams }: PageProps) {
           {title}
         </h1>
         <p className="mt-2 text-text-secondary">
-          Position-first rankings for recruiting classes {RECRUIT_CLASS_MIN}–{RECRUIT_CLASS_MAX}.
-          Built from permitted association honor rolls and competition depth — film grades added
-          when evaluations exist. No star ratings.
+          FBS/FCS Transfer Portal rankings. High-school inventory is dormant. Tackle Score™ uses
+          permitted sources — film grades added when evaluations exist. No star ratings.
         </p>
         <p className="mt-2 text-sm text-text-muted">
-          Methodology: evaluate within position (production proxies from All-State / All-CIF /
-          All-Ohio), state competition tier, multi-source consistency, and underclass recruiting
-          signal. Confidence remains Limited until film is confirmed. Source: {source} · {version}
+          Methodology adapts as college depth arrives from roster/portal ingest. Confidence remains
+          Limited until film is confirmed. Source: {source} · {version}
         </p>
 
         <div className="mt-8">

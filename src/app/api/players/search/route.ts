@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
+import { ACTIVE_COMPETITION_LEVEL } from "@/lib/competition-level";
 import { searchPlayers } from "@/lib/players";
 import type { ClaimSearchHit } from "@/types/claim-search";
 
@@ -38,7 +39,7 @@ function seedFallback(query: string, state: string | null, limit: number): Claim
 }
 
 /**
- * Public player search for claim-onboarding.
+ * Public player search for claim-onboarding (college FBS/FCS only; HS dormant).
  * Prefers live takkle.players; falls back to local seed when Supabase is unset/unreachable.
  */
 export async function GET(request: Request) {
@@ -84,23 +85,22 @@ export async function GET(request: Request) {
         status,
         verification_status,
         source_school,
+        college_name,
         schools ( name, city, state_code )
       `,
       )
       .eq("is_synthetic", false)
+      .eq("competition_level", ACTIVE_COMPETITION_LEVEL)
       .order("last_name", { ascending: true })
       .limit(limit);
 
     if (claimableOnly) {
       query = query.eq("status", "unclaimed");
     }
-    // Recruiting window: class of 2027–2031
-    query = query.gte("class_year", 2027).lte("class_year", 2031);
     if (state) {
       query = query.eq("state_code", state);
     }
     if (q.length >= 2) {
-      // Quote patterns so spaces / special chars do not break PostgREST filters.
       const pattern = `"%${q.replace(/"/g, "")}%"`;
       query = query.or(
         [
@@ -108,6 +108,7 @@ export async function GET(request: Request) {
           `first_name.ilike.${pattern}`,
           `last_name.ilike.${pattern}`,
           `source_school.ilike.${pattern}`,
+          `college_name.ilike.${pattern}`,
           `slug.ilike.${pattern}`,
         ].join(","),
       );
@@ -138,6 +139,7 @@ export async function GET(request: Request) {
         status: row.status as string,
         verificationStatus: (row.verification_status as string) ?? null,
         schoolName:
+          (row.college_name as string) ??
           (school as { name?: string } | null)?.name ??
           (row.source_school as string) ??
           null,
