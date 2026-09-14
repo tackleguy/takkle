@@ -7,7 +7,7 @@ import Button from "@/components/ui/Button";
 const LINKS = [
   { href: "/discover", label: "Discover" },
   { href: "/rankings", label: "Rankings" },
-  { href: "/nil-rules", label: "High School NIL Rules", highlight: true },
+  { href: "/college", label: "College", highlight: true },
   { href: "/guides", label: "Parent Guides" },
 ];
 

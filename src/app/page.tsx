@@ -127,19 +127,19 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* NIL Rules banner */}
+      {/* College eligibility banner */}
       <section className="px-4 py-12">
         <div className="mx-auto max-w-4xl">
-          <div className="rounded-xl border border-status-limited/30 bg-status-limited/5 p-6 sm:p-8 text-center">
+          <div className="rounded-xl border border-turf/30 bg-turf/5 p-6 sm:p-8 text-center">
             <h2 className="font-[family-name:var(--font-display)] text-2xl text-text-primary">
-              High School NIL Rules
+              College Eligibility Calculator
             </h2>
             <p className="mt-2 text-text-secondary max-w-xl mx-auto">
-              NIL rules vary by state. Check what your athlete can and can&apos;t do before pursuing deals.
+              Estimate remaining NCAA D1 football seasons, redshirt impact, and your five-year clock.
             </p>
             <div className="mt-6">
-              <Button href="/nil-rules" variant="outline">
-                Check High School NIL Rules
+              <Button href="/college" variant="outline">
+                Calculate eligibility
               </Button>
             </div>
           </div>

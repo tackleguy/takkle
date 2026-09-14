@@ -10,7 +10,7 @@ export default function Footer() {
               TAKKLE
             </span>
             <p className="mt-2 text-sm text-text-secondary">
-              Player-first high school football recruiting. Build your profile, showcase film,
+              Player-first college football recruiting. Build your profile, showcase film,
               earn your Tackle Score™.
             </p>
           </div>
@@ -40,7 +40,12 @@ export default function Footer() {
             <h3 className="text-sm font-semibold text-text-primary mb-3">Resources</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/nil-rules" className="text-sm font-medium text-accent hover:text-accent-hover transition-colors">
+                <Link href="/college" className="text-sm font-medium text-accent hover:text-accent-hover transition-colors">
+                  College Eligibility
+                </Link>
+              </li>
+              <li>
+                <Link href="/nil-rules" className="text-sm text-text-secondary hover:text-accent transition-colors">
                   High School NIL Rules
                 </Link>
               </li>
@@ -58,27 +63,32 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-text-primary mb-3">Popular States</h3>
+            <h3 className="text-sm font-semibold text-text-primary mb-3">College</h3>
             <ul className="space-y-2">
-              {["california", "texas", "florida", "ohio"].map((slug) => (
-                <li key={slug}>
-                  <Link
-                    href={`/nil-rules/${slug}`}
-                    className="text-sm text-text-secondary hover:text-accent transition-colors capitalize"
-                  >
-                    {slug.replace(/^\w/, (c) => c.toUpperCase())}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link href="/discover" className="text-sm text-text-secondary hover:text-accent transition-colors">
+                  Transfer Portal
+                </Link>
+              </li>
+              <li>
+                <Link href="/rankings" className="text-sm text-text-secondary hover:text-accent transition-colors">
+                  College Rankings
+                </Link>
+              </li>
+              <li>
+                <Link href="/college" className="text-sm text-text-secondary hover:text-accent transition-colors">
+                  Eligibility Calculator
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
 
         <div className="mt-8 pt-8 border-t border-border space-y-3">
           <p className="text-xs text-text-muted text-center max-w-3xl mx-auto">
-            <strong className="text-text-secondary">NIL varies by state.</strong> High school Name,
-            Image, and Likeness rules differ across all 50 states and change frequently. Always verify
-            current rules with your state athletic association before pursuing NIL opportunities.
+            <strong className="text-text-secondary">Eligibility is school-specific.</strong> The
+            college calculator is an educational estimate. Confirm remaining seasons and transfer
+            status with your compliance office. High school NIL still varies by state.
           </p>
           <p className="text-xs text-text-muted text-center">
             This information is for educational purposes only and is not legal advice. Consult a
