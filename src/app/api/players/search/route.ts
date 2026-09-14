@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 import { ACTIVE_COMPETITION_LEVEL } from "@/lib/competition-level";
+import { displaySchoolLabel } from "@/lib/player-display";
 import { searchPlayers } from "@/lib/players";
 import type { ClaimSearchHit } from "@/types/claim-search";
 
@@ -32,7 +33,7 @@ function seedFallback(query: string, state: string | null, limit: number): Claim
     jerseyNumber: p.jerseyNumber ?? null,
     status: p.status,
     verificationStatus: null,
-    schoolName: p.collegeName ?? p.school?.name ?? null,
+    schoolName: displaySchoolLabel(p.collegeName ?? p.school?.name),
     schoolCity: null,
     source: "seed" as const,
   }));
@@ -138,11 +139,12 @@ export async function GET(request: Request) {
         jerseyNumber: (row.jersey_number as number) ?? null,
         status: row.status as string,
         verificationStatus: (row.verification_status as string) ?? null,
-        schoolName:
+        schoolName: displaySchoolLabel(
           (row.college_name as string) ??
-          (school as { name?: string } | null)?.name ??
-          (row.source_school as string) ??
-          null,
+            (school as { name?: string } | null)?.name ??
+            (row.source_school as string) ??
+            null,
+        ),
         schoolCity: null,
         source: "supabase" as const,
       };

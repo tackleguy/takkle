@@ -47,11 +47,19 @@ function mapSchool(
 ): School {
   const rawName = raw?.name?.trim() ?? "";
   const college = collegeName?.trim() ?? "";
-  const placeholder = new Set(["unknown", "wl", "n/a", "tbd", "?"]);
+  const placeholder = new Set([
+    "unknown",
+    "wl",
+    "n/a",
+    "tbd",
+    "?",
+    "transfer portal",
+    "the transfer portal",
+  ]);
   const name =
     (college && !placeholder.has(college.toLowerCase()) && college) ||
     (rawName && !placeholder.has(rawName.toLowerCase()) && rawName) ||
-    "College TBD";
+    "Team";
   const isCollege = Boolean(college && !placeholder.has(college.toLowerCase()));
   return {
     id: raw?.id ?? "unknown",
@@ -105,7 +113,13 @@ function toPlayer(row: Record<string, unknown>, score: number, confidence: Score
     status: (row.status as Player["status"]) ?? "unclaimed",
     competitionLevel: (row.competition_level as CompetitionLevel) ?? ACTIVE_COMPETITION_LEVEL,
     division,
-    collegeName: (row.college_name as string | null) ?? null,
+    collegeName: (() => {
+      const raw = (row.college_name as string | null) ?? null;
+      if (!raw?.trim()) return null;
+      const low = raw.trim().toLowerCase();
+      if (low === "transfer portal" || low === "the transfer portal") return "Team";
+      return raw;
+    })(),
     conference,
     eligibilityYear: (row.eligibility_year as number | null) ?? null,
     transferPortalStatus,

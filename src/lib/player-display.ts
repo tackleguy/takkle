@@ -1,11 +1,28 @@
 import type { Player } from "@/types/recruiting";
 
+const PLACEHOLDER_SCHOOLS = new Set([
+  "unknown",
+  "wl",
+  "n/a",
+  "tbd",
+  "?",
+  "",
+  "transfer portal",
+  "the transfer portal",
+]);
+
+/** Normalize school/college labels for UI — never show "Transfer Portal". */
+export function displaySchoolLabel(raw: string | null | undefined): string {
+  const name = raw?.trim() ?? "";
+  if (!name || PLACEHOLDER_SCHOOLS.has(name.toLowerCase())) return "Team";
+  return name;
+}
+
 /** College/school line for cards and profiles — never hometown. */
 export function playerSchoolLine(player: Player): string {
-  const school =
-    player.collegeName?.trim() ||
-    player.school?.name?.trim() ||
-    "College TBD";
+  const school = displaySchoolLabel(
+    player.collegeName?.trim() || player.school?.name?.trim(),
+  );
 
   if (player.competitionLevel === "college" || player.collegeName || player.division) {
     const parts = [school];
@@ -23,9 +40,7 @@ export function playerSchoolLine(player: Player): string {
 
 /** Short school name only (tables, featured strips). */
 export function playerSchoolName(player: Player): string {
-  return (
-    player.collegeName?.trim() ||
-    player.school?.name?.trim() ||
-    "College TBD"
+  return displaySchoolLabel(
+    player.collegeName?.trim() || player.school?.name?.trim(),
   );
 }

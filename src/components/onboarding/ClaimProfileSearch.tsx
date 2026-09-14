@@ -220,7 +220,7 @@ export default function ClaimProfileSearch({
             ]
               .filter(Boolean)
               .join(" · ");
-            const schoolLine = p.schoolName || "College TBD";
+            const schoolLine = p.schoolName || "Team";
 
             return (
               <li key={p.id} role="option" aria-selected={selected}>

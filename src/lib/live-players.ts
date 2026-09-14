@@ -40,7 +40,16 @@ function mapSchool(
   sourceSchool?: string | null,
   collegeName?: string | null,
 ): School {
-  const placeholder = new Set(["unknown", "wl", "n/a", "tbd", "?", ""]);
+  const placeholder = new Set([
+    "unknown",
+    "wl",
+    "n/a",
+    "tbd",
+    "?",
+    "",
+    "transfer portal",
+    "the transfer portal",
+  ]);
   const rawName = raw?.name?.trim() ?? "";
   const sourceName = sourceSchool?.trim() ?? "";
   const college = collegeName?.trim() ?? "";
@@ -48,7 +57,7 @@ function mapSchool(
     (college && !placeholder.has(college.toLowerCase()) && college) ||
     (rawName && !placeholder.has(rawName.toLowerCase()) && rawName) ||
     (sourceName && !placeholder.has(sourceName.toLowerCase()) && sourceName) ||
-    "College TBD";
+    "Team";
 
   // For college athletes, school.city often holds hometown — omit it.
   const isCollege = Boolean(college && !placeholder.has(college.toLowerCase()));
@@ -112,7 +121,13 @@ function toPlayer(
     hometownCity: (row.hometown_city as string) ?? undefined,
     competitionLevel: (row.competition_level as CompetitionLevel) ?? ACTIVE_COMPETITION_LEVEL,
     division,
-    collegeName: (row.college_name as string | null) ?? null,
+    collegeName: (() => {
+      const raw = (row.college_name as string | null) ?? null;
+      if (!raw?.trim()) return null;
+      const low = raw.trim().toLowerCase();
+      if (low === "transfer portal" || low === "the transfer portal") return "Team";
+      return raw;
+    })(),
     conference,
     eligibilityYear: (row.eligibility_year as number | null) ?? null,
     transferPortalStatus,
