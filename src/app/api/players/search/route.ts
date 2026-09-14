@@ -87,6 +87,7 @@ export async function GET(request: Request) {
         schools ( name, city, state_code )
       `,
       )
+      .eq("is_synthetic", false)
       .order("last_name", { ascending: true })
       .limit(limit);
 

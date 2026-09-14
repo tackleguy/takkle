@@ -30,6 +30,11 @@ const SYNTHETIC_CHUNKS: Player[][] = [
 
 let _allPlayers: Player[] | null = null;
 
+/**
+ * Local seed switch only (Discover/Home/Rankings prefer live Supabase via live-players).
+ * Default remains synthetic for offline UI demos; set cfbd for real CFBD sample names.
+ * Prefer TAKKLE_PLAYERS_SOURCE=supabase with Supabase credentials for production.
+ */
 function playersSource(): string {
   return (
     process.env.TAKKLE_PLAYERS_SOURCE ||

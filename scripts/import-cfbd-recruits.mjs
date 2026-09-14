@@ -52,7 +52,7 @@ const CHUNK_SIZE = 500;
 const API_BASE = "https://api.collegefootballdata.com";
 const USER_AGENT = "TakkleCFBDImporter/1.0 (+https://takkle.com; CFBD licensed cache)";
 
-const DEFAULT_YEARS = [2025, 2026, 2027, 2028];
+const DEFAULT_YEARS = [2027, 2028, 2029, 2030, 2031];
 
 const SOURCE = {
   name: "CollegeFootballData",

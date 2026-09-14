@@ -1,7 +1,8 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getAllPlayerSlugs, getPlayerBySlug } from "@/lib/players";
+import { getAllPlayerSlugs } from "@/lib/players";
+import { getLivePlayerBySlug } from "@/lib/live-players";
 import PlayerProfileSections from "@/components/player/PlayerProfileSections";
 import TackleScoreDisplay from "@/components/ui/TackleScoreDisplay";
 import FilmWindow from "@/components/film/FilmWindow";
@@ -11,6 +12,7 @@ interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
+export const dynamic = "force-dynamic";
 export const dynamicParams = true;
 
 export async function generateStaticParams() {
@@ -21,7 +23,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const player = getPlayerBySlug(slug);
+  const { player } = await getLivePlayerBySlug(slug);
   if (!player) return {};
 
   return {
@@ -36,7 +38,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function PlayerProfilePage({ params }: PageProps) {
   const { slug } = await params;
-  const player = getPlayerBySlug(slug);
+  const { player } = await getLivePlayerBySlug(slug);
   if (!player) notFound();
 
   const heightFt = Math.floor(player.heightInches / 12);

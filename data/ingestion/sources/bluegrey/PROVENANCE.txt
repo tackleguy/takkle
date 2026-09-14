@@ -1,0 +1,10 @@
+Blue-Grey Football regional combine results → Takkle CSV import
+================================================================
+Source: https://bluegreyfootball.com/ (public HTML tables)
+robots.txt: allows crawling except /wp-admin/ and Gravity Forms export paths
+Method: fetch public result pages → normalize to data/ingestion/csv-template.csv schema
+Filter: class_year / Grad Yr 2027–2031 only (no invented years)
+Underrated signal: blank Star Rating on published tables (unranked/lower-profile depth)
+Years covered: 2025 + 2026 regional combines
+Local CSV: data/ingestion/sources/bluegrey/combines-2027-2031.csv
+data_sources.id: b1000000-9a11-4b1e-9a11-000000000001

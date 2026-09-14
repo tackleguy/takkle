@@ -1,14 +1,22 @@
-import Link from "next/link";
 import Button from "@/components/ui/Button";
 import PlayerCard from "@/components/player/PlayerCard";
 import TackleScoreDisplay from "@/components/ui/TackleScoreDisplay";
 import SyntheticNotice from "@/components/ui/SyntheticNotice";
-import { getFeaturedPlayer, getRisingPlayers, getTrendingPlayers } from "@/lib/players";
+import {
+  getLiveFeaturedPlayer,
+  getLiveRisingPlayers,
+  getLiveTrendingPlayers,
+} from "@/lib/live-players";
 
-export default function HomePage() {
-  const featured = getFeaturedPlayer();
-  const trending = getTrendingPlayers(4);
-  const rising = getRisingPlayers(4);
+export const dynamic = "force-dynamic";
+
+export default async function HomePage() {
+  const [{ player: featured, source: featuredSource }, trending, rising] = await Promise.all([
+    getLiveFeaturedPlayer(),
+    getLiveTrendingPlayers(4),
+    getLiveRisingPlayers(4),
+  ]);
+  const live = featuredSource === "supabase" || trending.source === "supabase";
 
   return (
     <>
@@ -79,7 +87,7 @@ export default function HomePage() {
                   Film evaluation, production, athleticism, and competition level combine into one
                   transparent score with confidence levels.
                 </p>
-                <SyntheticNotice compact />
+                <SyntheticNotice compact forceHide={live} />
               </div>
             </div>
           </div>
@@ -89,14 +97,14 @@ export default function HomePage() {
       {/* Trending & Rising */}
       <section className="px-4 py-16 bg-field/50">
         <div className="mx-auto max-w-6xl">
-          <SyntheticNotice />
+          <SyntheticNotice forceHide={live} />
           <div className="mt-6 grid gap-10 lg:grid-cols-2">
             <div>
               <h2 className="font-[family-name:var(--font-display)] text-2xl text-text-primary mb-4">
                 Trending Players
               </h2>
               <div className="grid gap-3">
-                {trending.map((p) => (
+                {trending.players.map((p) => (
                   <PlayerCard key={p.id} player={p} />
                 ))}
               </div>
@@ -106,7 +114,7 @@ export default function HomePage() {
                 Rising This Week
               </h2>
               <div className="grid gap-3">
-                {rising.map((p) => (
+                {rising.players.map((p) => (
                   <PlayerCard key={p.id} player={p} />
                 ))}
               </div>

@@ -1,0 +1,830 @@
+[
+  {
+    "id": "7985089f-9b5d-5993-ad84-62514fabea66",
+    "name": "Lomira",
+    "slug": "lomira-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "69f4bdc4-50be-5262-960c-569b6025f142",
+    "name": "Notre Dame",
+    "slug": "notre-dame-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "f4abd4a0-326a-55d7-b447-e1b610d0142d",
+    "name": "Reedsburg",
+    "slug": "reedsburg-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "ceea5397-90f7-5da1-9465-d0855f058254",
+    "name": "Cambridge",
+    "slug": "cambridge-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "8b014db7-c65b-543d-811e-3934debd53f2",
+    "name": "Badger",
+    "slug": "badger-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "957c39c9-4320-568b-af04-b48cae7aba84",
+    "name": "Appleton North",
+    "slug": "appleton-north-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "20ec3720-029a-5efc-a988-8c2680527061",
+    "name": "Wisconsin Lutheran",
+    "slug": "wisconsin-lutheran-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "d3085bc0-bbc3-5f9c-8536-bef7b794e387",
+    "name": "Stratford",
+    "slug": "stratford-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "b7408207-be28-5136-96ec-5b9d8e6611a1",
+    "name": "Pewaukee",
+    "slug": "pewaukee-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "11bee084-f7d9-54c5-bfbf-1ba68130f590",
+    "name": "Winneconne",
+    "slug": "winneconne-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "82a0faf1-66e3-59f3-a54c-62e769985e3a",
+    "name": "Monona Grove",
+    "slug": "monona-grove-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "b65d390a-ca66-5603-bf2e-7e2cd84a72bb",
+    "name": "DeForest",
+    "slug": "deforest-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "0918a1e6-fe41-51df-86eb-06da3bacb138",
+    "name": "Marquette University",
+    "slug": "marquette-university-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "10a80631-2a58-5341-9dec-77e505491711",
+    "name": "Madison Memorial",
+    "slug": "madison-memorial-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "50246440-4f45-5bf0-b524-90e20058a881",
+    "name": "Monroe",
+    "slug": "monroe-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "7f84fa1f-9ae9-55a2-9cba-8b2ed872d519",
+    "name": "Waunakee",
+    "slug": "waunakee-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "6f4a126b-a12e-5576-a487-944b32854de0",
+    "name": "Xavier",
+    "slug": "xavier-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "8a099e4c-829f-5787-92e2-2a5d2cb58e01",
+    "name": "Cochrane-Fountain City",
+    "slug": "cochrane-fountain-city-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "82753ea5-96ef-53e0-bd0d-11658ba05302",
+    "name": "Abbotsford",
+    "slug": "abbotsford-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "b664ccaa-5b9d-5d68-83fe-caf61509616b",
+    "name": "Oconto",
+    "slug": "oconto-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "c7e8cc13-3cd9-5576-8d5e-851b25478e77",
+    "name": "Sun Prairie West",
+    "slug": "sun-prairie-west-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "572a4bfb-a87d-54c4-a4ae-8c2d2bd49f1e",
+    "name": "Hamilton",
+    "slug": "hamilton-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "f83adc31-8bf4-57ae-ac15-f5c782e3cc58",
+    "name": "Verona",
+    "slug": "verona-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "470230ed-9694-5d05-8d03-284cc1bec602",
+    "name": "Oak Creek",
+    "slug": "oak-creek-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "aef69886-be02-581c-a231-a4b70b79865e",
+    "name": "Sun Prairie East",
+    "slug": "sun-prairie-east-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "add21b04-f401-5acc-afd2-76ef2c8b4167",
+    "name": "Neenah",
+    "slug": "neenah-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "c8414400-bd2c-5326-96b5-543f6a60ab77",
+    "name": "Sturgeon Bay",
+    "slug": "sturgeon-bay-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "dd496308-546e-525b-bad1-2901c607b57c",
+    "name": "Arrowhead",
+    "slug": "arrowhead-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "0388d87f-ea60-5f47-a419-53659d23a966",
+    "name": "Elkhorn",
+    "slug": "elkhorn-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "6d47939c-e71a-5d87-925c-05093518983a",
+    "name": "Kewaunee",
+    "slug": "kewaunee-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "fc34cdef-4475-5a11-af66-3a17f05f38c0",
+    "name": "Kenosha St. Joseph",
+    "slug": "kenosha-st-joseph-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "68c6020d-6d65-5968-a154-585273684403",
+    "name": "New Berlin Eisenhower",
+    "slug": "new-berlin-eisenhower-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "f09c3ec1-c465-53c1-9bd9-b4935768892c",
+    "name": "Mount Horeb",
+    "slug": "mount-horeb-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "bdec3622-9b38-5619-a2c0-df764dd1d753",
+    "name": "Stevens Point",
+    "slug": "stevens-point-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "4a3a6b07-b0be-581a-a719-799254cd4565",
+    "name": "Germantown",
+    "slug": "germantown-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "fd69f3dd-125d-55f6-a93e-75fc4ca0aadd",
+    "name": "Wisconsin Dells",
+    "slug": "wisconsin-dells-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "a7c8eb64-ba62-56e1-9f9a-6559351e4714",
+    "name": "St. Mary Catholic",
+    "slug": "st-mary-catholic-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "be256f93-6176-5702-b6b3-f7044cde8a1d",
+    "name": "Wild Rose",
+    "slug": "wild-rose-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "79e80094-6faa-536a-a8fd-d26efb5df825",
+    "name": "Horicon",
+    "slug": "horicon-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "a667d71d-23d4-5f86-b092-9c65cc627611",
+    "name": "Bay Port",
+    "slug": "bay-port-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "0fc18a6a-fbf5-5719-9b59-610a613d50ed",
+    "name": "Westosha Central",
+    "slug": "westosha-central-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "d573425a-91d0-5b34-a217-e66b12b07628",
+    "name": "University School",
+    "slug": "university-school-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "9571beb9-1684-557d-b88e-2254e868352d",
+    "name": "Fall Creek",
+    "slug": "fall-creek-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "364b3524-044a-59b5-b302-a288a62b2afe",
+    "name": "Janesville Parker",
+    "slug": "janesville-parker-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "ceefb905-a19c-5add-a803-c1fa95befaef",
+    "name": "Saint Francis",
+    "slug": "saint-francis-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "31d605e8-7311-5b24-b857-58aae84c29f9",
+    "name": "Lake County Lutheran",
+    "slug": "lake-county-lutheran-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "9b47bb34-d07e-5202-9d6b-e84d457f9b6e",
+    "name": "Ashwaubenon",
+    "slug": "ashwaubenon-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "8138f4e1-0760-5873-b52f-83f081c2a666",
+    "name": "Darlington",
+    "slug": "darlington-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "34486994-70c0-5224-857b-a2b1c64924e4",
+    "name": "Lodi",
+    "slug": "lodi-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "9d655f09-74f0-543c-a9e3-aacec51ed07f",
+    "name": "Evansville",
+    "slug": "evansville-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "3dc435d6-401d-534f-8ff4-6c0a0ab1e7af",
+    "name": "Brookfield Central",
+    "slug": "brookfield-central-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "63b35214-d963-5a09-aba3-778d88d36138",
+    "name": "Waupun",
+    "slug": "waupun-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "40a1ecf9-6f56-5e88-95a4-539f928217bb",
+    "name": "Hartford",
+    "slug": "hartford-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "25868cb1-f462-57e8-ab48-5267bd3dbaa5",
+    "name": "Colby",
+    "slug": "colby-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "d75adb9d-522d-56f4-b9c8-6a01ec4c80c1",
+    "name": "Slinger",
+    "slug": "slinger-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "9b037192-8bf8-5244-b226-9d09efb873fd",
+    "name": "Wauwatosa East",
+    "slug": "wauwatosa-east-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "822ad5ee-7ad5-5645-ab86-a1102c54081a",
+    "name": "Muskego",
+    "slug": "muskego-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "e2ccf6ed-3b4f-5e04-b2e0-bd553b7babb3",
+    "name": "Sparta",
+    "slug": "sparta-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "03cb60d3-a13f-5ea9-9824-aa8baf26970f",
+    "name": "Big Foot",
+    "slug": "big-foot-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "9bd35a4a-57dd-5d8d-a01c-2751d2c92b92",
+    "name": "New Richmond",
+    "slug": "new-richmond-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "48dc940e-dec3-5910-a401-4e6d96bc451a",
+    "name": "Oregon",
+    "slug": "oregon-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "67a9bf61-ea89-5cad-abbd-89f3c0bd9c1b",
+    "name": "Menasha",
+    "slug": "menasha-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "4195711d-e291-5783-8d17-f3035fbb9aa4",
+    "name": "Waukesha West",
+    "slug": "waukesha-west-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "ba3beaf2-1d4f-586e-8657-0d73a881efca",
+    "name": "Onalaska",
+    "slug": "onalaska-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "7132d78d-6158-53d7-abd0-f1f7818e9c78",
+    "name": "West Salem",
+    "slug": "west-salem-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "7d6202f9-c462-5d90-aebb-7cde8fab7196",
+    "name": "Whitewater",
+    "slug": "whitewater-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "fba6f1bd-000e-584e-9b72-86abb8768da9",
+    "name": "Sauk Prarie",
+    "slug": "sauk-prarie-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "0304d590-3e7e-571d-9e87-87447242e248",
+    "name": "Pulaski",
+    "slug": "pulaski-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "4745e5f9-177e-5803-981e-a172481e2eb7",
+    "name": "Laconia",
+    "slug": "laconia-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "61a687a5-f978-5113-b89c-8579f6530aff",
+    "name": "Burlington",
+    "slug": "burlington-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "ae74192c-d0b6-5857-9dd1-0181bae6e886",
+    "name": "Black Hawk",
+    "slug": "black-hawk-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "a24f706e-340f-5128-89fb-cdd42995fd0a",
+    "name": "New Holstein",
+    "slug": "new-holstein-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "3316ad71-ac43-5d6d-bd3c-54b956870517",
+    "name": "Menomonee Falls",
+    "slug": "menomonee-falls-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "b0ad2b46-9f1b-5ffc-8525-2d276f072fdd",
+    "name": "Middleton",
+    "slug": "middleton-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "087544cd-6388-5a69-8ba1-ac6c878d9416",
+    "name": "Milwaukee Lutheran",
+    "slug": "milwaukee-lutheran-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "14880cfe-e342-5905-9386-c0a608453155",
+    "name": "Sauk Prairie",
+    "slug": "sauk-prairie-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "3d006fbf-7209-5544-a682-900b3daa52be",
+    "name": "Greendale",
+    "slug": "greendale-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "7139bc29-129a-5e9a-8917-fa31f999c93c",
+    "name": "Wayland Academy",
+    "slug": "wayland-academy-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "dc3fe799-a0ac-55e0-9fd5-ac9847b4e330",
+    "name": "Delavan-Darien",
+    "slug": "delavan-darien-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "12e70e99-13b5-5bbe-acac-284ae8e70be9",
+    "name": "Appleton East",
+    "slug": "appleton-east-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "17ae3abe-55fb-500b-be09-5da6e981a0c2",
+    "name": "Grafton",
+    "slug": "grafton-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "759e7ab8-2a81-53ae-9f52-2b1586ab4e2b",
+    "name": "Kettle Moraine Lutheran",
+    "slug": "kettle-moraine-lutheran-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "58e26126-d506-5f23-babe-e7783d494b12",
+    "name": "Lakeside Lutheran",
+    "slug": "lakeside-lutheran-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "c8b6f8e9-c9e2-5c77-82ca-61a6d4aef4fa",
+    "name": "Turner",
+    "slug": "turner-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "7ef03993-0ec1-5c56-8dab-d17ce2530b78",
+    "name": "West Bend West",
+    "slug": "west-bend-west-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "de680477-ae39-56be-851d-f4afedb3645a",
+    "name": "Edgewood",
+    "slug": "edgewood-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "5a170e95-2eb7-57bc-9db8-75c6ab95ab7c",
+    "name": "Oconto Falls",
+    "slug": "oconto-falls-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "914208c1-3f52-5ba1-adcb-7c294daabc73",
+    "name": "Cuba City",
+    "slug": "cuba-city-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "ed59e1ff-74f5-5361-a65a-3ec0bae4c00b",
+    "name": "Freedom",
+    "slug": "freedom-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "b1d3380e-62b7-5b1e-81aa-aea64ad36e56",
+    "name": "Wilmot",
+    "slug": "wilmot-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "d6fad9e4-a377-50f6-8294-28b8c3d62bae",
+    "name": "Whitnall",
+    "slug": "whitnall-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  },
+  {
+    "id": "202a9795-b071-5400-8b36-a74a1227eca5",
+    "name": "West De Pere",
+    "slug": "west-de-pere-wi",
+    "state": "WI",
+    "source_url": "https://www.wifca.org/news_article/show/1360499",
+    "source_type": "media_public",
+    "source_name": "WFCA Spring Combine Results"
+  }
+]

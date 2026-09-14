@@ -59,16 +59,6 @@ export const CHSAA_DEFAULT_LISTS: ChsaaListSpec[] = [
     label: "2023 CHSAA All-State Football",
     url: "https://chsaanow.com/news/2023/12/13/all-state-football-teams-for-the-2023-season",
   },
-  {
-    seasonEndYear: 2023,
-    label: "2022 CHSAA All-State Football",
-    url: "https://chsaanow.com/news/2022/12/16/all-state-football-teams-for-the-2022-season",
-  },
-  {
-    seasonEndYear: 2022,
-    label: "2021 CHSAA All-State Football",
-    url: "https://chsaanow.com/news/2021/12/16/all-state-football-teams-for-the-2021-season",
-  },
 ];
 
 function decodeHtml(s: string): string {

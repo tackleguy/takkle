@@ -1,4 +1,3 @@
-import { createClient } from "@supabase/supabase-js";
 import {
   DEFAULT_RECRUIT_CLASS,
   RECRUIT_CLASS_MAX,
@@ -6,6 +5,7 @@ import {
   isRecruitClassYear,
 } from "@/lib/recruiting/class-years";
 import { RANKING_VERSION } from "@/lib/scoring/research-rankings";
+import { createTakkleClient } from "@/lib/takkle-client";
 import type {
   FootballPosition,
   Player,
@@ -24,18 +24,6 @@ export type RankedPlayerRow = {
   player: Player;
 };
 
-function createServiceClient() {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL;
-  const key =
-    process.env.SUPABASE_SERVICE_ROLE_KEY ||
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-  if (!url || !key) return null;
-  return createClient(url, key, {
-    db: { schema: "takkle" },
-    auth: { persistSession: false, autoRefreshToken: false },
-  });
-}
-
 function scopeKeyFor(filters: RankingFilters): { scope: RankingScope; scopeKey: string } {
   const scope = filters.scope ?? "position";
   if (scope === "national") return { scope, scopeKey: "national" };
@@ -53,9 +41,11 @@ function scopeKeyFor(filters: RankingFilters): { scope: RankingScope; scopeKey: 
 }
 
 function mapSchool(raw: { id?: string; name?: string; slug?: string; city?: string; state_code?: string } | null, stateCode: string): School {
+  const rawName = raw?.name?.trim() ?? "";
+  const placeholder = new Set(["unknown", "wl", "n/a", "tbd", "?"]);
   return {
     id: raw?.id ?? "unknown",
-    name: raw?.name ?? "Unknown School",
+    name: rawName && !placeholder.has(rawName.toLowerCase()) ? rawName : "High school TBD",
     slug: raw?.slug ?? "unknown",
     city: raw?.city ?? "",
     stateCode: raw?.state_code ?? stateCode,
@@ -111,7 +101,7 @@ export async function getLiveRankings(
   filters: RankingFilters,
   limit = 50,
 ): Promise<{ rows: RankedPlayerRow[]; source: "supabase" | "seed"; version: string }> {
-  const client = createServiceClient();
+  const client = createTakkleClient();
   if (!client) {
     const seed = getSeedRankings(
       {
@@ -176,6 +166,7 @@ export async function getLiveRankings(
   for (const r of ranks) {
     const playerRaw = Array.isArray(r.players) ? r.players[0] : r.players;
     if (!playerRaw) continue;
+    if ((playerRaw as { is_synthetic?: boolean }).is_synthetic) continue;
     const cy = (playerRaw as { class_year?: number }).class_year;
     if (!isRecruitClassYear(cy)) continue;
     const score = Number(r.score ?? 0);

@@ -28,6 +28,10 @@ export {
   schoolKey,
   emptyRunSummary,
   splitDisplayName,
+  RECRUIT_CLASS_MIN,
+  RECRUIT_CLASS_MAX,
+  isRecruitClassYear,
+  filterRecruitClassPlayers,
 } from "./shared/normalize";
 
 export { isUrlAllowed, fetchRobotsTxt, USER_AGENT } from "./shared/robots";

@@ -1,5 +1,5 @@
 import { loadNcesSchools } from "../shared/nces";
-import { emptyRunSummary } from "../shared/normalize";
+import { emptyRunSummary, filterRecruitClassPlayers } from "../shared/normalize";
 import { fetchOpsmaAllOhio } from "./opsma-allohio";
 import { fetchCfbdRecruitsForStates } from "../shared/cfbd-state";
 import type { StateAdapterResult } from "../types";
@@ -33,7 +33,7 @@ export async function runOhioAdapter(options?: {
     else summary.duplicatesDetected += 1;
   }
 
-  const deduped = [...byKey.values()];
+  const deduped = filterRecruitClassPlayers([...byKey.values()]);
   summary.playersDiscovered = deduped.length;
   summary.sourcesFailing = errors.length + blocked.length;
   summary.lastSuccessfulAt = new Date().toISOString();

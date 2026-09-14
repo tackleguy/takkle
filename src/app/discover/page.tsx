@@ -3,13 +3,16 @@ import type { Metadata } from "next";
 import DiscoveryFilters from "@/components/discovery/DiscoveryFilters";
 import PlayerCard from "@/components/player/PlayerCard";
 import SyntheticNotice from "@/components/ui/SyntheticNotice";
-import { searchPlayers } from "@/lib/players";
+import { searchLivePlayers } from "@/lib/live-players";
 import type { FootballPosition } from "@/types/recruiting";
 
 export const metadata: Metadata = {
   title: "Discover Players",
-  description: "Search and filter high school football prospects by state, position, class, and Tackle Score™.",
+  description:
+    "Search and filter high school football prospects by state, position, class, and Tackle Score™.",
 };
+
+export const dynamic = "force-dynamic";
 
 interface PageProps {
   searchParams: Promise<Record<string, string | undefined>>;
@@ -18,7 +21,7 @@ interface PageProps {
 export default async function DiscoverPage({ searchParams }: PageProps) {
   const params = await searchParams;
   const page = Number(params.page ?? 1);
-  const result = searchPlayers(
+  const result = await searchLivePlayers(
     {
       query: params.q,
       stateCode: params.state,
@@ -47,11 +50,12 @@ export default async function DiscoverPage({ searchParams }: PageProps) {
         </div>
 
         <div className="mt-6">
-          <SyntheticNotice />
+          <SyntheticNotice forceHide={result.source === "supabase"} />
         </div>
 
         <p className="mt-4 text-sm text-text-muted">
           {result.total.toLocaleString()} players found
+          {result.source === "supabase" ? " · verified sources" : " · local seed"}
         </p>
 
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

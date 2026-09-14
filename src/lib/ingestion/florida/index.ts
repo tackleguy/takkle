@@ -8,7 +8,7 @@
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { loadNcesSchools } from "../shared/nces";
-import { emptyRunSummary } from "../shared/normalize";
+import { emptyRunSummary, filterRecruitClassPlayers } from "../shared/normalize";
 import { parsePlayerCsv } from "../csv";
 import { fetchCfbdRecruitsForStates } from "../shared/cfbd-state";
 import type { StateAdapterResult } from "../types";
@@ -58,7 +58,7 @@ export async function runFloridaAdapter(options?: {
     else summary.duplicatesDetected += 1;
   }
 
-  const deduped = [...byKey.values()];
+  const deduped = filterRecruitClassPlayers([...byKey.values()]);
   summary.playersDiscovered = deduped.length;
   summary.lastSuccessfulAt = new Date().toISOString();
   return { schools, players: deduped, summary };

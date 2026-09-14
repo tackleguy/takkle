@@ -249,20 +249,7 @@ const CALHI_LISTS = [
 ];
 
 const TSWA_YEARS = [
-  { yy: "06", seasonEnd: 2007 },
-  { yy: "07", seasonEnd: 2008 },
-  { yy: "08", seasonEnd: 2009 },
-  { yy: "09", seasonEnd: 2010 },
-  { yy: "10", seasonEnd: 2011 },
-  { yy: "11", seasonEnd: 2012 },
-  { yy: "12", seasonEnd: 2013 },
-  { yy: "13", seasonEnd: 2014 },
-  { yy: "14", seasonEnd: 2015 },
-  { yy: "15", seasonEnd: 2016 },
-  { yy: "16", seasonEnd: 2017 },
-  { yy: "20", seasonEnd: 2021 },
-  { yy: "21", seasonEnd: 2022 },
-  { yy: "22", seasonEnd: 2023 },
+  // Seasons that can yield class 2027–2031 underclassmen only
   { yy: "23", seasonEnd: 2024 },
   { yy: "24", seasonEnd: 2025 },
   { yy: "25", seasonEnd: 2026 },
@@ -408,11 +395,15 @@ function parseTswa(html, seasonEnd = 2025, sourceUrl = "https://txswa.org/allsta
       sourceSchool: school,
     });
   };
-  // Newer: Name, School, [ht,] [wt,] sr.
+  // Newer (require ht+wt to avoid prose): "Name, School, 6-5, 285, jr."
   const entryRe =
-    /([A-Z][A-Za-z.'\-]+(?:\s+[A-Z][A-Za-z.'\-]+)+),\s*([A-Za-z0-9 .'\-\/]+?),\s*(?:\d-\d{1,2},?\s*)?(?:\d{2,3},?\s*)?(sr|jr|so|fr|soph|senior|junior|sophomore|freshman)\.?/gi;
+    /(?:\(tie\)\s+)?([A-Z][A-Za-z.'\-]+(?:\s+[A-Z][A-Za-z.'\-]+)+),\s*([A-Za-z0-9 .'\-\/]{2,45}?),\s*\d-\d{1,2},\s*\d{2,3},\s*(sr|jr|so|fr|soph|senior|junior|sophomore|freshman)\.?/gi;
   let m;
-  while ((m = entryRe.exec(text))) add(m[1], m[2], m[3]);
+  while ((m = entryRe.exec(text))) {
+    const school = m[2].trim();
+    if (/team|coach|signed|tackle|quarterback|pressures|honors|year/i.test(school)) continue;
+    add(m[1], school, m[3]);
+  }
   // Older: Sr. Name, School, 6-0, 180
   const gradeFirstRe =
     /\b(Sr|Jr|So|Fr|Soph)\.\s+([A-Z][A-Za-z.'\-]+(?:\s+[A-Z][A-Za-z.'\-]+)+),\s*([A-Za-z0-9 .'\-\/]+?)(?=,|\s+\d-|\s*$)/gi;
@@ -1132,7 +1123,20 @@ async function main() {
 
   const deduped = dedupePlayers(allPlayers);
   summary.duplicatesDetected = deduped.duplicatesDetected;
-  let players = deduped.players;
+  const RECRUIT_MIN = 2027;
+  const RECRUIT_MAX = 2031;
+  const allowAll = process.argv.includes("--allow-all-classes");
+  let players = allowAll
+    ? deduped.players
+    : deduped.players.filter(
+        (p) => p.classYear != null && p.classYear >= RECRUIT_MIN && p.classYear <= RECRUIT_MAX,
+      );
+  summary.playersOutsideWindow = deduped.players.length - players.length;
+  if (!allowAll && summary.playersOutsideWindow) {
+    console.log(
+      `Recruit window filter: kept ${players.length}/${deduped.players.length} (class ${RECRUIT_MIN}–${RECRUIT_MAX})`,
+    );
+  }
 
   // Cap at shared review target
   if (players.length > INGESTION_PLAYER_CAP) {

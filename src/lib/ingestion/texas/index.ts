@@ -4,7 +4,7 @@
  */
 
 import { loadNcesSchools } from "../shared/nces";
-import { emptyRunSummary } from "../shared/normalize";
+import { emptyRunSummary, filterRecruitClassPlayers } from "../shared/normalize";
 import { fetchTswaAllState } from "./tswa-allstate";
 import type { StateAdapterResult } from "../types";
 
@@ -37,5 +37,7 @@ export async function runTexasAdapter(options?: {
     else summary.duplicatesDetected += 1;
   }
 
-  return { schools, players: [...byKey.values()], summary };
+  const playersKept = filterRecruitClassPlayers([...byKey.values()]);
+  summary.playersDiscovered = playersKept.length;
+  return { schools, players: playersKept, summary };
 }

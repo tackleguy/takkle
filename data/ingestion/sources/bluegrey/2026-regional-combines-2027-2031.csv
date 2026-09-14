@@ -1,0 +1,585 @@
+first_name,last_name,school,state,position,class_year,jersey_number,height,weight,season_year,source_url,source_name,source_type
+Brayden,Graceffa,Monroe,NC,QB,2027,,"5'11""",175,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Mark,Hartman,Northwest,TX,QB,2027,,"6'2""",185,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Miles,Jackson,North Springs,GA,QB,2027,,"6'0""",165,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Skyler,Kelly,Prairieville,LA,QB,2027,,"6'0""",175,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Kip,Killough,McKinney,TX,QB,2028,,"5'10""",160,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Kyler,Lambert,Pearce,TX,QB,2028,,"6'1""",160,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Noah,Pierce,Crossings Christian,OK,QB,2028,,,160,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Logan,Spalding,Moore,TX,QB,2027,,"6'2""",185,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Landyn,York,Westmoore,OK,QB,2027,,"6'3""",219,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Rehan,Zaki,Liberty Frisco,TX,QB,2028,,"5'10""",170,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Zahkevion,Betts,Pewitt,TX,RB,2027,,"5'11""",203,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+T.J.,Burch,Sterlington,LA,RB,2027,,"5'9""",190,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Marcus,Johnson,Centennial,TX,RB,2028,,"5'9""",200,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Uzziah,Martinez,Tahoka,TX,RB,2028,,"5'7""",145,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Cade,Nix,Pewitt,TX,RB,2027,,"5'10""",175,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Darrell,O'Shea,Buffalo,TX,RB,2028,,"5'8""",170,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Sebastian,Quintanilla,Sabinal,TX,RB,2027,,"5'8""",190,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Caris,Sela,Northwest,TX,RB,2027,,"6'0""",190,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Lyndon,Spriggs,Allen,TX,RB,2027,,"5'7""",170,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Farris,Sutteer,Anadarko,OK,RB,2027,,"5'9""",188,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jaedyn,Thompson,Mabank,TX,RB,2027,,"5'10""",180,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Kason,Villlarreal,Lockney,TX,RB,2029,,"5'7""",160,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Dereon,Whitehorn,Guthrie,OK,RB,2027,,"5'11""",185,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Maverick,Bayer,Muenster,TX,WR,2027,,"5'9""",185,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+John,Carreon,Economedes,TX,WR,2027,,"5'10""",170,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Cooper,Childers,Bloomington,IL,WR,2027,,"6'1""",165,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Moises,Garcia,Eastside,TX,WR,2027,,"6'0""",175,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Cal,Jester,White Oak,TX,WR,2028,,"6'1""",165,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jake,Landry,Live Oak,LA,WR,2027,,"6'0""",175,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+J. J,Stewart,Moore,TX,WR,2027,,"6'2""",176,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Wyatt,Walters,Pearce,TX,WR,2029,,"6'1""",180,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Lincoln,Asprooth,Winnebago,IL,TE,2027,,"6'2""",230,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Chance,Davis,Mustang,OK,OL,2027,,"6'5""",290,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Christian,Gonzales,Eastside,TX,OL,2027,,"6'4""",319,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Sir’William,Morgan,Guthrie,OK,OL,2027,,"6'3""",275,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+James,Porter,Mabank,TX,OL,2027,,"6'1""",275,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Johnny,Wray,Eaton,TX,OL,2027,,"6'2""",267,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Titan,Binder,Muenster,TX,DB,2029,,"5'10""",160,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Bryston,Cornelious,Liberty Eylau,TX,DB,2029,,"5'8""",154,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Miles,Heaton,Legacy Christian Academy,TX,DB,2027,,"5'10""",160,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Niven,Hinkle,Whitney Young,IL,DB,2027,,"5'11""",163,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Kaiden,Johnson,Del City,OK,DB,2027,,"6'2""",175,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Landen,King,Gladewater,TX,DB,2028,,"5'11""",175,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+John Paul,Lundquist,Norman North,OK,DB,2028,,"6'2""",200,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Uriah,Mazyck,Pacelli,GA,DB,2027,,"5'11""",180,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Aayden,Minger,North Forney,TX,DB,2027,,"5'10""",160,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Frederick,Nash,Choctaw,OK,DB,2027,,"5'9""",173,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Davion,Okoe,Del City,OK,DB,2027,,"5'11""",167,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Nicholas,Payne,Bishop Lynch,TX,DB,2027,,"5'8""",160,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Senator “Tyler”,Robinson,Little River Academy,TX,DB,2028,,"5'8""",145,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Skylor,Scamman,Guthrie,OK,DB,2027,,"6'1""",170,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Destin,Sheridan,Gladewater,TX,DB,2027,,"5'9""",160,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Brady,Taylor,Northwest,TX,DB,2027,,"6'0""",175,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Pierre,Watson,Airline,LA,DB,2027,,"5'11""",195,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Nolan,West,Sherman,TX,DB,2027,,"5'8""",160,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Kristian,Barrios-Borjas,Hanks,TX,LB,2027,,"5'11""",198,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Shaun,Brown,Putnam City,OK,LB,2028,,"6'1""",157,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Zyon,Brown,Alvarado,TX,LB,2027,,"6'0""",180,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Paxton,Dunn,Crossings christian,OK,LB,2028,,"6'4""",195,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Thomas,Dvorak,Bishop Reicher,TX,LB,2029,,"5'10""",180,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Nathan,Fulton,Nolan Catholic,TX,LB,2028,,"6'0""",180,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Aaron,Haight,Catoosa,OK,LB,2028,,"6'0""",203,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Isaiah,Jones,Bethesda Academy,GA,LB,2027,,"6'0""",198,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Rowan,McHone,Guthrie,OK,LB,2027,,"5'11""",200,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Kingston,McMackin,Edmond Santa Fe,OK,LB,2027,,"5'9""",175,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Damu,Okoe,Del City,OK,LB,2028,,"5'8""",175,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Canyon,Overand,Buffalo,TX,LB,2028,,"6'2""",180,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+McTobia,Pilot,Lake Worth,TX,LB,2027,,"5'11""",190,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Reed,Renslow,Medina Valley,TX,LB,2027,,"6'2""",215,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Keller,Spinks,Slaughter,LA,LB,2027,,"5'10""",175,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Riley,Storie,Shawnee,OK,LB,2028,,"6'2""",205,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+John,Tompkins,All Saints Episcopal,TX,LB,2028,,"6'2""",180,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Cullen,Vestal,Leon,TX,LB,2027,,"6'0""",194,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Kole,Villasana,Sabinal,TX,LB,2029,,"5'8""",200,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Cord,Williamson,Uvalde,TX,LB,2027,,"6'0""",195,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Damian,Alvarez,Eastside,TX,DL,2027,,"6'0""",207,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jordan,Anderson,Frost,TX,DL,2027,,"6'2""",285,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Kash,Bacon,Collinsville,TX,DL,2028,,"6'2""",220,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Braxton,Baker,Tahlequah,OK,DL,2027,,"5'10""",220,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Wyllys,Carpenter,Shelton,TX,DL,2028,,"6'0""",210,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Oliver,Crinella,Amarillo,TX,DL,2027,,"6'1""",215,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Tyler,Grubbs,Collinsville,TX,DL,2028,,"5'9""",207,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Kyle,Hacker,Eunice,NM,DL,2027,,"6'0""",200,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Ty,Holguin,Jim Ned,TX,DL,2028,,"6'1""",202,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Joe,Nunez,Harlingen South,TX,DL,2028,,"6'0""",214,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Pierce,Ready,Bishop Reicher,TX,DL,2027,,"5'10""",225,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Aaron,Smith,Kenwood Academy,IL,DL,2027,,"6'1""",220,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Douglas,Sterling,Eastside,TX,DL,2027,,"5'10""",255,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Brandon,Ulloa,De Soto,KS,DL,2027,,"6'5""",245,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Travis,Vidales,New Braunfels,TX,DL,2027,,"5'11""",226,2026,https://bluegreyfootball.com/north-texas-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Chase,Corwin,Magnolia Wset,TX,QB,2028,,"6'1""",180,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Ijamyn,Gray Jr,Booker T Washington,FL,QB,2029,,"5'11""",190,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Haden,LaFrenz,Deer Park,TX,QB,2028,,"6'1""",190,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Kaden,Bellard,Gregory-Portland,TX,RB,2029,,"5'10""",165,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Antonio,Booker,The Woodlands College Park,TX,RB,2028,,"5'10""",195,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Cameron,Brown,Morton Ranch,TX,RB,2028,,"5'8""",170,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Dejaune,Etheridge,Klein Forest,TX,RB,2027,,"5'8""",175,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Trayvon,Johnson,Booker t Washington,FL,RB,2029,,"5'7""",146,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Caysen,Lopez,Stockdale,TX,RB,2028,,"5'11""",170,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Dedrick,Polk,Almeta Crawford,TX,RB,2028,,"5'8""",190,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jacob,Ramirez,Baytown Lee,TX,RB,2029,,"5'8""",180,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Sebastian,Robles,Mary Carroll,TX,RB,2028,,"5'7""",180,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Kameron,Simon,Franklinton,NC,RB,2028,,"5'10""",180,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Miles,Spurlock,Barbers Hill,TX,RB,2029,,"6'0""",196,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Dzayvin,Bonner,Cuero,TX,WR,2027,,"5'5""",153,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Dexter,Brantley Jr,Roy Miller,TX,WR,2028,,"5'10""",165,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Tramajah,Carroll,Mansfield,LA,WR,2027,,"6'4""",205,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Dustyn,Croft,Muenster,TX,WR,2028,,"6'3""",205,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Aubryn,Davis,Rouse,TX,WR,2027,,"5'8""",175,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Camryn,Fulton,Pflugerville,TX,WR,2029,,"6'0""",175,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Amare,Warren,Farmersville,TX,WR,2027,,"6'0""",182,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Nico,Tremusini,Cypress Woods,TX,WR,2027,,"5'9""",159,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jalen,Woods,Grapeland,TX,WR,2028,,"5'11""",155,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Leeland,Flores,Woodsboro,TX,DB,2029,,"5'7""",145,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Cade,Hebert,Prairieville,LA,DB,2027,,"6'0""",170,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Saineko,Mitchell,Woodville,TX,DB,2028,,"5'6""",140,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Michael,Renfro,San Augustine,TX,DB,2027,,"6'3""",170,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jacob,Young,Houston Lamar,TX,DB,2028,,"5'11""",175,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Myles,Andrews,Beaumont United,TX,LB,2027,,"5'11""",221,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Brayden,Bergeron,Rosepine,LA,LB,2027,,"6'0""",185,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Carson,Broussard,Rosepine,LA,LB,2027,,"5'9""",160,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jack,Coats,Lamar Consolidated,TX,LB,2028,,"5'9""",175,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Stantyn,Delapasse,Prairieville,LA,LB,2027,,"5'10""",185,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Alanthony,Gibbs,East Feliciana,LA,LB,2027,,"6'0""",192,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Demont,Jackson III,Cottondale,FL,LB,2028,,"5'11""",197,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Marquis,Menefee,Woodville,TX,LB,2028,,"5'7""",160,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Nicholes,Mosely,Ellender,LA,LB,2027,,"5'7""",220,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Alexander (Lex),Sablatura,Deer Park,TX,LB,2028,,"6'0""",208,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Ahkee,Watts,San Augustine,TX,LB,2027,,"6'0""",195,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Kendrick,Wyatt,Mansfield,LA,LB,2027,,"6'2""",225,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Justin,Bray,Newton,TX,DL,2027,,"6'0""",230,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Gavin,Brooks,Hightower,TX,DL,2028,,"5'11""",260,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Luke,Capalupo,Westlake,TX,DL,2028,,"6'5""",205,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Cayden,Cunningham,Klein Collins,TX,DL,2028,,"6'3""",285,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Oliver,Gordon,Canyon,TX,DL,2028,,"6'3""",215,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Heath (Rooster),Laughlin,Bangs,TX,DL,2028,,"6'2""",210,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Darius,Mack,Madison Prep Academy,LA,DL,2027,,"6'1""",225,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Treynell,Rivers,Legacy of Sports & Sciences,TX,DL,2028,,"6'0""",250,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Cordell,Siolo,St Pius,TX,DL,2028,,"6'4""",235,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Elliot,Siolo,St Pius,TX,DL,2029,,"6'1""",190,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jerry,Troncoso,Port Isabel,TX,DL,2028,,"6'0""",208,2026,https://bluegreyfootball.com/houston-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Hudson,Allison,Green Mountain,CO,QB,2029,,"6'1""",185,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Mason,Carter,Poudre,CO,QB,2027,,"5'10""",160,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Kaden,Hopkin,Holy Family,CO,QB,2028,,"6'3""",180,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Westin,Rayburn,Gateway,CO,QB,2027,,"5'11""",150,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Garrett,Cahoon,Frederick,CO,RB,2027,,"5'9""",180,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Chance Richard,Chamberlain,Pueblo West,CO,RB,2028,,"6'2""",180,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Maurice,Edwards,Americas,TX,RB,2027,,"5'7""",158,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jayden,Emery,Coal Ridge,CO,RB,2027,,"6'0""",210,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Cole,Kochevar,Erie,CO,RB,2028,,"6'0""",210,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Owen,Mensah,Mountain View,CO,RB,2028,,"5'9""",162,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Gavin,Moon,Fruita Monument,CO,RB,2028,,"5'7""",160,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Austin,Novotny,Northridge,CO,RB,2028,,"5'8""",155,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Chance,Phillips,Cherry Creek,CO,RB,2028,,"5'8""",210,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Deigen,Salvati,Palisade,CO,RB,2028,,"5'7""",165,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jackson,Urban,Brighton,CO,RB,2027,,"5'7""",165,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Lyric,Wynn,Gateway,CO,RB,2027,,"5'10""",195,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Thales,Anastosouplous,Horizon,CO,WR,2027,,"5'10""",165,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jake,Brock,Gateway,CO,WR,2028,,"5'6""",170,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+JayAnthony,Green,Eaglecrest,CO,WR,2027,,"6'3""",172,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jason,Harrison,Platte Valley,CO,WR,2027,,"6'1""",195,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Cole,Jany,Holy Family,CO,WR,2027,,"5'10""",190,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Darius,Jones,Stratford,TX,WR,2027,,"5'9""",180,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Alexander,Klug,Denver East,CO,WR,2028,,"5'9""",150,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Carson,Kozyra,Erie,CO,WR,2028,,"5'10""",168,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Sean,Newton,Broomfield,CO,WR,2027,,"6'0""",145,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Roman,Ochs,Holy Family,CO,WR,2027,,"6'4""",180,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Nicholas,Phillips,Prescott,AZ,WR,2027,,"5'9""",175,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Chase,Pittman,Cherry Creek,CO,WR,2027,,"5'10""",165,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Tucker,Rhoades,Arvada West,CO,WR,2028,,"5'10""",160,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Elijah,Salazar,Alamosa,CO,WR,2027,,"6'0""",160,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Richard,Shape,Horizon,CO,WR,2029,,"6'1""",167,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jair,Thomas,Liberty,CO,WR,2028,,"6'1""",180,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Kingstin,Trujillo-Mahar,Rampart,CO,WR,2028,,"5'10""",156,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Brandon,Veasley,Cherry Creek,CO,WR,2028,,"5'9""",165,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Aurelius,Wiley,Volcano Vista,NM,WR,2027,,"5'11""",175,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Tobin,Delle Donne,Denver Christian,CO,TE,2028,,"6'6""",220,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Drake,Humphries,Erie,CO,TE,2028,,"6'5""",215,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Carlos,Nunez,Limon,CO,TE,2027,,"6'3""",190,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Lyric,Olmeda,Greeley Central,CO,TE,2027,,"5'8""",150,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Kai,Osburn,Holy Family,CO,TE,2028,,"6'3""",200,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Brenton,Spohn-Hardman,Liberal,KS,TE,2027,,"6'5""",215,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Wyatt,Blomenkamp,Mitchell,NE,OL,2027,,"6'0""",260,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Wesley,Catterfeld,Monarch,CO,OL,2028,,"6'5""",305,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Cade,Cunningham,Manitou Springs,CO,OL,2028,,"6'4""",244,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Brynnen,Lambert,Florence,CO,OL,2027,,"6'2""",265,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Elijah,Chu,Cherry Creek,CO,DB,2028,,"5'10""",180,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Owen,Couch,Broomfield,CO,DB,2027,,"6'1""",180,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Luis,Grajeda,Gateway,CO,DB,2028,,"5'9""",150,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Daniel,Hiatt,Green Mountain,CO,DB,2027,,"6'4""",170,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Christopher,Hinojosa,Mesa Ridge,CO,DB,2027,,"5'9""",175,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Triston,Meek,Berthoud,CO,DB,2027,,"5'9""",155,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Evans,Mensah Jr,Cherokee Trail,CO,DB,2028,,"5'11""",160,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Landon,Pennock,Severance,CO,DB,2027,,"6'1""",170,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Santana,Prayer,Broomfield,CO,DB,2027,,"5'10""",160,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+William,Basham,Canon City,CO,LB,2027,,"5'11""",195,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Adam,Diaz,D’Evelyn,CO,LB,2028,,"5'9""",155,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Cody,Greiner,Fountain-Fort Carson,CO,LB,2027,,"6'0""",200,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Dylan,Grinstead,Pueblo West,CO,LB,2028,,"6'0""",190,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Easton,Jacobs,Mesa Ridge,CO,LB,2028,,"6'1""",200,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Carter,Karpilo,Canon City,CO,LB,2028,,"5'10""",170,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Justin,Liss,Chatfield,CO,LB,2027,,"6'2""",200,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Adam,Moore,Holy Family,CO,LB,2028,,"5'11""",170,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jayden,Murphy,Roosevelt,CO,LB,2028,,"5'10""",205,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Finn,O'Connell,Lutheran,CO,LB,2028,,"6'2""",210,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Geraghty,Osei,Gateway,CO,LB,2028,,"6'0""",193,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Drake,Rivera,Aztec,NM,LB,2027,,"6'2""",205,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Kaeden,Shriver,Cherokee Trail,CO,LB,2028,,"6'1""",190,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Hayden,Alles,Severance,CO,DL,2028,,"6'2""",250,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Truman,Beard,Poudre,CO,DL,2028,,"6'3""",200,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Isaac,Behrens,Cibola,NM,DL,2027,,"6'4""",225,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Devin,Downs,Liberty,CO,DL,2027,,"6'1""",270,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Claude,Espinoza,Gateway,CO,DL,2028,,"5'10""",184,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Mason,Harris,Poudre,CO,DL,2027,,"6'3""",190,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Hank,Jennings,Wright City,MO,DL,2028,,"5'11""",160,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jacob,Johnson,Chatfield,CO,DL,2027,,"6'4""",245,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Josiah,Salazar,University,CO,DL,2028,,"6'0""",200,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Joseph Kyle,Young,Roosevelt,CO,DL,2027,,"6'0""",215,2026,https://bluegreyfootball.com/rocky-mountain-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Kamryyn,Coley,Overhills,NC,QB,2029,,"5'8""",160,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Hayden,Fleisher,West Perry,PA,QB,2027,,"6'3""",190,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Owen,Hulbert,Cleveland,NC,QB,2027,,"6'2""",195,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Easton,Roschke,Langtree,NC,QB,2028,,"6'2""",175,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+A’Todrick,Settles,AL Brown,NC,QB,2027,,"5'11""",180,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Ian,Wands,ALA Johnston,NC,QB,2027,,"6'1""",185,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Derrick,Callis,Southeast Alamance,NC,RB,2027,,"5'9""",180,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Tobias,Cromartie,Union,NC,RB,2028,,"5'10""",177,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Xavier,Frazier,Sailsbury,NC,RB,2029,,"5'10""",195,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Loyality,Fuller,Ayden Grifton,NC,RB,2027,,"5'6""",185,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Hez,Krider Jr,High Point Christian,NC,RB,2027,,"5'8""",170,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+O'Ryon,LeGrande,Anson,NC,RB,2028,,"5'11""",198,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jaxon,Lyons,East Rowan,NC,RB,2028,,"5'11""",180,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Kamaree,Moore,Northern,NC,RB,2028,,"5'7""",170,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Luke,Pagan,Green Level,NC,RB,2028,,"5'9""",190,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Landyn,Roberts,Wake Prep Academy,NC,RB,2028,,"5'10""",160,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Nicholas,Straughn,Providence Grove,NC,RB,2027,,"6'3""",200,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Stefen,Tabon,Wake Forest,NC,RB,2028,,"5'8""",165,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Bently,Talley,Gordon Central,GA,RB,2027,,"6'0""",195,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Thomas,Barry,Covenant Day,NC,WR,2028,,"5'10""",150,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Ryyan,Coley,Overhills,NC,WR,2027,,"5'10""",175,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Landon,Corley,Apex,NC,WR,2027,,"5'11""",165,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jeremiah,Davis,Harrell's Christian Academy,NC,WR,2027,,"6'3""",180,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Demetrius,Dexter,East Columbus,NC,WR,2027,,"5'11""",153,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Nazeeh,Freeman,Concord,NC,WR,2028,,"6'0""",185,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jadyn,Goldwire,Overhills,NC,WR,2027,,"5'7""",168,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+CJ,Green,Darlington,SC,WR,2027,,"5'6""",140,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Thomas,Hay,Langtree Academy,NC,WR,2028,,"5'5""",120,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Che’kai,Hicks,Dudley,NC,WR,2028,,"5'11""",168,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Colten,Hill,Western Alamance,NC,WR,2027,,"5'9""",150,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Travis,Holmes,Heritage,NC,WR,2028,,"5'8""",158,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Kaden,Johnson,Lawrence County,WV,WR,2027,,"6'0""",160,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Dawson,Mack,Knightdale,NC,WR,2027,,"6'3""",187,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+River,McCrary,Patton,NC,WR,2027,,"5'11""",165,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Dyaon,Norman-Jackson,North Rowan,NC,WR,2027,,"5'11""",150,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Original,Sifford,Lexington,NC,WR,2028,,"6'0""",145,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Irvin,Thompson,Highland Tech,NC,WR,2027,,"6'4""",190,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jorian,Ussery,Burns,NC,WR,2028,,"6'1""",177,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jonathan,Eustace,Dutch Fork,SC,OL,2028,,"6'1""",275,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Peyton,Russo,Wheatmore,NC,OL,2028,,"6'4""",275,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Ali,Aman,Butler,NC,DB,2027,,"5'10""",160,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Aaron,Fulcher,Northern Durham,NC,DB,2028,,"6'1""",155,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Micah,Grier,Mountain Island,NC,DB,2028,,"5'4""",135,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Kaleil,Hamilton,Southeast Raleigh,NC,DB,2028,,"5'8""",180,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Trent,Hockenberry,West Perry,PA,DB,2027,,"5'11""",180,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Markus,Medley,Cleveland,NC,DB,2027,,"6'1""",188,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Cayson,Tarlton,Piedmont,NC,DB,2028,,"5'9""",135,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+De’reon,Watson,R.J. Reynolds,NC,DB,2028,,"5'11""",180,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Heath,Alejo,Saint Stephen’s,NC,LB,2027,,"5'10""",174,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Elijah,Alexander,Charlotte Latin,NC,LB,2028,,"6'0""",200,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jeremy,Blake,Cleveland,NC,LB,2027,,"6'1""",190,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jacob,Brown,Green Hope,NC,LB,2027,,"6'0""",208,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Gavin,Bullock,West Johnston,NC,LB,2028,,"6'0""",205,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Bryson,Covington,Ragsdale,NC,LB,2028,,"6'0""",220,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Conner,Haithcock,Providence Grove,NC,LB,2028,,"5'11""",165,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Walt,Liebenberg,Langtree Academy,NC,LB,2028,,"6'0""",195,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Hunter,McGreggor,Windsor Academy,GA,LB,2027,,"6'2""",205,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Luc,Mohamed,Green Level,NC,LB,2028,,"6'2""",220,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jaxson,Sivley,Ridgeland,GA,LB,2027,,"6'0""",165,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Owen,Smith,South Rowan,NC,LB,2027,,"5'10""",220,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+DJ,Steele,St. Bernard,OH,LB,2028,,"5'8""",180,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Willie,Sturgis,Ambassador Christian,NC,LB,2027,,"5'10""",195,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jordan,Wallace,Westover,GA,LB,2027,,"5'10""",200,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Adam,Watts,West Henderson,NC,LB,2028,,"6'1""",220,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Bralan,Wilson,North Pitt,NC,LB,2027,,"5'11""",215,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Ja'kye,Ambrose-Butler,Franklinton,NC,DL,2027,,"5'8""",210,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Zaidyn,Brodie,North Mecklenburg,NC,DL,2027,,"6'0""",257,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Preston,Burnette,Page,NC,DL,2028,,"6'0""",204,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Graeme,Dinwiddie,Southview,NC,DL,2028,,"5'10""",190,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jackson,Fox,Cleveland,NC,DL,2027,,"5'10""",200,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+King,Gardin,Hunter Huss,NC,DL,2028,,"5'10""",290,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Austin,Harkey,Langtree Academy,NC,DL,2028,,"5'10""",196,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Wilson,Hinshaw,Chatham Central,NC,DL,2027,,"5'10""",160,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Zechariah,James,North Mecklenburg,NC,DL,2028,,"5'10""",212,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Armani,Jones,South view,NC,DL,2028,,"6'3""",225,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Delano,Samuelson,Wheatmore,NC,DL,2028,,"6'0""",215,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Johnathan,Solomon,Hawkinsville,GA,DL,2027,,"6'1""",192,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Josiah,Sturdivant,Wake Forest,NC,DL,2027,,"6'4""",225,2026,https://bluegreyfootball.com/north-carolina-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Matthew,Eldridge,Cookeville,TN,QB,2027,,"6'0""",170,2026,https://bluegreyfootball.com/kentucky-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Camden,Larkey,Rockcastle County,KY,QB,2028,,"5'11""",178,2026,https://bluegreyfootball.com/kentucky-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Brayden,Auguste,Lakota East,OH,RB,2028,,"5'10""",190,2026,https://bluegreyfootball.com/kentucky-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jonathan,Miller,Carterville,IL,RB,2027,,"6'0""",205,2026,https://bluegreyfootball.com/kentucky-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Charles,Oglesby Jr,Holly Cross,KY,RB,2027,,"5'9""",200,2026,https://bluegreyfootball.com/kentucky-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Bryston,Toronto,London,OH,RB,2028,,"5'8""",205,2026,https://bluegreyfootball.com/kentucky-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Rylan,Batt,Harrison County,KY,WR,2027,,"6'1""",185,2026,https://bluegreyfootball.com/kentucky-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Talon,Calhoun,Cooper,KY,WR,2028,,"5'11""",165,2026,https://bluegreyfootball.com/kentucky-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Drew,Hardin,West Jessamine,KY,WR,2028,,"5'11""",165,2026,https://bluegreyfootball.com/kentucky-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Brayden,Harsha,Unioto,OH,WR,2029,,"6'1""",180,2026,https://bluegreyfootball.com/kentucky-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Brandon,Hawkins,Fort Knox,KY,WR,2028,,"5'11""",160,2026,https://bluegreyfootball.com/kentucky-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Malex,Hoening,Miami Valley Christian,OH,WR,2028,,"5'10""",170,2026,https://bluegreyfootball.com/kentucky-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jayden,Smith,Holy Cross,KY,WR,2028,,"5'8""",150,2026,https://bluegreyfootball.com/kentucky-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Levi,Strayer,Eastwood,OH,WR,2029,,"6'4""",182,2026,https://bluegreyfootball.com/kentucky-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Brendan,Dobbs,Western Hills,KY,TE,2027,,"6'3""",220,2026,https://bluegreyfootball.com/kentucky-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Xander,Lauer,Eastwood,OH,TE,2029,,"6'3""",205,2026,https://bluegreyfootball.com/kentucky-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Julius,Jessup,Fort Campbell,KY,OL,2027,,"6'2""",260,2026,https://bluegreyfootball.com/kentucky-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Kevin,Buanga,Cooper,KY,DB,2028,,"5'7""",153,2026,https://bluegreyfootball.com/kentucky-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Bishop,Burch,Medina,OH,DB,2027,,"5'11""",165,2026,https://bluegreyfootball.com/kentucky-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Damontre,Cherry,Louisville Central,KY,DB,2028,,"5'8""",160,2026,https://bluegreyfootball.com/kentucky-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Smyth,Dunaway,Mars Area,PA,DB,2027,,"6'1""",175,2026,https://bluegreyfootball.com/kentucky-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Alexander,Petsch,Bexley,OH,DB,2028,,"5'10""",165,2026,https://bluegreyfootball.com/kentucky-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Everett,Rayburn,Holy Cross,KY,DB,2028,,"5'11""",150,2026,https://bluegreyfootball.com/kentucky-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Maxton,Caudill,Knott County Central,KY,LB,2028,,"6'1""",210,2026,https://bluegreyfootball.com/kentucky-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Dalton,Chaney,Lakota East,OH,LB,2028,,"5'11""",215,2026,https://bluegreyfootball.com/kentucky-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Levi,Clemmons,Rockcastle County,KY,LB,2028,,"6'0""",230,2026,https://bluegreyfootball.com/kentucky-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Lincoln,Farley,Bexley,OH,LB,2028,,"6'1""",185,2026,https://bluegreyfootball.com/kentucky-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Max,Oliverio,Desales,KY,LB,2029,,"5'10""",195,2026,https://bluegreyfootball.com/kentucky-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Donovon,Strickland,Trinity,KY,LB,2027,,"5'10""",205,2026,https://bluegreyfootball.com/kentucky-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Brayden,Brown,Carterville,IL,DL,2027,,"6'2""",220,2026,https://bluegreyfootball.com/kentucky-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Cody,Doyle,Lakota East,OH,DL,2028,,"6'3""",220,2026,https://bluegreyfootball.com/kentucky-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Brody,Miller,Unioto,IN,DL,2029,,"6'4""",225,2026,https://bluegreyfootball.com/kentucky-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Cordell,Wallace,Lakota East,OH,DL,2028,,"6'1""",215,2026,https://bluegreyfootball.com/kentucky-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Bryis,Alford,Baldwin,KS,QB,2027,,"6'0""",185,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Noah,Kayal,Abington Heights,PA,QB,2027,,"5'10""",175,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Cameron,Strauss,Herington,KS,QB,2027,,"6'3""",173,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Ta'Vren,Williams,North Point,MO,QB,2027,,"6'0""",160,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Aiden,Adams,Du Quoin,IL,RB,2027,,"5'9""",195,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Keon,Allen,Metamora Township,IL,RB,2027,,"6'0""",200,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Drake,Claborn,Webb City,MO,RB,2028,,"5'11""",212,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Landon,Coleman,Timberland,MO,RB,2028,,"5'10""",170,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Dari’Auntay,Elliott,Raytown,MO,RB,2027,,"5'8""",174,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Caleb,Holland,Timberland,MO,RB,2029,,"5'8""",145,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jordan,Pender,Benjamin Logan,OH,RB,2027,,"5'9""",175,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Chase,Petersen,Wilber-Clatonia,NE,RB,2028,,"5'10""",235,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+K.J.,Smith,Timberland,MO,RB,2028,,"5'11""",180,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Dee,Carruthers,Massac County,IL,WR,2027,,"6'0""",185,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+DeAndre,Jones,Timberland,MO,WR,2027,,"5'10""",175,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Clark,Madden,Timberland,MO,WR,2028,,"5'11""",165,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Kalen,Mercer,Timberland,MO,WR,2029,,"5'11""",170,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Alan,Wilcox,Knob Noster,MO,WR,2028,,"6'0""",180,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Joshua,Fisher,Russellville,MO,OL,2027,,"5'11""",250,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Caden,Ford,Timberland,MO,OL,2027,,"6'6""",290,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jackson,Kuhns,Timberland,MO,OL,2028,,"6'2""",260,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Barrett,Redfield,Timberland,MO,OL,2028,,"6'0""",265,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jacob,Strokotter,Timberland,MO,OL,2027,,"6'3""",265,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Matthew,Carlton,Russellville,MO,DB,2027,,"6'0""",186,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Braylen,Coleman,Webb City,MO,DB,2028,,"6'1""",175,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Marz,Guein,Lee's Summit,MO,DB,2028,,"5'9""",147,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Parker,Harris,Newton Community,IL,DB,2027,,"5'10""",165,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Lucas,Johnson,Steamboat Springs,CO,DB,2027,,"5'9""",155,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Israel,Nelson,Raytown,MO,DB,2027,,"5'11""",176,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Xander,Rodgers,Bellevue East,NE,DB,2027,,"5'7""",155,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Carson,Zugmaier,Timberland,MO,DB,2027,,"5'10""",155,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Brody,Barker,Lebanon,MO,LB,2027,,"5'11""",185,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Drew,Bradford,Massac County,IL,LB,2027,,"6'1""",200,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Donald,Lewis,Putnam County,MO,LB,2029,,"5'10""",185,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Zonte,McMillon,Topeka Kansas,KS,LB,2027,,"5'8""",166,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Raivion,Richardson,Washington,KS,LB,2027,,"5'9""",150,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jackson,Snyder,Lebanon,MO,LB,2027,,"5'7""",170,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Matthew,Wilson,Houston,MO,LB,2029,,"5'9""",185,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Caden,Boyer,Gretna East,NE,DL,2027,,"6'1""",260,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Cory,Brown,Russellville,MO,DL,2028,,"6'5""",215,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Gabriel,Eichhorn,Timberland,MO,DL,2029,,"5'10""",195,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Nolan,Fain,Timberland,MO,DL,2027,,"6'0""",150,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Brody,Fetters,Central,MO,DL,2028,,"6'1""",245,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Gavin,Herbers,Timberland,MO,DL,2027,,"6'5""",245,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Trayton,Hooper,Central,MO,DL,2028,,"6'0""",230,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Brandon,James,Clever,MO,DL,2028,,"6'0""",195,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Wyatt,Kepley,Labette County,KS,DL,2027,,"5'10""",225,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jackson,McVay,Glendale,MO,DL,2028,,"6'1""",225,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jake,Tell,Jensen Beach,FL,DL,2027,,"6'3""",215,2026,https://bluegreyfootball.com/heartland-regional-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Hunter,Bejarano,Mingus Union,AZ,QB,2028,,"6'1""",185,2026,https://bluegreyfootball.com/desert-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Tyler,Gray,Skyline Prep,AZ,QB,2027,,"6'0""",216,2026,https://bluegreyfootball.com/desert-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Maximus,Harder,Ironwood Ridge,AZ,QB,2028,,"5'10""",155,2026,https://bluegreyfootball.com/desert-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Ezavien,Holleman,Betty Fairfax,AZ,QB,2027,,"6'0""",230,2026,https://bluegreyfootball.com/desert-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Race,Pinneo,Pusch Ridge,AZ,QB,2027,,"6'0""",175,2026,https://bluegreyfootball.com/desert-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Dylan,Skrinar,Marin Catholic,CA,QB,2028,,"6'0""",185,2026,https://bluegreyfootball.com/desert-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jace,Collins,Odyssey Institute,AZ,RB,2027,,"5'7""",160,2026,https://bluegreyfootball.com/desert-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Dmarco,De Castro,Vista Grande,AZ,RB,2027,,"5'4""",134,2026,https://bluegreyfootball.com/desert-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Kayden,Diaz,Skyline Prep,AZ,RB,2027,,"5'8""",160,2026,https://bluegreyfootball.com/desert-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jaden,Johnson,Yuma Catholic,AZ,RB,2028,,"5'7""",148,2026,https://bluegreyfootball.com/desert-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jon'te,Jones,Bradshaw Mountain,AZ,RB,2027,,"6'0""",195,2026,https://bluegreyfootball.com/desert-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Zander,Jones,Heritage Academy Mesa,AZ,RB,2027,,"5'6""",170,2026,https://bluegreyfootball.com/desert-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Shayne,Baker Debolt,Heritage Academy Maricopa,AZ,WR,2028,,"5'11""",165,2026,https://bluegreyfootball.com/desert-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Carter,Bliss,Verrado,AZ,WR,2027,,"5'10""",165,2026,https://bluegreyfootball.com/desert-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Ryot,Brumley-Black,Yuma Catholic,AZ,WR,2028,,"5'7""",150,2026,https://bluegreyfootball.com/desert-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Daryl,Little,Thunderbird,AZ,WR,2028,,"6'0""",180,2026,https://bluegreyfootball.com/desert-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jesus,Navarro,Alhambra,AZ,OL,2028,,"6'6""",290,2026,https://bluegreyfootball.com/desert-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Kiaun,Davison,Millennium,AZ,DB,2027,,"5'10""",160,2026,https://bluegreyfootball.com/desert-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Dakotah,Doutis,Barry Goldwater,AZ,DB,2027,,"5'10""",154,2026,https://bluegreyfootball.com/desert-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Michael,Harris,San Pasqual,AZ,DB,2027,,"5'9""",170,2026,https://bluegreyfootball.com/desert-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Remy,Shelton,Verrado,AZ,DB,2027,,"5'6""",165,2026,https://bluegreyfootball.com/desert-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Isaac,Gonzalez,Cholla,AZ,LB,2028,,"5'11""",180,2026,https://bluegreyfootball.com/desert-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Nicodemus,Holmes,Monument Valley,AZ,LB,2027,,"5'9""",184,2026,https://bluegreyfootball.com/desert-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Ryan,Lee,McClintock,AZ,LB,2028,,"6'1""",225,2026,https://bluegreyfootball.com/desert-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Connor,Main,Northwest Christian,AZ,LB,2027,,"5'11""",180,2026,https://bluegreyfootball.com/desert-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Landon,McDermott,San Tan Charter,AZ,LB,2029,,"5'9""",170,2026,https://bluegreyfootball.com/desert-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Gianni,Miguel,Desert Vista,AZ,LB,2027,,"6'2""",215,2026,https://bluegreyfootball.com/desert-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Maximiliano,Orozco,Yuma Catholic,AZ,LB,2027,,"6'0""",190,2026,https://bluegreyfootball.com/desert-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Carter,Sage,ALA Ironwood,AZ,LB,2028,,"5'10""",210,2026,https://bluegreyfootball.com/desert-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Christopher,Eustis,Empire,AZ,DL,2028,,"6'3""",178,2026,https://bluegreyfootball.com/desert-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Abraham,Figueroa,Benson,AZ,DL,2027,,"6'1""",220,2026,https://bluegreyfootball.com/desert-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Makhi,Goliday,Barry Goldwater,AZ,DL,2028,,"6'0""",310,2026,https://bluegreyfootball.com/desert-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Marice,Heard II,Heritage Academy,AZ,DL,2027,,"6'3""",228,2026,https://bluegreyfootball.com/desert-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Takoda,Nelson,Hozho Academy,NM,DL,2027,,"5'10""",220,2026,https://bluegreyfootball.com/desert-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Matthew,Perry,Estrella Foothills,AZ,DL,2028,,"6'2""",180,2026,https://bluegreyfootball.com/desert-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Seamus,Pezzelle,Estrella Foothills,AZ,DL,2027,,"6'3""",250,2026,https://bluegreyfootball.com/desert-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Leviticus,Samau,Berean Academy,AZ,DL,2027,,"6'1""",230,2026,https://bluegreyfootball.com/desert-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Brady,Stiegler,Coconino,AZ,DL,2027,,"6'5""",210,2026,https://bluegreyfootball.com/desert-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Brady,Arbutina,Nordonia Hills,OH,QB,2028,,"6'3""",179,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Myles,Arnold,Pickerington North,OH,QB,2027,,"6'3""",185,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Davell,Brock,Linden McKinley,OH,QB,2028,,"5'9""",140,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Gavin,Brown,Fairview,OH,QB,2029,,"6'3""",190,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Dominick,Corcetti,Keystone,PA,QB,2027,,"6'0""",180,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Landon,Echelberry,Clay,OH,QB,2028,,"6'2""",215,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Matthew,Eliason,Union City,PA,QB,2027,,"5'11""",166,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Meshach,Harris,East Liverpool,OH,QB,2028,,"5'9""",155,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jackson,Hessey,Sylvania Southview,OH,QB,2027,,"5'8""",190,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Dash,Hoy,Bishop Watterson,OH,QB,2028,,"6'3""",195,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Connor,Kmetz,Riverview,PA,QB,2027,,"6'1""",185,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Colt,Rawlins,Ridgedale,OH,QB,2028,,"5'10""",160,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Zach,Shafer,Cuyahoga Heights,OH,QB,2027,,"6'3""",220,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Dale,Smith,Cambridge Springs,PA,QB,2027,,"5'11""",205,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Garrett,Smoyer,Northern Lehigh,PA,QB,2027,,"5'11""",168,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Shawntez,Whitsitt,Executive Education Charter,PA,QB,2027,,"6'1""",165,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Richie,Wyse,Beaver Local,OH,QB,2027,,"5'11""",177,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Christian,Young,Delphos St Johns,OH,QB,2027,,"5'11""",190,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Aidan,Arnold,Girard,PA,RB,2027,,"5'10""",185,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Treyvon,Bearhs,Wahama,OH,RB,2027,,"6'2""",195,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Bryce,Besgrove,Clay,OH,RB,2028,,"6'0""",195,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Beckham,Blackston,Meigs,OH,RB,2027,,"5'11""",180,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Vincent,Broll,Niles McKinley,OH,RB,2027,,"5'7""",185,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Ellis,Clary,Bexley,OH,RB,2028,,"5'9""",160,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Leon,Cummings,Gahanna Lincoln,OH,RB,2028,,"5'9""",190,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Max,Desmith,LaBrae Vikings,OH,RB,2028,,"5'9""",156,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Devon,Englehart,Annville-Cleona,PA,RB,2027,,"5'6""",155,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Braydon,Frye,Marietta,OH,RB,2027,,"5'7""",155,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jeron,Jackson,Wellsville,OH,RB,2028,,"5'10""",155,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Isaac,Kyser,Vermilion,OH,RB,2028,,"6'1""",205,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Colton,Mathias,New Lexington,OH,RB,2028,,"5'9""",170,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Giovanni,Rothrauff,Norwin,PA,RB,2027,,"5'9""",205,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Logan,Russell,Sheridan,OH,RB,2027,,"6'2""",197,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Nathan,Szymusiak,Blacklick Valley,PA,RB,2027,,"5'10""",175,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Andyriq,Thomas,Pickerington North,OH,RB,2027,,"5'9""",195,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Dyionn,Tutwiler,Liberty,OH,RB,2027,,"6'0""",200,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Hunter,Weaver,Ridgemont,OH,RB,2029,,"5'7""",160,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Zachary,Banks,Wellsville,OH,WR,2029,,"5'11""",143,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Julien,Battles,Newark,OH,WR,2028,,"5'10""",165,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Potter,Brozeski,Norwin,PA,WR,2027,,"6'4""",185,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Dexter,Connor II,Executive Education Academy Charter,PA,WR,2027,,"5'8""",140,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Micah,Cowan,Van Wert,OH,WR,2027,,"6'1""",185,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Zephan,Hines,Harding,OH,WR,2029,,"6'4""",145,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Griffin,Hudson,Meigs,OH,WR,2027,,"5'9""",175,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Austyn,Kephart,Frontier,OH,WR,2027,,"6'1""",158,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Aiden,Kohlmyer,Elyria Catholic,OH,WR,2028,,"5'10""",165,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Daveon,Thorn,Catholic Central,OH,WR,2029,,"5'11""",150,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Landon,Coffee,West Branch,OH,TE,2028,,"6'6""",218,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Kevin,Gjergji,Yorktown,NY,TE,2029,,"6'0""",220,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Bryce,Galan,Karns City,PA,DB,2027,,"5'10""",155,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Kameron,Hickman,Whitehall Yearling,OH,DB,2027,,"5'7""",130,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Josh,Jensen,Willoughby South,OH,DB,2028,,"6'0""",175,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Christian,Thomas,Pickerington Central,OH,DB,2028,,"5'10""",170,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Aydric,Wynn,Fort Frye,OH,DB,2029,,"5'9""",147,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Howard,Bates,Gahanna Lincoln,OH,LB,2027,,"5'9""",210,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Shamarion,Coleman,East,OH,LB,2027,,"6'0""",210,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Demetrius,Curtis,Pickerington North,OH,LB,2028,,"6'0""",185,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jonathan,Daley,Cambridge Springs,PA,LB,2027,,"5'8""",195,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jayden,Hamlette,North Cobb,GA,LB,2027,,"5'11""",210,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jamarion,Johnson,Brooklyn,OH,LB,2029,,"5'10""",200,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Keylen,Kidd,Brooklyn,OH,LB,2027,,"5'11""",194,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Maxx,Leppert,Alexander Local,OH,LB,2028,,"6'0""",185,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Kaydin,McFarren,Cambridge Springs,PA,LB,2027,,"6'0""",195,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Brock,McMullen,Greensburg Central Catholic,PA,LB,2027,,"6'2""",208,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Joseph,Spence,Keystone,PA,LB,2027,,"6'1""",205,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Bryce,Yocum,Northern Lebanon,PA,LB,2027,,"6'0""",185,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Lucas,Brinley,Fairfield Christian Academy,OH,DL,2028,,"6'2""",215,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Justin,Chatmon Jr,Copley,OH,DL,2028,,"6'3""",220,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Marcus,Cobb,Rayen Early College,OH,DL,2028,,"6'1""",170,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Logan,Donaldson,East Liverpool,OH,DL,2028,,"6'4""",275,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Ethan,Grimm,Point Pleasant,WV,DL,2028,,"5'11""",240,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Anton,Haas,Gallia Academy,OH,DL,2028,,"6'2""",245,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Steven,McHenry,Rocky River,OH,DL,2027,,"6'2""",242,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Sawyer,McMillin,Midview,OH,DL,2027,,"6'2""",230,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Cameron,Reimold,Greenville,PA,DL,2027,,"6'2""",255,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jaxon,Speece,Annville Cleona,PA,DL,2027,,"6'0""",275,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jalen,Spraggins,Westerville Central,OH,DL,2029,,"6'0""",256,2026,https://bluegreyfootball.com/northeast-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Caelin,Argue,Seminole Ridge,FL,QB,2028,,"6'2""",212,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Zion,Benn,Dunnellon,FL,QB,2029,,"6'1""",155,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Kaleb,Bielski,Innovation,FL,QB,2027,,"6'3""",180,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Josiah,Carter,Zephyrhills Christian Academy,FL,QB,2029,,"6'1""",180,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Aidan,Colman,Springstead,FL,QB,2027,,"6'2""",212,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Colt,Davis,Father Lopez,FL,QB,2027,,"5'10""",160,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+DeAndre,Derr,Hillsborough,FL,QB,2029,,"6'1""",155,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Sebastian,Engel,Lakewood Ranch,FL,QB,2027,,"6'1""",190,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Johntel,Gibson Jr.,Lennard,FL,QB,2027,,"6'1""",185,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Aydan,Gillings Wright,Trinity Catholic,FL,QB,2029,,"6'2""",200,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Brayden,Grasso,Weeki Wachee,FL,QB,2028,,"6'0""",170,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Hogue,Haydon,Indian rocks Christian,FL,QB,2027,,"6'4""",175,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Laderian,Jackson,Largo,FL,QB,2028,,"5'9""",160,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Trent,Land,Branford,FL,QB,2028,,"6'2""",190,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Drew,LaPlante,Fort Pierce Central,FL,QB,2027,,"6'1""",160,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Ty,Nesmith,Wharton,FL,QB,2028,,"6'0""",165,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Wyatt,Raymer,Gulf Coast,FL,QB,2028,,"6'0""",185,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Ayden,Stephens,Leto,FL,QB,2027,,"5'7""",145,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Cam,Waddington,Countryside,FL,QB,2028,,"6'2""",180,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Noah,Alce,Ransom Everglades,FL,RB,2028,,"5'11""",175,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Matwoin,Bryant,Winter Haven,FL,RB,2028,,"5'10""",193,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Marcelo,Carrion,Archbishop Coleman Carroll,FL,RB,2028,,"5'9""",170,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Tyson,Drummond,Northeast,FL,RB,2027,,"5'8""",180,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Justin,Flores,Lakewood Ranch,FL,RB,2027,,"5'10""",182,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Michael,Garzia,Out-Of-Door Academy,FL,RB,2028,,"5'10""",172,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Amari,Germain,Coral Reef,FL,RB,2028,,"5'10""",165,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Eddie,Gore,Dunbar,FL,RB,2027,,"5'11""",175,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jhai,Hitchcock,Pinellas Park,FL,RB,2028,,"5'10""",170,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Evan,Kelly,Wesley Chapel,FL,RB,2028,,"5'9""",170,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Armon,Lindsey,Wakulla,FL,RB,2028,,"5'8""",175,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Liam,Neary,Aubrey Rogers,FL,RB,2029,,"5'9""",165,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Joshua,Patterson,Lake Placid,FL,RB,2029,,"5'9""",165,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Derek,Schmadeke,Viera,FL,RB,2029,,"6'1""",217,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Malik,Slocumb,Lakewood,FL,RB,2028,,"5'5""",155,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Alex,Townsend,Lafayette,FL,RB,2028,,"5'6""",170,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Tremayne,Tukes,Old Plank Christian Academy,FL,RB,2027,,"5'7""",165,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Wyatt,VanLandingham,Trenton,FL,RB,2027,,"6'1""",175,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Wayne,Walters,Northeast,FL,RB,2027,,"5'7""",155,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Dontavian,Wilson,Island Coast,FL,RB,2028,,"5'9""",170,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Christian,Batsis-Paul,Armwood,AL,WR,2029,,"6'0""",177,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Engozi,Burrows Jr,Riverview,FL,WR,2027,,"5'7""",145,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Shervin,Chavis,Legacy,FL,WR,2029,,"6'2""",176,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Raeshawn,Clyde,Randolph Clay High,GA,WR,2027,,"6'1""",168,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jack,Crifasi IV,Gulfcoast,FL,WR,2028,,"5'11""",175,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Cameron,Gunter,Dunnellon,FL,WR,2029,,"6'0""",185,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Christian,Henderson,Island Coast,FL,WR,2027,,"6'1""",185,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Nolan,McKinnon,Cypress Lake,FL,WR,2027,,"6'2""",160,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Noah,Patell,Durant,FL,WR,2028,,"5'9""",150,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Anthony,Piermatteo,Weeki Wachee,FL,WR,2028,,"5'11""",145,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Kingston,Pili,Olympic Heights,FL,WR,2027,,"5'11""",165,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jack,Powers,St Joseph,FL,WR,2028,,"6'0""",178,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Noah,Spenn,Sarasota Christian,FL,WR,2027,,"6'4""",192,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Max,Urbanek,Newsome,FL,WR,2027,,"6'6""",175,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Andre,Wise Jr,Tohopekaliga,FL,WR,2027,,"5'11""",156,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Fredrick,Mcknight,Lake Placid,FL,TE,2029,,"6'2""",195,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Braylon,Toussaint,Cape Coral,FL,OL,2028,,"6'3""",285,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Robert,Gordon,Freedom,FL,DB,2029,,"5'7""",150,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jacoby,Butler,Clearwater,FL,DB,2027,,"5'9""",180,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jeremiah,Epps,Lake Gibson,FL,DB,2027,,"5'11""",170,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Christopher,Faso,Cypress Bay,FL,DB,2027,,"6'1""",182,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Dylan,Galadza,Archbishop Coleman Carroll,FL,DB,2028,,"6'1""",165,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Kentrell,James,Marianna,FL,DB,2027,,"5'10""",155,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Delvin,Johnson,Poinciana,FL,DB,2027,,"6'0""",148,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Christian,Neal,Trinity Catholic,FL,DB,2027,,"5'10""",165,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Maksim,Noel,Lely,FL,DB,2027,,"5'10""",155,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Ryder,Pollard,Lecanto,FL,DB,2028,,"5'10""",172,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+King,Powell,Jesuit,FL,DB,2027,,"5'11""",170,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Blaine,Shoemaker,Barron Collier,FL,DB,2027,,"6'1""",185,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Mikari,Slocumb,Lakewood,FL,DB,2028,,"5'7""",165,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Ja’carri,Young,Countryside high,FL,DB,2029,,"5'7""",145,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Alexander,Birner,Zephyrhills Christian Academy,FL,LB,2029,,"5'8""",195,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Cale,Boles,Countryside,FL,LB,2028,,"6'0""",195,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Kyree,Brooks,Cocoa,FL,LB,2027,,"6'0""",218,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Bailey,Brown,Wewahitchka,FL,LB,2029,,"5'10""",160,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Kayden,Cobb,Island Coast,FL,LB,2028,,"5'10""",190,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Virshod,Eleaby,South Fort Myers,FL,LB,2028,,"6'1""",210,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Kellan,Jackson,Clearwater Central Catholic,FL,LB,2028,,"5'11""",185,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Tarlyn,Joseph,Leon,FL,LB,2028,,"5'9""",170,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Mason,Kurtz,Cypress,FL,LB,2027,,"6'0""",195,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Jason,Mock,Spanish River,FL,LB,2027,,"6'1""",230,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Ledora,Smith,Wildwood,FL,LB,2029,,"5'9""",185,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Brody,White,J.M. Tate,FL,LB,2027,,"5'11""",190,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Damon,Alexandre,North Broward Prep,FL,DL,2029,,"5'11""",251,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Carlos,Barrera,Saint Stephen’s Episcopal School,FL,DL,2027,,"6'2""",230,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Dominic,Brown,Westminster Christian School,FL,DL,2029,,"6'0""",205,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Grant,Harhen,Barron Collier,FL,DL,2028,,"6'2""",185,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Evan,Martin,Steinbrenner,FL,DL,2027,,"6'2""",220,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Gianni,Newton,Riverview,FL,DL,2028,,"6'0""",228,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Noah,Pastrana,South miami,FL,DL,2029,,"5'7""",170,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Justus,Vail,Windermere,FL,DL,2027,,"6'3""",210,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import
+Nate,Wilson,Pace,FL,DL,2028,,"5'11""",195,2026,https://bluegreyfootball.com/tampa-regional-combine-results-2026/,Blue-Grey Football Regional Combine Results,csv_import

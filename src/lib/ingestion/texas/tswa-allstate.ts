@@ -15,8 +15,19 @@ import type { NormalizedPlayerRecord } from "../types";
 export const TSWA_SOURCE_NAME = "Texas Sports Writers Association All-State Football";
 export const TSWA_BASE = "https://txswa.org/";
 
-/** Two-digit season end years with usable HTML lists (probed). 17–19 are 404. */
+/**
+ * Two-digit season end years with usable HTML lists (probed). 17–19 are 404.
+ * Default to seasons that can still yield class 2027–2031 underclassmen
+ * (Fr in seasonEnd 2024 → 2027; Jr/So/Fr in 2025–2026).
+ */
 export const TSWA_YEAR_SPECS: { yy: string; seasonEndYear: number }[] = [
+  { yy: "23", seasonEndYear: 2024 },
+  { yy: "24", seasonEndYear: 2025 },
+  { yy: "25", seasonEndYear: 2026 },
+];
+
+/** Full archive (alumni-heavy) — only use with --allow-all-classes style callers. */
+export const TSWA_YEAR_SPECS_ALL: { yy: string; seasonEndYear: number }[] = [
   { yy: "06", seasonEndYear: 2007 },
   { yy: "07", seasonEndYear: 2008 },
   { yy: "08", seasonEndYear: 2009 },
@@ -31,9 +42,7 @@ export const TSWA_YEAR_SPECS: { yy: string; seasonEndYear: number }[] = [
   { yy: "20", seasonEndYear: 2021 },
   { yy: "21", seasonEndYear: 2022 },
   { yy: "22", seasonEndYear: 2023 },
-  { yy: "23", seasonEndYear: 2024 },
-  { yy: "24", seasonEndYear: 2025 },
-  { yy: "25", seasonEndYear: 2026 },
+  ...TSWA_YEAR_SPECS,
 ];
 
 export const TSWA_URL = "https://txswa.org/allstatefootball24.php";
@@ -84,12 +93,30 @@ export function parseTswaHtml(
   const seen = new Set<string>();
 
   const add = (nameRaw: string, schoolRaw: string, gradeToken: string, idx: number) => {
-    const name = normalizeName(nameRaw);
+    let name = normalizeName(nameRaw);
+    // Strip section prefixes glued by missing newlines: "Guards Tristan Dare" / "and Jordan Burnett"
+    name = name
+      .replace(
+        /^(?:and\s+)?(?:(?:first|second|third)\s+team\s+)?(?:offense|defense)\s+(?:guards|tackles|centers|ends|backs|linebackers|receivers|quarterbacks|running\s+backs|wide\s+receivers|tight\s+ends|cornerbacks|safeties|kickers|punters|athletes|utility|all[\s-]?purpose)\s+/i,
+        "",
+      )
+      .replace(
+        /^(?:and\s+)?(?:guards|tackles|centers|ends|backs|linebackers|receivers|quarterbacks|running\s+backs|wide\s+receivers|tight\s+ends|cornerbacks|safeties|kickers|punters|athletes|utility|fullbacks|defensive\s+linemen|defensive\s+ends)\s+/i,
+        "",
+      )
+      .replace(/^and\s+/i, "")
+      .replace(/^team\.\s+/i, "");
+    // If still polluted, keep last 2–3 capitalized tokens
+    if (/\b(team|offense|defense|guards|tackles)\b/i.test(name) || name.split(/\s+/).length > 4) {
+      const toks = name.split(/\s+/).filter((t) => /^[A-Z]/.test(t));
+      name = toks.slice(-3).join(" ");
+    }
     const school = normalizeName(schoolRaw);
     const classYear = parseClassYear(gradeToken, seasonEndYear);
     const { firstName, lastName } = splitDisplayName(name);
     if (!firstName || !lastName || school.length < 2) return;
     if (/coach/i.test(name) || /player of the year/i.test(name)) return;
+    if (/^(and|the|first|second|third)$/i.test(firstName)) return;
 
     const key = `${firstName}|${lastName}|${school}|${classYear ?? ""}`.toLowerCase();
     if (seen.has(key)) return;
@@ -164,12 +191,15 @@ export function parseTswaHtml(
     });
   };
 
-  // Newer format: Name, School, [ht,] [wt,] sr.
+  // Newer format (require height + weight to avoid prose false positives):
+  // "Tristan Dare, Southlake Carroll, 6-5, 285, jr."
   const entryRe =
-    /([A-Z][A-Za-z.'\-]+(?:\s+[A-Z][A-Za-z.'\-]+)+),\s*([A-Za-z0-9 .'\-\/]+?),\s*(?:\d-\d{1,2},?\s*)?(?:\d{2,3},?\s*)?(sr|jr|so|fr|soph|senior|junior|sophomore|freshman)\.?/gi;
+    /(?:\(tie\)\s+)?([A-Z][A-Za-z.'\-]+(?:\s+[A-Z][A-Za-z.'\-]+)+),\s*([A-Za-z0-9 .'\-\/]{2,45}?),\s*\d-\d{1,2},\s*\d{2,3},\s*(sr|jr|so|fr|soph|senior|junior|sophomore|freshman)\.?/gi;
   let m: RegExpExecArray | null;
   while ((m = entryRe.exec(text)) !== null) {
-    add(m[1], m[2], m[3], m.index);
+    const school = m[2].trim();
+    if (/team|coach|signed|tackle|quarterback|pressures|honors|year/i.test(school)) continue;
+    add(m[1], school, m[3], m.index);
   }
 
   // Older format: Sr. Name, School, 6-0, 180

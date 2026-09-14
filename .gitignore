@@ -66,3 +66,16 @@ next-env.d.ts
 /data/ingestion/.west-apply/
 /data/ingestion/.chsaa-apply/
 /scripts/tmp/
+
+# Temp apply batches / session fetch caches (regenerate via ingest scripts)
+/data/ingestion/.bluegrey-apply/
+/data/ingestion/.tx-apply/
+/data/ingestion/sources/session2029/
+/data/ingestion/sources/session2028/apply/
+/data/ingestion/sources/session2028/html/
+/data/ingestion/sources/session2028/espn/
+/data/ingestion/sources/session2028/hunt/
+/data/ingestion/sources/session2028/bluegrey_rosters/
+/data/ingestion/sources/session2028/calhi/
+/data/ingestion/sources/session2028/arkansas/
+/data/ingestion/sources/session2028/florida_so/

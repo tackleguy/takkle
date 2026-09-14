@@ -1,5 +1,5 @@
 import { loadNcesSchools } from "../shared/nces";
-import { emptyRunSummary } from "../shared/normalize";
+import { emptyRunSummary, filterRecruitClassPlayers } from "../shared/normalize";
 import { fetchChsaaAllState } from "./chsaa-allstate";
 import { fetchCfbdRecruitsForStates } from "../shared/cfbd-state";
 import type { StateAdapterResult } from "../types";
@@ -30,7 +30,7 @@ export async function runColoradoAdapter(options?: {
     else summary.duplicatesDetected += 1;
   }
 
-  const players = [...byKey.values()];
+  const players = filterRecruitClassPlayers([...byKey.values()]);
   summary.playersDiscovered = players.length;
   summary.sourcesFailing = summary.errors.length + summary.blockedSources.length;
   summary.lastSuccessfulAt = new Date().toISOString();

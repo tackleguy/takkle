@@ -78,6 +78,21 @@ export function classYearFromGrade(grade: number, seasonEndYear: number): number
   return seasonEndYear + Math.max(0, yearsLeft);
 }
 
+/** Active recruiting classes only — never ingest alumni / null class years. */
+export const RECRUIT_CLASS_MIN = 2027;
+export const RECRUIT_CLASS_MAX = 2031;
+
+export function isRecruitClassYear(year: number | null | undefined): boolean {
+  return year != null && year >= RECRUIT_CLASS_MIN && year <= RECRUIT_CLASS_MAX;
+}
+
+/** Drop players outside class 2027–2031 (requires a known classYear). */
+export function filterRecruitClassPlayers<T extends { classYear?: number | null }>(
+  players: T[],
+): T[] {
+  return players.filter((p) => isRecruitClassYear(p.classYear ?? null));
+}
+
 export function parseGrade(raw?: string | number | null): number | undefined {
   if (raw == null || raw === "") return undefined;
   const n = typeof raw === "number" ? raw : Number(String(raw).replace(/\D/g, ""));
