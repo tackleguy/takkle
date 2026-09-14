@@ -28,6 +28,10 @@ export {
   schoolKey,
   emptyRunSummary,
   splitDisplayName,
+  parseRosterDisplayName,
+  stripRosterRoleSuffix,
+  isJunkPlayerName,
+  isPositionCodeSchool,
   RECRUIT_CLASS_MIN,
   RECRUIT_CLASS_MAX,
   isRecruitClassYear,
@@ -37,6 +41,17 @@ export {
 export { isUrlAllowed, fetchRobotsTxt, USER_AGENT } from "./shared/robots";
 export { loadNcesSchools } from "./shared/nces";
 export { INGESTION_SOURCE_REGISTRY } from "./source-registry";
+export {
+  parsePrepRedzoneHtml,
+  rejectPositionCodeSchools,
+  inferPrzState,
+  inferPrzClassYear,
+} from "./shared/prep-redzone";
+export {
+  parseHtoRosterHtml,
+  parseHtoPlayerName,
+  mapHtoClassYear,
+} from "./shared/hto-roster";
 
 export { runCaliforniaAdapter } from "./california";
 export { runTexasAdapter } from "./texas";

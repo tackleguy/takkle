@@ -148,10 +148,46 @@ function decodeHtml(s) {
 }
 
 function splitName(full) {
-  const parts = full.trim().split(/\s+/).filter(Boolean);
+  const cleaned = String(full || "")
+    .replace(/\s+/g, " ")
+    .replace(/\s*[-–—]\s*(Co-?Captains?|Captains?|Managers?|Coaches?|Trainers?|Volunteers?|Staff)\s*$/i, "")
+    .trim();
+  if (cleaned.includes(",")) {
+    const [lastPart, firstPart] = cleaned.split(",", 2).map((s) => s.trim());
+    if (!lastPart || !firstPart) return { firstName: "", lastName: "" };
+    if (/^(jr\.?|sr\.?|ii|iii|iv|v)$/i.test(firstPart)) return { firstName: "", lastName: "" };
+    return { firstName: firstPart, lastName: lastPart };
+  }
+  const parts = cleaned.split(/\s+/).filter(Boolean);
   if (parts.length === 0) return { firstName: "", lastName: "" };
   if (parts.length === 1) return { firstName: parts[0], lastName: parts[0] };
+  if (/^(jr\.?|sr\.?|ii|iii|iv|v)$/i.test(parts[0])) return { firstName: "", lastName: "" };
   return { firstName: parts[0], lastName: parts.slice(1).join(" ") };
+}
+
+function isJunkName(firstName, lastName) {
+  if (!firstName || !lastName) return true;
+  if (firstName.length < 2 || lastName.length < 2) return true;
+  if (/^(jr\.?|sr\.?|ii|iii|iv|v)$/i.test(firstName)) return true;
+  const display = `${firstName} ${lastName}`;
+  if (/^(None\.?\s*)?Athlete\b/i.test(display) || /^(None\.?\s*)?Athlete\b/i.test(firstName)) {
+    return true;
+  }
+  if (/^(athlete|none\.?|n\/?a|unknown|null|undefined|player|test|recruit)$/i.test(firstName)) {
+    return true;
+  }
+  if (/^(athlete|none\.?|n\/?a|unknown|null|undefined|player|test|recruit)$/i.test(lastName)) {
+    return true;
+  }
+  return false;
+}
+
+const POS_SCHOOL_RE =
+  /^(?:QB|RB|WR|TE|OL|DL|LB|DB|CB|S|K|P|ATH|EDGE|DE|DT|NT|FS|SS|OT|OG|C|OC|FB|HB|SAF|ILB|OLB|MLB|PK|LS|UTL|FLEX|KR|PR|AP|UTILITY)(?:\/(?:QB|RB|WR|TE|OL|DL|LB|DB|CB|S|K|P|ATH|EDGE|DE|DT|NT|FS|SS|OT|OG|C|OC|FB|HB|SAF|ILB|OLB|MLB|PK|LS|UTL|FLEX|KR|PR|AP|UTILITY))*$/i;
+
+function isPosSchool(name) {
+  if (!name) return true;
+  return POS_SCHOOL_RE.test(String(name).replace(/\s+/g, ""));
 }
 
 const POS = {
@@ -654,16 +690,20 @@ async function fetchGeorgiaPlayers() {
 function parseAswaText(text, seasonEnd, sourceUrl) {
   const players = [];
   const seen = new Set();
+  const cleaned = String(text || "")
+    .replace(/^\s*(?:P|K|PK|ATH)\s*:\s*None\.?\s*$/gim, "")
+    .replace(/^\s*Athlete\s*$/gim, "\nATH:\n");
   const lineRe =
     /^\s*(?:QB|RB|WR|TE|OL|DL|LB|DB|K|P|ATH|UTL|FLEX|KR|PR|AP):\s*([^,\n]+),\s*([^,\n]+),\s*(Jr\.?|Sr\.?|So\.?|Fr\.?|Junior|Senior|Sophomore|Freshman)\b/gim;
   let m;
-  while ((m = lineRe.exec(text))) {
-    const pos = m[0].slice(0, m[0].indexOf(":")).toUpperCase();
+  while ((m = lineRe.exec(cleaned))) {
+    const pos = m[0].slice(0, m[0].indexOf(":")).trim().toUpperCase();
     const { firstName, lastName } = splitName(m[1].trim());
     const school = m[2].trim();
     const tok = m[3].toLowerCase().replace(/\./g, "");
     const g = GRADE_MAP_SE[tok] || GRADE_MAP_SE[tok.slice(0, 2)];
-    if (!firstName || !lastName || school.length < 2) continue;
+    if (isJunkName(firstName, lastName) || school.length < 2 || isPosSchool(school)) continue;
+    if (/^none\b/i.test(school) || /^none\b/i.test(firstName)) continue;
     const key = `${firstName}|${lastName}|${school}|${seasonEnd}`.toLowerCase();
     if (seen.has(key)) continue;
     seen.add(key);
@@ -682,14 +722,16 @@ function parseAswaText(text, seasonEnd, sourceUrl) {
       sourceSchool: school,
     });
   }
+  // Same-line only — do not let "Athlete" section headers glue onto the next name via \s
   const hmRe =
-    /([A-Z][A-Za-z.'\-]+(?:\s+[A-Z][A-Za-z.'\-]+)+),\s*([A-Za-z0-9 .'\-\/]+),\s*(Jr\.|Sr\.|So\.|Fr\.)/g;
-  while ((m = hmRe.exec(text))) {
+    /([A-Z][A-Za-z.'\-]+(?:[ \t]+[A-Z][A-Za-z.'\-]+)+),[ \t]*([A-Za-z0-9 .'/\-]+),[ \t]*(Jr\.|Sr\.|So\.|Fr\.)/g;
+  while ((m = hmRe.exec(cleaned))) {
     const { firstName, lastName } = splitName(m[1]);
     const school = m[2].trim();
     const g = GRADE_MAP_SE[m[3].toLowerCase().replace(/\./g, "")];
-    if (!firstName || !lastName) continue;
-    if (/coach|football|all-state|class /i.test(m[1])) continue;
+    if (isJunkName(firstName, lastName)) continue;
+    if (/coach|football|all-state|class |^none\b/i.test(m[1])) continue;
+    if (school.length < 2 || isPosSchool(school) || /^none\b/i.test(school)) continue;
     const key = `${firstName}|${lastName}|${school}|${seasonEnd}`.toLowerCase();
     if (seen.has(key)) continue;
     seen.add(key);

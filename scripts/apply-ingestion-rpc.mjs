@@ -41,6 +41,31 @@ function uuidFromKey(key) {
   return `${hex.slice(0, 8)}-${hex.slice(8, 12)}-${hex.slice(12, 16)}-${hex.slice(16, 20)}-${hex.slice(20)}`;
 }
 
+const POS_SCHOOL_RE =
+  /^(?:QB|RB|WR|TE|OL|DL|LB|DB|CB|S|K|P|ATH|EDGE|DE|DT|NT|FS|SS|OT|OG|C|OC|FB|HB|SAF|ILB|OLB|MLB|PK|LS|UTL|FLEX|KR|PR|AP|UTILITY)(?:\/(?:QB|RB|WR|TE|OL|DL|LB|DB|CB|S|K|P|ATH|EDGE|DE|DT|NT|FS|SS|OT|OG|C|OC|FB|HB|SAF|ILB|OLB|MLB|PK|LS|UTL|FLEX|KR|PR|AP|UTILITY))*$/i;
+
+function isPosSchool(name) {
+  if (!name) return true;
+  return POS_SCHOOL_RE.test(String(name).replace(/\s+/g, ""));
+}
+
+function cleanRosterName(first, last) {
+  let fn = String(first || "")
+    .replace(/\s*[-–—]\s*(Co-?Captains?|Captains?|Managers?|Coaches?|Trainers?|Volunteers?|Staff)\s*$/i, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  let ln = String(last || "").replace(/\s+/g, " ").trim();
+  // "Jr" + "Smith" from bad "Smith, Jr" parse — drop
+  if (/^(jr\.?|sr\.?|ii|iii|iv|v)$/i.test(fn)) return null;
+  if (/^(None\.?\s*)?Athlete\b/i.test(`${fn} ${ln}`) || /^(None\.?\s*)?Athlete\b/i.test(fn)) {
+    return null;
+  }
+  if (/^(athlete|none\.?|n\/?a|unknown|null|undefined|player|test|recruit)$/i.test(fn)) return null;
+  if (/^(athlete|none\.?|n\/?a|unknown|null|undefined|player|test|recruit)$/i.test(ln)) return null;
+  if (fn.length < 2 || ln.length < 2) return null;
+  return { firstName: fn, lastName: ln };
+}
+
 async function rpc(name, payload) {
   const res = await fetch(`${url}/rest/v1/rpc/${name}`, {
     method: "POST",
@@ -69,14 +94,30 @@ async function main() {
   const RECRUIT_MIN = 2027;
   const RECRUIT_MAX = 2031;
   const allowAll = process.argv.includes("--allow-all-classes");
-  const players = allowAll
-    ? playersRaw
-    : playersRaw.filter(
-        (p) => p.classYear != null && p.classYear >= RECRUIT_MIN && p.classYear <= RECRUIT_MAX,
-      );
-  if (!allowAll && players.length !== playersRaw.length) {
+  let rejected = { class: 0, junkName: 0, posSchool: 0 };
+  const players = [];
+  for (const p of playersRaw) {
+    if (
+      !allowAll &&
+      (p.classYear == null || p.classYear < RECRUIT_MIN || p.classYear > RECRUIT_MAX)
+    ) {
+      rejected.class++;
+      continue;
+    }
+    const names = cleanRosterName(p.firstName, p.lastName);
+    if (!names) {
+      rejected.junkName++;
+      continue;
+    }
+    if (isPosSchool(p.schoolName) || isPosSchool(p.sourceSchool)) {
+      rejected.posSchool++;
+      continue;
+    }
+    players.push({ ...p, firstName: names.firstName, lastName: names.lastName });
+  }
+  if (rejected.class || rejected.junkName || rejected.posSchool) {
     console.log(
-      `Recruit window filter: kept ${players.length}/${playersRaw.length} (class ${RECRUIT_MIN}–${RECRUIT_MAX})`,
+      `Filters: kept ${players.length}/${playersRaw.length} (class-drop=${rejected.class}, junk-name=${rejected.junkName}, pos-school=${rejected.posSchool})`,
     );
   }
 
@@ -84,6 +125,7 @@ async function main() {
   if (!schools.length && players.length) {
     const seen = new Map();
     for (const p of players) {
+      if (isPosSchool(p.schoolName)) continue;
       const slug = `${slugify(p.schoolName)}-${p.stateCode.toLowerCase()}`;
       if (seen.has(slug)) continue;
       const id = uuidFromKey(`assoc-school:${p.stateCode}:${slugify(p.schoolName)}`);
@@ -102,6 +144,8 @@ async function main() {
     }
     schools = [...seen.values()];
   }
+  // Drop any position-code schools even if schools.json provided them
+  schools = schools.filter((s) => !isPosSchool(s.name));
 
   console.log(`Schools: ${schools.length}, Players: ${players.length}`);
 

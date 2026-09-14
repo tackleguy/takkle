@@ -10,6 +10,8 @@ import { join } from "node:path";
 import { isUrlAllowed, USER_AGENT } from "../shared/robots";
 import {
   classYearFromGrade,
+  isJunkPlayerName,
+  isPositionCodeSchool,
   normalizeName,
   normalizePosition,
   splitDisplayName,
@@ -81,32 +83,36 @@ export function parseAswaText(
   const players: NormalizedPlayerRecord[] = [];
   const seen = new Set<string>();
 
+  // Section header "Athlete" (not a player) — keep on its own line so hmRe cannot glue it to the next name.
+  // Also drop empty slots like "P: None." / "K: None."
+  const cleaned = text
+    .replace(/^\s*(?:P|K|PK|ATH)\s*:\s*None\.?\s*$/gim, "")
+    .replace(/^\s*Athlete\s*$/gim, "\nATH:\n");
+
   // QB: Trent Seaborn, Thompson, Jr., 6-1, 205 (allow leading whitespace from news mirrors)
   const lineRe =
     /^\s*(?:QB|RB|WR|TE|OL|DL|LB|DB|K|P|ATH|UTL|FLEX|KR|PR|AP|UTILITY):\s*([^,\n]+),\s*([^,\n]+),\s*(Jr\.?|Sr\.?|So\.?|Fr\.?|Junior|Senior|Sophomore|Freshman)\b/gim;
 
   let m: RegExpExecArray | null;
-  while ((m = lineRe.exec(text)) !== null) {
-    const posToken = text.slice(Math.max(0, m.index - 5), m.index + 3);
-    const posMatch = posToken.match(
-      /(QB|RB|WR|TE|OL|DL|LB|DB|K|P|ATH|UTL|FLEX|KR|PR|AP)/i,
-    );
+  while ((m = lineRe.exec(cleaned)) !== null) {
+    const pos = m[0].slice(0, m[0].indexOf(":")).trim();
     add(
       players,
       seen,
       m[1],
       m[2],
       m[3],
-      posMatch?.[1],
+      pos,
       seasonEndYear,
       sourceUrl,
     );
   }
 
-  // Also catch "Name, School, Sr." honorable mentions without position prefix
+  // "Name, School, Sr." without position — require same-line name tokens (no \n) so
+  // section headers like "Athlete" cannot be glued onto the following player.
   const hmRe =
-    /([A-Z][A-Za-z.'\-]+(?:\s+[A-Z][A-Za-z.'\-]+)+),\s*([A-Za-z0-9 .'\-\/]+),\s*(Jr\.|Sr\.|So\.|Fr\.)/g;
-  while ((m = hmRe.exec(text)) !== null) {
+    /([A-Z][A-Za-z.'\-]+(?:[ \t]+[A-Z][A-Za-z.'\-]+)+),[ \t]*([A-Za-z0-9 .'/\-]+),[ \t]*(Jr\.|Sr\.|So\.|Fr\.)/g;
+  while ((m = hmRe.exec(cleaned)) !== null) {
     add(players, seen, m[1], m[2], m[3], undefined, seasonEndYear, sourceUrl);
   }
 
@@ -125,9 +131,10 @@ function add(
 ) {
   const name = normalizeName(nameRaw);
   const school = normalizeName(schoolRaw);
-  if (/coach|football|all-state|class \d/i.test(name)) return;
+  if (/coach|football|all-state|class \d|^none\b/i.test(name)) return;
+  if (/^none\b/i.test(school) || isPositionCodeSchool(school)) return;
   const { firstName, lastName } = splitDisplayName(name);
-  if (!firstName || !lastName || school.length < 2) return;
+  if (isJunkPlayerName(firstName, lastName) || school.length < 2) return;
 
   const gKey = gradeRaw.toLowerCase().replace(/\./g, "");
   const grade = GRADE_MAP[gKey] || GRADE_MAP[gKey.slice(0, 2)];
