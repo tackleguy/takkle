@@ -33,9 +33,9 @@ export default function RankingsFilters() {
   const selectClass =
     "rounded-lg border border-border bg-field px-3 py-2 text-sm text-text-primary focus:border-accent focus:outline-none";
 
-  const scope = (params.get("scope") ?? "position") as RankingScope;
+  const scope = (params.get("scope") ?? "national") as RankingScope;
   const position = params.get("position") ?? "QB";
-  const classYear = params.get("class") ?? String(DEFAULT_RECRUIT_CLASS);
+  const classYear = params.get("class") ?? "";
   const state = params.get("state") ?? "CA";
 
   return (
@@ -46,13 +46,13 @@ export default function RankingsFilters() {
           type="button"
           onClick={() => {
             if (value === "position") {
-              update({ scope: value, position, class: classYear });
+              update({ scope: value, position, class: classYear || null });
             } else if (value === "state") {
               update({ scope: value, state });
             } else if (value === "class") {
-              update({ scope: value, class: classYear });
+              update({ scope: value, class: classYear || String(DEFAULT_RECRUIT_CLASS) });
             } else {
-              update({ scope: value });
+              update({ scope: value, class: null });
             }
           }}
           className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors ${
@@ -68,9 +68,15 @@ export default function RankingsFilters() {
       {(scope === "position" || scope === "class") && (
         <select
           className={selectClass}
-          value={classYear}
-          onChange={(e) => update({ class: e.target.value, scope })}
+          value={classYear || "all"}
+          onChange={(e) =>
+            update({
+              class: e.target.value === "all" ? null : e.target.value,
+              scope,
+            })
+          }
         >
+          <option value="all">All eligibility years</option>
           {RECRUIT_CLASS_YEARS.map((y) => (
             <option key={y} value={y}>
               Class of {y}

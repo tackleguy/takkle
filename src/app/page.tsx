@@ -16,7 +16,11 @@ export default async function HomePage() {
     getLiveTrendingPlayers(4),
     getLiveRisingPlayers(4),
   ]);
-  const live = featuredSource === "supabase" || trending.source === "supabase";
+  const live =
+    featuredSource === "supabase" ||
+    featuredSource === "college" ||
+    trending.source === "supabase" ||
+    trending.source === "college";
 
   return (
     <>

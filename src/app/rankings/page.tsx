@@ -3,10 +3,6 @@ import type { Metadata } from "next";
 import RankingsFilters from "@/components/rankings/RankingsFilters";
 import RankingsTable from "@/components/rankings/RankingsTable";
 import { getLiveRankings } from "@/lib/rankings";
-import {
-  DEFAULT_RECRUIT_CLASS,
-  isRecruitClassYear,
-} from "@/lib/recruiting/class-years";
 import type { FootballPosition, RankingScope } from "@/types/recruiting";
 
 export const metadata: Metadata = {
@@ -23,9 +19,10 @@ interface PageProps {
 
 export default async function RankingsPage({ searchParams }: PageProps) {
   const params = await searchParams;
-  const scope = (params.scope ?? "position") as RankingScope;
-  const classYearRaw = params.class ? Number(params.class) : DEFAULT_RECRUIT_CLASS;
-  const classYear = isRecruitClassYear(classYearRaw) ? classYearRaw : DEFAULT_RECRUIT_CLASS;
+  const scope = (params.scope ?? "national") as RankingScope;
+  const classYearRaw = params.class ? Number(params.class) : undefined;
+  const classYear =
+    classYearRaw && Number.isFinite(classYearRaw) ? classYearRaw : undefined;
   const position = (params.position ?? "QB") as FootballPosition;
   const stateCode = params.state ?? "CA";
 

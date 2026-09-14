@@ -1,0 +1,13 @@
+{
+  "version": "2026.1-college",
+  "generatedAt": "2026-09-14T00:00:00.000Z",
+  "playerCount": 42869,
+  "schoolCount": 0,
+  "chunks": [
+    "data/college/players-chunk-00.json"
+  ],
+  "featuredSlug": "fungani-aho-dl-2029-ut-martin",
+  "isSynthetic": false,
+  "competitionLevel": "college",
+  "note": "Full FBS/FCS dump lives at data/college/ (server-loaded). Sample: players-college-sample.json."
+}

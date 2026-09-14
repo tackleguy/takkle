@@ -1,0 +1,110 @@
+{
+  "generatedAt": "2026-09-14T00:00:00.000Z",
+  "source": "takkle.players competition_level=college",
+  "isSynthetic": false,
+  "competitionLevel": "college",
+  "totalPlayers": 42869,
+  "divisionCounts": {
+    "fcs": 19996,
+    "fbs": 22873
+  },
+  "topConferences": [
+    [
+      "AAC",
+      3226
+    ],
+    [
+      "Sun Belt",
+      3004
+    ],
+    [
+      "MAC",
+      2604
+    ],
+    [
+      "SWAC",
+      2525
+    ],
+    [
+      "Mountain West",
+      2484
+    ],
+    [
+      "Big Sky",
+      2445
+    ],
+    [
+      "Conference USA",
+      2426
+    ],
+    [
+      "Big Ten",
+      2084
+    ],
+    [
+      "United Athletic",
+      2059
+    ],
+    [
+      "Southland",
+      2019
+    ],
+    [
+      "Ohio Valley",
+      1960
+    ],
+    [
+      "ACC",
+      1943
+    ],
+    [
+      "SEC",
+      1865
+    ],
+    [
+      "Southern",
+      1861
+    ],
+    [
+      "Big 12",
+      1813
+    ],
+    [
+      "CAA",
+      1374
+    ],
+    [
+      "MEAC",
+      1217
+    ],
+    [
+      "Pioneer",
+      1097
+    ],
+    [
+      "MVFC",
+      999
+    ],
+    [
+      "Pac-12",
+      922
+    ]
+  ],
+  "chunks": [
+    "players-chunk-00.json",
+    "players-chunk-01.json",
+    "players-chunk-02.json",
+    "players-chunk-03.json",
+    "players-chunk-04.json",
+    "players-chunk-05.json",
+    "players-chunk-06.json",
+    "players-chunk-07.json",
+    "players-chunk-08.json",
+    "players-chunk-09.json",
+    "players-chunk-10.json"
+  ],
+  "csvPath": "data/college/players-college-fbs-fcs.csv",
+  "featuredSlug": "fungani-aho-dl-fcs-ut-martin-304807",
+  "notes": "FBS/FCS roster export for Transfer Portal + NIL Portal. HS players excluded.",
+  "dir": "data/college"
+}

@@ -51,12 +51,16 @@ export default async function DiscoverPage({ searchParams }: PageProps) {
         </div>
 
         <div className="mt-6">
-          <SyntheticNotice forceHide={result.source === "supabase"} />
+          <SyntheticNotice forceHide={result.source === "supabase" || result.source === "college"} />
         </div>
 
         <p className="mt-4 text-sm text-text-muted">
           {result.total.toLocaleString()} players found
-          {result.source === "supabase" ? " · verified sources" : " · local seed"}
+          {result.source === "supabase"
+            ? " · verified sources"
+            : result.source === "college"
+              ? " · college roster dump"
+              : " · local seed"}
         </p>
 
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

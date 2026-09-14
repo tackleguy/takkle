@@ -3,6 +3,7 @@ import { ACTIVE_COMPETITION_LEVEL } from "@/lib/competition-level";
 import { RANKING_VERSION } from "@/lib/scoring/research-rankings";
 import { createTakkleClient, isTakkleConfigured } from "@/lib/takkle-client";
 import {
+  getCollegePlayers,
   getFeaturedPlayer as getSeedFeaturedPlayer,
   getPlayerBySlug as getSeedPlayerBySlug,
   getRisingPlayers as getSeedRisingPlayers,
@@ -117,11 +118,19 @@ function toPlayer(
   };
 }
 
-export type LivePlayersSource = "supabase" | "seed";
+export type LivePlayersSource = "supabase" | "college" | "seed";
+
+function collegeSeedSearch(
+  filters: PlayerSearchFilters = {},
+  page = 1,
+  pageSize = 24,
+): PlayerSearchResult & { source: LivePlayersSource } {
+  return { ...searchSeedPlayers(filters, page, pageSize), source: "college" };
+}
 
 /**
  * Prefer live takkle.players (college FBS/FCS). HS rows are dormant.
- * Fall back to local seed only when Supabase credentials are missing or the query fails.
+ * Fall back to committed college dump (data/college/), never synthetic HS demo.
  */
 export async function searchLivePlayers(
   filters: PlayerSearchFilters = {},
@@ -130,7 +139,7 @@ export async function searchLivePlayers(
 ): Promise<PlayerSearchResult & { source: LivePlayersSource }> {
   const client = createTakkleClient();
   if (!client) {
-    return { ...searchSeedPlayers(filters, page, pageSize), source: "seed" };
+    return collegeSeedSearch(filters, page, pageSize);
   }
 
   try {
@@ -173,12 +182,11 @@ export async function searchLivePlayers(
     const { data, error, count } = await query;
     if (error) {
       console.error("searchLivePlayers", error.message);
-      return { ...searchSeedPlayers(filters, page, pageSize), source: "seed" };
+      return collegeSeedSearch(filters, page, pageSize);
     }
 
     let players = (data ?? []).map((row) => toPlayer(row as Record<string, unknown>));
 
-    // Score filters need ranking rows; apply client-side when requested.
     if (filters.minScore != null || filters.maxScore != null) {
       const scored = await attachNationalScores(client, players);
       players = scored.filter((p) => {
@@ -195,6 +203,10 @@ export async function searchLivePlayers(
       };
     }
 
+    if (!players.length && (count ?? 0) === 0) {
+      return collegeSeedSearch(filters, page, pageSize);
+    }
+
     return {
       players,
       total: count ?? players.length,
@@ -204,7 +216,7 @@ export async function searchLivePlayers(
     };
   } catch (err) {
     console.error("searchLivePlayers failed", err);
-    return { ...searchSeedPlayers(filters, page, pageSize), source: "seed" };
+    return collegeSeedSearch(filters, page, pageSize);
   }
 }
 
@@ -240,7 +252,7 @@ export async function getLivePlayerBySlug(
 ): Promise<{ player: Player | null; source: LivePlayersSource }> {
   const client = createTakkleClient();
   if (!client) {
-    return { player: getSeedPlayerBySlug(slug) ?? null, source: "seed" };
+    return { player: getSeedPlayerBySlug(slug) ?? null, source: "college" };
   }
 
   try {
@@ -254,7 +266,7 @@ export async function getLivePlayerBySlug(
 
     if (error || !data) {
       const seed = getSeedPlayerBySlug(slug);
-      return { player: seed ?? null, source: seed ? "seed" : "supabase" };
+      return { player: seed ?? null, source: seed ? "college" : "supabase" };
     }
 
     const player = toPlayer(data as Record<string, unknown>);
@@ -262,7 +274,7 @@ export async function getLivePlayerBySlug(
     return { player: withScore ?? player, source: "supabase" };
   } catch (err) {
     console.error("getLivePlayerBySlug failed", err);
-    return { player: getSeedPlayerBySlug(slug) ?? null, source: "seed" };
+    return { player: getSeedPlayerBySlug(slug) ?? null, source: "college" };
   }
 }
 
@@ -356,11 +368,13 @@ export async function getLiveFeaturedPlayer(): Promise<{
   source: LivePlayersSource;
 }> {
   if (!isTakkleConfigured()) {
-    return { player: getSeedFeaturedPlayer() ?? null, source: "seed" };
+    return { player: getSeedFeaturedPlayer() ?? null, source: "college" };
   }
   const top = await playersFromNationalRankings(1);
   if (top[0]) return { player: top[0], source: "supabase" };
-  return { player: getSeedFeaturedPlayer() ?? null, source: "seed" };
+  const college = getCollegePlayers()[0];
+  if (college) return { player: college, source: "college" };
+  return { player: getSeedFeaturedPlayer() ?? null, source: "college" };
 }
 
 export async function getLiveTrendingPlayers(limit = 8): Promise<{
@@ -368,11 +382,13 @@ export async function getLiveTrendingPlayers(limit = 8): Promise<{
   source: LivePlayersSource;
 }> {
   if (!isTakkleConfigured()) {
-    return { players: getSeedTrendingPlayers(limit), source: "seed" };
+    return { players: getSeedTrendingPlayers(limit), source: "college" };
   }
   const players = await playersFromNationalRankings(limit);
   if (players.length) return { players, source: "supabase" };
-  return { players: getSeedTrendingPlayers(limit), source: "seed" };
+  const college = getCollegePlayers().slice(0, limit);
+  if (college.length) return { players: college, source: "college" };
+  return { players: getSeedTrendingPlayers(limit), source: "college" };
 }
 
 export async function getLiveRisingPlayers(limit = 8): Promise<{
@@ -380,11 +396,13 @@ export async function getLiveRisingPlayers(limit = 8): Promise<{
   source: LivePlayersSource;
 }> {
   if (!isTakkleConfigured()) {
-    return { players: getSeedRisingPlayers(limit), source: "seed" };
+    return { players: getSeedRisingPlayers(limit), source: "college" };
   }
   const rising = await playersFromRisingRankings(limit);
   if (rising.length) return { players: rising, source: "supabase" };
   const fallback = await playersFromNationalRankings(limit);
   if (fallback.length) return { players: fallback, source: "supabase" };
-  return { players: getSeedRisingPlayers(limit), source: "seed" };
+  const college = getCollegePlayers().slice(0, limit);
+  if (college.length) return { players: college, source: "college" };
+  return { players: getSeedRisingPlayers(limit), source: "college" };
 }

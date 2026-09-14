@@ -115,21 +115,19 @@ function toPlayer(row: Record<string, unknown>, score: number, confidence: Score
 
 /**
  * Live rankings for college (FBS/FCS) athletes. HS inventory is dormant.
- * Falls back to seed only when Supabase is unavailable.
+ * Falls back to committed college dump when Supabase is unavailable.
  */
 export async function getLiveRankings(
   filters: RankingFilters,
   limit = 50,
-): Promise<{ rows: RankedPlayerRow[]; source: "supabase" | "seed"; version: string }> {
+): Promise<{ rows: RankedPlayerRow[]; source: "supabase" | "college" | "seed"; version: string }> {
   const client = createTakkleClient();
   if (!client) {
     const seed = getSeedRankings(
       {
         ...filters,
-        classYear:
-          filters.classYear && isRecruitClassYear(filters.classYear)
-            ? filters.classYear
-            : undefined,
+        // Don't force HS recruit-class window on college athletes
+        classYear: filters.classYear,
       },
       limit,
     );
@@ -141,8 +139,8 @@ export async function getLiveRankings(
         previousRank: null,
         player,
       })),
-      source: "seed",
-      version: "seed",
+      source: "college",
+      version: "college-dump",
     };
   }
 

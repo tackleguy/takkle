@@ -3,6 +3,8 @@ import schoolsData from "@/data/seed/schools.json";
 import ncesSchoolsSample from "@/data/seed/schools-nces-sample.json";
 import cfbdSample from "@/data/seed/players-cfbd-sample.json";
 import cfbdManifest from "@/data/seed/players-cfbd-manifest.json";
+import collegeSample from "@/data/seed/players-college-sample.json";
+import collegeManifest from "@/data/seed/players-college-manifest.json";
 import chunk0 from "@/data/seed/players-chunk-0.json";
 import chunk1 from "@/data/seed/players-chunk-1.json";
 import chunk2 from "@/data/seed/players-chunk-2.json";
@@ -29,23 +31,26 @@ const SYNTHETIC_CHUNKS: Player[][] = [
 ] as Player[][];
 
 let _allPlayers: Player[] | null = null;
+let _collegePlayers: Player[] | null = null;
 
 /**
- * Local seed switch only (Discover/Home/Rankings prefer live Supabase via live-players).
- * Default remains synthetic for offline UI demos; set cfbd for real CFBD sample names.
- * Prefer TAKKLE_PLAYERS_SOURCE=supabase with Supabase credentials for production.
+ * Local seed switch. Default is **college** (real FBS/FCS dump under data/college/).
+ * Discover/Home/Rankings prefer live Supabase; this is the offline / fallback pool.
+ * Use TAKKLE_PLAYERS_SOURCE=synthetic only for intentional demo UI.
  */
 function playersSource(): string {
   return (
     process.env.TAKKLE_PLAYERS_SOURCE ||
     process.env.NEXT_PUBLIC_TAKKLE_PLAYERS_SOURCE ||
-    "synthetic"
+    "college"
   ).toLowerCase();
 }
 
 export function getSeedManifest(): SeedManifest {
-  if (playersSource() === "cfbd") {
-    return cfbdManifest as SeedManifest;
+  const source = playersSource();
+  if (source === "cfbd") return cfbdManifest as SeedManifest;
+  if (source === "college" || source === "supabase" || source === "live") {
+    return collegeManifest as SeedManifest;
   }
   return manifest as SeedManifest;
 }
@@ -134,10 +139,58 @@ function getCfbdPlayers(): Player[] {
   return getCfbdPlayersSample();
 }
 
+/** Full FBS/FCS dump from data/college/ (server). Falls back to committed 100-player sample. */
+export function getCollegePlayers(): Player[] {
+  if (_collegePlayers) return _collegePlayers;
+  if (typeof window === "undefined") {
+    try {
+      // eslint-disable-next-line @typescript-eslint/no-require-imports
+      const fs = require("node:fs") as typeof import("node:fs");
+      // eslint-disable-next-line @typescript-eslint/no-require-imports
+      const path = require("node:path") as typeof import("node:path");
+      const dir = path.join(process.cwd(), "data", "college");
+      const manifestPath = path.join(dir, "manifest.json");
+      if (fs.existsSync(manifestPath)) {
+        const meta = JSON.parse(fs.readFileSync(manifestPath, "utf8")) as {
+          chunks?: string[];
+        };
+        const chunks = meta.chunks?.length
+          ? meta.chunks
+          : fs
+              .readdirSync(dir)
+              .filter((f: string) => /^players-chunk-\d+\.json$/.test(f))
+              .sort();
+        const players: Player[] = [];
+        for (const chunk of chunks) {
+          const filePath = path.join(dir, chunk);
+          if (!fs.existsSync(filePath)) continue;
+          const rows = JSON.parse(fs.readFileSync(filePath, "utf8")) as Player[];
+          if (Array.isArray(rows)) players.push(...rows);
+        }
+        if (players.length) {
+          _collegePlayers = players;
+          return _collegePlayers;
+        }
+      }
+    } catch {
+      /* fall through to sample */
+    }
+  }
+  _collegePlayers = collegeSample as Player[];
+  return _collegePlayers;
+}
+
+export function getCollegePlayersSample(): Player[] {
+  return collegeSample as Player[];
+}
+
 export function getAllPlayers(): Player[] {
   if (!_allPlayers) {
     const source = playersSource();
-    const pool = source === "cfbd" ? getCfbdPlayers() : getSyntheticPlayers();
+    let pool: Player[];
+    if (source === "cfbd") pool = getCfbdPlayers();
+    else if (source === "synthetic" || source === "seed") pool = getSyntheticPlayers();
+    else pool = getCollegePlayers(); // college | supabase | live | default
     _allPlayers = [...pool].sort(
       (a, b) => b.tackleScore.score - a.tackleScore.score,
     );
@@ -177,6 +230,8 @@ function matchesFilters(player: Player, filters: PlayerSearchFilters): boolean {
     const haystack = [
       player.displayName,
       player.school.name,
+      player.collegeName ?? "",
+      player.conference ?? "",
       player.position,
       player.stateCode,
       player.hometownCity ?? "",
@@ -200,8 +255,15 @@ export function searchPlayers(
   page = 1,
   pageSize = 24,
 ): PlayerSearchResult {
+  const source = playersSource();
+  const collegeMode =
+    source === "college" || source === "supabase" || source === "live" || !source;
   const filtered = getAllPlayers().filter((p) => {
-    if (!isRecruitClassYear(p.classYear)) return false;
+    // HS recruit-window filter only for synthetic/cfbd HS seeds — not college rosters.
+    if (!collegeMode && !isRecruitClassYear(p.classYear)) return false;
+    if (collegeMode && p.competitionLevel && p.competitionLevel !== "college") {
+      return false;
+    }
     return matchesFilters(p, filters);
   });
   const start = (page - 1) * pageSize;
@@ -217,7 +279,15 @@ export function getRankings(
   filters: RankingFilters,
   limit = 50,
 ): Player[] {
-  let pool = getAllPlayers().filter((p) => isRecruitClassYear(p.classYear));
+  const source = playersSource();
+  const collegeMode =
+    source === "college" || source === "supabase" || source === "live" || !source;
+  let pool = getAllPlayers().filter((p) => {
+    if (collegeMode) {
+      return !p.competitionLevel || p.competitionLevel === "college";
+    }
+    return isRecruitClassYear(p.classYear);
+  });
 
   if (filters.stateCode) {
     pool = pool.filter((p) => p.stateCode === filters.stateCode);
