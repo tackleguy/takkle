@@ -160,7 +160,6 @@ function computeTackleScore(rng, position) {
 }
 
 function buildRankings(rng, stateCode, position, classYear, nationalRank) {
-  const stateTotal = 600;
   const posTotal = Math.floor(3000 / POSITIONS.length);
   const classTotal = 600;
   return [
@@ -170,13 +169,6 @@ function buildRankings(rng, stateCode, position, classYear, nationalRank) {
       rank: nationalRank,
       totalInScope: PLAYER_COUNT,
       label: `National #${nationalRank}`,
-    },
-    {
-      scope: "state",
-      scopeKey: stateCode,
-      rank: Math.floor(rng() * stateTotal) + 1,
-      totalInScope: stateTotal,
-      label: `${stateCode} #${Math.floor(rng() * stateTotal) + 1}`,
     },
     {
       scope: "position",
@@ -374,7 +366,6 @@ if (featured) {
   featured.rankings = [
     { scope: "national", scopeKey: "US", rank: 127, totalInScope: PLAYER_COUNT, label: "National" },
     { scope: "position", scopeKey: "QB", rank: 18, totalInScope: Math.max(1, Math.floor(PLAYER_COUNT / POSITIONS.length)), label: "QB" },
-    { scope: "state", scopeKey: "FL", rank: 6, totalInScope: Math.floor(PLAYER_COUNT / STATES.length), label: "Florida" },
     { scope: "region", scopeKey: "Miami-Dade", rank: 4, totalInScope: 80, label: "Miami-Dade" },
   ];
   featured.measurements = [{

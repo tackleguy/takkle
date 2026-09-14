@@ -19,17 +19,16 @@ interface PageProps {
 
 export default async function RankingsPage({ searchParams }: PageProps) {
   const params = await searchParams;
-  const scope = (params.scope ?? "national") as RankingScope;
+  const rawScope = params.scope ?? "national";
+  const scope = (rawScope === "state" ? "national" : rawScope) as RankingScope;
   const classYearRaw = params.class ? Number(params.class) : undefined;
   const classYear =
     classYearRaw && Number.isFinite(classYearRaw) ? classYearRaw : undefined;
   const position = (params.position ?? "QB") as FootballPosition;
-  const stateCode = params.state ?? "CA";
 
   const { rows, source, version } = await getLiveRankings(
     {
       scope,
-      stateCode: scope === "state" ? stateCode : undefined,
       position: scope === "position" ? position : undefined,
       classYear: scope === "position" || scope === "class" ? classYear : undefined,
     },
@@ -39,11 +38,9 @@ export default async function RankingsPage({ searchParams }: PageProps) {
   const title =
     scope === "national"
       ? "National College Rankings"
-      : scope === "state"
-        ? `${stateCode} College Rankings`
-        : scope === "class"
-          ? `Eligibility ${classYear} Rankings`
-          : `${position} Rankings · College`;
+      : scope === "class"
+        ? `Eligibility ${classYear} Rankings`
+        : `${position} Rankings · College`;
 
   return (
     <div className="px-4 py-10 sm:py-14">

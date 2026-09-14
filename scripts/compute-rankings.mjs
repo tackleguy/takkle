@@ -250,23 +250,6 @@ async function main() {
     }
   }
 
-  // By state
-  const states = [...new Set(scored.map((s) => s.player.state_code).filter(Boolean))];
-  for (const st of states) {
-    const subset = scored.filter((s) => s.player.state_code === st);
-    if (subset.length) pushRanks("state", st, subset);
-  }
-
-  // State + position
-  for (const st of states) {
-    for (const pos of POSITIONS) {
-      const subset = scored.filter(
-        (s) => s.player.state_code === st && s.position === pos,
-      );
-      if (subset.length) pushRanks("position", `${st}:${pos}`, subset);
-    }
-  }
-
   // Delete prior version rows then upsert
   await supabase.from("player_rankings").delete().eq("ranking_version", RANKING_VERSION);
 

@@ -29,7 +29,6 @@ export type RankedPlayerRow = {
 function scopeKeyFor(filters: RankingFilters): { scope: RankingScope; scopeKey: string } {
   const scope = filters.scope ?? "position";
   if (scope === "national") return { scope, scopeKey: "national" };
-  if (scope === "state") return { scope, scopeKey: filters.stateCode ?? "CA" };
   if (scope === "class") {
     const y = filters.classYear ?? DEFAULT_RECRUIT_CLASS;
     return { scope, scopeKey: String(y) };

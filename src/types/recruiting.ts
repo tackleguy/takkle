@@ -48,7 +48,6 @@ export type ScoreConfidence = "high" | "medium" | "limited" | "insufficient";
 
 export type RankingScope =
   | "national"
-  | "state"
   | "position"
   | "class"
   | "school"

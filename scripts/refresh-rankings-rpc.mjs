@@ -239,19 +239,6 @@ async function main() {
       if (subset.length) pushRanks("position", `${pos}:${y}`, subset);
     }
   }
-  const states = [...new Set(scored.map((s) => s.player.state_code).filter(Boolean))];
-  for (const st of states) {
-    const subset = scored.filter((s) => s.player.state_code === st);
-    if (subset.length) pushRanks("state", st, subset);
-  }
-  for (const st of states) {
-    for (const pos of POSITIONS) {
-      const subset = scored.filter(
-        (s) => s.player.state_code === st && s.position === pos,
-      );
-      if (subset.length) pushRanks("position", `${st}:${pos}`, subset);
-    }
-  }
 
   console.log(`Writing ${rankingRows.length} ranking rows…`);
   await rpc("clear_research_rankings", { version: RANKING_VERSION });
