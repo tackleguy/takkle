@@ -14,8 +14,8 @@ export default function RankingsTable({ rows }: RankingsTableProps) {
           No ranked players yet
         </p>
         <p className="mt-2 text-sm text-text-muted">
-          Rankings cover recruiting classes 2027–2031 by position. Add film and stats to raise
-          confidence beyond honor-roll research signals.
+          No ranked college players yet for this filter. Provisional Tackle Scores come from
+          division, conference, and roster signals until film grades land.
         </p>
       </div>
     );

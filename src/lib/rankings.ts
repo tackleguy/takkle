@@ -1,6 +1,9 @@
 import { DEFAULT_RECRUIT_CLASS, isRecruitClassYear } from "@/lib/recruiting/class-years";
 import { ACTIVE_COMPETITION_LEVEL } from "@/lib/competition-level";
-import { RANKING_VERSION } from "@/lib/scoring/research-rankings";
+import {
+  COLLEGE_RANKING_VERSION,
+  scoreCollegePlayer,
+} from "@/lib/scoring/college-provisional";
 import { createTakkleClient } from "@/lib/takkle-client";
 import type {
   CollegeDivision,
@@ -63,6 +66,24 @@ function mapSchool(
 function toPlayer(row: Record<string, unknown>, score: number, confidence: ScoreConfidence): Player {
   const schoolRaw = Array.isArray(row.schools) ? row.schools[0] : row.schools;
   const stateCode = (row.state_code as string) ?? "NA";
+  const division = (row.division as CollegeDivision | null) ?? null;
+  const conference = (row.conference as string | null) ?? null;
+  const transferPortalStatus =
+    (row.transfer_portal_status as TransferPortalStatus | null) ?? null;
+  let finalScore = score;
+  let finalConfidence = confidence;
+  if (!finalScore) {
+    const provisional = scoreCollegePlayer({
+      division,
+      conference,
+      heightInches: Number(row.height_inches ?? 0) || null,
+      weightLbs: Number(row.weight_lbs ?? 0) || null,
+      transferPortalStatus,
+      position: (row.position as string) || "ATH",
+    });
+    finalScore = provisional.score;
+    finalConfidence = provisional.confidence;
+  }
   return {
     id: row.id as string,
     firstName: row.first_name as string,
@@ -83,19 +104,19 @@ function toPlayer(row: Record<string, unknown>, score: number, confidence: Score
     jerseyNumber: (row.jersey_number as number) ?? undefined,
     status: (row.status as Player["status"]) ?? "unclaimed",
     competitionLevel: (row.competition_level as CompetitionLevel) ?? ACTIVE_COMPETITION_LEVEL,
-    division: (row.division as CollegeDivision | null) ?? null,
+    division,
     collegeName: (row.college_name as string | null) ?? null,
-    conference: (row.conference as string | null) ?? null,
+    conference,
     eligibilityYear: (row.eligibility_year as number | null) ?? null,
-    transferPortalStatus: (row.transfer_portal_status as TransferPortalStatus | null) ?? null,
+    transferPortalStatus,
     portalEntryDate: (row.portal_entry_date as string | null) ?? null,
     transferFromSchool: (row.transfer_from_school as string | null) ?? null,
     transferToSchool: (row.transfer_to_school as string | null) ?? null,
     isSynthetic: Boolean(row.is_synthetic),
     tackleScore: {
-      score,
-      version: RANKING_VERSION,
-      confidence,
+      score: finalScore,
+      version: COLLEGE_RANKING_VERSION,
+      confidence: finalConfidence,
       scoreDate: new Date().toISOString(),
       components: [],
     },
@@ -167,7 +188,7 @@ export async function getLiveRankings(
     )
     .eq("ranking_scope", scope)
     .eq("scope_key", scopeKey)
-    .eq("ranking_version", RANKING_VERSION)
+    .eq("ranking_version", COLLEGE_RANKING_VERSION)
     .eq("players.competition_level", ACTIVE_COMPETITION_LEVEL)
     .eq("players.is_synthetic", false)
     .order("rank", { ascending: true })
@@ -187,6 +208,28 @@ export async function getLiveRankings(
       );
     }
 
+    // College rankings not yet in DB — use scored college dump (sorted by Tackle Score).
+    const seed = getSeedRankings(
+      {
+        ...filters,
+        classYear: filters.classYear,
+      },
+      limit,
+    );
+    if (seed.length) {
+      return {
+        rows: seed.map((player, i) => ({
+          rank: i + 1,
+          score: player.tackleScore.score,
+          isRising: false,
+          previousRank: null,
+          player,
+        })),
+        source: "college",
+        version: COLLEGE_RANKING_VERSION,
+      };
+    }
+
     let rosterQuery = client
       .from("players")
       .select(
@@ -202,21 +245,28 @@ export async function getLiveRankings(
       .eq("competition_level", ACTIVE_COMPETITION_LEVEL)
       .eq("is_synthetic", false)
       .order("last_name", { ascending: true })
-      .limit(limit);
+      .limit(Math.max(limit * 5, 200));
 
     if (filters.position) rosterQuery = rosterQuery.eq("position", filters.position);
     if (filters.stateCode) rosterQuery = rosterQuery.eq("state_code", filters.stateCode);
     if (filters.classYear) rosterQuery = rosterQuery.eq("class_year", filters.classYear);
 
     const { data: roster } = await rosterQuery;
-    const rows: RankedPlayerRow[] = (roster ?? []).map((raw, i) => ({
-      rank: i + 1,
-      score: null,
-      isRising: false,
-      previousRank: null,
-      player: toPlayer(raw as Record<string, unknown>, 0, "limited"),
-    }));
-    return { rows, source: "supabase", version: RANKING_VERSION };
+    const rows: RankedPlayerRow[] = (roster ?? [])
+      .map((raw) => {
+        const player = toPlayer(raw as Record<string, unknown>, 0, "limited");
+        return {
+          rank: 0,
+          score: player.tackleScore.score,
+          isRising: false,
+          previousRank: null,
+          player,
+        };
+      })
+      .sort((a, b) => (b.score ?? 0) - (a.score ?? 0))
+      .slice(0, limit)
+      .map((row, i) => ({ ...row, rank: i + 1 }));
+    return { rows, source: "supabase", version: COLLEGE_RANKING_VERSION };
   }
 
   const rows: RankedPlayerRow[] = [];
@@ -237,5 +287,5 @@ export async function getLiveRankings(
     });
   }
 
-  return { rows, source: "supabase", version: RANKING_VERSION };
+  return { rows, source: "supabase", version: COLLEGE_RANKING_VERSION };
 }

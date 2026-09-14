@@ -1,6 +1,9 @@
 import { DEFAULT_RECRUIT_CLASS } from "@/lib/recruiting/class-years";
 import { ACTIVE_COMPETITION_LEVEL } from "@/lib/competition-level";
-import { RANKING_VERSION } from "@/lib/scoring/research-rankings";
+import {
+  COLLEGE_RANKING_VERSION,
+  scoreCollegePlayer,
+} from "@/lib/scoring/college-provisional";
 import { createTakkleClient, isTakkleConfigured } from "@/lib/takkle-client";
 import {
   getCollegePlayers,
@@ -66,6 +69,24 @@ function toPlayer(
   const stateCode = (row.state_code as string) ?? "NA";
   const firstName = (row.first_name as string) ?? "";
   const lastName = (row.last_name as string) ?? "";
+  const division = (row.division as CollegeDivision | null) ?? null;
+  const conference = (row.conference as string | null) ?? null;
+  const transferPortalStatus =
+    (row.transfer_portal_status as TransferPortalStatus | null) ?? null;
+  let finalScore = score;
+  let finalConfidence = confidence;
+  if (!finalScore) {
+    const provisional = scoreCollegePlayer({
+      division,
+      conference,
+      heightInches: Number(row.height_inches ?? 0) || null,
+      weightLbs: Number(row.weight_lbs ?? 0) || null,
+      transferPortalStatus,
+      position: (row.position as string) || "ATH",
+    });
+    finalScore = provisional.score;
+    finalConfidence = provisional.confidence;
+  }
   return {
     id: row.id as string,
     firstName,
@@ -88,19 +109,19 @@ function toPlayer(
     status: (row.status as Player["status"]) ?? "unclaimed",
     hometownCity: (row.hometown_city as string) ?? undefined,
     competitionLevel: (row.competition_level as CompetitionLevel) ?? ACTIVE_COMPETITION_LEVEL,
-    division: (row.division as CollegeDivision | null) ?? null,
+    division,
     collegeName: (row.college_name as string | null) ?? null,
-    conference: (row.conference as string | null) ?? null,
+    conference,
     eligibilityYear: (row.eligibility_year as number | null) ?? null,
-    transferPortalStatus: (row.transfer_portal_status as TransferPortalStatus | null) ?? null,
+    transferPortalStatus,
     portalEntryDate: (row.portal_entry_date as string | null) ?? null,
     transferFromSchool: (row.transfer_from_school as string | null) ?? null,
     transferToSchool: (row.transfer_to_school as string | null) ?? null,
     isSynthetic: Boolean(row.is_synthetic),
     tackleScore: {
-      score,
-      version: RANKING_VERSION,
-      confidence,
+      score: finalScore,
+      version: COLLEGE_RANKING_VERSION,
+      confidence: finalConfidence,
       scoreDate: new Date().toISOString(),
       components: [],
     },
@@ -231,7 +252,7 @@ async function attachNationalScores(
     .select("player_id, score")
     .eq("ranking_scope", "national")
     .eq("scope_key", "national")
-    .eq("ranking_version", RANKING_VERSION)
+    .eq("ranking_version", COLLEGE_RANKING_VERSION)
     .in("player_id", ids);
 
   const byId = new Map<string, number>();
@@ -294,7 +315,7 @@ async function playersFromRisingRankings(limit: number): Promise<Player[]> {
     )
     .eq("ranking_scope", "national")
     .eq("scope_key", "national")
-    .eq("ranking_version", RANKING_VERSION)
+    .eq("ranking_version", COLLEGE_RANKING_VERSION)
     .eq("is_rising", true)
     .eq("players.competition_level", ACTIVE_COMPETITION_LEVEL)
     .eq("players.is_synthetic", false)
@@ -332,7 +353,7 @@ async function playersFromNationalRankings(limit: number): Promise<Player[]> {
     )
     .eq("ranking_scope", "national")
     .eq("scope_key", "national")
-    .eq("ranking_version", RANKING_VERSION)
+    .eq("ranking_version", COLLEGE_RANKING_VERSION)
     .eq("players.competition_level", ACTIVE_COMPETITION_LEVEL)
     .eq("players.is_synthetic", false)
     .order("rank", { ascending: true })
