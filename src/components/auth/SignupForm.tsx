@@ -25,13 +25,11 @@ export default function SignupForm({ supabaseReady }: SignupFormProps) {
   const [password, setPassword] = useState("");
   const [accountType, setAccountType] = useState<AccountType>("player");
   const [error, setError] = useState<string | null>(null);
-  const [message, setMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setError(null);
-    setMessage(null);
 
     if (!supabaseReady) {
       setError("Supabase is not configured.");
@@ -44,32 +42,42 @@ export default function SignupForm({ supabaseReady }: SignupFormProps) {
       return;
     }
 
+    const trimmedEmail = email.trim();
     setLoading(true);
-    const emailRedirectTo = `${window.location.origin}/auth/callback?next=/onboarding`;
+
     const { data, error: signUpError } = await supabase.auth.signUp({
-      email: email.trim(),
+      email: trimmedEmail,
       password,
       options: {
-        emailRedirectTo,
         data: {
           account_type: accountType,
         },
       },
     });
-    setLoading(false);
 
     if (signUpError) {
+      setLoading(false);
       setError(signUpError.message);
       return;
     }
 
-    if (data.session) {
-      router.push("/onboarding");
-      router.refresh();
-      return;
+    // Email confirmation is disabled: session should exist. If not (e.g. existing
+    // unconfirmed user), sign in immediately.
+    if (!data.session) {
+      const { error: signInError } = await supabase.auth.signInWithPassword({
+        email: trimmedEmail,
+        password,
+      });
+      if (signInError) {
+        setLoading(false);
+        setError(signInError.message);
+        return;
+      }
     }
 
-    setMessage("Check your email to confirm your account, then log in.");
+    setLoading(false);
+    router.push("/onboarding");
+    router.refresh();
   }
 
   return (
@@ -110,11 +118,6 @@ export default function SignupForm({ supabaseReady }: SignupFormProps) {
       {error && (
         <p className="rounded-lg border border-status-limited/30 bg-status-limited/5 px-4 py-3 text-sm text-status-limited">
           {error}
-        </p>
-      )}
-      {message && (
-        <p className="rounded-lg border border-turf/30 bg-turf/5 px-4 py-3 text-sm text-turf">
-          {message}
         </p>
       )}
       <Button type="submit" className="w-full" disabled={!supabaseReady || loading}>

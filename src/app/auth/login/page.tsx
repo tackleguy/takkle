@@ -7,14 +7,8 @@ export const metadata: Metadata = {
   title: "Log In",
 };
 
-type LoginPageProps = {
-  searchParams: Promise<{ error?: string }>;
-};
-
-export default async function LoginPage({ searchParams }: LoginPageProps) {
+export default function LoginPage() {
   const supabaseReady = isSupabaseConfigured();
-  const params = await searchParams;
-  const confirmError = params.error === "confirm";
 
   return (
     <div className="px-4 py-16">
@@ -31,12 +25,6 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
             Supabase not configured. Add{" "}
             <code className="text-accent">NEXT_PUBLIC_SUPABASE_URL</code> and{" "}
             <code className="text-accent">NEXT_PUBLIC_SUPABASE_ANON_KEY</code> to enable auth.
-          </div>
-        )}
-
-        {confirmError && (
-          <div className="mt-6 rounded-lg border border-status-limited/30 bg-status-limited/5 px-4 py-3 text-sm text-status-limited">
-            Email confirmation failed or expired. Try logging in, or sign up again.
           </div>
         )}
 
