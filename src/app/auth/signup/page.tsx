@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Button from "@/components/ui/Button";
+import SignupForm from "@/components/auth/SignupForm";
 import { isSupabaseConfigured } from "@/lib/supabase/server";
 
 export const metadata: Metadata = {
@@ -26,28 +26,7 @@ export default function SignupPage() {
           </div>
         )}
 
-        <form className="mt-8 space-y-4">
-          <input
-            type="email"
-            placeholder="Email"
-            className="w-full rounded-lg border border-border bg-field px-4 py-3 text-text-primary"
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            className="w-full rounded-lg border border-border bg-field px-4 py-3 text-text-primary"
-          />
-          <select className="w-full rounded-lg border border-border bg-field px-4 py-3 text-text-primary">
-            <option value="player">I am a player</option>
-            <option value="parent">I am a parent/guardian</option>
-            <option value="recruiter">I am a recruiter</option>
-            <option value="coach">I am a coach</option>
-            <option value="business">I am a business</option>
-          </select>
-          <Button type="submit" className="w-full" disabled={!supabaseReady}>
-            Create account
-          </Button>
-        </form>
+        <SignupForm supabaseReady={supabaseReady} />
 
         <p className="mt-6 text-center text-sm text-text-muted">
           Already have an account?{" "}

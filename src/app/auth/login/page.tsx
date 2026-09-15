@@ -1,14 +1,20 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Button from "@/components/ui/Button";
+import LoginForm from "@/components/auth/LoginForm";
 import { isSupabaseConfigured } from "@/lib/supabase/server";
 
 export const metadata: Metadata = {
   title: "Log In",
 };
 
-export default function LoginPage() {
+type LoginPageProps = {
+  searchParams: Promise<{ error?: string }>;
+};
+
+export default async function LoginPage({ searchParams }: LoginPageProps) {
   const supabaseReady = isSupabaseConfigured();
+  const params = await searchParams;
+  const confirmError = params.error === "confirm";
 
   return (
     <div className="px-4 py-16">
@@ -28,21 +34,13 @@ export default function LoginPage() {
           </div>
         )}
 
-        <form className="mt-8 space-y-4">
-          <input
-            type="email"
-            placeholder="Email"
-            className="w-full rounded-lg border border-border bg-field px-4 py-3 text-text-primary"
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            className="w-full rounded-lg border border-border bg-field px-4 py-3 text-text-primary"
-          />
-          <Button type="submit" className="w-full" disabled={!supabaseReady}>
-            Log in
-          </Button>
-        </form>
+        {confirmError && (
+          <div className="mt-6 rounded-lg border border-status-limited/30 bg-status-limited/5 px-4 py-3 text-sm text-status-limited">
+            Email confirmation failed or expired. Try logging in, or sign up again.
+          </div>
+        )}
+
+        <LoginForm supabaseReady={supabaseReady} />
 
         <p className="mt-6 text-center text-sm text-text-muted">
           No account?{" "}

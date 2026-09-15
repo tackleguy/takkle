@@ -1,8 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import Button from "@/components/ui/Button";
+import { createClient } from "@/lib/supabase/client";
 
 const LINKS: { href: string; label: string; highlight?: boolean }[] = [
   { href: "/discover", label: "Discover" },
@@ -14,7 +16,42 @@ const LINKS: { href: string; label: string; highlight?: boolean }[] = [
 ];
 
 export default function Navbar() {
+  const router = useRouter();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [email, setEmail] = useState<string | null>(null);
+
+  useEffect(() => {
+    const supabase = createClient();
+    if (!supabase) return;
+
+    let cancelled = false;
+
+    supabase.auth.getUser().then(({ data }) => {
+      if (!cancelled) setEmail(data.user?.email ?? null);
+    });
+
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
+      setEmail(session?.user?.email ?? null);
+    });
+
+    return () => {
+      cancelled = true;
+      subscription.unsubscribe();
+    };
+  }, []);
+
+  async function signOut() {
+    const supabase = createClient();
+    if (supabase) {
+      await supabase.auth.signOut();
+    }
+    setEmail(null);
+    setMobileOpen(false);
+    router.push("/");
+    router.refresh();
+  }
 
   return (
     <nav className="sticky top-0 z-50 border-b border-border bg-bg-primary/95 backdrop-blur-md">
@@ -46,12 +83,22 @@ export default function Navbar() {
             <Button href="/onboarding" variant="primary" size="sm">
               Claim Profile
             </Button>
-            <Link
-              href="/auth/login"
-              className="text-sm text-text-secondary hover:text-text-primary transition-colors"
-            >
-              Log in
-            </Link>
+            {email ? (
+              <button
+                type="button"
+                onClick={signOut}
+                className="text-sm text-text-secondary hover:text-text-primary transition-colors"
+              >
+                Log out
+              </button>
+            ) : (
+              <Link
+                href="/auth/login"
+                className="text-sm text-text-secondary hover:text-text-primary transition-colors"
+              >
+                Log in
+              </Link>
+            )}
           </div>
 
           <button
@@ -87,13 +134,23 @@ export default function Navbar() {
               <Button href="/onboarding" size="sm" className="w-full">
                 Claim Profile
               </Button>
-              <Link
-                href="/auth/login"
-                className="block text-center text-sm text-text-secondary py-2"
-                onClick={() => setMobileOpen(false)}
-              >
-                Log in
-              </Link>
+              {email ? (
+                <button
+                  type="button"
+                  onClick={signOut}
+                  className="block text-center text-sm text-text-secondary py-2"
+                >
+                  Log out
+                </button>
+              ) : (
+                <Link
+                  href="/auth/login"
+                  className="block text-center text-sm text-text-secondary py-2"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  Log in
+                </Link>
+              )}
             </div>
           </div>
         )}
