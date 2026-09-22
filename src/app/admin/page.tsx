@@ -13,7 +13,7 @@ export default function AdminDashboardPage() {
 
   const stats = [
     { label: "Total players", value: players.length.toLocaleString() },
-    { label: "Schools", value: manifest.schoolCount.toLocaleString() },
+    { label: "Schools", value: (manifest.schoolCount ?? new Set(players.map(player => player.collegeName || player.school?.name).filter(Boolean)).size).toLocaleString() },
     { label: "Pending claims", value: "12" },
     { label: "Open disputes", value: "3" },
   ];

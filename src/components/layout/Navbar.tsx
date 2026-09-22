@@ -19,6 +19,8 @@ export default function Navbar() {
   const router = useRouter();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [email, setEmail] = useState<string | null>(null);
+  const [signingOut, setSigningOut] = useState(false);
+  const [authError, setAuthError] = useState<string | null>(null);
 
   useEffect(() => {
     const supabase = createClient();
@@ -28,7 +30,7 @@ export default function Navbar() {
 
     supabase.auth.getUser().then(({ data }) => {
       if (!cancelled) setEmail(data.user?.email ?? null);
-    });
+    }).catch(() => { /* Public navigation remains available during auth outages. */ });
 
     const {
       data: { subscription },
@@ -43,14 +45,22 @@ export default function Navbar() {
   }, []);
 
   async function signOut() {
-    const supabase = createClient();
-    if (supabase) {
-      await supabase.auth.signOut();
+    setSigningOut(true);
+    setAuthError(null);
+    try {
+      const supabase = createClient();
+      if (!supabase) throw new Error("Account services unavailable");
+      const { error } = await supabase.auth.signOut({ scope: "local" });
+      if (error) throw error;
+      setEmail(null);
+      setMobileOpen(false);
+      router.push("/");
+      router.refresh();
+    } catch {
+      setAuthError("We couldn’t log you out. Please try again.");
+    } finally {
+      setSigningOut(false);
     }
-    setEmail(null);
-    setMobileOpen(false);
-    router.push("/");
-    router.refresh();
   }
 
   return (
@@ -80,16 +90,17 @@ export default function Navbar() {
           </div>
 
           <div className="hidden md:flex items-center gap-3">
-            <Button href="/onboarding" variant="primary" size="sm">
-              Claim Profile
+            <Button href={email ? "/account" : "/onboarding"} variant="primary" size="sm">
+              {email ? "My account" : "Claim Profile"}
             </Button>
             {email ? (
               <button
                 type="button"
                 onClick={signOut}
+                disabled={signingOut}
                 className="text-sm text-text-secondary hover:text-text-primary transition-colors"
               >
-                Log out
+                {signingOut ? "Logging out…" : "Log out"}
               </button>
             ) : (
               <Link
@@ -105,6 +116,7 @@ export default function Navbar() {
             className="md:hidden p-2 text-text-secondary hover:text-text-primary"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
+            aria-expanded={mobileOpen}
           >
             <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               {mobileOpen ? (
@@ -131,16 +143,17 @@ export default function Navbar() {
               </Link>
             ))}
             <div className="px-3 pt-3 flex flex-col gap-2">
-              <Button href="/onboarding" size="sm" className="w-full">
-                Claim Profile
+              <Button href={email ? "/account" : "/onboarding"} size="sm" className="w-full">
+                {email ? "My account" : "Claim Profile"}
               </Button>
               {email ? (
                 <button
                   type="button"
                   onClick={signOut}
+                  disabled={signingOut}
                   className="block text-center text-sm text-text-secondary py-2"
                 >
-                  Log out
+                  {signingOut ? "Logging out…" : "Log out"}
                 </button>
               ) : (
                 <Link
@@ -154,6 +167,7 @@ export default function Navbar() {
             </div>
           </div>
         )}
+        {authError && <p role="alert" className="pb-3 text-sm text-red-400">{authError}</p>}
       </div>
     </nav>
   );

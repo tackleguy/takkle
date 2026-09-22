@@ -1,3 +1,5 @@
+import { accountSession } from "@/lib/auth/session";
+import { isSupabaseConfigured } from "@/lib/supabase/server";
 import { getLivePlayerBySlug } from "@/lib/live-players";
 import { profileSession } from "@/lib/profile/access";
 import { playerSchoolName } from "@/lib/player-display";
@@ -14,7 +16,7 @@ export const dynamic = "force-dynamic";
 
 export default async function OnboardingPage({ searchParams }: { searchParams: Promise<{ player?: string }> }) {
   const query = await searchParams;
-  const session = await profileSession();
+  const [session, account] = await Promise.all([profileSession(), accountSession()]);
   const player = query.player ? (await getLivePlayerBySlug(query.player)).player : null;
   const initialPlayer = player ? { slug: player.slug, displayName: player.displayName, schoolName: playerSchoolName(player), position: player.position, classYear: player.classYear, stateCode: player.stateCode } : null;
   const claims = session ? await session.db.from("player_claims").select("id,status,players(display_name,slug)").eq("user_id", session.user.id).order("created_at", { ascending: false }) : null;
@@ -45,7 +47,7 @@ export default async function OnboardingPage({ searchParams }: { searchParams: P
           return <li key={claim.id} className="flex flex-wrap items-center justify-between gap-3 text-sm"><span>{record?.display_name} · {claim.status === "pending" ? "Under review" : claim.status}</span>{record?.slug && claim.status === "approved" && <Link href={`/site/player/${record.slug}/edit`} className="text-accent hover:underline">Manage profile, stats & film</Link>}</li>;
         })}</ul>
       </section>}
-      <OnboardingWizard initialPlayer={initialPlayer} signedIn={Boolean(session)} available={Boolean(process.env.SUPABASE_SERVICE_ROLE_KEY && process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY)} />
+      <OnboardingWizard initialPlayer={initialPlayer} signedIn={"user" in account} available={Boolean((process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_SECRET_KEY) && isSupabaseConfigured() && (account.status === "signed_in" || account.status === "signed_out"))} />
     </div>
   );
 }

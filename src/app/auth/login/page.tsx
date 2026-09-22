@@ -1,3 +1,4 @@
+import { safeNext } from "@/lib/auth/flow";
 import type { Metadata } from "next";
 import Link from "next/link";
 import LoginForm from "@/components/auth/LoginForm";
@@ -7,7 +8,9 @@ export const metadata: Metadata = {
   title: "Log In",
 };
 
-export default function LoginPage() {
+export default async function LoginPage({ searchParams }: { searchParams: Promise<{ next?: string; error?: string }> }) {
+  const query = await searchParams;
+  const next = safeNext(query.next);
   const supabaseReady = isSupabaseConfigured();
 
   return (
@@ -17,22 +20,20 @@ export default function LoginPage() {
           Log In
         </h1>
         <p className="mt-2 text-center text-text-secondary text-sm">
-          Access your claimed player profile. player_id ≠ user_id.
+          Access your Takkle account, player profiles, and college recruiting tools.
         </p>
 
         {!supabaseReady && (
           <div className="mt-6 rounded-lg border border-status-limited/30 bg-status-limited/5 px-4 py-3 text-sm text-text-secondary">
-            Supabase not configured. Add{" "}
-            <code className="text-accent">NEXT_PUBLIC_SUPABASE_URL</code> and{" "}
-            <code className="text-accent">NEXT_PUBLIC_SUPABASE_ANON_KEY</code> to enable auth.
+            Account services are temporarily unavailable. Please try again later.
           </div>
         )}
 
-        <LoginForm supabaseReady={supabaseReady} />
+        <LoginForm supabaseReady={supabaseReady} next={next} confirmationError={query.error === "confirm"} />
 
         <p className="mt-6 text-center text-sm text-text-muted">
           No account?{" "}
-          <Link href="/auth/signup" className="text-accent hover:underline">
+          <Link href={`/auth/signup?next=${encodeURIComponent(next)}`} className="text-accent hover:underline">
             Sign up
           </Link>
         </p>

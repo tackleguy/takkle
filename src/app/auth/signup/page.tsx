@@ -1,3 +1,4 @@
+import { safeNext } from "@/lib/auth/flow";
 import type { Metadata } from "next";
 import Link from "next/link";
 import SignupForm from "@/components/auth/SignupForm";
@@ -7,7 +8,9 @@ export const metadata: Metadata = {
   title: "Sign Up",
 };
 
-export default function SignupPage() {
+export default async function SignupPage({ searchParams }: { searchParams: Promise<{ next?: string; error?: string }> }) {
+  const query = await searchParams;
+  const next = safeNext(query.next);
   const supabaseReady = isSupabaseConfigured();
 
   return (
@@ -17,20 +20,20 @@ export default function SignupPage() {
           Create Account
         </h1>
         <p className="mt-2 text-center text-text-secondary text-sm">
-          Sign up to claim and manage your recruiting profile.
+          Join as a player, parent, recruiter, coach, or business.
         </p>
 
         {!supabaseReady && (
           <div className="mt-6 rounded-lg border border-status-limited/30 bg-status-limited/5 px-4 py-3 text-sm text-text-secondary">
-            Supabase not configured. Auth will activate once environment variables are set.
+            Account services are temporarily unavailable. Please try again later.
           </div>
         )}
 
-        <SignupForm supabaseReady={supabaseReady} />
+        <SignupForm supabaseReady={supabaseReady} next={next} />
 
         <p className="mt-6 text-center text-sm text-text-muted">
           Already have an account?{" "}
-          <Link href="/auth/login" className="text-accent hover:underline">
+          <Link href={`/auth/login?next=${encodeURIComponent(next)}`} className="text-accent hover:underline">
             Log in
           </Link>
         </p>

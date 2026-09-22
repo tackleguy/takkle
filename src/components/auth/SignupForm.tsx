@@ -1,128 +1,56 @@
 "use client";
-
-import { FormEvent, useState } from "react";
+import { type FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import Button from "@/components/ui/Button";
 import { createClient } from "@/lib/supabase/client";
+import { SIGNUP_ROLES, signUpAccount, safeNext, type SignupRole } from "@/lib/auth/flow";
 
-const ACCOUNT_TYPES = [
-  { value: "player", label: "I am a player" },
-  { value: "parent", label: "I am a parent/guardian" },
-  { value: "recruiter", label: "I am a recruiter" },
-  { value: "coach", label: "I am a coach" },
-  { value: "business", label: "I am a business" },
-] as const;
-
-type AccountType = (typeof ACCOUNT_TYPES)[number]["value"];
-
-type SignupFormProps = {
-  supabaseReady: boolean;
-};
-
-export default function SignupForm({ supabaseReady }: SignupFormProps) {
+const inputClass = "mt-1 w-full rounded-lg border border-border bg-field px-4 py-3 text-text-primary focus-visible:outline-accent";
+export default function SignupForm({ supabaseReady, next = "/account" }: { supabaseReady: boolean; next?: string }) {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [accountType, setAccountType] = useState<AccountType>("player");
-  const [error, setError] = useState<string | null>(null);
+  const [role, setRole] = useState<SignupRole>("player");
+  const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-
+  const [confirmation, setConfirmation] = useState(false);
+  const [resent, setResent] = useState(false);
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setError(null);
-
-    if (!supabaseReady) {
-      setError("Supabase is not configured.");
-      return;
-    }
-
-    const supabase = createClient();
-    if (!supabase) {
-      setError("Supabase is not configured.");
-      return;
-    }
-
-    const trimmedEmail = email.trim();
-    setLoading(true);
-
-    const { data, error: signUpError } = await supabase.auth.signUp({
-      email: trimmedEmail,
-      password,
-      options: {
-        data: {
-          account_type: accountType,
-        },
-      },
-    });
-
-    if (signUpError) {
-      setLoading(false);
-      setError(signUpError.message);
-      return;
-    }
-
-    // Email confirmation is disabled: session should exist. If not (e.g. existing
-    // unconfirmed user), sign in immediately.
-    if (!data.session) {
-      const { error: signInError } = await supabase.auth.signInWithPassword({
-        email: trimmedEmail,
-        password,
-      });
-      if (signInError) {
-        setLoading(false);
-        setError(signInError.message);
-        return;
-      }
-    }
-
-    setLoading(false);
-    router.push("/onboarding");
-    router.refresh();
+    event.preventDefault(); setError(""); setLoading(true);
+    try {
+      const client = createClient();
+      if (!client) throw new Error("Account services are temporarily unavailable. Please try again later.");
+      const result = await signUpAccount(client, { email, password, role, origin: window.location.origin, next });
+      if (result.state === "confirmation_required") { setConfirmation(true); setPassword(""); }
+      else { router.replace(result.next); router.refresh(); }
+    } catch (err) { setError(err instanceof Error ? err.message : "Couldn’t create your account. Check your connection and try again."); }
+    finally { setLoading(false); }
   }
-
-  return (
-    <form className="mt-8 space-y-4" onSubmit={onSubmit}>
-      <input
-        type="email"
-        name="email"
-        autoComplete="email"
-        required
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="Email"
-        className="w-full rounded-lg border border-border bg-field px-4 py-3 text-text-primary"
-      />
-      <input
-        type="password"
-        name="password"
-        autoComplete="new-password"
-        required
-        minLength={6}
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        placeholder="Password"
-        className="w-full rounded-lg border border-border bg-field px-4 py-3 text-text-primary"
-      />
-      <select
-        name="account_type"
-        value={accountType}
-        onChange={(e) => setAccountType(e.target.value as AccountType)}
-        className="w-full rounded-lg border border-border bg-field px-4 py-3 text-text-primary"
-      >
-        {ACCOUNT_TYPES.map((option) => (
-          <option key={option.value} value={option.value}>
-            {option.label}
-          </option>
-        ))}
-      </select>
-      {error && (
-        <p className="rounded-lg border border-status-limited/30 bg-status-limited/5 px-4 py-3 text-sm text-status-limited">
-          {error}
-        </p>
-      )}
-      <Button type="submit" className="w-full" disabled={!supabaseReady || loading}>
-        {loading ? "Creating account…" : "Create account"}
-      </Button>
-    </form>
-  );
+  async function resend() {
+    setLoading(true); setError("");
+    try {
+      const client = createClient();
+      if (!client) throw new Error("Account services are temporarily unavailable.");
+      const { error } = await client.auth.resend({ type: "signup", email: email.trim(), options: { emailRedirectTo: `${window.location.origin}/auth/callback?next=${encodeURIComponent(safeNext(next))}` } });
+      if (error) throw error;
+      setResent(true);
+    } catch (err) { setError(err instanceof Error ? err.message : "Couldn’t resend the email. Please try again."); }
+    finally { setLoading(false); }
+  }
+  if (confirmation) return <div className="mt-8 space-y-4">
+    <h2 className="text-2xl">Check your email</h2>
+    <p role="status" className="text-text-secondary">If this address is eligible for signup, a confirmation link has been sent to {email.trim()}. Open it to finish creating your account. Check spam if it hasn’t arrived.</p>
+    <Button variant="secondary" disabled={loading || resent} onClick={() => void resend()}>{resent ? "Confirmation email resent" : loading ? "Sending…" : "Resend confirmation email"}</Button>
+    <p className="text-sm text-text-secondary">Already registered? <Link className="text-accent hover:underline" href={`/auth/login?next=${encodeURIComponent(safeNext(next))}`}>Log in</Link> or <Link className="text-accent hover:underline" href="/auth/forgot-password">reset your password</Link>.</p>
+    {error && <p role="alert">{error}</p>}
+  </div>;
+  return <form className="mt-8 space-y-4" onSubmit={onSubmit}>
+    <label className="block text-sm text-text-secondary">Email<input type="email" autoComplete="email" required value={email} onChange={e => setEmail(e.target.value)} className={inputClass} /></label>
+    <label className="block text-sm text-text-secondary">Password<input type="password" autoComplete="new-password" required minLength={8} value={password} onChange={e => setPassword(e.target.value)} aria-describedby="password-help" className={inputClass} /></label>
+    <p id="password-help" className="text-sm text-text-secondary">Use at least 8 characters.</p>
+    <label className="block text-sm text-text-secondary">Account type<select value={role} onChange={e => setRole(e.target.value as SignupRole)} className={inputClass}>{SIGNUP_ROLES.map(option => <option key={option.value} value={option.value}>{option.label}</option>)}</select></label>
+    {error && <p role="alert" className="text-sm text-text-primary">{error}</p>}
+    <Button type="submit" className="w-full" disabled={!supabaseReady || loading}>{loading ? "Creating account…" : "Create account"}</Button>
+  </form>;
 }

@@ -3,6 +3,7 @@ import { notFound, redirect } from "next/navigation";
 import { getLivePlayerBySlug } from "@/lib/live-players";
 import { profileSession, ownsProfile } from "@/lib/profile/access";
 import PlayerProfileEditor from "@/components/player/PlayerProfileEditor";
+import { accountSession } from "@/lib/auth/session";
 
 export const dynamic = "force-dynamic";
 export const metadata = { title: "Manage your player profile", robots: { index: false, follow: false } };
@@ -10,7 +11,11 @@ export const metadata = { title: "Manage your player profile", robots: { index: 
 export default async function EditPlayerPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const session = await profileSession();
-  if (!session) redirect(`/auth/login?next=${encodeURIComponent(`/site/player/${slug}/edit`)}`);
+  if (!session) {
+    const account = await accountSession();
+    if (account.status === "signed_out") redirect(`/auth/login?next=${encodeURIComponent(`/site/player/${slug}/edit`)}`);
+    return <div className="mx-auto max-w-3xl px-4 py-10"><h1 className="text-3xl">Profile editing unavailable</h1><p className="mt-3 text-text-secondary">We couldn’t open the profile editor for your account. Please try again later.</p><Link href="/account" className="mt-4 inline-block text-accent">Back to your account</Link></div>;
+  }
   const { player } = await getLivePlayerBySlug(slug);
   if (!player) notFound();
   const allowed = await ownsProfile(session, player.id);
