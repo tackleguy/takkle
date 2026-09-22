@@ -1,3 +1,5 @@
+import { restoreCollegeRoster } from "@/lib/profile/college-roster";
+import { publicHttpsUrl } from "@/lib/profile/links";
 import { DEFAULT_RECRUIT_CLASS } from "@/lib/recruiting/class-years";
 import { ACTIVE_COMPETITION_LEVEL } from "@/lib/competition-level";
 import {
@@ -57,7 +59,7 @@ function mapSchool(
     (college && !placeholder.has(college.toLowerCase()) && college) ||
     (rawName && !placeholder.has(rawName.toLowerCase()) && rawName) ||
     (sourceName && !placeholder.has(sourceName.toLowerCase()) && sourceName) ||
-    "Team";
+    "School not listed";
 
   // For college athletes, school.city often holds hometown — omit it.
   const isCollege = Boolean(college && !placeholder.has(college.toLowerCase()));
@@ -98,7 +100,7 @@ function toPlayer(
     finalScore = provisional.score;
     finalConfidence = provisional.confidence;
   }
-  return {
+  return restoreCollegeRoster({
     id: row.id as string,
     firstName,
     lastName,
@@ -125,7 +127,7 @@ function toPlayer(
       const raw = (row.college_name as string | null) ?? null;
       if (!raw?.trim()) return null;
       const low = raw.trim().toLowerCase();
-      if (low === "transfer portal" || low === "the transfer portal") return "Team";
+      if (low === "transfer portal" || low === "the transfer portal") return null;
       return raw;
     })(),
     conference,
@@ -153,7 +155,7 @@ function toPlayer(
       sourceUrl: (row.source_url as string) ?? undefined,
       dataOrigin: "licensed",
     },
-  };
+  });
 }
 
 export type LivePlayersSource = "supabase" | "college" | "seed";
@@ -308,6 +310,15 @@ export async function getLivePlayerBySlug(
     }
 
     const player = toPlayer(data as Record<string, unknown>);
+    const [filmResult, linksResult, statsResult] = await Promise.all([
+      client.from("player_film").select("id,title,film_type,season_year,source_url,embed_url,verification_status,data_origin")
+        .eq("player_id", player.id).in("verification_status", ["player_confirmed", "platform_verified"]).order("created_at", { ascending: false }),
+      client.from("player_external_profiles").select("id,provider,label,source_url").eq("player_id", player.id).order("created_at"),
+      client.from("player_stats").select("stat_key,stat_value,stat_label,unit,data_origin,seasons(year)").eq("player_id", player.id),
+    ]);
+    player.film = (filmResult.data ?? []).map(row => ({ id: row.id, title: row.title, filmType: row.film_type, seasonYear: row.season_year, sourceUrl: row.source_url, embedUrl: row.embed_url, verificationStatus: row.verification_status, dataOrigin: row.data_origin }));
+    player.externalProfiles = (linksResult.data ?? []).filter(row => publicHttpsUrl(row.source_url)).map(row => ({ id: row.id, provider: row.provider, label: row.label, sourceUrl: row.source_url }));
+    player.stats = (statsResult.data ?? []).map(row => ({ statKey: row.stat_key, statValue: Number(row.stat_value), statLabel: row.stat_label || row.stat_key, unit: row.unit, seasonYear: Number((Array.isArray(row.seasons) ? row.seasons[0] : row.seasons)?.year ?? 0), dataOrigin: row.data_origin }));
     const [withScore] = await attachNationalScores(client, [player]);
     return { player: withScore ?? player, source: "supabase" };
   } catch (err) {

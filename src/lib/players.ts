@@ -1,3 +1,4 @@
+import { restoreCollegeRoster } from "@/lib/profile/college-roster";
 import manifest from "@/data/seed/manifest.json";
 import schoolsData from "@/data/seed/schools.json";
 import ncesSchoolsSample from "@/data/seed/schools-nces-sample.json";
@@ -168,7 +169,7 @@ export function getCollegePlayers(): Player[] {
           if (Array.isArray(rows)) players.push(...rows);
         }
         if (players.length) {
-          _collegePlayers = players;
+          _collegePlayers = players.map(restoreCollegeRoster);
           return _collegePlayers;
         }
       }
@@ -176,12 +177,12 @@ export function getCollegePlayers(): Player[] {
       /* fall through to sample */
     }
   }
-  _collegePlayers = collegeSample as Player[];
+  _collegePlayers = (collegeSample as Player[]).map(restoreCollegeRoster);
   return _collegePlayers;
 }
 
 export function getCollegePlayersSample(): Player[] {
-  return collegeSample as Player[];
+  return (collegeSample as Player[]).map(restoreCollegeRoster);
 }
 
 export function getAllPlayers(): Player[] {

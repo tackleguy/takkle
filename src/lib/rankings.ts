@@ -1,3 +1,4 @@
+import { restoreCollegeRoster } from "@/lib/profile/college-roster";
 import { DEFAULT_RECRUIT_CLASS, isRecruitClassYear } from "@/lib/recruiting/class-years";
 import { ACTIVE_COMPETITION_LEVEL } from "@/lib/competition-level";
 import {
@@ -44,6 +45,7 @@ function mapSchool(
   raw: { id?: string; name?: string; slug?: string; city?: string; state_code?: string } | null,
   stateCode: string,
   collegeName?: string | null,
+  sourceSchool?: string | null,
 ): School {
   const rawName = raw?.name?.trim() ?? "";
   const college = collegeName?.trim() ?? "";
@@ -59,7 +61,8 @@ function mapSchool(
   const name =
     (college && !placeholder.has(college.toLowerCase()) && college) ||
     (rawName && !placeholder.has(rawName.toLowerCase()) && rawName) ||
-    "Team";
+    (sourceSchool?.trim() && !placeholder.has(sourceSchool.trim().toLowerCase()) && sourceSchool.trim()) ||
+    "School not listed";
   const isCollege = Boolean(college && !placeholder.has(college.toLowerCase()));
   return {
     id: raw?.id ?? "unknown",
@@ -92,7 +95,7 @@ function toPlayer(row: Record<string, unknown>, score: number, confidence: Score
     finalScore = provisional.score;
     finalConfidence = provisional.confidence;
   }
-  return {
+  return restoreCollegeRoster({
     id: row.id as string,
     firstName: row.first_name as string,
     lastName: row.last_name as string,
@@ -105,6 +108,7 @@ function toPlayer(row: Record<string, unknown>, score: number, confidence: Score
       schoolRaw as School & { state_code?: string },
       stateCode,
       row.college_name as string | null | undefined,
+      row.source_school as string | null | undefined,
     ),
     stateCode,
     heightInches: Number(row.height_inches ?? 0) || 0,
@@ -117,7 +121,7 @@ function toPlayer(row: Record<string, unknown>, score: number, confidence: Score
       const raw = (row.college_name as string | null) ?? null;
       if (!raw?.trim()) return null;
       const low = raw.trim().toLowerCase();
-      if (low === "transfer portal" || low === "the transfer portal") return "Team";
+      if (low === "transfer portal" || low === "the transfer portal") return null;
       return raw;
     })(),
     conference,
@@ -145,7 +149,7 @@ function toPlayer(row: Record<string, unknown>, score: number, confidence: Score
       sourceUrl: (row.source_url as string) ?? undefined,
       dataOrigin: "licensed",
     },
-  };
+  });
 }
 
 /**
@@ -193,7 +197,7 @@ export async function getLiveRankings(
       players!inner (
         id, first_name, last_name, display_name, slug, position, class_year,
         school_id, state_code, height_inches, weight_lbs, jersey_number,
-        status, is_synthetic, source_name, source_url,
+        status, is_synthetic, source_name, source_url, source_school,
         competition_level, division, college_name, conference, eligibility_year,
         transfer_portal_status, portal_entry_date, transfer_from_school, transfer_to_school,
         schools ( id, name, slug, city, state_code )
@@ -250,7 +254,7 @@ export async function getLiveRankings(
         `
         id, first_name, last_name, display_name, slug, position, class_year,
         school_id, state_code, height_inches, weight_lbs, jersey_number,
-        status, is_synthetic, source_name, source_url,
+        status, is_synthetic, source_name, source_url, source_school,
         competition_level, division, college_name, conference, eligibility_year,
         transfer_portal_status, portal_entry_date, transfer_from_school, transfer_to_school,
         schools ( id, name, slug, city, state_code )

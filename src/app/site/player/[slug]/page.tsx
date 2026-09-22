@@ -1,3 +1,4 @@
+import { formatHeight, formatWeight, playerDisplayName, playerClassLabel } from "@/lib/player-display";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -29,10 +30,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const school = playerSchoolName(player);
   return {
-    title: `${player.displayName} — ${player.position} Class of ${player.classYear}`,
-    description: `${player.displayName} recruiting profile at ${school}. Tackle Score™ ${player.tackleScore.score}.`,
+    title: `${playerDisplayName(player)} — ${player.position} ${playerClassLabel(player)}`,
+    description: `${playerDisplayName(player)} recruiting profile at ${school}. Tackle Score™ ${player.tackleScore.score}.`,
     openGraph: {
-      title: `${player.displayName} | Takkle`,
+      title: `${playerDisplayName(player)} | Takkle`,
       description: `Tackle Score™ ${player.tackleScore.score} — ${school}`,
     },
   };
@@ -43,8 +44,6 @@ export default async function PlayerProfilePage({ params }: PageProps) {
   const { player } = await getLivePlayerBySlug(slug);
   if (!player) notFound();
 
-  const heightFt = Math.floor(player.heightInches / 12);
-  const heightIn = Math.round(player.heightInches % 12);
   const shareUrl = `https://takkle.com/site/player/${player.slug}`;
 
   return (
@@ -58,15 +57,15 @@ export default async function PlayerProfilePage({ params }: PageProps) {
                 <div>
                   <p className="text-xs uppercase tracking-[0.2em] text-text-muted">Official Visit Dossier</p>
                   <h1 className="mt-1 font-[family-name:var(--font-display)] text-4xl sm:text-5xl text-text-primary tracking-wide">
-                    {player.displayName}
+                    {playerDisplayName(player)}
                   </h1>
                   <p className="mt-2 text-lg text-text-secondary">
-                    {player.position} · Class of {player.classYear}
+                    {player.position} · {playerClassLabel(player)}
                   </p>
                   <p className="text-text-muted">{playerSchoolLine(player)}</p>
                   <div className="mt-3 flex flex-wrap gap-2">
                     <Badge tone="turf">{player.status.replace(/_/g, " ")}</Badge>
-                    <Badge>{heightFt}&apos;{heightIn}&quot; · {player.weightLbs} lbs</Badge>
+                    <Badge>{formatHeight(player.heightInches)} · {formatWeight(player.weightLbs)}</Badge>
                     {player.isSynthetic && <Badge tone="warning">Demo data</Badge>}
                   </div>
                 </div>
@@ -83,10 +82,15 @@ export default async function PlayerProfilePage({ params }: PageProps) {
           </div>
         </div>
 
+        <div className="mt-4 flex flex-wrap gap-4 text-sm">
+          <Link href={`/site/player/${player.slug}/edit`} className="text-accent hover:underline">Manage profile, stats & film</Link>
+          <Link href={`/onboarding?player=${encodeURIComponent(player.slug)}`} className="text-accent hover:underline">Claim this profile</Link>
+        </div>
+
         {/* Share */}
         <div className="mt-4 flex flex-wrap items-center gap-3 text-sm">
           <span className="text-text-muted">Share:</span>
-          <code className="rounded bg-bg-card px-2 py-1 text-xs text-text-secondary">{shareUrl}</code>
+          <code className="break-all rounded bg-bg-card px-2 py-1 text-xs text-text-secondary">{shareUrl}</code>
           <Link href="/guides" className="ml-auto text-accent hover:underline text-sm">
             Player Guides →
           </Link>

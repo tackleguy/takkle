@@ -1,3 +1,4 @@
+import { formatHeight, formatWeight, playerDisplayName, playerClassLabel } from "@/lib/player-display";
 import Link from "next/link";
 import type { Player } from "@/types/recruiting";
 import TackleScoreDisplay from "@/components/ui/TackleScoreDisplay";
@@ -10,8 +11,6 @@ interface PlayerCardProps {
 }
 
 export default function PlayerCard({ player, showSynthetic = true }: PlayerCardProps) {
-  const heightFt = Math.floor(player.heightInches / 12);
-  const heightIn = Math.round(player.heightInches % 12);
 
   return (
     <Link
@@ -20,19 +19,19 @@ export default function PlayerCard({ player, showSynthetic = true }: PlayerCardP
     >
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0 flex-1">
-          <h3 className="truncate font-[family-name:var(--font-display)] text-lg tracking-wide text-text-primary group-hover:text-accent transition-colors">
-            {player.displayName}
+          <h3 className="break-words font-[family-name:var(--font-display)] text-lg tracking-wide text-text-primary group-hover:text-accent transition-colors">
+            {playerDisplayName(player)}
           </h3>
           <p className="mt-0.5 text-sm text-text-secondary">
-            {player.position} · Class of {player.classYear}
+            {player.position} · {playerClassLabel(player)}
           </p>
-          <p className="text-sm text-text-muted truncate">{playerSchoolLine(player)}</p>
+          <p className="text-sm text-text-secondary break-words">{playerSchoolLine(player)}</p>
         </div>
         <TackleScoreDisplay score={player.tackleScore.score} size="sm" showLabel={false} />
       </div>
       <div className="mt-3 flex items-center justify-between text-xs text-text-muted">
         <span>
-          {heightFt}&apos;{heightIn}&quot; · {player.weightLbs} lbs
+          {formatHeight(player.heightInches)} · {formatWeight(player.weightLbs)}
         </span>
         {showSynthetic && player.isSynthetic && <SyntheticNotice compact />}
       </div>

@@ -12,7 +12,9 @@
     "import:cfbd-recruits": "node scripts/import-cfbd-recruits.mjs",
     "ingest:permitted": "node scripts/run-ingestion.mjs",
     "ingest:apply": "node scripts/apply-ingestion-rpc.mjs",
-    "rankings:compute": "node scripts/compute-rankings.mjs"
+    "rankings:compute": "node scripts/compute-rankings.mjs",
+    "test": "node --experimental-strip-types --test tests/*.test.mjs",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@supabase/ssr": "^0.6.1",
@@ -24,6 +26,7 @@
     "zod": "^3.24.2"
   },
   "devDependencies": {
+    "@electric-sql/pglite": "^0.5.8",
     "@tailwindcss/postcss": "^4.1.18",
     "@types/node": "^25.9.6",
     "@types/react": "^19.2.13",

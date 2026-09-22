@@ -136,6 +136,13 @@ export interface PlayerFilm {
   dataOrigin: DataOrigin;
 }
 
+export interface PlayerExternalProfile {
+  id: string;
+  provider: "maxpreps" | "247sports" | "on3" | "espn" | "hudl" | "other";
+  label: string;
+  sourceUrl: string;
+}
+
 export interface PlayerOffer {
   schoolName: string;
   conference?: string;
@@ -225,6 +232,7 @@ export interface Player {
   tackleScore: TackleScore;
   rankings: PlayerRanking[];
   film: PlayerFilm[];
+  externalProfiles?: PlayerExternalProfile[];
   stats: PlayerStat[];
   measurements: PlayerMeasurement[];
   offers: PlayerOffer[];

@@ -1,3 +1,4 @@
+import { formatHeight, formatWeight, playerDisplayName, playerClassLabel } from "@/lib/player-display";
 import type { ReactNode } from "react";
 import type { Player } from "@/types/recruiting";
 import FilmWindow from "@/components/film/FilmWindow";
@@ -24,8 +25,6 @@ function Section({ title, children }: { title: string; children: ReactNode }) {
 }
 
 export default function PlayerProfileSections({ player }: PlayerProfileSectionsProps) {
-  const heightFt = Math.floor(player.heightInches / 12);
-  const heightIn = Math.round(player.heightInches % 12);
   const m = player.measurements[0];
   const school = playerSchoolName(player);
 
@@ -36,7 +35,7 @@ export default function PlayerProfileSections({ player }: PlayerProfileSectionsP
       <Section title="About">
         <p className="text-text-secondary leading-relaxed">
           {player.bio ??
-            `${player.displayName} is a ${player.position} at ${school} (Class of ${player.classYear}).`}
+            `${playerDisplayName(player)} is a ${player.position} at ${school} (${playerClassLabel(player)}).`}
         </p>
         <div className="mt-4 flex flex-wrap gap-2">
           <Badge>{player.status.replace(/_/g, " ")}</Badge>
@@ -57,11 +56,11 @@ export default function PlayerProfileSections({ player }: PlayerProfileSectionsP
         <dl className="grid grid-cols-2 gap-4 sm:grid-cols-4">
           <div>
             <dt className="text-xs uppercase text-text-muted">Height</dt>
-            <dd className="mt-1 text-lg text-text-primary">{heightFt}&apos;{heightIn}&quot;</dd>
+            <dd className="mt-1 text-lg text-text-primary">{formatHeight(player.heightInches)}</dd>
           </div>
           <div>
             <dt className="text-xs uppercase text-text-muted">Weight</dt>
-            <dd className="mt-1 text-lg text-text-primary">{player.weightLbs} lbs</dd>
+            <dd className="mt-1 text-lg text-text-primary">{formatWeight(player.weightLbs)}</dd>
           </div>
           {m?.fortyYard && (
             <div>
@@ -93,6 +92,13 @@ export default function PlayerProfileSections({ player }: PlayerProfileSectionsP
           </dl>
         </Section>
       )}
+
+      <Section title="Connected stats & profiles">
+        <p className="mb-4 text-sm text-text-secondary">Player-provided links to stats and recruiting profiles. Stats aren’t automatically imported or verified.</p>
+        {player.externalProfiles?.length ? <ul className="divide-y divide-border">{player.externalProfiles.map(source => (
+          <li key={source.id} className="py-3"><a href={source.sourceUrl} target="_blank" rel="noopener noreferrer" className="break-words text-accent hover:underline">{source.label}</a><p className="mt-1 text-xs text-text-secondary">{source.provider === "247sports" ? "247Sports" : source.provider === "maxpreps" ? "MaxPreps" : source.provider === "other" ? "External stats page" : source.provider.toUpperCase()}</p></li>
+        ))}</ul> : <p className="text-sm text-text-secondary">No stats pages connected yet.</p>}
+      </Section>
 
       <Section title="Recruiting">
         {player.offers.length > 0 ? (

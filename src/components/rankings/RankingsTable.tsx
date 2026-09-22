@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { RankedPlayerRow } from "@/lib/rankings";
 import { formatTackleScore } from "@/lib/scoring/tackle-score";
-import { playerSchoolLine, playerSchoolName } from "@/lib/player-display";
+import { playerSchoolLine, playerSchoolName, playerDisplayName, formatHeight, formatWeight } from "@/lib/player-display";
 
 interface RankingsTableProps {
   rows: RankedPlayerRow[];
@@ -29,9 +29,9 @@ export default function RankingsTable({ rows }: RankingsTableProps) {
           <tr className="border-b border-border bg-field text-left text-xs uppercase tracking-wider text-text-muted">
             <th className="px-4 py-3 w-12">#</th>
             <th className="px-4 py-3">Player</th>
-            <th className="px-4 py-3 hidden sm:table-cell">Their Team</th>
+            <th className="px-4 py-3 hidden sm:table-cell">School</th>
             <th className="px-4 py-3 hidden md:table-cell">Pos</th>
-            <th className="px-4 py-3 hidden md:table-cell">Class</th>
+            <th className="px-4 py-3 hidden md:table-cell">Height / weight</th>
             <th className="px-4 py-3 text-right">Tackle Score™</th>
           </tr>
         </thead>
@@ -50,11 +50,12 @@ export default function RankingsTable({ rows }: RankingsTableProps) {
                   href={`/site/player/${player.slug}`}
                   className="font-medium text-text-primary hover:text-accent transition-colors"
                 >
-                  {player.displayName}
+                  {playerDisplayName(player)}
                 </Link>
                 <span className="sm:hidden block text-xs text-text-muted">
                   {playerSchoolLine(player)}
                 </span>
+                <span className="md:hidden block text-xs text-text-secondary">{formatHeight(player.heightInches)} · {formatWeight(player.weightLbs)}</span>
               </td>
               <td className="px-4 py-3 hidden sm:table-cell text-text-secondary">
                 {playerSchoolName(player)}
@@ -66,7 +67,7 @@ export default function RankingsTable({ rows }: RankingsTableProps) {
                 {player.position}
               </td>
               <td className="px-4 py-3 hidden md:table-cell text-text-secondary">
-                {player.classYear}
+                {formatHeight(player.heightInches)} · {formatWeight(player.weightLbs)}
               </td>
               <td className="px-4 py-3 text-right">
                 <span className="font-[family-name:var(--font-display)] text-xl text-accent">

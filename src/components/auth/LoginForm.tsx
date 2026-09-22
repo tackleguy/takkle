@@ -43,7 +43,8 @@ export default function LoginForm({ supabaseReady }: LoginFormProps) {
       return;
     }
 
-    router.push("/onboarding");
+    const next = new URLSearchParams(window.location.search).get("next");
+    router.push(next?.startsWith("/") && !next.startsWith("//") && !next.includes("\\") ? next : "/onboarding");
     router.refresh();
   }
 
