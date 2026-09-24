@@ -27,6 +27,7 @@ const STATE_OPTIONS = [
 ] as const;
 
 export type ClaimProfileSelection = {
+  id?: string;
   slug: string;
   displayName: string;
   schoolName: string | null;
@@ -220,7 +221,7 @@ export default function ClaimProfileSearch({
             ]
               .filter(Boolean)
               .join(" · ");
-            const schoolLine = p.schoolName || "Team";
+            const schoolLine = p.schoolName || "Team TBD";
 
             return (
               <li key={p.id} role="option" aria-selected={selected}>
@@ -228,6 +229,7 @@ export default function ClaimProfileSearch({
                   type="button"
                   onClick={() =>
                     onSelect({
+                      id: p.id,
                       slug: p.slug,
                       displayName: p.displayName,
                       schoolName: p.schoolName,

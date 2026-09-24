@@ -34,6 +34,12 @@ function scopeKeyFor(filters: RankingFilters): { scope: RankingScope; scopeKey: 
     const y = filters.classYear ?? DEFAULT_RECRUIT_CLASS;
     return { scope, scopeKey: String(y) };
   }
+  if (scope === "division") {
+    return { scope, scopeKey: filters.division ?? "fbs" };
+  }
+  if (scope === "conference") {
+    return { scope, scopeKey: filters.conference ?? "SEC" };
+  }
   const pos = filters.position ?? "QB";
   if (filters.classYear && isRecruitClassYear(filters.classYear)) {
     return { scope: "position", scopeKey: `${pos}:${filters.classYear}` };
@@ -268,6 +274,8 @@ export async function getLiveRankings(
     if (filters.position) rosterQuery = rosterQuery.eq("position", filters.position);
     if (filters.stateCode) rosterQuery = rosterQuery.eq("state_code", filters.stateCode);
     if (filters.classYear) rosterQuery = rosterQuery.eq("class_year", filters.classYear);
+    if (filters.conference) rosterQuery = rosterQuery.eq("conference", filters.conference);
+    if (filters.division) rosterQuery = rosterQuery.eq("division", filters.division);
 
     const { data: roster } = await rosterQuery;
     const rows: RankedPlayerRow[] = (roster ?? [])

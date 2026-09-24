@@ -1,6 +1,6 @@
 /**
  * Provisional Tackle Scores for college FBS/FCS athletes (no film yet).
- * Uses division, conference tier, measurables, and team/roster status as public proxies.
+ * Uses division, conference tier, measurables, and roster/team status as public proxies.
  * Confidence stays "limited" until film evaluations exist.
  */
 

@@ -299,6 +299,14 @@ export function getRankings(
   if (filters.classYear) {
     pool = pool.filter((p) => p.classYear === filters.classYear);
   }
+  if (filters.conference) {
+    pool = pool.filter(
+      (p) => (p.conference ?? "").toLowerCase() === filters.conference!.toLowerCase(),
+    );
+  }
+  if (filters.division) {
+    pool = pool.filter((p) => p.division === filters.division);
+  }
 
   return pool
     .sort((a, b) => b.tackleScore.score - a.tackleScore.score)

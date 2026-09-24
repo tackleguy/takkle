@@ -1,16 +1,22 @@
 "use client";
 
 import { useRouter, useSearchParams } from "next/navigation";
-import type { FootballPosition, RankingScope } from "@/types/recruiting";
+import type { CollegeDivision, FootballPosition, RankingScope } from "@/types/recruiting";
 import {
   DEFAULT_RECRUIT_CLASS,
   RECRUIT_CLASS_YEARS,
 } from "@/lib/recruiting/class-years";
+import {
+  COLLEGE_CONFERENCES,
+  COLLEGE_DIVISIONS,
+} from "@/lib/recruiting/college-conferences";
 import { RANKING_POSITIONS } from "@/lib/scoring/research-rankings";
 
 const SCOPES: { value: RankingScope; label: string }[] = [
-  { value: "position", label: "By Position" },
   { value: "national", label: "National" },
+  { value: "division", label: "By Division" },
+  { value: "conference", label: "By Conference" },
+  { value: "position", label: "By Position" },
   { value: "class", label: "Class" },
 ];
 
@@ -40,6 +46,8 @@ export default function RankingsFilters({ basePath = "/rankings" }: RankingsFilt
   const scope = (rawScope === "state" ? "national" : rawScope) as RankingScope;
   const position = params.get("position") ?? "QB";
   const classYear = params.get("class") ?? "";
+  const conference = params.get("conference") ?? "SEC";
+  const division = (params.get("division") ?? "fbs") as CollegeDivision;
 
   return (
     <div className="flex flex-wrap gap-3">
@@ -49,11 +57,45 @@ export default function RankingsFilters({ basePath = "/rankings" }: RankingsFilt
           type="button"
           onClick={() => {
             if (value === "position") {
-              update({ scope: value, position, class: classYear || null });
+              update({
+                scope: value,
+                position,
+                class: classYear || null,
+                conference: null,
+                division: null,
+              });
             } else if (value === "class") {
-              update({ scope: value, class: classYear || String(DEFAULT_RECRUIT_CLASS) });
+              update({
+                scope: value,
+                class: classYear || String(DEFAULT_RECRUIT_CLASS),
+                position: null,
+                conference: null,
+                division: null,
+              });
+            } else if (value === "conference") {
+              update({
+                scope: value,
+                conference,
+                position: null,
+                class: null,
+                division: null,
+              });
+            } else if (value === "division") {
+              update({
+                scope: value,
+                division,
+                position: null,
+                class: null,
+                conference: null,
+              });
             } else {
-              update({ scope: value, class: null });
+              update({
+                scope: value,
+                class: null,
+                position: null,
+                conference: null,
+                division: null,
+              });
             }
           }}
           className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors ${
@@ -65,6 +107,44 @@ export default function RankingsFilters({ basePath = "/rankings" }: RankingsFilt
           {label}
         </button>
       ))}
+
+      {scope === "division" && (
+        <select
+          className={selectClass}
+          value={division}
+          onChange={(e) =>
+            update({
+              division: e.target.value as CollegeDivision,
+              scope: "division",
+            })
+          }
+        >
+          {COLLEGE_DIVISIONS.map((d) => (
+            <option key={d.value} value={d.value}>
+              {d.label}
+            </option>
+          ))}
+        </select>
+      )}
+
+      {scope === "conference" && (
+        <select
+          className={selectClass}
+          value={conference}
+          onChange={(e) =>
+            update({
+              conference: e.target.value,
+              scope: "conference",
+            })
+          }
+        >
+          {COLLEGE_CONFERENCES.map((c) => (
+            <option key={c} value={c}>
+              {c}
+            </option>
+          ))}
+        </select>
+      )}
 
       {(scope === "position" || scope === "class") && (
         <select

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import RankingsFilters from "@/components/rankings/RankingsFilters";
 import RankingsTable from "@/components/rankings/RankingsTable";
 import { getLiveRankings } from "@/lib/rankings";
-import type { FootballPosition, RankingScope } from "@/types/recruiting";
+import type { CollegeDivision, FootballPosition, RankingScope } from "@/types/recruiting";
 
 export const metadata: Metadata = {
   title: "Rankings",
@@ -25,12 +25,16 @@ export default async function RankingsPage({ searchParams }: PageProps) {
   const classYear =
     classYearRaw && Number.isFinite(classYearRaw) ? classYearRaw : undefined;
   const position = (params.position ?? "QB") as FootballPosition;
+  const conference = params.conference ?? "SEC";
+  const division = (params.division === "fcs" ? "fcs" : "fbs") as CollegeDivision;
 
   const { rows, source, version } = await getLiveRankings(
     {
       scope,
       position: scope === "position" ? position : undefined,
       classYear: scope === "position" || scope === "class" ? classYear : undefined,
+      conference: scope === "conference" ? conference : undefined,
+      division: scope === "division" ? division : undefined,
     },
     50,
   );
@@ -40,7 +44,11 @@ export default async function RankingsPage({ searchParams }: PageProps) {
       ? "National College Rankings"
       : scope === "class"
         ? `Eligibility ${classYear} Rankings`
-        : `${position} Rankings · College`;
+        : scope === "conference"
+          ? `${conference} Rankings`
+          : scope === "division"
+            ? `${division.toUpperCase()} Rankings`
+            : `${position} Rankings · College`;
 
   return (
     <div className="px-4 py-10 sm:py-14">

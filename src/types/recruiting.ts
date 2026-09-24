@@ -52,6 +52,8 @@ export type RankingScope =
   | "national"
   | "position"
   | "class"
+  | "conference"
+  | "division"
   | "school"
   | "region";
 
@@ -264,6 +266,8 @@ export interface RankingFilters {
   stateCode?: string;
   position?: FootballPosition;
   classYear?: number;
+  conference?: string;
+  division?: CollegeDivision;
 }
 
 export interface SeedManifest {
