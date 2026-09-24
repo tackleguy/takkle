@@ -3,12 +3,17 @@ import type { Metadata } from "next";
 import RankingsFilters from "@/components/rankings/RankingsFilters";
 import RankingsTable from "@/components/rankings/RankingsTable";
 import { getLiveRankings } from "@/lib/rankings";
+import {
+  defaultConferenceForDivision,
+  divisionLabel,
+  isCollegeDivision,
+} from "@/lib/recruiting/college-conferences";
 import type { CollegeDivision, FootballPosition, RankingScope } from "@/types/recruiting";
 
 export const metadata: Metadata = {
   title: "Rankings",
   description:
-    "FBS/FCS rankings for athletes and their teams, powered by research-informed Tackle Score™.",
+    "FBS, FCS, DII, and DIII rankings for athletes and their teams, powered by research-informed Tackle Score™.",
 };
 
 export const dynamic = "force-dynamic";
@@ -25,8 +30,8 @@ export default async function RankingsPage({ searchParams }: PageProps) {
   const classYear =
     classYearRaw && Number.isFinite(classYearRaw) ? classYearRaw : undefined;
   const position = (params.position ?? "QB") as FootballPosition;
-  const conference = params.conference ?? "SEC";
-  const division = (params.division === "fcs" ? "fcs" : "fbs") as CollegeDivision;
+  const division: CollegeDivision = isCollegeDivision(params.division) ? params.division : "fbs";
+  const conference = params.conference ?? defaultConferenceForDivision(division);
 
   const { rows, source, version } = await getLiveRankings(
     {
@@ -45,9 +50,9 @@ export default async function RankingsPage({ searchParams }: PageProps) {
       : scope === "class"
         ? `Eligibility ${classYear} Rankings`
         : scope === "conference"
-          ? `${conference} Rankings`
+          ? `${conference} Rankings · ${divisionLabel(division)}`
           : scope === "division"
-            ? `${division.toUpperCase()} Rankings`
+            ? `${divisionLabel(division)} Rankings`
             : `${position} Rankings · College`;
 
   return (
@@ -57,8 +62,8 @@ export default async function RankingsPage({ searchParams }: PageProps) {
           {title}
         </h1>
         <p className="mt-2 text-text-secondary">
-          FBS/FCS rankings for athletes and their teams — Tackle Score™ from permitted sources, with
-          film grades added when evaluations exist. No star ratings.
+          FBS, FCS, DII, and DIII rankings for athletes and their teams — Tackle Score™ from
+          permitted sources, with film grades added when evaluations exist. No star ratings.
         </p>
         <p className="mt-2 text-sm text-text-muted">
           Methodology adapts as college depth arrives from roster ingest. Confidence remains Limited

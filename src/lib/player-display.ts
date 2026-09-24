@@ -28,7 +28,10 @@ export function playerSchoolLine(player: Player): string {
   if (player.competitionLevel === "college" || player.collegeName || player.division) {
     const parts = [school];
     if (player.conference?.trim()) parts.push(player.conference.trim());
-    if (player.division) parts.push(player.division.toUpperCase());
+    if (player.division === "fbs") parts.push("FBS");
+    else if (player.division === "fcs") parts.push("FCS");
+    else if (player.division === "d2") parts.push("DII");
+    else if (player.division === "d3") parts.push("DIII");
     return parts.join(" · ");
   }
 

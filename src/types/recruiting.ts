@@ -192,7 +192,7 @@ export interface PlayerProvenance {
 }
 
 export type CompetitionLevel = "hs" | "college";
-export type CollegeDivision = "fbs" | "fcs";
+export type CollegeDivision = "fbs" | "fcs" | "d2" | "d3";
 export type TransferPortalStatus =
   | "not_in_portal"
   | "entered"

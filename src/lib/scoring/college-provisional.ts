@@ -1,5 +1,5 @@
 /**
- * Provisional Tackle Scores for college FBS/FCS athletes (no film yet).
+ * Provisional Tackle Scores for college athletes (no film yet).
  * Uses division, conference tier, measurables, and roster/team status as public proxies.
  * Confidence stays "limited" until film evaluations exist.
  */
@@ -9,7 +9,7 @@ import type { ScoreConfidence } from "@/types/recruiting";
 export const COLLEGE_SCORE_VERSION = "college-provisional-2026.1";
 export const COLLEGE_RANKING_VERSION = "college-provisional-2026.1";
 
-/** Power / G5 / FCS conference competition proxies (1–10). */
+/** Power / G5 / FCS / DII / DIII conference competition proxies (1–10). */
 const CONFERENCE_TIER: Record<string, number> = {
   SEC: 9.6,
   "Big Ten": 9.5,
@@ -40,6 +40,31 @@ const CONFERENCE_TIER: Record<string, number> = {
   NEC: 6.5,
   SWAC: 6.8,
   MEAC: 6.7,
+  GSC: 5.8,
+  GLIAC: 5.7,
+  MIAA: 5.7,
+  NSIC: 5.6,
+  PSAC: 5.6,
+  "Lone Star": 5.6,
+  SAC: 5.5,
+  RMAC: 5.5,
+  GAC: 5.4,
+  GNAC: 5.4,
+  NE10: 5.3,
+  MEC: 5.3,
+  CIAA: 5.2,
+  SIAC: 5.2,
+  NESCAC: 4.8,
+  WIAC: 4.7,
+  MIAC: 4.7,
+  CCIW: 4.6,
+  OAC: 4.6,
+  Centennial: 4.5,
+  ODAC: 4.5,
+  ASC: 4.4,
+  SCIAC: 4.4,
+  NCAC: 4.3,
+  PAC: 4.3,
 };
 
 function clamp(v: number): number {
@@ -63,10 +88,12 @@ export type CollegeScoreResult = {
 
 export function scoreCollegePlayer(p: CollegeScoreInput): CollegeScoreResult {
   const div = (p.division || "").toLowerCase();
-  const divisionScore = div === "fbs" ? 8.6 : div === "fcs" ? 7.2 : 7.0;
+  const divisionScore =
+    div === "fbs" ? 8.6 : div === "fcs" ? 7.2 : div === "d2" ? 5.8 : div === "d3" ? 4.6 : 7.0;
 
   const confName = (p.conference || "").trim();
-  let conferenceScore = 7.0;
+  let conferenceScore =
+    div === "d2" ? 5.5 : div === "d3" ? 4.5 : 7.0;
   for (const [key, val] of Object.entries(CONFERENCE_TIER)) {
     if (confName.toLowerCase() === key.toLowerCase() || confName.includes(key)) {
       conferenceScore = val;

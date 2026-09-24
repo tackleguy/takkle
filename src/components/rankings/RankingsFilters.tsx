@@ -7,8 +7,11 @@ import {
   RECRUIT_CLASS_YEARS,
 } from "@/lib/recruiting/class-years";
 import {
-  COLLEGE_CONFERENCES,
   COLLEGE_DIVISIONS,
+  CONFERENCES_BY_DIVISION,
+  defaultConferenceForDivision,
+  divisionForConference,
+  isCollegeDivision,
 } from "@/lib/recruiting/college-conferences";
 import { RANKING_POSITIONS } from "@/lib/scoring/research-rankings";
 
@@ -46,8 +49,14 @@ export default function RankingsFilters({ basePath = "/rankings" }: RankingsFilt
   const scope = (rawScope === "state" ? "national" : rawScope) as RankingScope;
   const position = params.get("position") ?? "QB";
   const classYear = params.get("class") ?? "";
-  const conference = params.get("conference") ?? "SEC";
-  const division = (params.get("division") ?? "fbs") as CollegeDivision;
+  const divisionParam = params.get("division");
+  const division: CollegeDivision = isCollegeDivision(divisionParam) ? divisionParam : "fbs";
+  const conferenceList = CONFERENCES_BY_DIVISION[division];
+  const conferenceParam = params.get("conference");
+  const conference =
+    conferenceParam && conferenceList.includes(conferenceParam)
+      ? conferenceParam
+      : defaultConferenceForDivision(division);
 
   return (
     <div className="flex flex-wrap gap-3">
@@ -75,10 +84,10 @@ export default function RankingsFilters({ basePath = "/rankings" }: RankingsFilt
             } else if (value === "conference") {
               update({
                 scope: value,
-                conference,
+                division,
+                conference: defaultConferenceForDivision(division),
                 position: null,
                 class: null,
-                division: null,
               });
             } else if (value === "division") {
               update({
@@ -108,16 +117,25 @@ export default function RankingsFilters({ basePath = "/rankings" }: RankingsFilt
         </button>
       ))}
 
-      {scope === "division" && (
+      {(scope === "division" || scope === "conference") && (
         <select
           className={selectClass}
           value={division}
-          onChange={(e) =>
-            update({
-              division: e.target.value as CollegeDivision,
-              scope: "division",
-            })
-          }
+          onChange={(e) => {
+            const nextDivision = e.target.value as CollegeDivision;
+            if (scope === "conference") {
+              update({
+                division: nextDivision,
+                conference: defaultConferenceForDivision(nextDivision),
+                scope: "conference",
+              });
+            } else {
+              update({
+                division: nextDivision,
+                scope: "division",
+              });
+            }
+          }}
         >
           {COLLEGE_DIVISIONS.map((d) => (
             <option key={d.value} value={d.value}>
@@ -131,17 +149,24 @@ export default function RankingsFilters({ basePath = "/rankings" }: RankingsFilt
         <select
           className={selectClass}
           value={conference}
-          onChange={(e) =>
+          onChange={(e) => {
+            const nextConference = e.target.value;
+            const nextDivision = divisionForConference(nextConference) ?? division;
             update({
-              conference: e.target.value,
+              conference: nextConference,
+              division: nextDivision,
               scope: "conference",
-            })
-          }
+            });
+          }}
         >
-          {COLLEGE_CONFERENCES.map((c) => (
-            <option key={c} value={c}>
-              {c}
-            </option>
+          {COLLEGE_DIVISIONS.map((d) => (
+            <optgroup key={d.value} label={d.label}>
+              {CONFERENCES_BY_DIVISION[d.value].map((c) => (
+                <option key={`${d.value}-${c}`} value={c}>
+                  {c}
+                </option>
+              ))}
+            </optgroup>
           ))}
         </select>
       )}
