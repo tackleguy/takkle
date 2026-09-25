@@ -1,16 +1,18 @@
 # College player fields (getter contract)
 
-**Product surface:** NCAA D1 football **FBS** + **FCS** only.  
+**Product surface:** NCAA football **FBS**, **FCS**, **DII** (`d2`), and **DIII** (`d3`).  
 High-school rows stay in `takkle.players` with `competition_level = 'hs'` and are **dormant** (filtered out of Discover / Rankings / Claim).
 
 Do **not** fabricate athletes. Prefer CFBD, ESPN public APIs, NCAA/public pages, school athletics rosters. No MaxPreps / 247 / Rivals / On3 scrape.
+
+DII/DIII roster ingest: `node --env-file=.env.local scripts/ingest-espn-d2-d3.mjs` (ESPN groups 57/58).
 
 ## Required on every college upsert
 
 | Field | Value | Notes |
 |-------|--------|--------|
 | `competition_level` | `"college"` | **Required.** Default in DB is `hs`; omitting this leaves the row dormant. |
-| `division` | `"fbs"` or `"fcs"` | Required for product filters. |
+| `division` | `"fbs"` \| `"fcs"` \| `"d2"` \| `"d3"` | Required for product filters. |
 | `first_name`, `last_name`, `slug`, `id` | real athlete | Stable UUID per athlete; slug unique. |
 | `college_name` | e.g. `"Alabama"` | Denormalized school name for UI/search. |
 | `school_name` / `school_slug` / `school_id` | college as school row | Used by `bulk_upsert_players`; `college_name` falls back to `school_name` if omitted. |

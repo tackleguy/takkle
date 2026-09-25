@@ -12,6 +12,8 @@
     "import:cfbd-recruits": "node scripts/import-cfbd-recruits.mjs",
     "ingest:permitted": "node scripts/run-ingestion.mjs",
     "ingest:apply": "node scripts/apply-ingestion-rpc.mjs",
+    "ingest:d2-d3": "node --env-file=.env.local scripts/ingest-espn-d2-d3.mjs",
+    "ingest:d2-d3-enrich": "node --env-file=.env.local scripts/enrich-espn-d2-d3-core.mjs",
     "rankings:compute": "node scripts/compute-rankings.mjs",
     "test": "node --experimental-strip-types --test tests/*.test.mjs",
     "typecheck": "tsc --noEmit"
