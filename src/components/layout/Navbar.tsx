@@ -90,8 +90,8 @@ export default function Navbar() {
           </div>
 
           <div className="hidden md:flex items-center gap-3">
-            <Button href={email ? "/account" : "/onboarding"} variant="primary" size="sm">
-              {email ? "My account" : "Claim Profile"}
+            <Button href={email ? "/account" : "/discover"} variant="primary" size="sm">
+              {email ? "My account" : "Find Players"}
             </Button>
             {email ? (
               <button
@@ -143,8 +143,8 @@ export default function Navbar() {
               </Link>
             ))}
             <div className="px-3 pt-3 flex flex-col gap-2">
-              <Button href={email ? "/account" : "/onboarding"} size="sm" className="w-full">
-                {email ? "My account" : "Claim Profile"}
+              <Button href={email ? "/account" : "/discover"} size="sm" className="w-full">
+                {email ? "My account" : "Find Players"}
               </Button>
               {email ? (
                 <button

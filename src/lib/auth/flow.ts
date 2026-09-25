@@ -21,22 +21,77 @@ export function safeNext(raw: string | null | undefined, fallback = "/account"):
   } catch { return fallback; }
 }
 
+/** Post-signup destination by role — discovery-first tutorials when no explicit next. */
+export function signupNextForRole(role: SignupRole, rawNext?: string | null): string {
+  const explicit = rawNext && rawNext !== "/account" ? safeNext(rawNext, "") : "";
+  if (explicit) return explicit;
+  switch (role) {
+    case "player":
+    case "parent":
+      return "/tutorial/player";
+    case "business":
+      return "/tutorial/business";
+    case "recruiter":
+    case "coach":
+      return "/discover";
+    default:
+      return "/";
+  }
+}
+
 export function accountActions(role: AccountType | null) {
   switch (role) {
-    case "player": return [{ href: "/onboarding", label: "Claim or manage your player profile" }, { href: "/guides", label: "Build your recruiting profile" }];
-    case "parent": return [{ href: "/onboarding", label: "Help your athlete claim their profile" }, { href: "/guides", label: "Read player and family guides" }];
-    case "recruiter": return [{ href: "/discover", label: "Discover college players" }, { href: "/rankings", label: "Browse player rankings" }];
-    case "coach": return [{ href: "/discover", label: "Find players and school rosters" }, { href: "/rankings", label: "Compare player rankings" }];
-    case "business": return [{ href: "/nil/scores", label: "Explore college NIL profiles" }, { href: "/discover", label: "Find athletes" }];
-    case "school": return [{ href: "/discover", label: "Find your school’s players" }, { href: "/college", label: "View college resources" }];
-    case "admin": return [{ href: "/admin/claims", label: "Review player claims" }, { href: "/admin", label: "Open administration" }];
-    default: return [{ href: "/discover", label: "Discover college players" }, { href: "/guides", label: "Read player guides" }];
+    case "player":
+      return [
+        { href: "/discover", label: "Browse live player dossiers" },
+        { href: "/tutorial/player", label: "Player walkthrough" },
+        { href: "/onboarding", label: "Claim or manage your player profile" },
+        { href: "/guides", label: "Read player guides" },
+      ];
+    case "parent":
+      return [
+        { href: "/discover", label: "Browse live player dossiers" },
+        { href: "/tutorial/player", label: "Player walkthrough" },
+        { href: "/onboarding", label: "Help your athlete claim their profile" },
+        { href: "/guides", label: "Read player and family guides" },
+      ];
+    case "recruiter":
+      return [
+        { href: "/discover", label: "Discover college players" },
+        { href: "/rankings", label: "Browse player rankings" },
+      ];
+    case "coach":
+      return [
+        { href: "/discover", label: "Find players and school rosters" },
+        { href: "/rankings", label: "Compare player rankings" },
+      ];
+    case "business":
+      return [
+        { href: "/nil/scores", label: "Explore college NIL profiles" },
+        { href: "/tutorial/business", label: "Business walkthrough" },
+        { href: "/discover", label: "Find athletes" },
+      ];
+    case "school":
+      return [
+        { href: "/discover", label: "Find your school’s players" },
+        { href: "/college", label: "View college resources" },
+      ];
+    case "admin":
+      return [
+        { href: "/admin/claims", label: "Review player claims" },
+        { href: "/admin", label: "Open administration" },
+      ];
+    default:
+      return [
+        { href: "/discover", label: "Discover college players" },
+        { href: "/guides", label: "Read player guides" },
+      ];
   }
 }
 
 export async function signUpAccount(client: SupabaseClient, input: { email: string; password: string; role: SignupRole; origin: string; next?: string | null }) {
   if (!SIGNUP_ROLES.some(role => role.value === input.role)) throw new Error("Choose one of the available account types.");
-  const next = safeNext(input.next);
+  const next = signupNextForRole(input.role, input.next);
   const { data, error } = await client.auth.signUp({
     email: input.email.trim(), password: input.password,
     options: { data: { account_type: input.role }, emailRedirectTo: `${input.origin}/auth/callback?next=${encodeURIComponent(next)}` },
