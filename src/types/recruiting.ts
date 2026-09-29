@@ -221,7 +221,9 @@ export interface Player {
   hometownCity?: string;
   /** hs = dormant inventory; college = Transfer/NIL portal surface (FBS/FCS). */
   competitionLevel?: CompetitionLevel;
-  division?: CollegeDivision | null;
+  /** football | mbb | wbb | baseball | softball | mhockey | wvball | msoccer | wsoccer | mlax | wlax */
+  sport?: string | null;
+  division?: CollegeDivision | "d1" | null;
   collegeName?: string | null;
   conference?: string | null;
   eligibilityYear?: number | null;
@@ -247,6 +249,8 @@ export interface PlayerSearchFilters {
   query?: string;
   stateCode?: string;
   position?: FootballPosition;
+  /** Defaults to football in live search so other sports stay opt-in. */
+  sport?: string;
   classYear?: number;
   minScore?: number;
   maxScore?: number;

@@ -67,6 +67,9 @@ next-env.d.ts
 /data/ingestion/.chsaa-apply/
 /scripts/tmp/
 
+# ESPN non-football roster cache (regenerate via scripts/ingest-espn-college-sports.mjs)
+/data/ingestion/sources/college_sports_2026/
+
 # Temp apply batches / session fetch caches (regenerate via ingest scripts)
 /data/ingestion/.bluegrey-apply/
 /data/ingestion/.tx-apply/

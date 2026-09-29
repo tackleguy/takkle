@@ -16,7 +16,6 @@ import {
   searchPlayers as searchSeedPlayers,
 } from "@/lib/players";
 import type {
-  CollegeDivision,
   CompetitionLevel,
   FootballPosition,
   Player,
@@ -31,7 +30,7 @@ const PLAYER_SELECT = `
   id, first_name, last_name, display_name, slug, position, class_year,
   school_id, state_code, height_inches, weight_lbs, jersey_number,
   status, is_synthetic, source_name, source_url, source_school, hometown_city,
-  competition_level, division, college_name, conference, eligibility_year,
+  competition_level, sport, division, college_name, conference, eligibility_year,
   transfer_portal_status, portal_entry_date, transfer_from_school, transfer_to_school,
   schools ( id, name, slug, city, state_code )
 `;
@@ -82,13 +81,14 @@ function toPlayer(
   const stateCode = (row.state_code as string) ?? "NA";
   const firstName = (row.first_name as string) ?? "";
   const lastName = (row.last_name as string) ?? "";
-  const division = (row.division as CollegeDivision | null) ?? null;
+  const sport = (row.sport as string | null) || "football";
+  const division = (row.division as Player["division"]) ?? null;
   const conference = (row.conference as string | null) ?? null;
   const transferPortalStatus =
     (row.transfer_portal_status as TransferPortalStatus | null) ?? null;
   let finalScore = score;
   let finalConfidence = confidence;
-  if (!finalScore) {
+  if (!finalScore && sport === "football") {
     const provisional = scoreCollegePlayer({
       division,
       conference,
@@ -122,6 +122,7 @@ function toPlayer(
     status: (row.status as Player["status"]) ?? "unclaimed",
     hometownCity: (row.hometown_city as string) ?? undefined,
     competitionLevel: (row.competition_level as CompetitionLevel) ?? ACTIVE_COMPETITION_LEVEL,
+    sport,
     division,
     collegeName: (() => {
       const raw = (row.college_name as string | null) ?? null;
@@ -195,6 +196,9 @@ export async function searchLivePlayers(
       .order("first_name", { ascending: true })
       .range(from, to);
 
+    const sport = filters.sport || "football";
+    query = query.eq("sport", sport);
+
     if (filters.stateCode) query = query.eq("state_code", filters.stateCode);
     if (filters.position) query = query.eq("position", filters.position);
     if (filters.classYear && Number.isFinite(filters.classYear)) {
@@ -244,6 +248,9 @@ export async function searchLivePlayers(
     }
 
     if (!players.length && (count ?? 0) === 0) {
+      if (sport !== "football") {
+        return { players: [], total: 0, page, pageSize, source: "supabase" };
+      }
       return collegeSeedSearch(filters, page, pageSize);
     }
 
@@ -394,6 +401,7 @@ async function playersFromNationalRankings(limit: number): Promise<Player[]> {
       .select(PLAYER_SELECT)
       .eq("is_synthetic", false)
       .eq("competition_level", ACTIVE_COMPETITION_LEVEL)
+      .eq("sport", "football")
       .order("last_name", { ascending: true })
       .limit(limit);
     return (rows ?? []).map((row) => toPlayer(row as Record<string, unknown>));

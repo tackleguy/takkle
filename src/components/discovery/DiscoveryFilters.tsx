@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter, useSearchParams } from "next/navigation";
+import { COLLEGE_SCORE_SPORTS, resolveCollegeSport } from "@/lib/cfb-scores";
 import type { FootballPosition } from "@/types/recruiting";
 import { RECRUIT_CLASS_YEARS } from "@/lib/recruiting/class-years";
 
@@ -11,19 +12,45 @@ export default function DiscoveryFilters() {
   const router = useRouter();
   const params = useSearchParams();
 
-  function update(key: string, value: string) {
+  function update(key: string, value: string, extra?: Record<string, string | null>) {
     const next = new URLSearchParams(params.toString());
     if (value) next.set(key, value);
     else next.delete(key);
+    if (extra) {
+      for (const [extraKey, extraValue] of Object.entries(extra)) {
+        if (extraValue) next.set(extraKey, extraValue);
+        else next.delete(extraKey);
+      }
+    }
     next.delete("page");
     router.push(`/discover?${next.toString()}`);
   }
+
+  const sport = resolveCollegeSport(params.get("sport"));
 
   const selectClass =
     "w-full rounded-lg border border-border bg-field px-3 py-2 text-sm text-text-primary focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent/50";
 
   return (
-    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+      <div>
+        <label className="mb-1 block text-xs uppercase tracking-wider text-text-muted">Sport</label>
+        <select
+          className={selectClass}
+          value={sport}
+          onChange={(e) =>
+            update("sport", e.target.value === "football" ? "" : e.target.value, {
+              position: e.target.value === "football" ? params.get("position") : null,
+            })
+          }
+        >
+          {COLLEGE_SCORE_SPORTS.map((item) => (
+            <option key={item.value} value={item.value}>
+              {item.label}
+            </option>
+          ))}
+        </select>
+      </div>
       <div>
         <label className="mb-1 block text-xs uppercase tracking-wider text-text-muted">Search</label>
         <input
@@ -50,6 +77,7 @@ export default function DiscoveryFilters() {
           ))}
         </select>
       </div>
+      {sport === "football" ? (
       <div>
         <label className="mb-1 block text-xs uppercase tracking-wider text-text-muted">Position</label>
         <select
@@ -63,6 +91,7 @@ export default function DiscoveryFilters() {
           ))}
         </select>
       </div>
+      ) : null}
       <div>
         <label className="mb-1 block text-xs uppercase tracking-wider text-text-muted">Class</label>
         <select
@@ -76,6 +105,7 @@ export default function DiscoveryFilters() {
           ))}
         </select>
       </div>
+      {sport === "football" ? (
       <div>
         <label className="mb-1 block text-xs uppercase tracking-wider text-text-muted">Min Score</label>
         <select
@@ -89,6 +119,7 @@ export default function DiscoveryFilters() {
           ))}
         </select>
       </div>
+      ) : null}
     </div>
   );
 }

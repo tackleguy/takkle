@@ -5,6 +5,7 @@ export type ClaimSearchHit = {
   firstName: string;
   lastName: string;
   position: string | null;
+  sport: string | null;
   classYear: number | null;
   stateCode: string | null;
   jerseyNumber: number | null;

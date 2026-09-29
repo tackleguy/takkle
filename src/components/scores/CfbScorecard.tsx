@@ -73,6 +73,9 @@ export default function CfbScorecard({ game }: { game: CfbGame }) {
           {game.statusDetail || game.status}
         </span>
         <span className="text-text-muted">
+          {game.conference ? (
+            <span className="mr-2 text-text-secondary">{game.conference}</span>
+          ) : null}
           {game.broadcast || (game.status === "scheduled" ? formatKickoff(game.startTime) : null)}
         </span>
       </div>

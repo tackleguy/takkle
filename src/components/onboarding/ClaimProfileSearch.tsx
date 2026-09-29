@@ -1,6 +1,7 @@
 "use client";
 
 import { useDeferredValue, useEffect, useId, useState, useTransition } from "react";
+import { playerSportLabel } from "@/lib/player-display";
 import type { ClaimSearchHit } from "@/types/claim-search";
 
 const STATE_OPTIONS = [
@@ -215,6 +216,7 @@ export default function ClaimProfileSearch({
           {players.map((p) => {
             const selected = selectedSlug === p.slug;
             const meta = [
+              p.sport ? playerSportLabel(p.sport) : null,
               p.position,
               p.classYear ? `Class of ${p.classYear}` : null,
               p.jerseyNumber != null ? `#${p.jerseyNumber}` : null,

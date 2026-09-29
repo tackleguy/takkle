@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import DiscoveryFilters from "@/components/discovery/DiscoveryFilters";
 import PlayerCard from "@/components/player/PlayerCard";
 import SyntheticNotice from "@/components/ui/SyntheticNotice";
+import { collegeScoreSport, resolveCollegeSport } from "@/lib/cfb-scores";
 import { searchLivePlayers } from "@/lib/live-players";
 import type { FootballPosition } from "@/types/recruiting";
 
@@ -21,13 +22,16 @@ interface PageProps {
 export default async function DiscoverPage({ searchParams }: PageProps) {
   const params = await searchParams;
   const page = Number(params.page ?? 1);
+  const sport = resolveCollegeSport(params.sport);
+  const sportLabel = collegeScoreSport(sport).label;
   const result = await searchLivePlayers(
     {
       query: params.q,
       stateCode: params.state,
-      position: params.position as FootballPosition | undefined,
+      position: sport === "football" ? (params.position as FootballPosition | undefined) : undefined,
+      sport,
       classYear: params.class ? Number(params.class) : undefined,
-      minScore: params.minScore ? Number(params.minScore) : undefined,
+      minScore: sport === "football" && params.minScore ? Number(params.minScore) : undefined,
     },
     page,
     24,
@@ -40,8 +44,9 @@ export default async function DiscoverPage({ searchParams }: PageProps) {
           Discover Players
         </h1>
         <p className="mt-2 text-text-secondary max-w-2xl">
-          Discover FBS and FCS athletes and their teams — filter by school, position, eligibility
-          year, and Tackle Score™.
+          {sport === "football"
+            ? "Discover FBS, FCS, DII, and DIII football athletes — filter by school, position, eligibility year, and Tackle Score™."
+            : `Discover college ${sportLabel.toLowerCase()} athletes and their teams.`}
         </p>
 
         <div className="mt-8">

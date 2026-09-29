@@ -77,7 +77,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/cfb/scores" className="text-sm text-text-secondary hover:text-accent transition-colors">
-                  CFB Scores
+                  Scores
                 </Link>
               </li>
               <li>

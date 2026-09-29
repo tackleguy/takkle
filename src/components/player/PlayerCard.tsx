@@ -27,7 +27,9 @@ export default function PlayerCard({ player, showSynthetic = true }: PlayerCardP
           </p>
           <p className="text-sm text-text-secondary break-words">{playerSchoolLine(player)}</p>
         </div>
-        <TackleScoreDisplay score={player.tackleScore.score} size="sm" showLabel={false} />
+        {player.sport && player.sport !== "football" ? null : (
+          <TackleScoreDisplay score={player.tackleScore.score} size="sm" showLabel={false} />
+        )}
       </div>
       <div className="mt-3 flex items-center justify-between text-xs text-text-muted">
         <span>

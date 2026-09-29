@@ -1,3 +1,4 @@
+import { collegeScoreSport, resolveCollegeSport } from "@/lib/cfb-scores";
 import type { Player } from "@/types/recruiting";
 
 const PLACEHOLDER_SCHOOLS = new Set([
@@ -32,6 +33,7 @@ export function playerSchoolLine(player: Player): string {
     else if (player.division === "fcs") parts.push("FCS");
     else if (player.division === "d2") parts.push("DII");
     else if (player.division === "d3") parts.push("DIII");
+    else if (player.division === "d1") parts.push("DI");
     return parts.join(" · ");
   }
 
@@ -63,7 +65,14 @@ export function formatWeight(lbs: number): string {
   return Number.isFinite(lbs) && lbs > 0 ? `${lbs} lbs` : "Not listed";
 }
 
-export function playerClassLabel(player: Pick<Player, "competitionLevel" | "classYear">): string {
-  if (player.competitionLevel === "college") return "College football";
+export function playerSportLabel(sport: string | null | undefined): string {
+  return collegeScoreSport(resolveCollegeSport(sport)).label;
+}
+
+export function playerClassLabel(player: Pick<Player, "competitionLevel" | "classYear" | "sport">): string {
+  if (player.competitionLevel === "college") {
+    const label = playerSportLabel(player.sport);
+    return label === "Football" ? "College football" : `College ${label.toLowerCase()}`;
+  }
   return player.classYear > 0 ? `Class of ${player.classYear}` : "Class not listed";
 }

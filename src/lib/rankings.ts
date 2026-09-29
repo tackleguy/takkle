@@ -267,6 +267,7 @@ export async function getLiveRankings(
       `,
       )
       .eq("competition_level", ACTIVE_COMPETITION_LEVEL)
+      .eq("sport", "football")
       .eq("is_synthetic", false)
       .order("last_name", { ascending: true })
       .limit(Math.max(limit * 5, 200));
