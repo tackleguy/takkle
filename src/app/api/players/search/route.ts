@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
-import { ACTIVE_COMPETITION_LEVEL } from "@/lib/competition-level";
+import type { CompetitionLevel } from "@/lib/competition-level";
 import { displaySchoolLabel } from "@/lib/player-display";
 import { searchPlayers } from "@/lib/players";
 import type { ClaimSearchHit } from "@/types/claim-search";
@@ -15,13 +15,13 @@ function sanitizeQuery(raw: string): string {
     .slice(0, 80);
 }
 
-function seedFallback(query: string, state: string | null, limit: number): ClaimSearchHit[] {
+function seedFallback(query: string, state: string | null, limit: number, level: CompetitionLevel | null, claimableOnly: boolean): ClaimSearchHit[] {
   const { players } = searchPlayers(
-    { query, stateCode: state || undefined },
+    { query, stateCode: state || undefined, status: claimableOnly ? "unclaimed" : undefined },
     1,
-    limit,
+    Number.MAX_SAFE_INTEGER,
   );
-  return players.map((p) => ({
+  return players.filter(p => !p.isSynthetic && (!level || p.competitionLevel === level) && (!claimableOnly || p.status === "unclaimed")).slice(0, limit).map((p) => ({
     id: p.id,
     slug: p.slug,
     displayName: p.displayName,
@@ -36,12 +36,13 @@ function seedFallback(query: string, state: string | null, limit: number): Claim
     verificationStatus: null,
     schoolName: displaySchoolLabel(p.collegeName ?? p.school?.name),
     schoolCity: null,
+    competitionLevel: p.competitionLevel,
     source: "seed" as const,
   }));
 }
 
 /**
- * Public player search for claim-onboarding (college FBS/FCS only; HS dormant).
+ * Public player search for claim-onboarding across high-school and college records.
  * Prefers live takkle.players; falls back to local seed when Supabase is unset/unreachable.
  */
 export async function GET(request: Request) {
@@ -50,6 +51,11 @@ export async function GET(request: Request) {
   const state = (searchParams.get("state") ?? "").toUpperCase().slice(0, 2) || null;
   const limit = Math.min(Math.max(Number(searchParams.get("limit") ?? 40) || 40, 1), 75);
   const claimableOnly = searchParams.get("claimable") !== "0";
+  const requestedLevel = searchParams.get("level");
+  if (requestedLevel !== null && requestedLevel !== "hs" && requestedLevel !== "college") {
+    return NextResponse.json({ error: "Choose high school or college.", players: [], source: "none" }, { status: 400 });
+  }
+  const level: CompetitionLevel | null = requestedLevel;
 
   if (q.length < 2 && !state) {
     return NextResponse.json({ players: [] as ClaimSearchHit[], source: "none" });
@@ -60,7 +66,7 @@ export async function GET(request: Request) {
 
   if (!url || !key) {
     return NextResponse.json({
-      players: seedFallback(q || "a", state, limit),
+      players: seedFallback(q, state, limit, level, claimableOnly),
       source: "seed",
     });
   }
@@ -89,11 +95,12 @@ export async function GET(request: Request) {
         verification_status,
         source_school,
         college_name,
+        competition_level,
         schools ( name, city, state_code )
       `,
       )
       .eq("is_synthetic", false)
-      .eq("competition_level", ACTIVE_COMPETITION_LEVEL)
+      .in("competition_level", level ? [level] : ["hs", "college"])
       .order("last_name", { ascending: true })
       .limit(limit);
 
@@ -121,7 +128,7 @@ export async function GET(request: Request) {
     if (error) {
       console.error("players search supabase error", error.message);
       return NextResponse.json({
-        players: seedFallback(q || "a", state, limit),
+        players: seedFallback(q, state, limit, level, claimableOnly),
         source: "seed",
         warning: error.message,
       });
@@ -149,6 +156,7 @@ export async function GET(request: Request) {
             null,
         ),
         schoolCity: null,
+        competitionLevel: row.competition_level as CompetitionLevel,
         source: "supabase" as const,
       };
     });
@@ -157,7 +165,7 @@ export async function GET(request: Request) {
   } catch (err) {
     console.error("players search failed", err);
     return NextResponse.json({
-      players: seedFallback(q || "a", state, limit),
+      players: seedFallback(q, state, limit, level, claimableOnly),
       source: "seed",
     });
   }

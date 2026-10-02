@@ -32,8 +32,8 @@ export default function OnboardingWizard({ initialPlayer = null, signedIn = fals
       <p className="mt-2 text-text-secondary">We’ll check your details before unlocking editing. Once approved, you can update your school and measurements, connect stats pages, and add YouTube film.</p>
       <Link href={`/site/player/${selected?.slug}/edit`} className="mt-4 inline-block text-accent hover:underline">Check profile access</Link>
     </div> : <>
-      <h2 className="text-2xl">Find your college profile</h2>
-      <p className="mt-2 text-sm text-text-secondary">Search your name or school, then select your roster record.</p>
+      <h2 className="text-2xl">Find your player profile</h2>
+      <p className="mt-2 text-sm text-text-secondary">High school and college players: search your name or school, then select your roster record.</p>
       <ClaimProfileSearch className="mt-4" selectedSlug={selected?.slug ?? null} initialQuery={initialPlayer?.displayName} onSelect={player => { setSelected(player); setError(""); }} />
       {selected && <div className="mt-6 border-t border-border pt-6">
         <h3 className="text-2xl">{selected.displayName}</h3>

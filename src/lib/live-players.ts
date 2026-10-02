@@ -86,9 +86,10 @@ function toPlayer(
   const conference = (row.conference as string | null) ?? null;
   const transferPortalStatus =
     (row.transfer_portal_status as TransferPortalStatus | null) ?? null;
+  const competitionLevel = (row.competition_level as CompetitionLevel) ?? ACTIVE_COMPETITION_LEVEL;
   let finalScore = score;
   let finalConfidence = confidence;
-  if (!finalScore && sport === "football") {
+  if (!finalScore && competitionLevel === "college" && sport === "football") {
     const provisional = scoreCollegePlayer({
       division,
       conference,
@@ -121,7 +122,7 @@ function toPlayer(
     jerseyNumber: (row.jersey_number as number) ?? undefined,
     status: (row.status as Player["status"]) ?? "unclaimed",
     hometownCity: (row.hometown_city as string) ?? undefined,
-    competitionLevel: (row.competition_level as CompetitionLevel) ?? ACTIVE_COMPETITION_LEVEL,
+    competitionLevel,
     sport,
     division,
     collegeName: (() => {
@@ -140,7 +141,7 @@ function toPlayer(
     isSynthetic: Boolean(row.is_synthetic),
     tackleScore: {
       score: finalScore,
-      version: COLLEGE_RANKING_VERSION,
+      version: competitionLevel === "college" ? COLLEGE_RANKING_VERSION : "unscored",
       confidence: finalConfidence,
       scoreDate: new Date().toISOString(),
       components: [],
@@ -272,7 +273,8 @@ async function attachNationalScores(
   players: Player[],
 ): Promise<Player[]> {
   if (!players.length) return players;
-  const ids = players.map((p) => p.id);
+  const ids = players.filter(p => p.competitionLevel === "college").map((p) => p.id);
+  if (!ids.length) return players;
   const { data } = await client
     .from("player_rankings")
     .select("player_id, score")
@@ -289,7 +291,7 @@ async function attachNationalScores(
     ...p,
     tackleScore: {
       ...p.tackleScore,
-      score: byId.get(p.id) ?? p.tackleScore.score,
+      score: p.competitionLevel === "college" ? (byId.get(p.id) ?? p.tackleScore.score) : p.tackleScore.score,
     },
   }));
 }
@@ -308,7 +310,7 @@ export async function getLivePlayerBySlug(
       .select(PLAYER_SELECT)
       .eq("slug", slug)
       .eq("is_synthetic", false)
-      .eq("competition_level", ACTIVE_COMPETITION_LEVEL)
+      .in("competition_level", ["hs", "college"])
       .maybeSingle();
 
     if (error || !data) {

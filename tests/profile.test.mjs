@@ -5,7 +5,7 @@ import vm from 'node:vm';
 import ts from 'typescript';
 import { createRequire } from 'node:module';
 import { normalizeStatsUrl, youtubeVideo, publicHttpsUrl } from '../src/lib/profile/links.ts';
-import { formatHeight, formatWeight, playerSchoolName, playerDisplayName, playerClassLabel } from '../src/lib/player-display.ts';
+import * as collegeScores from '../src/lib/cfb-scores.ts';
 const require = createRequire(import.meta.url);
 function loadTs(file, mocks) {
   const module = { exports: {} };
@@ -13,6 +13,9 @@ function loadTs(file, mocks) {
   vm.runInNewContext(code, { module, exports: module.exports, require: id => mocks[id] ?? require(id), process, console, Date });
   return module.exports;
 }
+const { formatHeight, formatWeight, playerSchoolName, playerDisplayName, playerClassLabel } = loadTs('../src/lib/player-display.ts', {
+  '@/lib/cfb-scores': collegeScores,
+});
 
 test('college identity and measurements never show zero or hide a valid school', () => {
   assert.equal(formatHeight(74), '6′ 2″');

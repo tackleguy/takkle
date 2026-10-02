@@ -7,6 +7,7 @@ export type ClaimSearchHit = {
   position: string | null;
   sport: string | null;
   classYear: number | null;
+  competitionLevel?: "hs" | "college";
   stateCode: string | null;
   jerseyNumber: number | null;
   status: string;

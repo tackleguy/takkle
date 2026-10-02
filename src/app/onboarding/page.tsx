@@ -9,7 +9,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Claim Your Profile",
-  description: "Find and claim your collegiate football profile on Takkle (FBS/FCS).",
+  description: "Find and claim your high school or college football profile on Takkle. Add your measurements, stats links, and film after verification.",
 };
 
 export const dynamic = "force-dynamic";
@@ -27,17 +27,10 @@ export default async function OnboardingPage({ searchParams }: { searchParams: P
           Claim Your Profile
         </h1>
         <p className="mt-2 text-text-secondary">
-          Your player record is separate from your login. Find, claim, verify, and build your dossier.
+          Find your profile, verify it’s yours, and add the film and details you want coaches to see.
         </p>
         <p className="mt-2 text-sm text-text-muted">
-          College athletes and their teams —{" "}
-          <Link href="/guides" className="text-accent hover:underline">
-            Player Guides
-          </Link>
-          {" · "}
-          <Link href="/college" className="text-accent hover:underline">
-            Eligibility
-          </Link>
+          Players and authorized guardians can submit claims. Coaches can help confirm roster details.
         </p>
       </div>
       {claims?.data && claims.data.length > 0 && <section className="mx-auto mb-6 max-w-2xl rounded-xl border border-border bg-field p-5">

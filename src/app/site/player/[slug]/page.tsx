@@ -29,12 +29,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!player) return {};
 
   const school = playerSchoolName(player);
+  const scoreDescription = player.tackleScore.score >= 1 ? `Tackle Score™ ${player.tackleScore.score}.` : "Film, stats, and player details.";
   return {
     title: `${playerDisplayName(player)} — ${player.position} ${playerClassLabel(player)}`,
-    description: `${playerDisplayName(player)} recruiting profile at ${school}. Tackle Score™ ${player.tackleScore.score}.`,
+    description: `${playerDisplayName(player)} recruiting profile at ${school}. ${scoreDescription}`,
     openGraph: {
       title: `${playerDisplayName(player)} | Takkle`,
-      description: `Tackle Score™ ${player.tackleScore.score} — ${school}`,
+      description: `${school}. ${scoreDescription}`,
     },
   };
 }

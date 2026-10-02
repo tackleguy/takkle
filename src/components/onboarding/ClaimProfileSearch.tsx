@@ -1,30 +1,15 @@
 "use client";
 
-import { useDeferredValue, useEffect, useId, useState, useTransition } from "react";
+import { useDeferredValue, useEffect, useId, useState } from "react";
 import { playerSportLabel } from "@/lib/player-display";
 import type { ClaimSearchHit } from "@/types/claim-search";
 
 const STATE_OPTIONS = [
-  "",
-  "CA",
-  "TX",
-  "FL",
-  "GA",
-  "OH",
-  "AL",
-  "AZ",
-  "NC",
-  "PA",
-  "NY",
-  "IL",
-  "MI",
-  "LA",
-  "MS",
-  "TN",
-  "SC",
-  "VA",
-  "WA",
-  "OR",
+  "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL",
+  "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME",
+  "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH",
+  "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI",
+  "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY",
 ] as const;
 
 export type ClaimProfileSelection = {
@@ -53,11 +38,12 @@ export default function ClaimProfileSearch({
   const listId = useId();
   const [query, setQuery] = useState(initialQuery);
   const [stateFilter, setStateFilter] = useState("");
+  const [level, setLevel] = useState("");
   const deferredQuery = useDeferredValue(query.trim());
   const [players, setPlayers] = useState<ClaimSearchHit[]>([]);
   const [source, setSource] = useState<"supabase" | "seed" | "none">("none");
   const [error, setError] = useState<string | null>(null);
-  const [isPending, startTransition] = useTransition();
+  const [loading, setLoading] = useState(false);
   const [hasSearched, setHasSearched] = useState(false);
 
   useEffect(() => {
@@ -69,16 +55,19 @@ export default function ClaimProfileSearch({
   useEffect(() => {
     const q = deferredQuery;
     if (q.length < 2 && !stateFilter) {
-      startTransition(() => {
-        setPlayers([]);
-        setHasSearched(false);
-        setSource("none");
-        setError(null);
-      });
+      setPlayers([]);
+      setHasSearched(false);
+      setSource("none");
+      setError(null);
+      setLoading(false);
       return;
     }
 
     const controller = new AbortController();
+    setLoading(true);
+    setPlayers([]);
+    setSource("none");
+    setError(null);
     const timer = setTimeout(async () => {
       try {
         const params = new URLSearchParams({
@@ -87,6 +76,7 @@ export default function ClaimProfileSearch({
           claimable: "1",
         });
         if (stateFilter) params.set("state", stateFilter);
+        if (level) params.set("level", level);
 
         const res = await fetch(`/api/players/search?${params}`, {
           signal: controller.signal,
@@ -96,19 +86,21 @@ export default function ClaimProfileSearch({
           players: ClaimSearchHit[];
           source: "supabase" | "seed" | "none";
         };
-        startTransition(() => {
+        if (!controller.signal.aborted) {
           setPlayers(data.players);
           setSource(data.source);
           setHasSearched(true);
           setError(null);
-        });
+        }
       } catch (err) {
         if ((err as Error).name === "AbortError") return;
-        startTransition(() => {
+        if (!controller.signal.aborted) {
           setError("Could not search players. Try again.");
           setPlayers([]);
           setHasSearched(true);
-        });
+        }
+      } finally {
+        if (!controller.signal.aborted) setLoading(false);
       }
     }, 220);
 
@@ -116,10 +108,21 @@ export default function ClaimProfileSearch({
       controller.abort();
       clearTimeout(timer);
     };
-  }, [deferredQuery, stateFilter]);
+  }, [deferredQuery, stateFilter, level]);
 
   return (
     <div className={className}>
+      <fieldset className="mb-4">
+        <legend className="mb-2 text-sm text-text-secondary">Player level</legend>
+        <div className="flex flex-wrap gap-x-5 gap-y-2">
+          {[["", "All players"], ["hs", "High school"], ["college", "College"]].map(([value, label]) => (
+            <label key={value} className="flex min-h-10 cursor-pointer items-center gap-2 text-sm text-text-primary">
+              <input type="radio" name={`${listId}-level`} value={value} checked={level === value} onChange={() => setLevel(value)} className="h-4 w-4 accent-accent" />
+              {label}
+            </label>
+          ))}
+        </div>
+      </fieldset>
       <label htmlFor={`${listId}-search`} className="sr-only">
         Search players to claim
       </label>
@@ -142,10 +145,7 @@ export default function ClaimProfileSearch({
             id={`${listId}-search`}
             type="search"
             autoComplete="off"
-            role="combobox"
-            aria-expanded={players.length > 0}
             aria-controls={listId}
-            aria-autocomplete="list"
             placeholder="Search by name or school…"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
@@ -167,36 +167,44 @@ export default function ClaimProfileSearch({
         </select>
       </div>
 
-      <div className="mt-3 flex items-center justify-between gap-2 text-xs text-text-muted">
-        <span>
-          {isPending
+      <div className="mt-3 flex items-center justify-between gap-2 text-xs text-text-secondary">
+        <span role="status">
+          {loading
             ? "Searching…"
             : hasSearched
               ? `${players.length} profile${players.length === 1 ? "" : "s"}`
               : "Type at least 2 letters to search unclaimed profiles"}
         </span>
         {source === "seed" && (
-          <span className="text-amber-500/90">Demo seed results</span>
+          <span>Offline results</span>
         )}
         {source === "supabase" && (
-          <span className="text-turf">Live database</span>
+          <span>Live profiles</span>
         )}
       </div>
 
+      {source === "seed" && (
+        <p className="mt-2 text-sm text-text-secondary">
+          Live roster search is unavailable. Offline results may not include your profile; try again later.
+        </p>
+      )}
+
       <div
         id={listId}
-        role="listbox"
+        role="region"
         aria-label="Matching player profiles"
+        aria-busy={loading}
         className="mt-3 max-h-72 overflow-y-auto overscroll-contain rounded-xl border border-border bg-field/60 sm:max-h-80"
       >
-        {!hasSearched && (
-          <p className="px-4 py-10 text-center text-sm text-text-muted">
-            Results will scroll here. Pick the profile that is you.
+        {!hasSearched && !loading && (
+          <p className="px-4 py-10 text-center text-sm text-text-secondary">
+            Search for your name, or choose a state to browse available profiles.
           </p>
         )}
 
-        {hasSearched && players.length === 0 && !isPending && (
-          <p className="px-4 py-10 text-center text-sm text-text-muted">
+        {loading && <p className="px-4 py-10 text-center text-sm text-text-secondary">Searching profiles…</p>}
+        {hasSearched && players.length === 0 && !loading && !error && (
+          <p className="px-4 py-10 text-center text-sm text-text-secondary">
             No unclaimed profiles match
             {query ? (
               <>
@@ -204,18 +212,19 @@ export default function ClaimProfileSearch({
                 &quot;{query}&quot;
               </>
             ) : null}
-            . Try another spelling or state.
+            . Try another spelling, state, or player level. Only existing roster profiles can be claimed.
           </p>
         )}
 
         {error && (
-          <p className="px-4 py-6 text-center text-sm text-red-400">{error}</p>
+          <p role="alert" className="px-4 py-6 text-center text-sm text-red-400">{error}</p>
         )}
 
         <ul className="divide-y divide-border">
           {players.map((p) => {
             const selected = selectedSlug === p.slug;
             const meta = [
+              p.competitionLevel === "hs" ? "High school" : p.competitionLevel === "college" ? "College" : null,
               p.sport ? playerSportLabel(p.sport) : null,
               p.position,
               p.classYear ? `Class of ${p.classYear}` : null,
@@ -226,9 +235,10 @@ export default function ClaimProfileSearch({
             const schoolLine = p.schoolName || "Team TBD";
 
             return (
-              <li key={p.id} role="option" aria-selected={selected}>
+              <li key={p.id}>
                 <button
                   type="button"
+                  aria-pressed={selected}
                   onClick={() =>
                     onSelect({
                       id: p.id,

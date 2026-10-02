@@ -21,6 +21,7 @@ export default function TackleScoreDisplay({
   size = "md",
   showLabel = true,
 }: TackleScoreDisplayProps) {
+  const hasScore = typeof score === "number" && Number.isFinite(score) && score >= 1;
   return (
     <div className="flex flex-col items-start">
       {showLabel && (
@@ -30,15 +31,15 @@ export default function TackleScoreDisplay({
       )}
       <div className="flex items-baseline gap-1">
         <span
-          className={`font-[family-name:var(--font-display)] leading-none text-accent ${sizes[size]}`}
+          className={hasScore ? `font-[family-name:var(--font-display)] leading-none text-accent ${sizes[size]}` : "text-sm text-text-secondary"}
         >
-          {formatTackleScore(score)}
+          {hasScore ? formatTackleScore(score) : "Not yet scored"}
         </span>
-        {score != null && !Number.isNaN(score) ? (
+        {hasScore ? (
           <span className="text-sm text-text-muted">/10</span>
         ) : null}
       </div>
-      {confidence && score != null ? (
+      {confidence && hasScore ? (
         <span className="mt-1 text-xs text-text-muted">{confidenceLabel(confidence)}</span>
       ) : null}
     </div>

@@ -176,7 +176,7 @@ export default function PlayerProfileSections({ player }: PlayerProfileSectionsP
         </dl>
       </Section>
 
-      <div className="rounded-xl border border-status-limited/30 bg-status-limited/5 p-4 text-sm text-text-secondary">
+      {player.competitionLevel !== "hs" && <div className="rounded-xl border border-status-limited/30 bg-status-limited/5 p-4 text-sm text-text-secondary">
         <p className="font-medium text-text-primary">College NIL Notice</p>
         <p className="mt-1">
           Disclose deals with your compliance office. Read{" "}
@@ -189,7 +189,7 @@ export default function PlayerProfileSections({ player }: PlayerProfileSectionsP
           </Link>
           .
         </p>
-      </div>
+      </div>}
     </div>
   );
 }
