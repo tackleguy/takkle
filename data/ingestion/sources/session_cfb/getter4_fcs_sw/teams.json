@@ -1,0 +1,632 @@
+[
+  {
+    "id": "231",
+    "displayName": "Furman Paladins",
+    "location": "Furman",
+    "name": "Paladins",
+    "abbreviation": "FUR",
+    "slug": "furman-paladins",
+    "conference": "Southern",
+    "conferenceAbbrev": "SoCon"
+  },
+  {
+    "id": "236",
+    "displayName": "Chattanooga Mocs",
+    "location": "Chattanooga",
+    "name": "Mocs",
+    "abbreviation": "UTC",
+    "slug": "chattanooga-mocs",
+    "conference": "Southern",
+    "conferenceAbbrev": "SoCon"
+  },
+  {
+    "id": "2193",
+    "displayName": "East Tennessee State Buccaneers",
+    "location": "East Tennessee State",
+    "name": "Buccaneers",
+    "abbreviation": "ETSU",
+    "slug": "east-tennessee-state-buccaneers",
+    "conference": "Southern",
+    "conferenceAbbrev": "SoCon"
+  },
+  {
+    "id": "2382",
+    "displayName": "Mercer Bears",
+    "location": "Mercer",
+    "name": "Bears",
+    "abbreviation": "MER",
+    "slug": "mercer-bears",
+    "conference": "Southern",
+    "conferenceAbbrev": "SoCon"
+  },
+  {
+    "id": "2535",
+    "displayName": "Samford Bulldogs",
+    "location": "Samford",
+    "name": "Bulldogs",
+    "abbreviation": "SAM",
+    "slug": "samford-bulldogs",
+    "conference": "Southern",
+    "conferenceAbbrev": "SoCon"
+  },
+  {
+    "id": "2643",
+    "displayName": "The Citadel Bulldogs",
+    "location": "The Citadel",
+    "name": "Bulldogs",
+    "abbreviation": "CIT",
+    "slug": "the-citadel-bulldogs",
+    "conference": "Southern",
+    "conferenceAbbrev": "SoCon"
+  },
+  {
+    "id": "2678",
+    "displayName": "VMI Keydets",
+    "location": "VMI",
+    "name": "Keydets",
+    "abbreviation": "VMI",
+    "slug": "vmi-keydets",
+    "conference": "Southern",
+    "conferenceAbbrev": "SoCon"
+  },
+  {
+    "id": "2717",
+    "displayName": "Western Carolina Catamounts",
+    "location": "Western Carolina",
+    "name": "Catamounts",
+    "abbreviation": "WCU",
+    "slug": "western-carolina-catamounts",
+    "conference": "Southern",
+    "conferenceAbbrev": "SoCon"
+  },
+  {
+    "id": "2747",
+    "displayName": "Wofford Terriers",
+    "location": "Wofford",
+    "name": "Terriers",
+    "abbreviation": "WOF",
+    "slug": "wofford-terriers",
+    "conference": "Southern",
+    "conferenceAbbrev": "SoCon"
+  },
+  {
+    "id": "292",
+    "displayName": "UT Rio Grande Valley Vaqueros",
+    "location": "UT Rio Grande Valley",
+    "name": "Vaqueros",
+    "abbreviation": "RGV",
+    "slug": "ut-rio-grande-valley-vaqueros",
+    "conference": "Southland",
+    "conferenceAbbrev": "SLC"
+  },
+  {
+    "id": "2277",
+    "displayName": "Houston Christian Huskies",
+    "location": "Houston Christian",
+    "name": "Huskies",
+    "abbreviation": "HCU",
+    "slug": "houston-christian-huskies",
+    "conference": "Southland",
+    "conferenceAbbrev": "SLC"
+  },
+  {
+    "id": "2320",
+    "displayName": "Lamar Cardinals",
+    "location": "Lamar",
+    "name": "Cardinals",
+    "abbreviation": "LAM",
+    "slug": "lamar-cardinals",
+    "conference": "Southland",
+    "conferenceAbbrev": "SLC"
+  },
+  {
+    "id": "2377",
+    "displayName": "McNeese Cowboys",
+    "location": "McNeese",
+    "name": "Cowboys",
+    "abbreviation": "MCN",
+    "slug": "mcneese-cowboys",
+    "conference": "Southland",
+    "conferenceAbbrev": "SLC"
+  },
+  {
+    "id": "2447",
+    "displayName": "Nicholls Colonels",
+    "location": "Nicholls",
+    "name": "Colonels",
+    "abbreviation": "NICH",
+    "slug": "nicholls-colonels",
+    "conference": "Southland",
+    "conferenceAbbrev": "SLC"
+  },
+  {
+    "id": "2466",
+    "displayName": "Northwestern State Demons",
+    "location": "Northwestern State",
+    "name": "Demons",
+    "abbreviation": "NWST",
+    "slug": "northwestern-state-demons",
+    "conference": "Southland",
+    "conferenceAbbrev": "SLC"
+  },
+  {
+    "id": "2545",
+    "displayName": "SE Louisiana Lions",
+    "location": "SE Louisiana",
+    "name": "Lions",
+    "abbreviation": "SELA",
+    "slug": "se-louisiana-lions",
+    "conference": "Southland",
+    "conferenceAbbrev": "SLC"
+  },
+  {
+    "id": "2617",
+    "displayName": "Stephen F. Austin Lumberjacks",
+    "location": "Stephen F. Austin",
+    "name": "Lumberjacks",
+    "abbreviation": "SFA",
+    "slug": "stephen-f-austin-lumberjacks",
+    "conference": "Southland",
+    "conferenceAbbrev": "SLC"
+  },
+  {
+    "id": "2837",
+    "displayName": "East Texas A&M Lions",
+    "location": "East Texas A&M",
+    "name": "Lions",
+    "abbreviation": "ETAM",
+    "slug": "east-texas-am-lions",
+    "conference": "Southland",
+    "conferenceAbbrev": "SLC"
+  },
+  {
+    "id": "2916",
+    "displayName": "Incarnate Word Cardinals",
+    "location": "Incarnate Word",
+    "name": "Cardinals",
+    "abbreviation": "UIW",
+    "slug": "incarnate-word-cardinals",
+    "conference": "Southland",
+    "conferenceAbbrev": "SLC"
+  },
+  {
+    "id": "253",
+    "displayName": "Southern Utah Thunderbirds",
+    "location": "Southern Utah",
+    "name": "Thunderbirds",
+    "abbreviation": "SUU",
+    "slug": "southern-utah-thunderbirds",
+    "conference": "United Athletic",
+    "conferenceAbbrev": "UAC"
+  },
+  {
+    "id": "2000",
+    "displayName": "Abilene Christian Wildcats",
+    "location": "Abilene Christian",
+    "name": "Wildcats",
+    "abbreviation": "ACU",
+    "slug": "abilene-christian-wildcats",
+    "conference": "United Athletic",
+    "conferenceAbbrev": "UAC"
+  },
+  {
+    "id": "2046",
+    "displayName": "Austin Peay Governors",
+    "location": "Austin Peay",
+    "name": "Governors",
+    "abbreviation": "APSU",
+    "slug": "austin-peay-governors",
+    "conference": "United Athletic",
+    "conferenceAbbrev": "UAC"
+  },
+  {
+    "id": "2110",
+    "displayName": "Central Arkansas Bears",
+    "location": "Central Arkansas",
+    "name": "Bears",
+    "abbreviation": "CARK",
+    "slug": "central-arkansas-bears",
+    "conference": "United Athletic",
+    "conferenceAbbrev": "UAC"
+  },
+  {
+    "id": "2198",
+    "displayName": "Eastern Kentucky Colonels",
+    "location": "Eastern Kentucky",
+    "name": "Colonels",
+    "abbreviation": "EKU",
+    "slug": "eastern-kentucky-colonels",
+    "conference": "United Athletic",
+    "conferenceAbbrev": "UAC"
+  },
+  {
+    "id": "2453",
+    "displayName": "North Alabama Lions",
+    "location": "North Alabama",
+    "name": "Lions",
+    "abbreviation": "UNA",
+    "slug": "north-alabama-lions",
+    "conference": "United Athletic",
+    "conferenceAbbrev": "UAC"
+  },
+  {
+    "id": "2627",
+    "displayName": "Tarleton State Texans",
+    "location": "Tarleton State",
+    "name": "Texans",
+    "abbreviation": "TAR",
+    "slug": "tarleton-state-texans",
+    "conference": "United Athletic",
+    "conferenceAbbrev": "UAC"
+  },
+  {
+    "id": "2698",
+    "displayName": "West Georgia Wolves",
+    "location": "West Georgia",
+    "name": "Wolves",
+    "abbreviation": "WES",
+    "slug": "west-georgia-wolves",
+    "conference": "United Athletic",
+    "conferenceAbbrev": "UAC"
+  },
+  {
+    "id": "3101",
+    "displayName": "Utah Tech Trailblazers",
+    "location": "Utah Tech",
+    "name": "Trailblazers",
+    "abbreviation": "UTU",
+    "slug": "utah-tech-trailblazers",
+    "conference": "United Athletic",
+    "conferenceAbbrev": "UAC"
+  },
+  {
+    "id": "2127",
+    "displayName": "Charleston Southern Buccaneers",
+    "location": "Charleston Southern",
+    "name": "Buccaneers",
+    "abbreviation": "CHSO",
+    "slug": "charleston-southern-buccaneers",
+    "conference": "Ohio Valley",
+    "conferenceAbbrev": "OVC"
+  },
+  {
+    "id": "2197",
+    "displayName": "Eastern Illinois Panthers",
+    "location": "Eastern Illinois",
+    "name": "Panthers",
+    "abbreviation": "EIU",
+    "slug": "eastern-illinois-panthers",
+    "conference": "Ohio Valley",
+    "conferenceAbbrev": "OVC"
+  },
+  {
+    "id": "2241",
+    "displayName": "Gardner-Webb Runnin' Bulldogs",
+    "location": "Gardner-Webb",
+    "name": "Runnin' Bulldogs",
+    "abbreviation": "GWEB",
+    "slug": "gardner-webb-runnin-bulldogs",
+    "conference": "Ohio Valley",
+    "conferenceAbbrev": "OVC"
+  },
+  {
+    "id": "2546",
+    "displayName": "Southeast Missouri State Redhawks",
+    "location": "Southeast Missouri State",
+    "name": "Redhawks",
+    "abbreviation": "SEMO",
+    "slug": "southeast-missouri-state-redhawks",
+    "conference": "Ohio Valley",
+    "conferenceAbbrev": "OVC"
+  },
+  {
+    "id": "2630",
+    "displayName": "UT Martin Skyhawks",
+    "location": "UT Martin",
+    "name": "Skyhawks",
+    "abbreviation": "UTM",
+    "slug": "ut-martin-skyhawks",
+    "conference": "Ohio Valley",
+    "conferenceAbbrev": "OVC"
+  },
+  {
+    "id": "2634",
+    "displayName": "Tennessee State Tigers",
+    "location": "Tennessee State",
+    "name": "Tigers",
+    "abbreviation": "TNST",
+    "slug": "tennessee-state-tigers",
+    "conference": "Ohio Valley",
+    "conferenceAbbrev": "OVC"
+  },
+  {
+    "id": "2635",
+    "displayName": "Tennessee Tech Golden Eagles",
+    "location": "Tennessee Tech",
+    "name": "Golden Eagles",
+    "abbreviation": "TNTC",
+    "slug": "tennessee-tech-golden-eagles",
+    "conference": "Ohio Valley",
+    "conferenceAbbrev": "OVC"
+  },
+  {
+    "id": "2710",
+    "displayName": "Western Illinois Leathernecks",
+    "location": "Western Illinois",
+    "name": "Leathernecks",
+    "abbreviation": "WIU",
+    "slug": "western-illinois-leathernecks",
+    "conference": "Ohio Valley",
+    "conferenceAbbrev": "OVC"
+  },
+  {
+    "id": "2815",
+    "displayName": "Lindenwood Lions",
+    "location": "Lindenwood",
+    "name": "Lions",
+    "abbreviation": "LIN",
+    "slug": "lindenwood-lions",
+    "conference": "Ohio Valley",
+    "conferenceAbbrev": "OVC"
+  },
+  {
+    "id": "50",
+    "displayName": "Florida A&M Rattlers",
+    "location": "Florida A&M",
+    "name": "Rattlers",
+    "abbreviation": "FAMU",
+    "slug": "florida-am-rattlers",
+    "conference": "SWAC",
+    "conferenceAbbrev": "SWAC"
+  },
+  {
+    "id": "2010",
+    "displayName": "Alabama A&M Bulldogs",
+    "location": "Alabama A&M",
+    "name": "Bulldogs",
+    "abbreviation": "AAMU",
+    "slug": "alabama-am-bulldogs",
+    "conference": "SWAC",
+    "conferenceAbbrev": "SWAC"
+  },
+  {
+    "id": "2011",
+    "displayName": "Alabama State Hornets",
+    "location": "Alabama State",
+    "name": "Hornets",
+    "abbreviation": "ALST",
+    "slug": "alabama-state-hornets",
+    "conference": "SWAC",
+    "conferenceAbbrev": "SWAC"
+  },
+  {
+    "id": "2016",
+    "displayName": "Alcorn State Braves",
+    "location": "Alcorn State",
+    "name": "Braves",
+    "abbreviation": "ALCN",
+    "slug": "alcorn-state-braves",
+    "conference": "SWAC",
+    "conferenceAbbrev": "SWAC"
+  },
+  {
+    "id": "2029",
+    "displayName": "Arkansas-Pine Bluff Golden Lions",
+    "location": "Arkansas-Pine Bluff",
+    "name": "Golden Lions",
+    "abbreviation": "UAPB",
+    "slug": "arkansas-pine-bluff-golden-lions",
+    "conference": "SWAC",
+    "conferenceAbbrev": "SWAC"
+  },
+  {
+    "id": "2065",
+    "displayName": "Bethune-Cookman Wildcats",
+    "location": "Bethune-Cookman",
+    "name": "Wildcats",
+    "abbreviation": "BCU",
+    "slug": "bethune-cookman-wildcats",
+    "conference": "SWAC",
+    "conferenceAbbrev": "SWAC"
+  },
+  {
+    "id": "2296",
+    "displayName": "Jackson State Tigers",
+    "location": "Jackson State",
+    "name": "Tigers",
+    "abbreviation": "JKST",
+    "slug": "jackson-state-tigers",
+    "conference": "SWAC",
+    "conferenceAbbrev": "SWAC"
+  },
+  {
+    "id": "2400",
+    "displayName": "Mississippi Valley State Delta Devils",
+    "location": "Mississippi Valley State",
+    "name": "Delta Devils",
+    "abbreviation": "MVSU",
+    "slug": "mississippi-valley-state-delta-devils",
+    "conference": "SWAC",
+    "conferenceAbbrev": "SWAC"
+  },
+  {
+    "id": "2504",
+    "displayName": "Prairie View A&M Panthers",
+    "location": "Prairie View A&M",
+    "name": "Panthers",
+    "abbreviation": "PV",
+    "slug": "prairie-view-am-panthers",
+    "conference": "SWAC",
+    "conferenceAbbrev": "SWAC"
+  },
+  {
+    "id": "2582",
+    "displayName": "Southern Jaguars",
+    "location": "Southern",
+    "name": "Jaguars",
+    "abbreviation": "SOU",
+    "slug": "southern-jaguars",
+    "conference": "SWAC",
+    "conferenceAbbrev": "SWAC"
+  },
+  {
+    "id": "2640",
+    "displayName": "Texas Southern Tigers",
+    "location": "Texas Southern",
+    "name": "Tigers",
+    "abbreviation": "TXSO",
+    "slug": "texas-southern-tigers",
+    "conference": "SWAC",
+    "conferenceAbbrev": "SWAC"
+  },
+  {
+    "id": "2755",
+    "displayName": "Grambling Tigers",
+    "location": "Grambling",
+    "name": "Tigers",
+    "abbreviation": "GRAM",
+    "slug": "grambling-tigers",
+    "conference": "SWAC",
+    "conferenceAbbrev": "SWAC"
+  },
+  {
+    "id": "47",
+    "displayName": "Howard Bison",
+    "location": "Howard",
+    "name": "Bison",
+    "abbreviation": "HOW",
+    "slug": "howard-bison",
+    "conference": "MEAC",
+    "conferenceAbbrev": "MEAC"
+  },
+  {
+    "id": "2169",
+    "displayName": "Delaware State Hornets",
+    "location": "Delaware State",
+    "name": "Hornets",
+    "abbreviation": "DSU",
+    "slug": "delaware-state-hornets",
+    "conference": "MEAC",
+    "conferenceAbbrev": "MEAC"
+  },
+  {
+    "id": "2415",
+    "displayName": "Morgan State Bears",
+    "location": "Morgan State",
+    "name": "Bears",
+    "abbreviation": "MORG",
+    "slug": "morgan-state-bears",
+    "conference": "MEAC",
+    "conferenceAbbrev": "MEAC"
+  },
+  {
+    "id": "2428",
+    "displayName": "North Carolina Central Eagles",
+    "location": "North Carolina Central",
+    "name": "Eagles",
+    "abbreviation": "NCCU",
+    "slug": "north-carolina-central-eagles",
+    "conference": "MEAC",
+    "conferenceAbbrev": "MEAC"
+  },
+  {
+    "id": "2450",
+    "displayName": "Norfolk State Spartans",
+    "location": "Norfolk State",
+    "name": "Spartans",
+    "abbreviation": "NORF",
+    "slug": "norfolk-state-spartans",
+    "conference": "MEAC",
+    "conferenceAbbrev": "MEAC"
+  },
+  {
+    "id": "2569",
+    "displayName": "South Carolina State Bulldogs",
+    "location": "South Carolina State",
+    "name": "Bulldogs",
+    "abbreviation": "SCST",
+    "slug": "south-carolina-state-bulldogs",
+    "conference": "MEAC",
+    "conferenceAbbrev": "MEAC"
+  },
+  {
+    "id": "13",
+    "displayName": "Cal Poly Mustangs",
+    "location": "Cal Poly",
+    "name": "Mustangs",
+    "abbreviation": "CP",
+    "slug": "cal-poly-mustangs",
+    "conference": "Big Sky",
+    "conferenceAbbrev": "Big Sky"
+  },
+  {
+    "id": "16",
+    "displayName": "Sacramento State Hornets",
+    "location": "Sacramento State",
+    "name": "Hornets",
+    "abbreviation": "SAC",
+    "slug": "sacramento-state-hornets",
+    "conference": "Big Sky",
+    "conferenceAbbrev": "Big Sky"
+  },
+  {
+    "id": "302",
+    "displayName": "UC Davis Aggies",
+    "location": "UC Davis",
+    "name": "Aggies",
+    "abbreviation": "UCD",
+    "slug": "uc-davis-aggies",
+    "conference": "Big Sky",
+    "conferenceAbbrev": "Big Sky"
+  },
+  {
+    "id": "304",
+    "displayName": "Idaho State Bengals",
+    "location": "Idaho State",
+    "name": "Bengals",
+    "abbreviation": "IDST",
+    "slug": "idaho-state-bengals",
+    "conference": "Big Sky",
+    "conferenceAbbrev": "Big Sky"
+  },
+  {
+    "id": "2458",
+    "displayName": "Northern Colorado Bears",
+    "location": "Northern Colorado",
+    "name": "Bears",
+    "abbreviation": "UNCO",
+    "slug": "northern-colorado-bears",
+    "conference": "Big Sky",
+    "conferenceAbbrev": "Big Sky"
+  },
+  {
+    "id": "2464",
+    "displayName": "Northern Arizona Lumberjacks",
+    "location": "Northern Arizona",
+    "name": "Lumberjacks",
+    "abbreviation": "NAU",
+    "slug": "northern-arizona-lumberjacks",
+    "conference": "Big Sky",
+    "conferenceAbbrev": "Big Sky"
+  },
+  {
+    "id": "2502",
+    "displayName": "Portland State Vikings",
+    "location": "Portland State",
+    "name": "Vikings",
+    "abbreviation": "PRST",
+    "slug": "portland-state-vikings",
+    "conference": "Big Sky",
+    "conferenceAbbrev": "Big Sky"
+  },
+  {
+    "id": "2692",
+    "displayName": "Weber State Wildcats",
+    "location": "Weber State",
+    "name": "Wildcats",
+    "abbreviation": "WEB",
+    "slug": "weber-state-wildcats",
+    "conference": "Big Sky",
+    "conferenceAbbrev": "Big Sky"
+  }
+]

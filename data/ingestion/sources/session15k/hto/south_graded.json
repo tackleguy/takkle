@@ -1,0 +1,56 @@
+[
+  {
+    "slug": "BASH-FOOTBALL",
+    "state": "FL",
+    "school": "Bears",
+    "title": "Bears Fall 2026 Roster",
+    "n": 55,
+    "year_kind": "int",
+    "sample_years": [
+      2027,
+      2027,
+      2027,
+      2029,
+      2029,
+      2027,
+      2027,
+      2027
+    ]
+  },
+  {
+    "slug": "BVSWTIMBERWOLVESFOOT",
+    "state": "TX",
+    "school": "Timberwolves",
+    "title": "Timberwolves Fall 2026 Roster",
+    "n": 61,
+    "year_kind": "str",
+    "sample_years": [
+      "FR",
+      "FR",
+      "JR",
+      "SO",
+      "JR",
+      "FR",
+      "SO",
+      "JR"
+    ]
+  },
+  {
+    "slug": "CLEARFALLSFOOTBALL",
+    "state": "TX",
+    "school": "CLEARFALLSFOOTBALL",
+    "title": "Varsity Fall 2026 Roster",
+    "n": 63,
+    "year_kind": "int",
+    "sample_years": [
+      2027,
+      2027,
+      2027,
+      2027,
+      2027,
+      2027,
+      2028,
+      2027
+    ]
+  }
+]

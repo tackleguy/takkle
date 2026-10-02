@@ -16,5 +16,5 @@ export default function ClaimReviewButtons({ claimId }: { claimId: string }) {
     } catch (err) { setError(err instanceof Error ? err.message : "Unable to save review."); }
     finally { setBusy(false); }
   }
-  return <div className="mt-4"><p className="mb-3 text-sm text-text-secondary">Approve only after independently verifying the player’s identity and school details.</p><div className="flex gap-3"><Button disabled={busy} onClick={() => void review(true)}>Approve verified claim</Button><Button variant="secondary" disabled={busy} onClick={() => void review(false)}>Reject claim</Button></div>{error && <p role="alert" className="mt-2 text-sm">{error}</p>}</div>;
+  return <div className="mt-4"><p className="mb-3 text-sm text-text-secondary">Confirm school email proof, jersey/season match, domain registry status, and notes before approving. Reject when signals don’t line up.</p><div className="flex gap-3"><Button disabled={busy} onClick={() => void review(true)}>Approve verified claim</Button><Button variant="secondary" disabled={busy} onClick={() => void review(false)}>Reject claim</Button></div>{error && <p role="alert" className="mt-2 text-sm">{error}</p>}</div>;
 }

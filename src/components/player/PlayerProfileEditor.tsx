@@ -50,14 +50,19 @@ export default function PlayerProfileEditor({ player }: { player: Player }) {
       <form onSubmit={event => submit(event, "details")} className="rounded-xl border border-border bg-bg-card p-5 sm:p-6">
         <h2 className="text-2xl">Player details</h2>
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
-          <label className="text-sm text-text-secondary">First name<input name="firstName" required maxLength={80} defaultValue={player.firstName} className={inputClass} /></label>
-          <label className="text-sm text-text-secondary">Last name<input name="lastName" required maxLength={80} defaultValue={player.lastName} className={inputClass} /></label>
-          <label className="text-sm text-text-secondary sm:col-span-2">College / school<input name="collegeName" required minLength={2} maxLength={160} defaultValue={playerSchoolName(player) === "School not listed" ? "" : playerSchoolName(player)} className={inputClass} /></label>
+          <div className="text-sm text-text-secondary">
+            <p className="text-text-primary">Name</p>
+            <p className="mt-1">{player.firstName} {player.lastName}</p>
+          </div>
+          <div className="text-sm text-text-secondary">
+            <p className="text-text-primary">College / school</p>
+            <p className="mt-1">{playerSchoolName(player)}</p>
+          </div>
           <label className="text-sm text-text-secondary">Height (inches)<input name="heightInches" type="number" min={48} max={96} step="0.1" placeholder="e.g. 74" defaultValue={player.heightInches || ""} className={inputClass} /></label>
           <label className="text-sm text-text-secondary">Weight (lbs)<input name="weightLbs" type="number" min={80} max={500} step="1" placeholder="e.g. 215" defaultValue={player.weightLbs || ""} className={inputClass} /></label>
         </div>
-        <p className="mt-3 text-sm text-text-secondary">Leave a measurement blank if it isn’t available.</p>
-        <Button type="submit" disabled={busy} className="mt-5">{busy ? "Saving…" : "Save player details"}</Button>
+        <p className="mt-3 text-sm text-text-secondary">Roster name and school stay locked after verification. Contact support for identity corrections. Leave a measurement blank if it isn’t available.</p>
+        <Button type="submit" disabled={busy} className="mt-5">{busy ? "Saving…" : "Save measurements"}</Button>
       </form>
 
       <section className="rounded-xl border border-border bg-bg-card p-5 sm:p-6">

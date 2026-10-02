@@ -1,0 +1,14 @@
+[
+  {
+    "id": "a11a0000-5c10-4101-9a11-00000000b002",
+    "name": "High School Athletics Football Roster",
+    "source_type": "school_site",
+    "base_url": null
+  },
+  {
+    "id": "a11a0000-1fca-41fc-91fc-000000000027",
+    "name": "Indiana Football Coaches Association Junior All-State",
+    "source_type": "association",
+    "base_url": "https://ifca.net/all-state-teams/"
+  }
+]

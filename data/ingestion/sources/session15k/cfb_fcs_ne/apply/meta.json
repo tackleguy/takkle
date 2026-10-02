@@ -1,0 +1,14 @@
+{
+  "schools": 67,
+  "players": 6610,
+  "batches": 83,
+  "by_conf": {
+    "CAA": 1374,
+    "Ivy": 786,
+    "Patriot": 775,
+    "NEC": 879,
+    "Pioneer": 1097,
+    "MVFC": 999,
+    "Big Sky": 700
+  }
+}

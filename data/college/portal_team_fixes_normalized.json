@@ -1,0 +1,632 @@
+[
+  {
+    "id": "6575e7c6-b440-5201-b719-c0f05eb3f913",
+    "college_name": "Texas A&M Aggies",
+    "source_school": "Texas A&M Aggies",
+    "conference": "SEC",
+    "division": "fbs"
+  },
+  {
+    "id": "0ba176e4-cf5d-5f54-962b-708cde04a574",
+    "college_name": "South Carolina Gamecocks",
+    "source_school": "South Carolina Gamecocks",
+    "conference": "SEC",
+    "division": "fbs"
+  },
+  {
+    "id": "106c5f5f-bf80-55fc-8a9d-d23eae274be0",
+    "college_name": "Miami Hurricanes",
+    "source_school": "Miami Hurricanes",
+    "conference": "ACC",
+    "division": "fbs"
+  },
+  {
+    "id": "4166d7df-1b83-5ea0-a85d-d1e1f80fdd74",
+    "college_name": "LSU Tigers",
+    "source_school": "LSU Tigers",
+    "conference": "SEC",
+    "division": "fbs"
+  },
+  {
+    "id": "47316f55-0472-5814-8e71-292b9ccbbe38",
+    "college_name": "Texas Tech Red Raiders",
+    "source_school": "Texas Tech Red Raiders",
+    "conference": "Big 12",
+    "division": "fbs"
+  },
+  {
+    "id": "4b5919d3-5010-51d7-8634-6d77a4f993b0",
+    "college_name": "Texas Tech Red Raiders",
+    "source_school": "Texas Tech Red Raiders",
+    "conference": "Big 12",
+    "division": "fbs"
+  },
+  {
+    "id": "615659b6-891c-56f2-8dce-206df3613d2e",
+    "college_name": "Texas Longhorns",
+    "source_school": "Texas Longhorns",
+    "conference": "SEC",
+    "division": "fbs"
+  },
+  {
+    "id": "62719bdc-ed0a-5e36-94e2-bfd336dbaa35",
+    "college_name": "Miami Hurricanes",
+    "source_school": "Miami Hurricanes",
+    "conference": "ACC",
+    "division": "fbs"
+  },
+  {
+    "id": "88497748-5f53-52a2-9ad4-1e47f3e16c46",
+    "college_name": "Indiana Hoosiers",
+    "source_school": "Indiana Hoosiers",
+    "conference": "Big Ten",
+    "division": "fbs"
+  },
+  {
+    "id": "973761a8-ea91-56c5-90b7-e23ea91137b8",
+    "college_name": "Auburn Tigers",
+    "source_school": "Auburn Tigers",
+    "conference": "SEC",
+    "division": "fbs"
+  },
+  {
+    "id": "9d0ea05b-416a-5147-9953-fed2fbba3ad8",
+    "college_name": "Oregon Ducks",
+    "source_school": "Oregon Ducks",
+    "conference": "Big Ten",
+    "division": "fbs"
+  },
+  {
+    "id": "b8f6155b-8049-5e71-86bb-186b6fb40d14",
+    "college_name": "Texas A&M Aggies",
+    "source_school": "Texas A&M Aggies",
+    "conference": "SEC",
+    "division": "fbs"
+  },
+  {
+    "id": "b9e0329f-67dd-5453-a533-6acb95704af8",
+    "college_name": "Virginia Cavaliers",
+    "source_school": "Virginia Cavaliers",
+    "conference": "ACC",
+    "division": "fbs"
+  },
+  {
+    "id": "f9da4a10-b63b-5884-ac6e-a34982bc2cd7",
+    "college_name": "Georgia Tech Yellow Jackets",
+    "source_school": "Georgia Tech Yellow Jackets",
+    "conference": "ACC",
+    "division": "fbs"
+  },
+  {
+    "id": "09e65246-597f-500d-96a6-2218dbccc9b5",
+    "college_name": "Ohio State Buckeyes",
+    "source_school": "Ohio State Buckeyes",
+    "conference": "Big Ten",
+    "division": "fbs"
+  },
+  {
+    "id": "0a2a92b1-dc64-50c1-99b8-a18d464a7a74",
+    "college_name": "Ohio State Buckeyes",
+    "source_school": "Ohio State Buckeyes",
+    "conference": "Big Ten",
+    "division": "fbs"
+  },
+  {
+    "id": "0b89a682-87b4-5588-bcc4-629d7db72ee5",
+    "college_name": "Alabama Crimson Tide",
+    "source_school": "Alabama Crimson Tide",
+    "conference": "SEC",
+    "division": "fbs"
+  },
+  {
+    "id": "0edd567b-b849-5f40-8766-0e07b6ce7553",
+    "college_name": "BYU Cougars",
+    "source_school": "BYU Cougars",
+    "conference": "Big 12",
+    "division": "fbs"
+  },
+  {
+    "id": "05410cc8-61ec-5dbc-92bd-ec11fb3371d2",
+    "college_name": "Ole Miss Rebels",
+    "source_school": "Ole Miss Rebels",
+    "conference": "SEC",
+    "division": "fbs"
+  },
+  {
+    "id": "2b163e9a-6dae-51e3-a76a-b4d0f2172b34",
+    "college_name": "Washington Huskies",
+    "source_school": "Washington Huskies",
+    "conference": "Big Ten",
+    "division": "fbs"
+  },
+  {
+    "id": "3b31f4ae-0125-5742-af72-e9caf1da538b",
+    "college_name": "California Golden Bears",
+    "source_school": "California Golden Bears",
+    "conference": "ACC",
+    "division": "fbs"
+  },
+  {
+    "id": "3ca527a7-b2b9-535b-9568-12c0ee45a5e0",
+    "college_name": "Missouri Tigers",
+    "source_school": "Missouri Tigers",
+    "conference": "SEC",
+    "division": "fbs"
+  },
+  {
+    "id": "3eb821ae-8084-54d0-8618-b7b85b51e57a",
+    "college_name": "Indiana Hoosiers",
+    "source_school": "Indiana Hoosiers",
+    "conference": "Big Ten",
+    "division": "fbs"
+  },
+  {
+    "id": "448d2f0a-f54b-54bc-9910-e3213671fcc5",
+    "college_name": "Vanderbilt Commodores",
+    "source_school": "Vanderbilt Commodores",
+    "conference": "SEC",
+    "division": "fbs"
+  },
+  {
+    "id": "45e903f8-a6cc-5fca-a45d-0fce406f3b21",
+    "college_name": "Kentucky Wildcats",
+    "source_school": "Kentucky Wildcats",
+    "conference": "SEC",
+    "division": "fbs"
+  },
+  {
+    "id": "4df79ab2-c9eb-5ce9-9287-4cc39d9900a9",
+    "college_name": "USC Trojans",
+    "source_school": "USC Trojans",
+    "conference": "Big Ten",
+    "division": "fbs"
+  },
+  {
+    "id": "4f78d8c6-a027-5c55-a987-f4491cf85deb",
+    "college_name": "Louisville Cardinals",
+    "source_school": "Louisville Cardinals",
+    "conference": "ACC",
+    "division": "fbs"
+  },
+  {
+    "id": "5199d5e6-0a83-5a43-8a18-c250cf4810e4",
+    "college_name": "Texas Longhorns",
+    "source_school": "Texas Longhorns",
+    "conference": "SEC",
+    "division": "fbs"
+  },
+  {
+    "id": "5250acee-82b7-5f7f-ac2e-f9cb0bd5dc59",
+    "college_name": "Indiana Hoosiers",
+    "source_school": "Indiana Hoosiers",
+    "conference": "Big Ten",
+    "division": "fbs"
+  },
+  {
+    "id": "6a81269d-3ce8-574b-8f00-28fefe1ba6f9",
+    "college_name": "Texas Longhorns",
+    "source_school": "Texas Longhorns",
+    "conference": "SEC",
+    "division": "fbs"
+  },
+  {
+    "id": "7660d271-e8c6-58e8-99eb-8850d8c3ba8a",
+    "college_name": "Florida Gators",
+    "source_school": "Florida Gators",
+    "conference": "SEC",
+    "division": "fbs"
+  },
+  {
+    "id": "7ee0a961-3572-56c9-bd98-fc23de0f1432",
+    "college_name": "Tennessee Volunteers",
+    "source_school": "Tennessee Volunteers",
+    "conference": "SEC",
+    "division": "fbs"
+  },
+  {
+    "id": "843f07b4-dd7d-5269-905a-bb09341c7aa2",
+    "college_name": "Alabama Crimson Tide",
+    "source_school": "Alabama Crimson Tide",
+    "conference": "SEC",
+    "division": "fbs"
+  },
+  {
+    "id": "84723adc-4d45-5736-9938-62a3f9c56f2a",
+    "college_name": "Oklahoma Sooners",
+    "source_school": "Oklahoma Sooners",
+    "conference": "SEC",
+    "division": "fbs"
+  },
+  {
+    "id": "99e097a3-ba7e-5c2b-aca6-0a8139e33372",
+    "college_name": "Virginia Tech Hokies",
+    "source_school": "Virginia Tech Hokies",
+    "conference": "ACC",
+    "division": "fbs"
+  },
+  {
+    "id": "a50d1005-30b0-59ea-a14f-7e508183a0c2",
+    "college_name": "Indiana Hoosiers",
+    "source_school": "Indiana Hoosiers",
+    "conference": "Big Ten",
+    "division": "fbs"
+  },
+  {
+    "id": "a86dec35-a607-546c-99ec-d35b39a5b652",
+    "college_name": "Miami Hurricanes",
+    "source_school": "Miami Hurricanes",
+    "conference": "ACC",
+    "division": "fbs"
+  },
+  {
+    "id": "b57ecbce-3a14-5ed3-919a-373c44b4f5aa",
+    "college_name": "Ohio State Buckeyes",
+    "source_school": "Ohio State Buckeyes",
+    "conference": "Big Ten",
+    "division": "fbs"
+  },
+  {
+    "id": "ba78e512-7233-5bd7-9ff6-1d24c984bdfb",
+    "college_name": "Florida State Seminoles",
+    "source_school": "Florida State Seminoles",
+    "conference": "ACC",
+    "division": "fbs"
+  },
+  {
+    "id": "c39b6049-98f9-50d8-b20c-11cdf5179d70",
+    "college_name": "Florida State Seminoles",
+    "source_school": "Florida State Seminoles",
+    "conference": "ACC",
+    "division": "fbs"
+  },
+  {
+    "id": "d05f3c62-e18b-5854-9f20-12509413e70a",
+    "college_name": "Oregon Ducks",
+    "source_school": "Oregon Ducks",
+    "conference": "Big Ten",
+    "division": "fbs"
+  },
+  {
+    "id": "d0f07ed4-0b59-5210-bd9e-0b5538f06244",
+    "college_name": "California Golden Bears",
+    "source_school": "California Golden Bears",
+    "conference": "ACC",
+    "division": "fbs"
+  },
+  {
+    "id": "d82769e4-6bb9-54ef-aaf0-4b879a52d8e5",
+    "college_name": "Texas Longhorns",
+    "source_school": "Texas Longhorns",
+    "conference": "SEC",
+    "division": "fbs"
+  },
+  {
+    "id": "f0570631-513e-56d0-85c8-b4e40a620198",
+    "college_name": "Ole Miss Rebels",
+    "source_school": "Ole Miss Rebels",
+    "conference": "SEC",
+    "division": "fbs"
+  },
+  {
+    "id": "f2c5619f-0815-5443-b737-cc60509d8490",
+    "college_name": "Georgia Tech Yellow Jackets",
+    "source_school": "Georgia Tech Yellow Jackets",
+    "conference": "ACC",
+    "division": "fbs"
+  },
+  {
+    "id": "fe1a30d9-11f1-5f78-ab47-9edfa8b5e910",
+    "college_name": "Texas A&M Aggies",
+    "source_school": "Texas A&M Aggies",
+    "conference": "SEC",
+    "division": "fbs"
+  },
+  {
+    "id": "316feece-4b7e-573c-ba8e-5c76e901facb",
+    "college_name": "Georgia Tech Yellow Jackets",
+    "source_school": "Georgia Tech Yellow Jackets",
+    "conference": "ACC",
+    "division": "fbs"
+  },
+  {
+    "id": "36e46763-2b90-5288-9f5b-227013f5ef09",
+    "college_name": "Arkansas Razorbacks",
+    "source_school": "Arkansas Razorbacks",
+    "conference": "SEC",
+    "division": "fbs"
+  },
+  {
+    "id": "4660bd0a-81df-5aee-9e77-fad51367b00d",
+    "college_name": "Miami Hurricanes",
+    "source_school": "Miami Hurricanes",
+    "conference": "ACC",
+    "division": "fbs"
+  },
+  {
+    "id": "545471a4-c72a-5e0e-9bb9-f0a6bc9fa3d9",
+    "college_name": "Utah Utes",
+    "source_school": "Utah Utes",
+    "conference": "Big 12",
+    "division": "fbs"
+  },
+  {
+    "id": "6a61cb61-3234-5586-9058-fbdf88ea1b36",
+    "college_name": "Louisville Cardinals",
+    "source_school": "Louisville Cardinals",
+    "conference": "ACC",
+    "division": "fbs"
+  },
+  {
+    "id": "6cb4bb06-8149-5cc0-a916-2d59acdbe69b",
+    "college_name": "Ole Miss Rebels",
+    "source_school": "Ole Miss Rebels",
+    "conference": "SEC",
+    "division": "fbs"
+  },
+  {
+    "id": "808cd267-d5cd-56d9-96cb-6a7576eb3b40",
+    "college_name": "Indiana Hoosiers",
+    "source_school": "Indiana Hoosiers",
+    "conference": "Big Ten",
+    "division": "fbs"
+  },
+  {
+    "id": "88c12a88-6a02-55dc-a17f-0110dc9e07ae",
+    "college_name": "Cincinnati Bearcats",
+    "source_school": "Cincinnati Bearcats",
+    "conference": "Big 12",
+    "division": "fbs"
+  },
+  {
+    "id": "a2a2d2a1-8ff1-51bc-8190-20393c375523",
+    "college_name": "Wisconsin Badgers",
+    "source_school": "Wisconsin Badgers",
+    "conference": "Big Ten",
+    "division": "fbs"
+  },
+  {
+    "id": "a5592c55-5726-59e3-a59e-8ff78394bf9f",
+    "college_name": "Penn State Nittany Lions",
+    "source_school": "Penn State Nittany Lions",
+    "conference": "Big Ten",
+    "division": "fbs"
+  },
+  {
+    "id": "c2114c37-6e1f-550d-a4a6-8919023e98e3",
+    "college_name": "Ole Miss Rebels",
+    "source_school": "Ole Miss Rebels",
+    "conference": "SEC",
+    "division": "fbs"
+  },
+  {
+    "id": "df7d4f39-8d2a-5f4d-b521-a4b7a5356b99",
+    "college_name": "Texas A&M Aggies",
+    "source_school": "Texas A&M Aggies",
+    "conference": "SEC",
+    "division": "fbs"
+  },
+  {
+    "id": "f6b7ffec-979a-5e67-87fa-288d3192c2f2",
+    "college_name": "Oklahoma Sooners",
+    "source_school": "Oklahoma Sooners",
+    "conference": "SEC",
+    "division": "fbs"
+  },
+  {
+    "id": "0a609830-df84-54d7-8c01-7b7eb1c239a9",
+    "college_name": "LSU",
+    "source_school": "LSU",
+    "conference": "SEC",
+    "division": "fbs"
+  },
+  {
+    "id": "24151191-2938-5a1c-8dd4-06fc299f4cb0",
+    "college_name": "Auburn",
+    "source_school": "Auburn",
+    "conference": "SEC",
+    "division": "fbs"
+  },
+  {
+    "id": "52168a96-2310-5aab-a270-712616592ca9",
+    "college_name": "Arizona State",
+    "source_school": "Arizona State",
+    "conference": "Big 12",
+    "division": "fbs"
+  },
+  {
+    "id": "56fdf434-b17b-5e95-8423-bd9bbbb98530",
+    "college_name": "Penn State",
+    "source_school": "Penn State",
+    "conference": "Big Ten",
+    "division": "fbs"
+  },
+  {
+    "id": "58699dc0-2d6e-5b6d-a871-92d13973f32c",
+    "college_name": "Texas",
+    "source_school": "Texas",
+    "conference": "SEC",
+    "division": "fbs"
+  },
+  {
+    "id": "6d5e194d-7738-533c-acd8-cf7092bec188",
+    "college_name": "Arizona State",
+    "source_school": "Arizona State",
+    "conference": "Big 12",
+    "division": "fbs"
+  },
+  {
+    "id": "97a5ed85-624d-5e9a-870e-b33955e874c3",
+    "college_name": "LSU",
+    "source_school": "LSU",
+    "conference": "SEC",
+    "division": "fbs"
+  },
+  {
+    "id": "9c3231e0-3bc0-581b-8b25-d77dae3cd3e9",
+    "college_name": "Oklahoma State",
+    "source_school": "Oklahoma State",
+    "conference": "Big 12",
+    "division": "fbs"
+  },
+  {
+    "id": "bb6a1c7a-e33c-5e07-9ced-72ccb2b86801",
+    "college_name": "Louisville",
+    "source_school": "Louisville",
+    "conference": "ACC",
+    "division": "fbs"
+  },
+  {
+    "id": "d67ddce1-ac94-5ce0-b2f8-49c906bdfc2b",
+    "college_name": "Michigan",
+    "source_school": "Michigan",
+    "conference": "Big Ten",
+    "division": "fbs"
+  },
+  {
+    "id": "095d65f0-76f9-5afa-a417-47f69bacdbba",
+    "college_name": "Georgia",
+    "source_school": "Georgia",
+    "conference": "SEC",
+    "division": "fbs"
+  },
+  {
+    "id": "1c1789b8-674a-5dd7-bfbd-d925f0e6dd86",
+    "college_name": "Arizona",
+    "source_school": "Arizona",
+    "conference": "Big 12",
+    "division": "fbs"
+  },
+  {
+    "id": "21801fba-aafc-5a3f-a4a9-530b6e67df73",
+    "college_name": "Miami (OH) RedHawks",
+    "source_school": "Miami (OH) RedHawks",
+    "conference": "MAC",
+    "division": "fbs"
+  },
+  {
+    "id": "2da16113-af51-5e57-b4bd-59cfa2e69ea5",
+    "college_name": "Penn State",
+    "source_school": "Penn State",
+    "conference": "Big Ten",
+    "division": "fbs"
+  },
+  {
+    "id": "1804041c-975e-5b5a-9755-6420e87ca002",
+    "college_name": "James Madison Dukes",
+    "source_school": "James Madison Dukes",
+    "conference": "Sun Belt",
+    "division": "fbs"
+  },
+  {
+    "id": "32c2fd35-b3ef-5241-8563-8ab0c0abd83c",
+    "college_name": "Indiana",
+    "source_school": "Indiana",
+    "conference": "Big Ten",
+    "division": "fbs"
+  },
+  {
+    "id": "49d32967-29f1-543c-ad49-5caa23f101fb",
+    "college_name": "Oklahoma State",
+    "source_school": "Oklahoma State",
+    "conference": "Big 12",
+    "division": "fbs"
+  },
+  {
+    "id": "4beee12d-3911-52cb-9691-1527d5a13ecc",
+    "college_name": "Baylor",
+    "source_school": "Baylor",
+    "conference": "Big 12",
+    "division": "fbs"
+  },
+  {
+    "id": "559e46cf-884f-504b-ba44-c3a308aec492",
+    "college_name": "Michigan",
+    "source_school": "Michigan",
+    "conference": "Big Ten",
+    "division": "fbs"
+  },
+  {
+    "id": "621ccfba-9da0-5952-9efb-be51e312ff8e",
+    "college_name": "Ole Miss",
+    "source_school": "Ole Miss",
+    "conference": "SEC",
+    "division": "fbs"
+  },
+  {
+    "id": "88abf76e-6d01-542b-803e-1af1c6983602",
+    "college_name": "LSU",
+    "source_school": "LSU",
+    "conference": "SEC",
+    "division": "fbs"
+  },
+  {
+    "id": "c280a16c-6264-5d8b-93fb-479d6da7a3f9",
+    "college_name": "Notre Dame",
+    "source_school": "Notre Dame",
+    "conference": "FBS Independents",
+    "division": "fbs"
+  },
+  {
+    "id": "cf87c14c-7bb3-53f5-b8b4-fda1ee53b559",
+    "college_name": "LSU",
+    "source_school": "LSU",
+    "conference": "SEC",
+    "division": "fbs"
+  },
+  {
+    "id": "efd4f509-cdd4-5b37-a99f-99b5c0154b7a",
+    "college_name": "Notre Dame",
+    "source_school": "Notre Dame",
+    "conference": "FBS Independents",
+    "division": "fbs"
+  },
+  {
+    "id": "f672d122-0f76-5a27-a582-b86b3a781968",
+    "college_name": "USC",
+    "source_school": "USC",
+    "conference": "Big Ten",
+    "division": "fbs"
+  },
+  {
+    "id": "f92087d1-0262-5896-9a59-149258b0b370",
+    "college_name": "Alabama",
+    "source_school": "Alabama",
+    "conference": "SEC",
+    "division": "fbs"
+  },
+  {
+    "id": "68707df3-1b48-5eda-b318-11cefd2c0fee",
+    "college_name": "Oklahoma",
+    "source_school": "Oklahoma",
+    "conference": "SEC",
+    "division": "fbs"
+  },
+  {
+    "id": "76570492-3fca-511f-ad09-14f62979348a",
+    "college_name": "UNLV Rebels",
+    "source_school": "UNLV Rebels",
+    "conference": "Mountain West",
+    "division": "fbs"
+  },
+  {
+    "id": "896b31a2-67cb-5256-b9cd-bd8943a11612",
+    "college_name": "Oklahoma State",
+    "source_school": "Oklahoma State",
+    "conference": "Big 12",
+    "division": "fbs"
+  },
+  {
+    "id": "c46401d6-722b-5345-b685-10f97d2ad794",
+    "college_name": "LSU",
+    "source_school": "LSU",
+    "conference": "SEC",
+    "division": "fbs"
+  },
+  {
+    "id": "c667ab8d-1e55-5aa0-a22a-047273a47cd7",
+    "college_name": "TCU",
+    "source_school": "TCU",
+    "conference": "Big 12",
+    "division": "fbs"
+  }
+]

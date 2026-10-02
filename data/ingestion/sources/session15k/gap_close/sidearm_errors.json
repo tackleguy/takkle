@@ -1,0 +1,193 @@
+[
+  {
+    "school": "UMS-Wright Preparatory School",
+    "url": "https://athletics.ums-wright.org/sports/football/roster",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "school": "Archbishop Moeller",
+    "url": "https://moellerathletics.org/sports/football/roster",
+    "reason": "soft404_or_no_class",
+    "title": ""
+  },
+  {
+    "school": "St Edward High School",
+    "url": "https://stedwardathletics.com/sports/football/roster",
+    "error": "<urlopen error [Errno 61] Connection refused>"
+  },
+  {
+    "school": "Brother Rice",
+    "url": "https://brwarriors.com/sports/football/roster",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  },
+  {
+    "school": "Detroit Catholic Central",
+    "url": "https://www.catholiccentral.net/athletics/football/roster",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "school": "Skyridge",
+    "url": "https://skyridgeathletics.com/sports/football/roster",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  },
+  {
+    "school": "Corner Canyon",
+    "url": "https://cornercanyonathletics.com/sports/football/roster",
+    "error": "HTTP Error 308: Permanent Redirect"
+  },
+  {
+    "school": "Dutch Fork",
+    "url": "https://dutchforkathletics.com/sports/football/roster",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  },
+  {
+    "school": "Byrnes",
+    "url": "https://byrnesathletics.com/sports/football/roster",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  },
+  {
+    "school": "Male High School",
+    "url": "https://maleathletics.com/sports/football/roster",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  },
+  {
+    "school": "Trinity Louisville",
+    "url": "https://trinityrocks.com/sports/football/roster",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "school": "Iona Prep",
+    "url": "https://ionaprepathletics.com/sports/football/roster",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  },
+  {
+    "school": "Archbishop Stepinac",
+    "url": "https://stepinacsports.org/sports/football/roster",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  },
+  {
+    "school": "Bellevue High School",
+    "url": "https://bellevueathletics.org/sports/football/roster",
+    "error": "HTTP Error 308: Permanent Redirect"
+  },
+  {
+    "school": "Curtis High School",
+    "url": "https://curtissports.org/sports/football/roster",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  },
+  {
+    "school": "Bothell High School",
+    "url": "https://bothellathletics.com/sports/football/roster",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  },
+  {
+    "school": "Eden Prairie",
+    "url": "https://epeagles.com/sports/football/roster",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  },
+  {
+    "school": "Wayzata",
+    "url": "https://wayzataathletics.com/sports/football/roster",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "school": "Blue Valley Northwest",
+    "url": "https://bvnwathletics.org/sports/football/roster",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  },
+  {
+    "school": "Ankeny",
+    "url": "https://ankenytrojansathletics.com/sports/football/roster",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  },
+  {
+    "school": "Waukee Northwest",
+    "url": "https://northwestathletics.com/sports/football/roster",
+    "error": "<urlopen error timed out>"
+  },
+  {
+    "school": "Bishop Gorman",
+    "url": "https://bishopgormangaels.com/sports/football/roster",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  },
+  {
+    "school": "Servite",
+    "url": "https://serviteathletics.com/sports/football/roster",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  },
+  {
+    "school": "St John Bosco",
+    "url": "https://boscoathletics.com/sports/football/roster",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  },
+  {
+    "school": "La Salle High School Cincinnati",
+    "url": "https://lasalleathletics.com/sports/football/roster",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "school": "Elder High School",
+    "url": "https://elderathletics.com/sports/football/roster",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  },
+  {
+    "school": "Chaminade",
+    "url": "https://chaminadeathletics.com/sports/football/roster",
+    "error": "<urlopen error timed out>"
+  },
+  {
+    "school": "St Francis Prep",
+    "url": "https://sfpathetics.com/sports/football/roster",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  },
+  {
+    "school": "Canisius",
+    "url": "https://canisiusathletics.com/sports/football/roster",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  },
+  {
+    "school": "Salesianum",
+    "url": "https://salesianumathletics.com/sports/football/roster",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  },
+  {
+    "school": "Archmere",
+    "url": "https://archmereathletics.com/sports/football/roster",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  },
+  {
+    "school": "Gonzaga College HS",
+    "url": "https://gonzaga.org/athletics/teams/football/roster",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "school": "DeMatha",
+    "url": "https://dematha.org/athletics/football/roster",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "school": "Good Counsel",
+    "url": "https://www.aghsathletics.org/sports/football/roster",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  },
+  {
+    "school": "St Josephs Prep",
+    "url": "https://sjprephawks.com/sports/football/roster",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  },
+  {
+    "school": "La Salle College HS",
+    "url": "https://lschs.org/athletics/football/roster",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "school": "Don Bosco Prep",
+    "url": "https://donboscoprep.org/athletics/football/roster",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "school": "Bergen Catholic",
+    "url": "https://bergencatholic.org/athletics/football/roster",
+    "error": "HTTP Error 404: Not Found"
+  }
+]

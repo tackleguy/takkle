@@ -1,0 +1,2802 @@
+[
+  {
+    "id": "2000",
+    "name": "Abilene Christian Wildcats",
+    "abbr": "ACU",
+    "group": null,
+    "slug": "abilene-christian-wildcats"
+  },
+  {
+    "id": "2001",
+    "name": "Adams State Grizzlies",
+    "abbr": "ADSU",
+    "group": null,
+    "slug": "adams-state-grizzlies"
+  },
+  {
+    "id": "2003",
+    "name": "Adrian Bulldogs",
+    "abbr": "ADR",
+    "group": null,
+    "slug": "adrian-bulldogs"
+  },
+  {
+    "id": "2005",
+    "name": "Air Force Falcons",
+    "abbr": "AF",
+    "group": null,
+    "slug": "air-force-falcons"
+  },
+  {
+    "id": "2006",
+    "name": "Akron Zips",
+    "abbr": "AKR",
+    "group": null,
+    "slug": "akron-zips"
+  },
+  {
+    "id": "2010",
+    "name": "Alabama A&M Bulldogs",
+    "abbr": "AAMU",
+    "group": null,
+    "slug": "alabama-am-bulldogs"
+  },
+  {
+    "id": "333",
+    "name": "Alabama Crimson Tide",
+    "abbr": "ALA",
+    "group": null,
+    "slug": "alabama-crimson-tide"
+  },
+  {
+    "id": "2011",
+    "name": "Alabama State Hornets",
+    "abbr": "ALST",
+    "group": null,
+    "slug": "alabama-state-hornets"
+  },
+  {
+    "id": "2013",
+    "name": "Albany State Golden Rams",
+    "abbr": "ABSU",
+    "group": null,
+    "slug": "albany-state-golden-rams"
+  },
+  {
+    "id": "2015",
+    "name": "Albright Lions",
+    "abbr": "ALBR",
+    "group": null,
+    "slug": "albright-lions"
+  },
+  {
+    "id": "2016",
+    "name": "Alcorn State Braves",
+    "abbr": "ALCN",
+    "group": null,
+    "slug": "alcorn-state-braves"
+  },
+  {
+    "id": "365",
+    "name": "Alfred Saxons",
+    "abbr": "ALFR",
+    "group": null,
+    "slug": "alfred-saxons"
+  },
+  {
+    "id": "2018",
+    "name": "Allegheny Gators",
+    "abbr": "ALLG",
+    "group": null,
+    "slug": "allegheny-gators"
+  },
+  {
+    "id": "2019",
+    "name": "Allen Yellow Jackets",
+    "abbr": "ALNU",
+    "group": null,
+    "slug": "allen-yellow-jackets"
+  },
+  {
+    "id": "2022",
+    "name": "American International Yellow Jackets",
+    "abbr": "AIC",
+    "group": null,
+    "slug": "american-international-yellow-jackets"
+  },
+  {
+    "id": "7",
+    "name": "Amherst Mammoths",
+    "abbr": "AMH",
+    "group": null,
+    "slug": "amherst-mammoths"
+  },
+  {
+    "id": "2023",
+    "name": "Anderson (IN) Ravens",
+    "abbr": "ANIN",
+    "group": null,
+    "slug": "anderson-in-ravens"
+  },
+  {
+    "id": "2025",
+    "name": "Angelo State Rams",
+    "abbr": "AGSU",
+    "group": null,
+    "slug": "angelo-state-rams"
+  },
+  {
+    "id": "2026",
+    "name": "App State Mountaineers",
+    "abbr": "APP",
+    "group": null,
+    "slug": "app-state-mountaineers"
+  },
+  {
+    "id": "9",
+    "name": "Arizona State Sun Devils",
+    "abbr": "ASU",
+    "group": null,
+    "slug": "arizona-state-sun-devils"
+  },
+  {
+    "id": "12",
+    "name": "Arizona Wildcats",
+    "abbr": "ARIZ",
+    "group": null,
+    "slug": "arizona-wildcats"
+  },
+  {
+    "id": "2028",
+    "name": "Arkansas Monticello Boll Weevils",
+    "abbr": "UAM",
+    "group": null,
+    "slug": "arkansas-monticello-boll-weevils"
+  },
+  {
+    "id": "8",
+    "name": "Arkansas Razorbacks",
+    "abbr": "ARK",
+    "group": null,
+    "slug": "arkansas-razorbacks"
+  },
+  {
+    "id": "2032",
+    "name": "Arkansas State Red Wolves",
+    "abbr": "ARST",
+    "group": null,
+    "slug": "arkansas-state-red-wolves"
+  },
+  {
+    "id": "2033",
+    "name": "Arkansas Tech Wonder Boys",
+    "abbr": "ARTE",
+    "group": null,
+    "slug": "arkansas-tech-wonder-boys"
+  },
+  {
+    "id": "2029",
+    "name": "Arkansas-Pine Bluff Golden Lions",
+    "abbr": "UAPB",
+    "group": null,
+    "slug": "arkansas-pine-bluff-golden-lions"
+  },
+  {
+    "id": "349",
+    "name": "Army Black Knights",
+    "abbr": "ARMY",
+    "group": null,
+    "slug": "army-black-knights"
+  },
+  {
+    "id": "308",
+    "name": "Ashland Eagles",
+    "abbr": "ASH",
+    "group": null,
+    "slug": "ashland-eagles"
+  },
+  {
+    "id": "2038",
+    "name": "Assumption Greyhounds",
+    "abbr": "ASP",
+    "group": null,
+    "slug": "assumption-greyhounds"
+  },
+  {
+    "id": "2",
+    "name": "Auburn Tigers",
+    "abbr": "AUB",
+    "group": null,
+    "slug": "auburn-tigers"
+  },
+  {
+    "id": "124",
+    "name": "Augsburg Auggies",
+    "abbr": "AUGS",
+    "group": null,
+    "slug": "augsburg-auggies"
+  },
+  {
+    "id": "2042",
+    "name": "Augustana (IL) Vikings",
+    "abbr": "AUGC",
+    "group": null,
+    "slug": "augustana-il-vikings"
+  },
+  {
+    "id": "2043",
+    "name": "Augustana (SD) Vikings",
+    "abbr": "AUSD",
+    "group": null,
+    "slug": "augustana-sd-vikings"
+  },
+  {
+    "id": "2044",
+    "name": "Aurora Spartans",
+    "abbr": "AUR",
+    "group": null,
+    "slug": "aurora-spartans"
+  },
+  {
+    "id": "2045",
+    "name": "Austin 'Roos",
+    "abbr": "AUS",
+    "group": null,
+    "slug": "austin-roos"
+  },
+  {
+    "id": "2046",
+    "name": "Austin Peay Governors",
+    "abbr": "APSU",
+    "group": null,
+    "slug": "austin-peay-governors"
+  },
+  {
+    "id": "2047",
+    "name": "Averett Cougars",
+    "abbr": "AVER",
+    "group": null,
+    "slug": "averett-cougars"
+  },
+  {
+    "id": "2048",
+    "name": "Avila University Eagles",
+    "abbr": "AVILA",
+    "group": null,
+    "slug": "avila-university-eagles"
+  },
+  {
+    "id": "2049",
+    "name": "Azusa Pacific Cougars",
+    "abbr": "APU",
+    "group": null,
+    "slug": "azusa-pacific-cougars"
+  },
+  {
+    "id": "495",
+    "name": "BLUEFIELD Ramblin' Rams",
+    "abbr": "BLU",
+    "group": null,
+    "slug": "bluefield-ramblin-rams"
+  },
+  {
+    "id": "252",
+    "name": "BYU Cougars",
+    "abbr": "BYU",
+    "group": null,
+    "slug": "byu-cougars"
+  },
+  {
+    "id": "488",
+    "name": "Baker University Baker",
+    "abbr": "BAK",
+    "group": null,
+    "slug": "baker-university-baker"
+  },
+  {
+    "id": "188",
+    "name": "Baldwin Wallace Yellow Jackets",
+    "abbr": "BW",
+    "group": null,
+    "slug": "baldwin-wallace-yellow-jackets"
+  },
+  {
+    "id": "2050",
+    "name": "Ball State Cardinals",
+    "abbr": "BALL",
+    "group": null,
+    "slug": "ball-state-cardinals"
+  },
+  {
+    "id": "121",
+    "name": "Bates Bobcats",
+    "abbr": "BATE",
+    "group": null,
+    "slug": "bates-bobcats"
+  },
+  {
+    "id": "239",
+    "name": "Baylor Bears",
+    "abbr": "BAY",
+    "group": null,
+    "slug": "baylor-bears"
+  },
+  {
+    "id": "2056",
+    "name": "Belhaven Blazers",
+    "abbr": "BELH",
+    "group": null,
+    "slug": "belhaven-blazers"
+  },
+  {
+    "id": "266",
+    "name": "Beloit Buccaneers",
+    "abbr": "BELO",
+    "group": null,
+    "slug": "beloit-buccaneers"
+  },
+  {
+    "id": "132",
+    "name": "Bemidji State Beavers",
+    "abbr": "BST",
+    "group": null,
+    "slug": "bemidji-state-beavers"
+  },
+  {
+    "id": "490",
+    "name": "Benedict Tigers",
+    "abbr": "BEN",
+    "group": null,
+    "slug": "benedict-tigers"
+  },
+  {
+    "id": "2060",
+    "name": "Bentley Falcons",
+    "abbr": "BENT",
+    "group": null,
+    "slug": "bentley-falcons"
+  },
+  {
+    "id": "492",
+    "name": "Bethany (Ks)",
+    "abbr": "BETHA",
+    "group": null,
+    "slug": "bethany-ks"
+  },
+  {
+    "id": "2062",
+    "name": "Bethany (WV) Bison",
+    "abbr": "BCWV",
+    "group": null,
+    "slug": "bethany-wv-bison"
+  },
+  {
+    "id": "2064",
+    "name": "Bethel University Tennessee Wildcats",
+    "abbr": "BETHTN",
+    "group": null,
+    "slug": "bethel-university-tennessee-wildcats"
+  },
+  {
+    "id": "2065",
+    "name": "Bethune-Cookman Wildcats",
+    "abbr": "BCU",
+    "group": null,
+    "slug": "bethune-cookman-wildcats"
+  },
+  {
+    "id": "2069",
+    "name": "Black Hills State Yellow Jackets",
+    "abbr": "BHSU",
+    "group": null,
+    "slug": "black-hills-state-yellow-jackets"
+  },
+  {
+    "id": "2071",
+    "name": "Bloomsburg Huskies",
+    "abbr": "BBU",
+    "group": null,
+    "slug": "bloomsburg-huskies"
+  },
+  {
+    "id": "2074",
+    "name": "Bluffton Beavers",
+    "abbr": "BLF",
+    "group": null,
+    "slug": "bluffton-beavers"
+  },
+  {
+    "id": "68",
+    "name": "Boise State Broncos",
+    "abbr": "BOIS",
+    "group": null,
+    "slug": "boise-state-broncos"
+  },
+  {
+    "id": "103",
+    "name": "Boston College Eagles",
+    "abbr": "BC",
+    "group": null,
+    "slug": "boston-college-eagles"
+  },
+  {
+    "id": "340",
+    "name": "Bowdoin Polar Bears",
+    "abbr": "BOW",
+    "group": null,
+    "slug": "bowdoin-polar-bears"
+  },
+  {
+    "id": "2075",
+    "name": "Bowie State Bulldogs",
+    "abbr": "BOWE",
+    "group": null,
+    "slug": "bowie-state-bulldogs"
+  },
+  {
+    "id": "189",
+    "name": "Bowling Green Falcons",
+    "abbr": "BGSU",
+    "group": null,
+    "slug": "bowling-green-falcons"
+  },
+  {
+    "id": "2079",
+    "name": "Bridgewater Eagles",
+    "abbr": "BRI",
+    "group": null,
+    "slug": "bridgewater-eagles"
+  },
+  {
+    "id": "18",
+    "name": "Bridgewater State Bears",
+    "abbr": "BRIS",
+    "group": null,
+    "slug": "bridgewater-state-bears"
+  },
+  {
+    "id": "2080",
+    "name": "British Columbia British Col",
+    "abbr": "BBM",
+    "group": null,
+    "slug": "british-columbia-british-col"
+  },
+  {
+    "id": "225",
+    "name": "Brown Bears",
+    "abbr": "BRWN",
+    "group": null,
+    "slug": "brown-bears"
+  },
+  {
+    "id": "2083",
+    "name": "Bucknell Bison",
+    "abbr": "BUCK",
+    "group": null,
+    "slug": "bucknell-bison"
+  },
+  {
+    "id": "63",
+    "name": "Buena Vista Beavers",
+    "abbr": "BVU",
+    "group": null,
+    "slug": "buena-vista-beavers"
+  },
+  {
+    "id": "2084",
+    "name": "Buffalo Bulls",
+    "abbr": "BUF",
+    "group": null,
+    "slug": "buffalo-bulls"
+  },
+  {
+    "id": "2085",
+    "name": "Buffalo State Bengals",
+    "abbr": "BSU",
+    "group": null,
+    "slug": "buffalo-state-bengals"
+  },
+  {
+    "id": "2086",
+    "name": "Butler Bulldogs",
+    "abbr": "BTLR",
+    "group": null,
+    "slug": "butler-bulldogs"
+  },
+  {
+    "id": "2094",
+    "name": "Cal Lutheran Kingsmen",
+    "abbr": "CLU",
+    "group": null,
+    "slug": "cal-lutheran-kingsmen"
+  },
+  {
+    "id": "13",
+    "name": "Cal Poly Mustangs",
+    "abbr": "CP",
+    "group": null,
+    "slug": "cal-poly-mustangs"
+  },
+  {
+    "id": "25",
+    "name": "California Golden Bears",
+    "abbr": "CAL",
+    "group": null,
+    "slug": "california-golden-bears"
+  },
+  {
+    "id": "2097",
+    "name": "Campbell Fighting Camels",
+    "abbr": "CAM",
+    "group": null,
+    "slug": "campbell-fighting-camels"
+  },
+  {
+    "id": "2098",
+    "name": "Campbellsville University Tigers",
+    "abbr": "CMPBVIL",
+    "group": null,
+    "slug": "campbellsville-university-tigers"
+  },
+  {
+    "id": "424",
+    "name": "Capital Comets",
+    "abbr": "CAPU",
+    "group": null,
+    "slug": "capital-comets"
+  },
+  {
+    "id": "2101",
+    "name": "Carleton Knights",
+    "abbr": "CAR",
+    "group": null,
+    "slug": "carleton-knights"
+  },
+  {
+    "id": "2102",
+    "name": "Carnegie Mellon Tartans",
+    "abbr": "CGMU",
+    "group": null,
+    "slug": "carnegie-mellon-tartans"
+  },
+  {
+    "id": "32",
+    "name": "Carroll (WI) Pioneers",
+    "abbr": "CRU",
+    "group": null,
+    "slug": "carroll-wi-pioneers"
+  },
+  {
+    "id": "2105",
+    "name": "Carson Newman Eagles",
+    "abbr": "CN",
+    "group": null,
+    "slug": "carson-newman-eagles"
+  },
+  {
+    "id": "2106",
+    "name": "Carthage Firebirds",
+    "abbr": "CCW",
+    "group": null,
+    "slug": "carthage-firebirds"
+  },
+  {
+    "id": "2107",
+    "name": "Catawba Indians",
+    "abbr": "CAT",
+    "group": null,
+    "slug": "catawba-indians"
+  },
+  {
+    "id": "2108",
+    "name": "Catholic Cardinals",
+    "abbr": "CATH",
+    "group": null,
+    "slug": "catholic-cardinals"
+  },
+  {
+    "id": "2110",
+    "name": "Central Arkansas Bears",
+    "abbr": "CARK",
+    "group": null,
+    "slug": "central-arkansas-bears"
+  },
+  {
+    "id": "2115",
+    "name": "Central Connecticut Blue Devils",
+    "abbr": "CCSU",
+    "group": null,
+    "slug": "central-connecticut-blue-devils"
+  },
+  {
+    "id": "2117",
+    "name": "Central Michigan Chippewas",
+    "abbr": "CMU",
+    "group": null,
+    "slug": "central-michigan-chippewas"
+  },
+  {
+    "id": "2118",
+    "name": "Central Missouri Mules",
+    "abbr": "UCM",
+    "group": null,
+    "slug": "central-missouri-mules"
+  },
+  {
+    "id": "2122",
+    "name": "Central Oklahoma Bronchos",
+    "abbr": "UCO",
+    "group": null,
+    "slug": "central-oklahoma-bronchos"
+  },
+  {
+    "id": "2119",
+    "name": "Central State Marauders",
+    "abbr": "CNSU",
+    "group": null,
+    "slug": "central-state-marauders"
+  },
+  {
+    "id": "2120",
+    "name": "Central Washington Wildcats",
+    "abbr": "CWAU",
+    "group": null,
+    "slug": "central-washington-wildcats"
+  },
+  {
+    "id": "2121",
+    "name": "Centre Colonels",
+    "abbr": "CCO",
+    "group": null,
+    "slug": "centre-colonels"
+  },
+  {
+    "id": "2123",
+    "name": "Chadron State Eagles",
+    "abbr": "CHAD",
+    "group": null,
+    "slug": "chadron-state-eagles"
+  },
+  {
+    "id": "411",
+    "name": "Chapman Panthers",
+    "abbr": "CHAP",
+    "group": null,
+    "slug": "chapman-panthers"
+  },
+  {
+    "id": "2128",
+    "name": "Charleston (WV) Golden Eagles",
+    "abbr": "UCWV",
+    "group": null,
+    "slug": "charleston-wv-golden-eagles"
+  },
+  {
+    "id": "2127",
+    "name": "Charleston Southern Buccaneers",
+    "abbr": "CHSO",
+    "group": null,
+    "slug": "charleston-southern-buccaneers"
+  },
+  {
+    "id": "236",
+    "name": "Chattanooga Mocs",
+    "abbr": "UTC",
+    "group": null,
+    "slug": "chattanooga-mocs"
+  },
+  {
+    "id": "80",
+    "name": "Chicago Maroons",
+    "abbr": "CHI",
+    "group": null,
+    "slug": "chicago-maroons"
+  },
+  {
+    "id": "2130",
+    "name": "Chicago State Cougars",
+    "abbr": "CHST",
+    "group": null,
+    "slug": "chicago-state-cougars"
+  },
+  {
+    "id": "2132",
+    "name": "Cincinnati Bearcats",
+    "abbr": "CIN",
+    "group": null,
+    "slug": "cincinnati-bearcats"
+  },
+  {
+    "id": "17",
+    "name": "Claremont Mudd Scripps Stags",
+    "abbr": "CMS",
+    "group": null,
+    "slug": "claremont-mudd-scripps-stags"
+  },
+  {
+    "id": "2134",
+    "name": "Clarion Golden Eagles",
+    "abbr": "CLRN",
+    "group": null,
+    "slug": "clarion-golden-eagles"
+  },
+  {
+    "id": "228",
+    "name": "Clemson Tigers",
+    "abbr": "CLEM",
+    "group": null,
+    "slug": "clemson-tigers"
+  },
+  {
+    "id": "324",
+    "name": "Coastal Carolina Chanticleers",
+    "abbr": "CCU",
+    "group": null,
+    "slug": "coastal-carolina-chanticleers"
+  },
+  {
+    "id": "2141",
+    "name": "Coe Kohawks",
+    "abbr": "COE",
+    "group": null,
+    "slug": "coe-kohawks"
+  },
+  {
+    "id": "33",
+    "name": "Colby White Mules",
+    "abbr": "CLBY",
+    "group": null,
+    "slug": "colby-white-mules"
+  },
+  {
+    "id": "2142",
+    "name": "Colgate Raiders",
+    "abbr": "COLG",
+    "group": null,
+    "slug": "colgate-raiders"
+  },
+  {
+    "id": "38",
+    "name": "Colorado Buffaloes",
+    "abbr": "COLO",
+    "group": null,
+    "slug": "colorado-buffaloes"
+  },
+  {
+    "id": "11",
+    "name": "Colorado Mesa Mavericks",
+    "abbr": "COMU",
+    "group": null,
+    "slug": "colorado-mesa-mavericks"
+  },
+  {
+    "id": "2146",
+    "name": "Colorado School of Mines Orediggers",
+    "abbr": "CMIN",
+    "group": null,
+    "slug": "colorado-school-of-mines-orediggers"
+  },
+  {
+    "id": "36",
+    "name": "Colorado State Rams",
+    "abbr": "CSU",
+    "group": null,
+    "slug": "colorado-state-rams"
+  },
+  {
+    "id": "171",
+    "name": "Columbia Lions",
+    "abbr": "COLU",
+    "group": null,
+    "slug": "columbia-lions"
+  },
+  {
+    "id": "2148",
+    "name": "Concord Mountain Lions",
+    "abbr": "CONC",
+    "group": null,
+    "slug": "concord-mountain-lions"
+  },
+  {
+    "id": "2152",
+    "name": "Concordia (MN) Cobbers",
+    "abbr": "CCMN",
+    "group": null,
+    "slug": "concordia-mn-cobbers"
+  },
+  {
+    "id": "409",
+    "name": "Concordia (WI) Falcons",
+    "abbr": "CUW",
+    "group": null,
+    "slug": "concordia-wi-falcons"
+  },
+  {
+    "id": "2151",
+    "name": "Concordia Chicago Cougars",
+    "abbr": "CUC",
+    "group": null,
+    "slug": "concordia-chicago-cougars"
+  },
+  {
+    "id": "507",
+    "name": "Concordia University Nebraska Clippers",
+    "abbr": "CONCONE",
+    "group": null,
+    "slug": "concordia-university-nebraska-clippers"
+  },
+  {
+    "id": "2155",
+    "name": "Cornell (IA) Rams",
+    "abbr": "CNIA",
+    "group": null,
+    "slug": "cornell-ia-rams"
+  },
+  {
+    "id": "172",
+    "name": "Cornell Big Red",
+    "abbr": "COR",
+    "group": null,
+    "slug": "cornell-big-red"
+  },
+  {
+    "id": "509",
+    "name": "Crown Polars",
+    "abbr": "CRWN",
+    "group": null,
+    "slug": "crown-polars"
+  },
+  {
+    "id": "510",
+    "name": "Culver-Stockton College Wildcats",
+    "abbr": "CULVE",
+    "group": null,
+    "slug": "culver-stockton-college-wildcats"
+  },
+  {
+    "id": "2161",
+    "name": "Cumberland (TN) Bulldogs",
+    "abbr": "CUMBTN",
+    "group": null,
+    "slug": "cumberland-tn-bulldogs"
+  },
+  {
+    "id": "511",
+    "name": "Cumberlands Indians",
+    "abbr": "CMBS",
+    "group": null,
+    "slug": "cumberlands-indians"
+  },
+  {
+    "id": "40",
+    "name": "Curry Colonels",
+    "abbr": "CC",
+    "group": null,
+    "slug": "curry-colonels"
+  },
+  {
+    "id": "512",
+    "name": "Dakota State University Trojans",
+    "abbr": "DAKOT",
+    "group": null,
+    "slug": "dakota-state-university-trojans"
+  },
+  {
+    "id": "513",
+    "name": "Dakota Wesleyan Tigers",
+    "abbr": "DWU",
+    "group": null,
+    "slug": "dakota-wesleyan-tigers"
+  },
+  {
+    "id": "159",
+    "name": "Dartmouth Big Green",
+    "abbr": "DART",
+    "group": null,
+    "slug": "dartmouth-big-green"
+  },
+  {
+    "id": "2166",
+    "name": "Davidson Wildcats",
+    "abbr": "DAV",
+    "group": null,
+    "slug": "davidson-wildcats"
+  },
+  {
+    "id": "2168",
+    "name": "Dayton Flyers",
+    "abbr": "DAY",
+    "group": null,
+    "slug": "dayton-flyers"
+  },
+  {
+    "id": "83",
+    "name": "DePauw Tigers",
+    "abbr": "DPU",
+    "group": null,
+    "slug": "depauw-tigers"
+  },
+  {
+    "id": "190",
+    "name": "Defiance College Yellow Jackets",
+    "abbr": "DEF",
+    "group": null,
+    "slug": "defiance-college-yellow-jackets"
+  },
+  {
+    "id": "48",
+    "name": "Delaware Blue Hens",
+    "abbr": "DEL",
+    "group": null,
+    "slug": "delaware-blue-hens"
+  },
+  {
+    "id": "2169",
+    "name": "Delaware State Hornets",
+    "abbr": "DSU",
+    "group": null,
+    "slug": "delaware-state-hornets"
+  },
+  {
+    "id": "2170",
+    "name": "Delta State Statesmen",
+    "abbr": "DLST",
+    "group": null,
+    "slug": "delta-state-statesmen"
+  },
+  {
+    "id": "2171",
+    "name": "Denison Big Red",
+    "abbr": "DSN",
+    "group": null,
+    "slug": "denison-big-red"
+  },
+  {
+    "id": "2175",
+    "name": "Dickinson Red Devils",
+    "abbr": "DKSN",
+    "group": null,
+    "slug": "dickinson-red-devils"
+  },
+  {
+    "id": "316",
+    "name": "Dickinson State University Blue Hawks",
+    "abbr": "DIC",
+    "group": null,
+    "slug": "dickinson-state-university-blue-hawks"
+  },
+  {
+    "id": "2181",
+    "name": "Drake Bulldogs",
+    "abbr": "DRKE",
+    "group": null,
+    "slug": "drake-bulldogs"
+  },
+  {
+    "id": "49",
+    "name": "Dubuque Spartans",
+    "abbr": "DBQ",
+    "group": null,
+    "slug": "dubuque-spartans"
+  },
+  {
+    "id": "150",
+    "name": "Duke Blue Devils",
+    "abbr": "DUKE",
+    "group": null,
+    "slug": "duke-blue-devils"
+  },
+  {
+    "id": "2184",
+    "name": "Duquesne Dukes",
+    "abbr": "DUQ",
+    "group": null,
+    "slug": "duquesne-dukes"
+  },
+  {
+    "id": "151",
+    "name": "East Carolina Pirates",
+    "abbr": "ECU",
+    "group": null,
+    "slug": "east-carolina-pirates"
+  },
+  {
+    "id": "2191",
+    "name": "East Central Tigers",
+    "abbr": "ECNU",
+    "group": null,
+    "slug": "east-central-tigers"
+  },
+  {
+    "id": "2188",
+    "name": "East Stroudsburg Warriors",
+    "abbr": "ESU",
+    "group": null,
+    "slug": "east-stroudsburg-warriors"
+  },
+  {
+    "id": "2193",
+    "name": "East Tennessee State Buccaneers",
+    "abbr": "ETSU",
+    "group": null,
+    "slug": "east-tennessee-state-buccaneers"
+  },
+  {
+    "id": "2194",
+    "name": "East Texas Baptist Tigers",
+    "abbr": "ETBU",
+    "group": null,
+    "slug": "east-texas-baptist-tigers"
+  },
+  {
+    "id": "2197",
+    "name": "Eastern Illinois Panthers",
+    "abbr": "EIU",
+    "group": null,
+    "slug": "eastern-illinois-panthers"
+  },
+  {
+    "id": "2198",
+    "name": "Eastern Kentucky Colonels",
+    "abbr": "EKU",
+    "group": null,
+    "slug": "eastern-kentucky-colonels"
+  },
+  {
+    "id": "2199",
+    "name": "Eastern Michigan Eagles",
+    "abbr": "EMU",
+    "group": null,
+    "slug": "eastern-michigan-eagles"
+  },
+  {
+    "id": "2201",
+    "name": "Eastern New Mexico Greyhounds",
+    "abbr": "ENMU",
+    "group": null,
+    "slug": "eastern-new-mexico-greyhounds"
+  },
+  {
+    "id": "2202",
+    "name": "Eastern Oregon",
+    "abbr": "EORE",
+    "group": null,
+    "slug": "eastern-oregon"
+  },
+  {
+    "id": "331",
+    "name": "Eastern Washington Eagles",
+    "abbr": "EWU",
+    "group": null,
+    "slug": "eastern-washington-eagles"
+  },
+  {
+    "id": "2205",
+    "name": "Edinboro Fighting Scots",
+    "abbr": "EDBR",
+    "group": null,
+    "slug": "edinboro-fighting-scots"
+  },
+  {
+    "id": "2206",
+    "name": "Edward Waters Tigers",
+    "abbr": "EDW",
+    "group": null,
+    "slug": "edward-waters-tigers"
+  },
+  {
+    "id": "2207",
+    "name": "Elizabeth City State Vikings",
+    "abbr": "ECSU",
+    "group": null,
+    "slug": "elizabeth-city-state-vikings"
+  },
+  {
+    "id": "72",
+    "name": "Elmhurst Bluejays",
+    "abbr": "ELMH",
+    "group": null,
+    "slug": "elmhurst-bluejays"
+  },
+  {
+    "id": "2210",
+    "name": "Elon Phoenix",
+    "abbr": "ELON",
+    "group": null,
+    "slug": "elon-phoenix"
+  },
+  {
+    "id": "2213",
+    "name": "Emory & Henry Wasps",
+    "abbr": "EHC",
+    "group": null,
+    "slug": "emory-henry-wasps"
+  },
+  {
+    "id": "2214",
+    "name": "Emporia State Hornets",
+    "abbr": "EMSU",
+    "group": null,
+    "slug": "emporia-state-hornets"
+  },
+  {
+    "id": "452",
+    "name": "Endicott Gulls",
+    "abbr": "ENDC",
+    "group": null,
+    "slug": "endicott-gulls"
+  },
+  {
+    "id": "101",
+    "name": "Eureka Red Devils",
+    "abbr": "ERKA",
+    "group": null,
+    "slug": "eureka-red-devils"
+  },
+  {
+    "id": "2221",
+    "name": "FDU Florham Devils",
+    "abbr": "FDUF",
+    "group": null,
+    "slug": "fdu-florham-devils"
+  },
+  {
+    "id": "2219",
+    "name": "Faulkner University Eagles",
+    "abbr": "FAULKNER",
+    "group": null,
+    "slug": "faulkner-university-eagles"
+  },
+  {
+    "id": "2220",
+    "name": "Fayetteville State Broncos",
+    "abbr": "FAYU",
+    "group": null,
+    "slug": "fayetteville-state-broncos"
+  },
+  {
+    "id": "2222",
+    "name": "Ferris State Bulldogs",
+    "abbr": "FRST",
+    "group": null,
+    "slug": "ferris-state-bulldogs"
+  },
+  {
+    "id": "366",
+    "name": "Ferrum Panthers",
+    "abbr": "FC",
+    "group": null,
+    "slug": "ferrum-panthers"
+  },
+  {
+    "id": "2224",
+    "name": "Findlay Oilers",
+    "abbr": "UF",
+    "group": null,
+    "slug": "findlay-oilers"
+  },
+  {
+    "id": "114",
+    "name": "Fitchburg State Falcons",
+    "abbr": "FBSU",
+    "group": null,
+    "slug": "fitchburg-state-falcons"
+  },
+  {
+    "id": "50",
+    "name": "Florida A&M Rattlers",
+    "abbr": "FAMU",
+    "group": null,
+    "slug": "florida-am-rattlers"
+  },
+  {
+    "id": "2226",
+    "name": "Florida Atlantic Owls",
+    "abbr": "FAU",
+    "group": null,
+    "slug": "florida-atlantic-owls"
+  },
+  {
+    "id": "57",
+    "name": "Florida Gators",
+    "abbr": "FLA",
+    "group": null,
+    "slug": "florida-gators"
+  },
+  {
+    "id": "2229",
+    "name": "Florida International Panthers",
+    "abbr": "FIU",
+    "group": null,
+    "slug": "florida-international-panthers"
+  },
+  {
+    "id": "52",
+    "name": "Florida State Seminoles",
+    "abbr": "FSU",
+    "group": null,
+    "slug": "florida-state-seminoles"
+  },
+  {
+    "id": "2230",
+    "name": "Fordham Rams",
+    "abbr": "FOR",
+    "group": null,
+    "slug": "fordham-rams"
+  },
+  {
+    "id": "2231",
+    "name": "Fort Hays Tigers",
+    "abbr": "FHSU",
+    "group": null,
+    "slug": "fort-hays-tigers"
+  },
+  {
+    "id": "2237",
+    "name": "Fort Lewis Skyhawks",
+    "abbr": "FLWC",
+    "group": null,
+    "slug": "fort-lewis-skyhawks"
+  },
+  {
+    "id": "2232",
+    "name": "Fort Valley State Wildcats",
+    "abbr": "FVSU",
+    "group": null,
+    "slug": "fort-valley-state-wildcats"
+  },
+  {
+    "id": "2234",
+    "name": "Franklin & Marshall Diplomats",
+    "abbr": "FMC",
+    "group": null,
+    "slug": "franklin-marshall-diplomats"
+  },
+  {
+    "id": "2233",
+    "name": "Franklin Grizzlies",
+    "abbr": "FRKL",
+    "group": null,
+    "slug": "franklin-grizzlies"
+  },
+  {
+    "id": "278",
+    "name": "Fresno State Bulldogs",
+    "abbr": "FRES",
+    "group": null,
+    "slug": "fresno-state-bulldogs"
+  },
+  {
+    "id": "527",
+    "name": "Friends University Friends",
+    "abbr": "FRIE",
+    "group": null,
+    "slug": "friends-university-friends"
+  },
+  {
+    "id": "341",
+    "name": "Frostburg State Bobcats",
+    "abbr": "FSTU",
+    "group": null,
+    "slug": "frostburg-state-bobcats"
+  },
+  {
+    "id": "231",
+    "name": "Furman Paladins",
+    "abbr": "FUR",
+    "group": null,
+    "slug": "furman-paladins"
+  },
+  {
+    "id": "417",
+    "name": "Gallaudet Bison",
+    "abbr": "GLDT",
+    "group": null,
+    "slug": "gallaudet-bison"
+  },
+  {
+    "id": "367",
+    "name": "Gannon Golden Knights",
+    "abbr": "GANN",
+    "group": null,
+    "slug": "gannon-golden-knights"
+  },
+  {
+    "id": "2241",
+    "name": "Gardner-Webb Runnin' Bulldogs",
+    "abbr": "GWEB",
+    "group": null,
+    "slug": "gardner-webb-runnin-bulldogs"
+  },
+  {
+    "id": "2242",
+    "name": "Geneva Golden Tornadoes",
+    "abbr": "GEN",
+    "group": null,
+    "slug": "geneva-golden-tornadoes"
+  },
+  {
+    "id": "415",
+    "name": "George Fox Bruins",
+    "abbr": "GFU",
+    "group": null,
+    "slug": "george-fox-bruins"
+  },
+  {
+    "id": "2244",
+    "name": "George Mason University Patriots",
+    "abbr": "GMU",
+    "group": null,
+    "slug": "george-mason-university-patriots"
+  },
+  {
+    "id": "2245",
+    "name": "Georgetown (KY) Tigers",
+    "abbr": "GTKY",
+    "group": null,
+    "slug": "georgetown-ky-tigers"
+  },
+  {
+    "id": "46",
+    "name": "Georgetown Hoyas",
+    "abbr": "GTWN",
+    "group": null,
+    "slug": "georgetown-hoyas"
+  },
+  {
+    "id": "61",
+    "name": "Georgia Bulldogs",
+    "abbr": "UGA",
+    "group": null,
+    "slug": "georgia-bulldogs"
+  },
+  {
+    "id": "290",
+    "name": "Georgia Southern Eagles",
+    "abbr": "GASO",
+    "group": null,
+    "slug": "georgia-southern-eagles"
+  },
+  {
+    "id": "2247",
+    "name": "Georgia State Panthers",
+    "abbr": "GAST",
+    "group": null,
+    "slug": "georgia-state-panthers"
+  },
+  {
+    "id": "59",
+    "name": "Georgia Tech Yellow Jackets",
+    "abbr": "GT",
+    "group": null,
+    "slug": "georgia-tech-yellow-jackets"
+  },
+  {
+    "id": "530",
+    "name": "Graceland University Graceland",
+    "abbr": "GRC",
+    "group": null,
+    "slug": "graceland-university-graceland"
+  },
+  {
+    "id": "125",
+    "name": "Grand Valley State Lakers",
+    "abbr": "GVSU",
+    "group": null,
+    "slug": "grand-valley-state-lakers"
+  },
+  {
+    "id": "65",
+    "name": "Grinnell Pioneers",
+    "abbr": "GRNL",
+    "group": null,
+    "slug": "grinnell-pioneers"
+  },
+  {
+    "id": "146",
+    "name": "Grove City Wolverines",
+    "abbr": "GRO",
+    "group": null,
+    "slug": "grove-city-wolverines"
+  },
+  {
+    "id": "348",
+    "name": "Hamilton Continentals",
+    "abbr": "HAM",
+    "group": null,
+    "slug": "hamilton-continentals"
+  },
+  {
+    "id": "162",
+    "name": "Hamline Pipers",
+    "abbr": "HMLN",
+    "group": null,
+    "slug": "hamline-pipers"
+  },
+  {
+    "id": "297",
+    "name": "Hampden Sydney Tigers",
+    "abbr": "HSC",
+    "group": null,
+    "slug": "hampden-sydney-tigers"
+  },
+  {
+    "id": "173",
+    "name": "Hartwick Hawks",
+    "abbr": "HRTW",
+    "group": null,
+    "slug": "hartwick-hawks"
+  },
+  {
+    "id": "108",
+    "name": "Harvard Crimson",
+    "abbr": "HARV",
+    "group": null,
+    "slug": "harvard-crimson"
+  },
+  {
+    "id": "535",
+    "name": "Haskell Indian Nations Univ Jayhawks",
+    "abbr": "HASKELL",
+    "group": null,
+    "slug": "haskell-indian-nations-univ-jayhawks"
+  },
+  {
+    "id": "62",
+    "name": "Hawai'i Rainbow Warriors",
+    "abbr": "HAW",
+    "group": null,
+    "slug": "hawaii-rainbow-warriors"
+  },
+  {
+    "id": "191",
+    "name": "Heidelberg Student Princes",
+    "abbr": "HDBG",
+    "group": null,
+    "slug": "heidelberg-student-princes"
+  },
+  {
+    "id": "418",
+    "name": "Hendrix Warriors",
+    "abbr": "HDX",
+    "group": null,
+    "slug": "hendrix-warriors"
+  },
+  {
+    "id": "174",
+    "name": "Hobart Statesmen",
+    "abbr": "HBRT",
+    "group": null,
+    "slug": "hobart-statesmen"
+  },
+  {
+    "id": "107",
+    "name": "Holy Cross Crusaders",
+    "abbr": "HC",
+    "group": null,
+    "slug": "holy-cross-crusaders"
+  },
+  {
+    "id": "248",
+    "name": "Houston Cougars",
+    "abbr": "HOU",
+    "group": null,
+    "slug": "houston-cougars"
+  },
+  {
+    "id": "47",
+    "name": "Howard Bison",
+    "abbr": "HOW",
+    "group": null,
+    "slug": "howard-bison"
+  },
+  {
+    "id": "304",
+    "name": "Idaho State Bengals",
+    "abbr": "IDST",
+    "group": null,
+    "slug": "idaho-state-bengals"
+  },
+  {
+    "id": "70",
+    "name": "Idaho Vandals",
+    "abbr": "IDHO",
+    "group": null,
+    "slug": "idaho-vandals"
+  },
+  {
+    "id": "356",
+    "name": "Illinois Fighting Illini",
+    "abbr": "ILL",
+    "group": null,
+    "slug": "illinois-fighting-illini"
+  },
+  {
+    "id": "306",
+    "name": "Illinois Wesleyan Titans",
+    "abbr": "ILWU",
+    "group": null,
+    "slug": "illinois-wesleyan-titans"
+  },
+  {
+    "id": "84",
+    "name": "Indiana Hoosiers",
+    "abbr": "IU",
+    "group": null,
+    "slug": "indiana-hoosiers"
+  },
+  {
+    "id": "282",
+    "name": "Indiana State Sycamores",
+    "abbr": "INST",
+    "group": null,
+    "slug": "indiana-state-sycamores"
+  },
+  {
+    "id": "66",
+    "name": "Iowa State Cyclones",
+    "abbr": "ISU",
+    "group": null,
+    "slug": "iowa-state-cyclones"
+  },
+  {
+    "id": "175",
+    "name": "Ithaca Bombers",
+    "abbr": "ITH",
+    "group": null,
+    "slug": "ithaca-bombers"
+  },
+  {
+    "id": "55",
+    "name": "Jacksonville State Gamecocks",
+    "abbr": "JXST",
+    "group": null,
+    "slug": "jacksonville-state-gamecocks"
+  },
+  {
+    "id": "256",
+    "name": "James Madison Dukes",
+    "abbr": "JMU",
+    "group": null,
+    "slug": "james-madison-dukes"
+  },
+  {
+    "id": "118",
+    "name": "Johns Hopkins Blue Jays",
+    "abbr": "JHU",
+    "group": null,
+    "slug": "johns-hopkins-blue-jays"
+  },
+  {
+    "id": "246",
+    "name": "Juniata Eagles",
+    "abbr": "JUN",
+    "group": null,
+    "slug": "juniata-eagles"
+  },
+  {
+    "id": "126",
+    "name": "Kalamazoo Hornets",
+    "abbr": "KALC",
+    "group": null,
+    "slug": "kalamazoo-hornets"
+  },
+  {
+    "id": "547",
+    "name": "Kansas Wesleyan Ks Wesleyan",
+    "abbr": "KANSA",
+    "group": null,
+    "slug": "kansas-wesleyan-ks-wesleyan"
+  },
+  {
+    "id": "338",
+    "name": "Kennesaw State Owls",
+    "abbr": "KENN",
+    "group": null,
+    "slug": "kennesaw-state-owls"
+  },
+  {
+    "id": "96",
+    "name": "Kentucky Wildcats",
+    "abbr": "UK",
+    "group": null,
+    "slug": "kentucky-wildcats"
+  },
+  {
+    "id": "352",
+    "name": "Kenyon Owls",
+    "abbr": "KNY",
+    "group": null,
+    "slug": "kenyon-owls"
+  },
+  {
+    "id": "247",
+    "name": "King's Monarchs",
+    "abbr": "KNGS",
+    "group": null,
+    "slug": "kings-monarchs"
+  },
+  {
+    "id": "255",
+    "name": "Knox Prairie Fire",
+    "abbr": "KNOX",
+    "group": null,
+    "slug": "knox-prairie-fire"
+  },
+  {
+    "id": "99",
+    "name": "LSU Tigers",
+    "abbr": "LSU",
+    "group": null,
+    "slug": "lsu-tigers"
+  },
+  {
+    "id": "548",
+    "name": "LaGrange Panthers",
+    "abbr": "LGC",
+    "group": null,
+    "slug": "lagrange-panthers"
+  },
+  {
+    "id": "322",
+    "name": "Lafayette Leopards",
+    "abbr": "LAF",
+    "group": null,
+    "slug": "lafayette-leopards"
+  },
+  {
+    "id": "437",
+    "name": "Lake Erie Storm",
+    "abbr": "LKER",
+    "group": null,
+    "slug": "lake-erie-storm"
+  },
+  {
+    "id": "262",
+    "name": "Lake Forest Foresters",
+    "abbr": "LFC",
+    "group": null,
+    "slug": "lake-forest-foresters"
+  },
+  {
+    "id": "268",
+    "name": "Lawrence Vikings",
+    "abbr": "LAW",
+    "group": null,
+    "slug": "lawrence-vikings"
+  },
+  {
+    "id": "388",
+    "name": "Lebanon Valley Flying Dutchmen",
+    "abbr": "LVC",
+    "group": null,
+    "slug": "lebanon-valley-flying-dutchmen"
+  },
+  {
+    "id": "203",
+    "name": "Linfield Wildcats",
+    "abbr": "LINF",
+    "group": null,
+    "slug": "linfield-wildcats"
+  },
+  {
+    "id": "209",
+    "name": "Lock Haven Bald Eagles",
+    "abbr": "LHU",
+    "group": null,
+    "slug": "lock-haven-bald-eagles"
+  },
+  {
+    "id": "263",
+    "name": "Loras Duhawks",
+    "abbr": "LOR",
+    "group": null,
+    "slug": "loras-duhawks"
+  },
+  {
+    "id": "309",
+    "name": "Louisiana Ragin' Cajuns",
+    "abbr": "UL",
+    "group": null,
+    "slug": "louisiana-ragin-cajuns"
+  },
+  {
+    "id": "97",
+    "name": "Louisville Cardinals",
+    "abbr": "LOU",
+    "group": null,
+    "slug": "louisville-cardinals"
+  },
+  {
+    "id": "67",
+    "name": "Luther Norse",
+    "abbr": "LUTH",
+    "group": null,
+    "slug": "luther-norse"
+  },
+  {
+    "id": "109",
+    "name": "MIT Engineers",
+    "abbr": "MIT",
+    "group": null,
+    "slug": "mit-engineers"
+  },
+  {
+    "id": "311",
+    "name": "Maine Black Bears",
+    "abbr": "ME",
+    "group": null,
+    "slug": "maine-black-bears"
+  },
+  {
+    "id": "274",
+    "name": "Maine Maritime Mariners",
+    "abbr": "UMMA",
+    "group": null,
+    "slug": "maine-maritime-mariners"
+  },
+  {
+    "id": "317",
+    "name": "Marietta Pioneers",
+    "abbr": "MRTT",
+    "group": null,
+    "slug": "marietta-pioneers"
+  },
+  {
+    "id": "276",
+    "name": "Marshall Thundering Herd",
+    "abbr": "MRSH",
+    "group": null,
+    "slug": "marshall-thundering-herd"
+  },
+  {
+    "id": "446",
+    "name": "Martin Luther Knights",
+    "abbr": "MLC",
+    "group": null,
+    "slug": "martin-luther-knights"
+  },
+  {
+    "id": "120",
+    "name": "Maryland Terrapins",
+    "abbr": "MD",
+    "group": null,
+    "slug": "maryland-terrapins"
+  },
+  {
+    "id": "110",
+    "name": "Mass Maritime Buccaneers",
+    "abbr": "MMT",
+    "group": null,
+    "slug": "mass-maritime-buccaneers"
+  },
+  {
+    "id": "113",
+    "name": "Massachusetts Minutemen",
+    "abbr": "MASS",
+    "group": null,
+    "slug": "massachusetts-minutemen"
+  },
+  {
+    "id": "561",
+    "name": "Mayville State Comets",
+    "abbr": "MYSU",
+    "group": null,
+    "slug": "mayville-state-comets"
+  },
+  {
+    "id": "241",
+    "name": "McMurry War Hawks",
+    "abbr": "MCM",
+    "group": null,
+    "slug": "mcmurry-war-hawks"
+  },
+  {
+    "id": "235",
+    "name": "Memphis Tigers",
+    "abbr": "MEM",
+    "group": null,
+    "slug": "memphis-tigers"
+  },
+  {
+    "id": "291",
+    "name": "Methodist Monarchs",
+    "abbr": "MU",
+    "group": null,
+    "slug": "methodist-monarchs"
+  },
+  {
+    "id": "193",
+    "name": "Miami (OH) RedHawks",
+    "abbr": "M-OH",
+    "group": null,
+    "slug": "miami-oh-redhawks"
+  },
+  {
+    "id": "127",
+    "name": "Michigan State Spartans",
+    "abbr": "MSU",
+    "group": null,
+    "slug": "michigan-state-spartans"
+  },
+  {
+    "id": "130",
+    "name": "Michigan Wolverines",
+    "abbr": "MICH",
+    "group": null,
+    "slug": "michigan-wolverines"
+  },
+  {
+    "id": "565",
+    "name": "Midland MIDLAND LUTHERAN",
+    "abbr": "MIDL",
+    "group": null,
+    "slug": "midland-midland-lutheran"
+  },
+  {
+    "id": "210",
+    "name": "Millersville Marauders",
+    "abbr": "MILL",
+    "group": null,
+    "slug": "millersville-marauders"
+  },
+  {
+    "id": "74",
+    "name": "Millikin Big Blue",
+    "abbr": "MILK",
+    "group": null,
+    "slug": "millikin-big-blue"
+  },
+  {
+    "id": "134",
+    "name": "Minnesota Duluth Bulldogs",
+    "abbr": "UMD",
+    "group": null,
+    "slug": "minnesota-duluth-bulldogs"
+  },
+  {
+    "id": "135",
+    "name": "Minnesota Golden Gophers",
+    "abbr": "MINN",
+    "group": null,
+    "slug": "minnesota-golden-gophers"
+  },
+  {
+    "id": "568",
+    "name": "Minot State Beavers",
+    "abbr": "MINS",
+    "group": null,
+    "slug": "minot-state-beavers"
+  },
+  {
+    "id": "344",
+    "name": "Mississippi State Bulldogs",
+    "abbr": "MSST",
+    "group": null,
+    "slug": "mississippi-state-bulldogs"
+  },
+  {
+    "id": "142",
+    "name": "Missouri Tigers",
+    "abbr": "MIZ",
+    "group": null,
+    "slug": "missouri-tigers"
+  },
+  {
+    "id": "137",
+    "name": "Missouri Western Griffons",
+    "abbr": "MOWE",
+    "group": null,
+    "slug": "missouri-western-griffons"
+  },
+  {
+    "id": "149",
+    "name": "Montana Grizzlies",
+    "abbr": "MONT",
+    "group": null,
+    "slug": "montana-grizzlies"
+  },
+  {
+    "id": "147",
+    "name": "Montana State Bobcats",
+    "abbr": "MTST",
+    "group": null,
+    "slug": "montana-state-bobcats"
+  },
+  {
+    "id": "323",
+    "name": "Moravian Greyhounds",
+    "abbr": "MOR",
+    "group": null,
+    "slug": "moravian-greyhounds"
+  },
+  {
+    "id": "60",
+    "name": "Morehouse Maroon Tigers",
+    "abbr": "MRHO",
+    "group": null,
+    "slug": "morehouse-maroon-tigers"
+  },
+  {
+    "id": "426",
+    "name": "Mount Union Purple Raiders",
+    "abbr": "UMU",
+    "group": null,
+    "slug": "mount-union-purple-raiders"
+  },
+  {
+    "id": "93",
+    "name": "Murray State Racers",
+    "abbr": "MUR",
+    "group": null,
+    "slug": "murray-state-racers"
+  },
+  {
+    "id": "332",
+    "name": "Muskingum Fighting Muskies",
+    "abbr": "MSK",
+    "group": null,
+    "slug": "muskingum-fighting-muskies"
+  },
+  {
+    "id": "152",
+    "name": "NC State Wolfpack",
+    "abbr": "NCSU",
+    "group": null,
+    "slug": "nc-state-wolfpack"
+  },
+  {
+    "id": "158",
+    "name": "Nebraska Cornhuskers",
+    "abbr": "NEB",
+    "group": null,
+    "slug": "nebraska-cornhuskers"
+  },
+  {
+    "id": "160",
+    "name": "New Hampshire Wildcats",
+    "abbr": "UNH",
+    "group": null,
+    "slug": "new-hampshire-wildcats"
+  },
+  {
+    "id": "167",
+    "name": "New Mexico Lobos",
+    "abbr": "UNM",
+    "group": null,
+    "slug": "new-mexico-lobos"
+  },
+  {
+    "id": "166",
+    "name": "New Mexico State Aggies",
+    "abbr": "NMSU",
+    "group": null,
+    "slug": "new-mexico-state-aggies"
+  },
+  {
+    "id": "153",
+    "name": "North Carolina Tar Heels",
+    "abbr": "UNC",
+    "group": null,
+    "slug": "north-carolina-tar-heels"
+  },
+  {
+    "id": "286",
+    "name": "North Carolina Wesleyan Battling Bishops",
+    "abbr": "NCW",
+    "group": null,
+    "slug": "north-carolina-wesleyan-battling-bishops"
+  },
+  {
+    "id": "155",
+    "name": "North Dakota Fighting Hawks",
+    "abbr": "UND",
+    "group": null,
+    "slug": "north-dakota-fighting-hawks"
+  },
+  {
+    "id": "75",
+    "name": "North Park Vikings",
+    "abbr": "NPU",
+    "group": null,
+    "slug": "north-park-vikings"
+  },
+  {
+    "id": "249",
+    "name": "North Texas Mean Green",
+    "abbr": "UNT",
+    "group": null,
+    "slug": "north-texas-mean-green"
+  },
+  {
+    "id": "196",
+    "name": "Northeastern State RiverHawks",
+    "abbr": "NESU",
+    "group": null,
+    "slug": "northeastern-state-riverhawks"
+  },
+  {
+    "id": "128",
+    "name": "Northern Michigan Wildcats",
+    "abbr": "NMI",
+    "group": null,
+    "slug": "northern-michigan-wildcats"
+  },
+  {
+    "id": "425",
+    "name": "Northern State Wolves",
+    "abbr": "NSU",
+    "group": null,
+    "slug": "northern-state-wolves"
+  },
+  {
+    "id": "138",
+    "name": "Northwest Missouri State Bearcats",
+    "abbr": "MWMO",
+    "group": null,
+    "slug": "northwest-missouri-state-bearcats"
+  },
+  {
+    "id": "583",
+    "name": "Northwestern (MN) Eagles",
+    "abbr": "UNW",
+    "group": null,
+    "slug": "northwestern-mn-eagles"
+  },
+  {
+    "id": "77",
+    "name": "Northwestern Wildcats",
+    "abbr": "NU",
+    "group": null,
+    "slug": "northwestern-wildcats"
+  },
+  {
+    "id": "87",
+    "name": "Notre Dame Fighting Irish",
+    "abbr": "ND",
+    "group": null,
+    "slug": "notre-dame-fighting-irish"
+  },
+  {
+    "id": "391",
+    "name": "Oberlin Yeomen",
+    "abbr": "OBE",
+    "group": null,
+    "slug": "oberlin-yeomen"
+  },
+  {
+    "id": "195",
+    "name": "Ohio Bobcats",
+    "abbr": "OHIO",
+    "group": null,
+    "slug": "ohio-bobcats"
+  },
+  {
+    "id": "427",
+    "name": "Ohio Northern Polar Bears",
+    "abbr": "OHNU",
+    "group": null,
+    "slug": "ohio-northern-polar-bears"
+  },
+  {
+    "id": "194",
+    "name": "Ohio State Buckeyes",
+    "abbr": "OSU",
+    "group": null,
+    "slug": "ohio-state-buckeyes"
+  },
+  {
+    "id": "319",
+    "name": "Oklahoma Baptist Bison",
+    "abbr": "OKBU",
+    "group": null,
+    "slug": "oklahoma-baptist-bison"
+  },
+  {
+    "id": "201",
+    "name": "Oklahoma Sooners",
+    "abbr": "OU",
+    "group": null,
+    "slug": "oklahoma-sooners"
+  },
+  {
+    "id": "197",
+    "name": "Oklahoma State Cowboys",
+    "abbr": "OKST",
+    "group": null,
+    "slug": "oklahoma-state-cowboys"
+  },
+  {
+    "id": "295",
+    "name": "Old Dominion Monarchs",
+    "abbr": "ODU",
+    "group": null,
+    "slug": "old-dominion-monarchs"
+  },
+  {
+    "id": "145",
+    "name": "Ole Miss Rebels",
+    "abbr": "MISS",
+    "group": null,
+    "slug": "ole-miss-rebels"
+  },
+  {
+    "id": "354",
+    "name": "Olivet Comets",
+    "abbr": "UOO",
+    "group": null,
+    "slug": "olivet-comets"
+  },
+  {
+    "id": "204",
+    "name": "Oregon State Beavers",
+    "abbr": "ORST",
+    "group": null,
+    "slug": "oregon-state-beavers"
+  },
+  {
+    "id": "359",
+    "name": "Otterbein Cardinals",
+    "abbr": "OTTB",
+    "group": null,
+    "slug": "otterbein-cardinals"
+  },
+  {
+    "id": "205",
+    "name": "Pacific (OR) Boxers",
+    "abbr": "PCOR",
+    "group": null,
+    "slug": "pacific-or-boxers"
+  },
+  {
+    "id": "213",
+    "name": "Penn State Nittany Lions",
+    "abbr": "PSU",
+    "group": null,
+    "slug": "penn-state-nittany-lions"
+  },
+  {
+    "id": "219",
+    "name": "Pennsylvania Quakers",
+    "abbr": "PENN",
+    "group": null,
+    "slug": "pennsylvania-quakers"
+  },
+  {
+    "id": "95",
+    "name": "Pikeville Bears",
+    "abbr": "PIKEV",
+    "group": null,
+    "slug": "pikeville-bears"
+  },
+  {
+    "id": "90",
+    "name": "Pittsburg State Gorillas",
+    "abbr": "PTSU",
+    "group": null,
+    "slug": "pittsburg-state-gorillas"
+  },
+  {
+    "id": "221",
+    "name": "Pittsburgh Panthers",
+    "abbr": "PITT",
+    "group": null,
+    "slug": "pittsburgh-panthers"
+  },
+  {
+    "id": "163",
+    "name": "Princeton Tigers",
+    "abbr": "PRIN",
+    "group": null,
+    "slug": "princeton-tigers"
+  },
+  {
+    "id": "29",
+    "name": "Redlands Bulldogs",
+    "abbr": "REDL",
+    "group": null,
+    "slug": "redlands-bulldogs"
+  },
+  {
+    "id": "227",
+    "name": "Rhode Island Rams",
+    "abbr": "URI",
+    "group": null,
+    "slug": "rhode-island-rams"
+  },
+  {
+    "id": "242",
+    "name": "Rice Owls",
+    "abbr": "RICE",
+    "group": null,
+    "slug": "rice-owls"
+  },
+  {
+    "id": "257",
+    "name": "Richmond Spiders",
+    "abbr": "RICH",
+    "group": null,
+    "slug": "richmond-spiders"
+  },
+  {
+    "id": "184",
+    "name": "Rochester (NY) Yellow Jackets",
+    "abbr": "URNY",
+    "group": null,
+    "slug": "rochester-ny-yellow-jackets"
+  },
+  {
+    "id": "599",
+    "name": "Roosevelt Lakers",
+    "abbr": "RSVT",
+    "group": null,
+    "slug": "roosevelt-lakers"
+  },
+  {
+    "id": "86",
+    "name": "Rose Hulman Fightin' Engineers",
+    "abbr": "RHIT",
+    "group": null,
+    "slug": "rose-hulman-fightin-engineers"
+  },
+  {
+    "id": "164",
+    "name": "Rutgers Scarlet Knights",
+    "abbr": "RUTG",
+    "group": null,
+    "slug": "rutgers-scarlet-knights"
+  },
+  {
+    "id": "16",
+    "name": "Sacramento State Hornets",
+    "abbr": "SAC",
+    "group": null,
+    "slug": "sacramento-state-hornets"
+  },
+  {
+    "id": "129",
+    "name": "Saginaw Valley State Cardinals",
+    "abbr": "SVSU",
+    "group": null,
+    "slug": "saginaw-valley-state-cardinals"
+  },
+  {
+    "id": "21",
+    "name": "San Diego State Aztecs",
+    "abbr": "SDSU",
+    "group": null,
+    "slug": "san-diego-state-aztecs"
+  },
+  {
+    "id": "301",
+    "name": "San Diego Toreros",
+    "abbr": "USD",
+    "group": null,
+    "slug": "san-diego-toreros"
+  },
+  {
+    "id": "23",
+    "name": "San Jos\u00e9 State Spartans",
+    "abbr": "SJSU",
+    "group": null,
+    "slug": "san-jose-state-spartans"
+  },
+  {
+    "id": "611",
+    "name": "Seton Hill Griffins",
+    "abbr": "SEHI",
+    "group": null,
+    "slug": "seton-hill-griffins"
+  },
+  {
+    "id": "215",
+    "name": "Slippery Rock The Rock",
+    "abbr": "SRU",
+    "group": null,
+    "slug": "slippery-rock-the-rock"
+  },
+  {
+    "id": "6",
+    "name": "South Alabama Jaguars",
+    "abbr": "USA",
+    "group": null,
+    "slug": "south-alabama-jaguars"
+  },
+  {
+    "id": "233",
+    "name": "South Dakota Coyotes",
+    "abbr": "SDAK",
+    "group": null,
+    "slug": "south-dakota-coyotes"
+  },
+  {
+    "id": "613",
+    "name": "South Dakota Mines Hardrockers",
+    "abbr": "SDMT",
+    "group": null,
+    "slug": "south-dakota-mines-hardrockers"
+  },
+  {
+    "id": "58",
+    "name": "South Florida Bulls",
+    "abbr": "USF",
+    "group": null,
+    "slug": "south-florida-bulls"
+  },
+  {
+    "id": "267",
+    "name": "Southeastern Fires",
+    "abbr": "SEU",
+    "group": null,
+    "slug": "southeastern-fires"
+  },
+  {
+    "id": "199",
+    "name": "Southeastern Oklahoma State Savage Storm",
+    "abbr": "SEOK",
+    "group": null,
+    "slug": "southeastern-oklahoma-state-savage-storm"
+  },
+  {
+    "id": "79",
+    "name": "Southern Illinois Salukis",
+    "abbr": "SIU",
+    "group": null,
+    "slug": "southern-illinois-salukis"
+  },
+  {
+    "id": "200",
+    "name": "Southern Nazarene Crimson Storm",
+    "abbr": "SNU",
+    "group": null,
+    "slug": "southern-nazarene-crimson-storm"
+  },
+  {
+    "id": "253",
+    "name": "Southern Utah Thunderbirds",
+    "abbr": "SUU",
+    "group": null,
+    "slug": "southern-utah-thunderbirds"
+  },
+  {
+    "id": "616",
+    "name": "Southwestern (KS) Moundbuilders",
+    "abbr": "SWKS",
+    "group": null,
+    "slug": "southwestern-ks-moundbuilders"
+  },
+  {
+    "id": "81",
+    "name": "Springfield Pride",
+    "abbr": "SPR",
+    "group": null,
+    "slug": "springfield-pride"
+  },
+  {
+    "id": "374",
+    "name": "St. John Fisher Cardinals",
+    "abbr": "STJF",
+    "group": null,
+    "slug": "st-john-fisher-cardinals"
+  },
+  {
+    "id": "133",
+    "name": "St. Olaf Oles",
+    "abbr": "OLAF",
+    "group": null,
+    "slug": "st-olaf-oles"
+  },
+  {
+    "id": "375",
+    "name": "St. Scholastica Saints",
+    "abbr": "CSS",
+    "group": null,
+    "slug": "st-scholastica-saints"
+  },
+  {
+    "id": "24",
+    "name": "Stanford Cardinal",
+    "abbr": "STAN",
+    "group": null,
+    "slug": "stanford-cardinal"
+  },
+  {
+    "id": "618",
+    "name": "Sterling STERLING KS",
+    "abbr": "STLG",
+    "group": null,
+    "slug": "sterling-sterling-ks"
+  },
+  {
+    "id": "56",
+    "name": "Stetson Hatters",
+    "abbr": "STET",
+    "group": null,
+    "slug": "stetson-hatters"
+  },
+  {
+    "id": "471",
+    "name": "Stevenson Mustangs",
+    "abbr": "STVS",
+    "group": null,
+    "slug": "stevenson-mustangs"
+  },
+  {
+    "id": "284",
+    "name": "Stonehill Skyhawks",
+    "abbr": "STO",
+    "group": null,
+    "slug": "stonehill-skyhawks"
+  },
+  {
+    "id": "216",
+    "name": "Susquehanna River Hawks",
+    "abbr": "SUSQ",
+    "group": null,
+    "slug": "susquehanna-river-hawks"
+  },
+  {
+    "id": "183",
+    "name": "Syracuse Orange",
+    "abbr": "SYR",
+    "group": null,
+    "slug": "syracuse-orange"
+  },
+  {
+    "id": "620",
+    "name": "Taylor Trojans",
+    "abbr": "TLRU",
+    "group": null,
+    "slug": "taylor-trojans"
+  },
+  {
+    "id": "218",
+    "name": "Temple Owls",
+    "abbr": "TEM",
+    "group": null,
+    "slug": "temple-owls"
+  },
+  {
+    "id": "245",
+    "name": "Texas A&M Aggies",
+    "abbr": "TA&M",
+    "group": null,
+    "slug": "texas-am-aggies"
+  },
+  {
+    "id": "251",
+    "name": "Texas Longhorns",
+    "abbr": "TEX",
+    "group": null,
+    "slug": "texas-longhorns"
+  },
+  {
+    "id": "326",
+    "name": "Texas State Bobcats",
+    "abbr": "TXST",
+    "group": null,
+    "slug": "texas-state-bobcats"
+  },
+  {
+    "id": "119",
+    "name": "Towson Tigers",
+    "abbr": "TOW",
+    "group": null,
+    "slug": "towson-tigers"
+  },
+  {
+    "id": "386",
+    "name": "Trinity (TX) Tigers",
+    "abbr": "TUTX",
+    "group": null,
+    "slug": "trinity-tx-tigers"
+  },
+  {
+    "id": "112",
+    "name": "Tufts Jumbos",
+    "abbr": "TUFT",
+    "group": null,
+    "slug": "tufts-jumbos"
+  },
+  {
+    "id": "202",
+    "name": "Tulsa Golden Hurricane",
+    "abbr": "TLSA",
+    "group": null,
+    "slug": "tulsa-golden-hurricane"
+  },
+  {
+    "id": "5",
+    "name": "UAB Blazers",
+    "abbr": "UAB",
+    "group": null,
+    "slug": "uab-blazers"
+  },
+  {
+    "id": "399",
+    "name": "UAlbany Great Danes",
+    "abbr": "UALB",
+    "group": null,
+    "slug": "ualbany-great-danes"
+  },
+  {
+    "id": "302",
+    "name": "UC Davis Aggies",
+    "abbr": "UCD",
+    "group": null,
+    "slug": "uc-davis-aggies"
+  },
+  {
+    "id": "2116",
+    "name": "UCF Knights",
+    "abbr": "UCF",
+    "group": null,
+    "slug": "ucf-knights"
+  },
+  {
+    "id": "26",
+    "name": "UCLA Bruins",
+    "abbr": "UCLA",
+    "group": null,
+    "slug": "ucla-bruins"
+  },
+  {
+    "id": "41",
+    "name": "UConn Huskies",
+    "abbr": "CONN",
+    "group": null,
+    "slug": "uconn-huskies"
+  },
+  {
+    "id": "379",
+    "name": "UMass Dartmouth Corsairs",
+    "abbr": "MDAR",
+    "group": null,
+    "slug": "umass-dartmouth-corsairs"
+  },
+  {
+    "id": "30",
+    "name": "USC Trojans",
+    "abbr": "USC",
+    "group": null,
+    "slug": "usc-trojans"
+  },
+  {
+    "id": "237",
+    "name": "Union Garnet Chargers",
+    "abbr": "UNNY",
+    "group": null,
+    "slug": "union-garnet-chargers"
+  },
+  {
+    "id": "559",
+    "name": "University of Mary Marauders",
+    "abbr": "MARY",
+    "group": null,
+    "slug": "university-of-mary-marauders"
+  },
+  {
+    "id": "389",
+    "name": "Upper Iowa Peacocks",
+    "abbr": "UIU",
+    "group": null,
+    "slug": "upper-iowa-peacocks"
+  },
+  {
+    "id": "328",
+    "name": "Utah State Aggies",
+    "abbr": "USU",
+    "group": null,
+    "slug": "utah-state-aggies"
+  },
+  {
+    "id": "254",
+    "name": "Utah Utes",
+    "abbr": "UTAH",
+    "group": null,
+    "slug": "utah-utes"
+  },
+  {
+    "id": "390",
+    "name": "Utica Pioneers",
+    "abbr": "UTIC",
+    "group": null,
+    "slug": "utica-pioneers"
+  },
+  {
+    "id": "628",
+    "name": "Valley City State Vikings",
+    "abbr": "VCSU",
+    "group": null,
+    "slug": "valley-city-state-vikings"
+  },
+  {
+    "id": "238",
+    "name": "Vanderbilt Commodores",
+    "abbr": "VAN",
+    "group": null,
+    "slug": "vanderbilt-commodores"
+  },
+  {
+    "id": "293",
+    "name": "Vermont State Castleton Spartans",
+    "abbr": "VTSC",
+    "group": null,
+    "slug": "vermont-state-castleton-spartans"
+  },
+  {
+    "id": "222",
+    "name": "Villanova Wildcats",
+    "abbr": "VILL",
+    "group": null,
+    "slug": "villanova-wildcats"
+  },
+  {
+    "id": "258",
+    "name": "Virginia Cavaliers",
+    "abbr": "UVA",
+    "group": null,
+    "slug": "virginia-cavaliers"
+  },
+  {
+    "id": "330",
+    "name": "Virginia State Trojans",
+    "abbr": "VSU",
+    "group": null,
+    "slug": "virginia-state-trojans"
+  },
+  {
+    "id": "259",
+    "name": "Virginia Tech Hokies",
+    "abbr": "VT",
+    "group": null,
+    "slug": "virginia-tech-hokies"
+  },
+  {
+    "id": "89",
+    "name": "Wabash Little Giants",
+    "abbr": "WAB",
+    "group": null,
+    "slug": "wabash-little-giants"
+  },
+  {
+    "id": "154",
+    "name": "Wake Forest Demon Deacons",
+    "abbr": "WAKE",
+    "group": null,
+    "slug": "wake-forest-demon-deacons"
+  },
+  {
+    "id": "264",
+    "name": "Washington Huskies",
+    "abbr": "WASH",
+    "group": null,
+    "slug": "washington-huskies"
+  },
+  {
+    "id": "143",
+    "name": "Washington St. Louis Bears",
+    "abbr": "WUMO",
+    "group": null,
+    "slug": "washington-st-louis-bears"
+  },
+  {
+    "id": "265",
+    "name": "Washington State Cougars",
+    "abbr": "WSU",
+    "group": null,
+    "slug": "washington-state-cougars"
+  },
+  {
+    "id": "630",
+    "name": "Wayland Baptist Pioneers",
+    "abbr": "WYBU",
+    "group": null,
+    "slug": "wayland-baptist-pioneers"
+  },
+  {
+    "id": "131",
+    "name": "Wayne State (MI) Warriors",
+    "abbr": "WSMI",
+    "group": null,
+    "slug": "wayne-state-mi-warriors"
+  },
+  {
+    "id": "336",
+    "name": "Wesleyan (CT) Cardinals",
+    "abbr": "WSCT",
+    "group": null,
+    "slug": "wesleyan-ct-cardinals"
+  },
+  {
+    "id": "223",
+    "name": "West Chester Golden Rams",
+    "abbr": "WCHT",
+    "group": null,
+    "slug": "west-chester-golden-rams"
+  },
+  {
+    "id": "277",
+    "name": "West Virginia Mountaineers",
+    "abbr": "WVU",
+    "group": null,
+    "slug": "west-virginia-mountaineers"
+  },
+  {
+    "id": "455",
+    "name": "West Virginia Wesleyan Bobcats",
+    "abbr": "WVWC",
+    "group": null,
+    "slug": "west-virginia-wesleyan-bobcats"
+  },
+  {
+    "id": "98",
+    "name": "Western Kentucky Hilltoppers",
+    "abbr": "WKU",
+    "group": null,
+    "slug": "western-kentucky-hilltoppers"
+  },
+  {
+    "id": "433",
+    "name": "Westminster (MO) Blue Jays",
+    "abbr": "WCMO",
+    "group": null,
+    "slug": "westminster-mo-blue-jays"
+  },
+  {
+    "id": "396",
+    "name": "Wheaton (IL) Thunder",
+    "abbr": "WCIL",
+    "group": null,
+    "slug": "wheaton-il-thunder"
+  },
+  {
+    "id": "398",
+    "name": "Wilkes Colonels",
+    "abbr": "WILK",
+    "group": null,
+    "slug": "wilkes-colonels"
+  },
+  {
+    "id": "351",
+    "name": "Wingate Bulldogs",
+    "abbr": "WINU",
+    "group": null,
+    "slug": "wingate-bulldogs"
+  },
+  {
+    "id": "275",
+    "name": "Wisconsin Badgers",
+    "abbr": "WIS",
+    "group": null,
+    "slug": "wisconsin-badgers"
+  },
+  {
+    "id": "271",
+    "name": "Wisconsin Oshkosh Titans",
+    "abbr": "UWO",
+    "group": null,
+    "slug": "wisconsin-oshkosh-titans"
+  },
+  {
+    "id": "272",
+    "name": "Wisconsin Platteville Pioneers",
+    "abbr": "UWP",
+    "group": null,
+    "slug": "wisconsin-platteville-pioneers"
+  },
+  {
+    "id": "402",
+    "name": "Worcester State Lancers",
+    "abbr": "WORC",
+    "group": null,
+    "slug": "worcester-state-lancers"
+  },
+  {
+    "id": "43",
+    "name": "Yale Bulldogs",
+    "abbr": "YALE",
+    "group": null,
+    "slug": "yale-bulldogs"
+  }
+]

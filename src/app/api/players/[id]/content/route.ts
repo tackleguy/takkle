@@ -5,7 +5,8 @@ import { normalizeStatsUrl, youtubeVideo } from "@/lib/profile/links";
 
 const provider = z.enum(["maxpreps", "247sports", "on3", "espn", "hudl", "other"]);
 const bodySchema = z.discriminatedUnion("action", [
-  z.object({ action: z.literal("details"), firstName: z.string().trim().min(1).max(80), lastName: z.string().trim().min(1).max(80), collegeName: z.string().trim().min(2).max(160), heightInches: z.number().min(48).max(96).nullable(), weightLbs: z.number().int().min(80).max(500).nullable() }),
+  // Identity (name / school) stays locked after verification — owners may only update measurements.
+  z.object({ action: z.literal("details"), heightInches: z.number().min(48).max(96).nullable(), weightLbs: z.number().int().min(80).max(500).nullable() }),
   z.object({ action: z.literal("source"), provider, label: z.string().trim().min(1).max(100), url: z.string().max(2048) }),
   z.object({ action: z.literal("film"), title: z.string().trim().min(1).max(140), url: z.string().max(2048), filmType: z.enum(["highlights", "full_game", "game_film", "individual_clips", "training", "camp", "combine"]), seasonYear: z.number().int().min(2000).max(2100) }),
   z.object({ action: z.literal("remove_source"), id: z.string().uuid() }),
@@ -24,7 +25,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   const db = session.db;
   let result;
   if (input.action === "details") {
-    result = await db.from("players").update({ first_name: input.firstName, last_name: input.lastName, college_name: input.collegeName, height_inches: input.heightInches, weight_lbs: input.weightLbs }).eq("id", id).select("id").single();
+    result = await db.from("players").update({ height_inches: input.heightInches, weight_lbs: input.weightLbs }).eq("id", id).select("id").single();
   } else if (input.action === "source") {
     const url = normalizeStatsUrl(input.provider, input.url);
     if (!url) return NextResponse.json({ error: "Use an HTTPS player or stats page from the selected site." }, { status: 400 });

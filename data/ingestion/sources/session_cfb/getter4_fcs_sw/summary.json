@@ -1,0 +1,19 @@
+{
+  "seasons": [
+    2025,
+    2026
+  ],
+  "teams": 63,
+  "players": 13386,
+  "upserts_2025": 10487,
+  "upserts_2026_delta": 1680,
+  "byConference": {
+    "Southern": 1861,
+    "United Athletic": 2059,
+    "Ohio Valley": 1960,
+    "MEAC": 1217,
+    "SWAC": 2525,
+    "Southland": 2019,
+    "Big Sky": 1745
+  }
+}

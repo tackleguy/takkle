@@ -1,0 +1,2523 @@
+[
+  {
+    "team": "Johnson C Smith",
+    "division": "d2",
+    "season": 2026,
+    "refs": 65,
+    "new": 4
+  },
+  {
+    "team": "Virginia State",
+    "division": "d2",
+    "season": 2026,
+    "refs": 122,
+    "new": 22
+  },
+  {
+    "team": "Virginia Union",
+    "division": "d2",
+    "season": 2026,
+    "refs": 88,
+    "new": 3
+  },
+  {
+    "team": "Shaw",
+    "division": "d2",
+    "season": 2026,
+    "refs": 75,
+    "new": 2
+  },
+  {
+    "team": "Livingstone",
+    "division": "d2",
+    "season": 2026,
+    "refs": 74,
+    "new": 0
+  },
+  {
+    "team": "Fayetteville State",
+    "division": "d2",
+    "season": 2026,
+    "refs": 106,
+    "new": 6
+  },
+  {
+    "team": "Bowie State",
+    "division": "d2",
+    "season": 2026,
+    "refs": 100,
+    "new": 0
+  },
+  {
+    "team": "Elizabeth City State",
+    "division": "d2",
+    "season": 2026,
+    "refs": 103,
+    "new": 3
+  },
+  {
+    "team": "Lincoln (PA)",
+    "division": "d2",
+    "season": 2026,
+    "refs": 82,
+    "new": 1
+  },
+  {
+    "team": "Bluefield State University",
+    "division": "d2",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Winston-Salem",
+    "division": "d2",
+    "season": 2026,
+    "refs": 112,
+    "new": 12
+  },
+  {
+    "team": "North Greenville",
+    "division": "d2",
+    "season": 2026,
+    "refs": 104,
+    "new": 5
+  },
+  {
+    "team": "UNC Pembroke",
+    "division": "d2",
+    "season": 2026,
+    "refs": 148,
+    "new": 49
+  },
+  {
+    "team": "Erskine",
+    "division": "d2",
+    "season": 2026,
+    "refs": 94,
+    "new": 1
+  },
+  {
+    "team": "Chowan",
+    "division": "d2",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Shorter",
+    "division": "d2",
+    "season": 2026,
+    "refs": 154,
+    "new": 151
+  },
+  {
+    "team": "Barton",
+    "division": "d2",
+    "season": 2026,
+    "refs": 131,
+    "new": 31
+  },
+  {
+    "team": "Ferrum",
+    "division": "d2",
+    "season": 2026,
+    "refs": 140,
+    "new": 41
+  },
+  {
+    "team": "Davenport",
+    "division": "d2",
+    "season": 2026,
+    "refs": 7,
+    "new": 0
+  },
+  {
+    "team": "Grand Valley State",
+    "division": "d2",
+    "season": 2026,
+    "refs": 9,
+    "new": 0
+  },
+  {
+    "team": "Roosevelt",
+    "division": "d2",
+    "season": 2026,
+    "refs": 106,
+    "new": 6
+  },
+  {
+    "team": "Ferris State",
+    "division": "d2",
+    "season": 2026,
+    "refs": 129,
+    "new": 29
+  },
+  {
+    "team": "Michigan Tech",
+    "division": "d2",
+    "season": 2026,
+    "refs": 116,
+    "new": 20
+  },
+  {
+    "team": "Saginaw Valley State",
+    "division": "d2",
+    "season": 2026,
+    "refs": 126,
+    "new": 28
+  },
+  {
+    "team": "Wayne State (MI)",
+    "division": "d2",
+    "season": 2026,
+    "refs": 94,
+    "new": 0
+  },
+  {
+    "team": "Northern Michigan",
+    "division": "d2",
+    "season": 2026,
+    "refs": 113,
+    "new": 13
+  },
+  {
+    "team": "East Central (OK)",
+    "division": "d2",
+    "season": 2026,
+    "refs": 38,
+    "new": 35
+  },
+  {
+    "team": "Harding University",
+    "division": "d2",
+    "season": 2026,
+    "refs": 118,
+    "new": 18
+  },
+  {
+    "team": "Henderson State",
+    "division": "d2",
+    "season": 2026,
+    "refs": 188,
+    "new": 94
+  },
+  {
+    "team": "Ouachita Baptist",
+    "division": "d2",
+    "season": 2026,
+    "refs": 29,
+    "new": 26
+  },
+  {
+    "team": "Arkansas Tech",
+    "division": "d2",
+    "season": 2026,
+    "refs": 141,
+    "new": 53
+  },
+  {
+    "team": "Oklahoma Baptist",
+    "division": "d2",
+    "season": 2026,
+    "refs": 104,
+    "new": 4
+  },
+  {
+    "team": "Southeastern Oklahoma State",
+    "division": "d2",
+    "season": 2026,
+    "refs": 2,
+    "new": 0
+  },
+  {
+    "team": "Southern Arkansas",
+    "division": "d2",
+    "season": 2026,
+    "refs": 63,
+    "new": 0
+  },
+  {
+    "team": "Arkansas-Monticello",
+    "division": "d2",
+    "season": 2026,
+    "refs": 137,
+    "new": 56
+  },
+  {
+    "team": "Northwestern Oklahoma State",
+    "division": "d2",
+    "season": 2026,
+    "refs": 99,
+    "new": 0
+  },
+  {
+    "team": "Southern Nazarene",
+    "division": "d2",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Southwestern Oklahoma State",
+    "division": "d2",
+    "season": 2026,
+    "refs": 115,
+    "new": 14
+  },
+  {
+    "team": "William Jewell",
+    "division": "d2",
+    "season": 2026,
+    "refs": 94,
+    "new": 1
+  },
+  {
+    "team": "McKendree",
+    "division": "d2",
+    "season": 2026,
+    "refs": 69,
+    "new": 0
+  },
+  {
+    "team": "Quincy",
+    "division": "d2",
+    "season": 2026,
+    "refs": 128,
+    "new": 29
+  },
+  {
+    "team": "Upper Iowa",
+    "division": "d2",
+    "season": 2026,
+    "refs": 94,
+    "new": 0
+  },
+  {
+    "team": "Lincoln (MO)",
+    "division": "d2",
+    "season": 2026,
+    "refs": 97,
+    "new": 20
+  },
+  {
+    "team": "Truman State",
+    "division": "d2",
+    "season": 2026,
+    "refs": 94,
+    "new": 1
+  },
+  {
+    "team": "Indianapolis",
+    "division": "d2",
+    "season": 2026,
+    "refs": 108,
+    "new": 8
+  },
+  {
+    "team": "Southwest Baptist",
+    "division": "d2",
+    "season": 2026,
+    "refs": 103,
+    "new": 3
+  },
+  {
+    "team": "Missouri S&T",
+    "division": "d2",
+    "season": 2026,
+    "refs": 120,
+    "new": 20
+  },
+  {
+    "team": "Findlay",
+    "division": "d2",
+    "season": 2026,
+    "refs": 1,
+    "new": 0
+  },
+  {
+    "team": "Northwood (MI)",
+    "division": "d2",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Walsh",
+    "division": "d2",
+    "season": 2026,
+    "refs": 119,
+    "new": 21
+  },
+  {
+    "team": "Tiffin",
+    "division": "d2",
+    "season": 2026,
+    "refs": 31,
+    "new": 27
+  },
+  {
+    "team": "Hillsdale",
+    "division": "d2",
+    "season": 2026,
+    "refs": 2,
+    "new": 0
+  },
+  {
+    "team": "Lake Erie",
+    "division": "d2",
+    "season": 2026,
+    "refs": 1,
+    "new": 0
+  },
+  {
+    "team": "Ashland",
+    "division": "d2",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Ohio Dominican",
+    "division": "d2",
+    "season": 2026,
+    "refs": 118,
+    "new": 18
+  },
+  {
+    "team": "Kentucky Wesleyan",
+    "division": "d2",
+    "season": 2026,
+    "refs": 83,
+    "new": 0
+  },
+  {
+    "team": "Thomas More College",
+    "division": "d2",
+    "season": 2026,
+    "refs": 138,
+    "new": 38
+  },
+  {
+    "team": "Valdosta State",
+    "division": "d2",
+    "season": 2026,
+    "refs": 121,
+    "new": 26
+  },
+  {
+    "team": "West Alabama",
+    "division": "d2",
+    "season": 2026,
+    "refs": 109,
+    "new": 9
+  },
+  {
+    "team": "Delta State",
+    "division": "d2",
+    "season": 2026,
+    "refs": 108,
+    "new": 8
+  },
+  {
+    "team": "Northeastern State",
+    "division": "d2",
+    "season": 2026,
+    "refs": 114,
+    "new": 14
+  },
+  {
+    "team": "UT Permian Basin",
+    "division": "d2",
+    "season": 2026,
+    "refs": 166,
+    "new": 100
+  },
+  {
+    "team": "Midwestern State",
+    "division": "d2",
+    "season": 2026,
+    "refs": 116,
+    "new": 16
+  },
+  {
+    "team": "Western Oregon",
+    "division": "d2",
+    "season": 2026,
+    "refs": 118,
+    "new": 18
+  },
+  {
+    "team": "Central Washington",
+    "division": "d2",
+    "season": 2026,
+    "refs": 109,
+    "new": 9
+  },
+  {
+    "team": "Texas A&M-Kingsville",
+    "division": "d2",
+    "season": 2026,
+    "refs": 114,
+    "new": 14
+  },
+  {
+    "team": "West Texas A&M",
+    "division": "d2",
+    "season": 2026,
+    "refs": 114,
+    "new": 37
+  },
+  {
+    "team": "Sul Ross State",
+    "division": "d2",
+    "season": 2026,
+    "refs": 94,
+    "new": 42
+  },
+  {
+    "team": "Western New Mexico",
+    "division": "d2",
+    "season": 2026,
+    "refs": 108,
+    "new": 10
+  },
+  {
+    "team": "Angelo State",
+    "division": "d2",
+    "season": 2026,
+    "refs": 108,
+    "new": 8
+  },
+  {
+    "team": "Eastern New Mexico",
+    "division": "d2",
+    "season": 2026,
+    "refs": 85,
+    "new": 3
+  },
+  {
+    "team": "Emporia State",
+    "division": "d2",
+    "season": 2026,
+    "refs": 2,
+    "new": 0
+  },
+  {
+    "team": "Northwest Missouri State",
+    "division": "d2",
+    "season": 2026,
+    "refs": 125,
+    "new": 25
+  },
+  {
+    "team": "Central Missouri",
+    "division": "d2",
+    "season": 2026,
+    "refs": 43,
+    "new": 0
+  },
+  {
+    "team": "Fort Hays State",
+    "division": "d2",
+    "season": 2026,
+    "refs": 39,
+    "new": 34
+  },
+  {
+    "team": "Washburn",
+    "division": "d2",
+    "season": 2026,
+    "refs": 9,
+    "new": 0
+  },
+  {
+    "team": "Central Oklahoma",
+    "division": "d2",
+    "season": 2026,
+    "refs": 171,
+    "new": 94
+  },
+  {
+    "team": "Missouri Southern State",
+    "division": "d2",
+    "season": 2026,
+    "refs": 4,
+    "new": 0
+  },
+  {
+    "team": "Missouri Western",
+    "division": "d2",
+    "season": 2026,
+    "refs": 109,
+    "new": 9
+  },
+  {
+    "team": "Nebraska-Kearney",
+    "division": "d2",
+    "season": 2026,
+    "refs": 91,
+    "new": 0
+  },
+  {
+    "team": "Pittsburg State",
+    "division": "d2",
+    "season": 2026,
+    "refs": 104,
+    "new": 4
+  },
+  {
+    "team": "West Liberty",
+    "division": "d2",
+    "season": 2026,
+    "refs": 103,
+    "new": 3
+  },
+  {
+    "team": "Concord",
+    "division": "d2",
+    "season": 2026,
+    "refs": 169,
+    "new": 69
+  },
+  {
+    "team": "West Virginia Wesleyan",
+    "division": "d2",
+    "season": 2026,
+    "refs": 102,
+    "new": 2
+  },
+  {
+    "team": "Wheeling",
+    "division": "d2",
+    "season": 2026,
+    "refs": 129,
+    "new": 29
+  },
+  {
+    "team": "Glenville State",
+    "division": "d2",
+    "season": 2026,
+    "refs": 166,
+    "new": 97
+  },
+  {
+    "team": "Frostburg State",
+    "division": "d2",
+    "season": 2026,
+    "refs": 115,
+    "new": 16
+  },
+  {
+    "team": "West Virginia State",
+    "division": "d2",
+    "season": 2026,
+    "refs": 112,
+    "new": 12
+  },
+  {
+    "team": "University Of Charleston (WV)",
+    "division": "d2",
+    "season": 2026,
+    "refs": 101,
+    "new": 1
+  },
+  {
+    "team": "Fairmont State",
+    "division": "d2",
+    "season": 2026,
+    "refs": 147,
+    "new": 76
+  },
+  {
+    "team": "Bentley",
+    "division": "d2",
+    "season": 2026,
+    "refs": 97,
+    "new": 2
+  },
+  {
+    "team": "American International",
+    "division": "d2",
+    "season": 2026,
+    "refs": 130,
+    "new": 32
+  },
+  {
+    "team": "Franklin Pierce",
+    "division": "d2",
+    "season": 2026,
+    "refs": 96,
+    "new": 0
+  },
+  {
+    "team": "Southern Connecticut State",
+    "division": "d2",
+    "season": 2026,
+    "refs": 128,
+    "new": 31
+  },
+  {
+    "team": "Assumption",
+    "division": "d2",
+    "season": 2026,
+    "refs": 104,
+    "new": 8
+  },
+  {
+    "team": "Pace",
+    "division": "d2",
+    "season": 2026,
+    "refs": 98,
+    "new": 6
+  },
+  {
+    "team": "Post University",
+    "division": "d2",
+    "season": 2026,
+    "refs": 94,
+    "new": 8
+  },
+  {
+    "team": "St. Anselm",
+    "division": "d2",
+    "season": 2026,
+    "refs": 116,
+    "new": 17
+  },
+  {
+    "team": "CSU Pueblo",
+    "division": "d2",
+    "season": 2026,
+    "refs": 112,
+    "new": 12
+  },
+  {
+    "team": "Western Colorado",
+    "division": "d2",
+    "season": 2026,
+    "refs": 110,
+    "new": 10
+  },
+  {
+    "team": "New Mexico Highlands",
+    "division": "d2",
+    "season": 2026,
+    "refs": 95,
+    "new": 0
+  },
+  {
+    "team": "Black Hills State",
+    "division": "d2",
+    "season": 2026,
+    "refs": 127,
+    "new": 29
+  },
+  {
+    "team": "South Dakota Mines",
+    "division": "d2",
+    "season": 2026,
+    "refs": 140,
+    "new": 64
+  },
+  {
+    "team": "Fort Lewis",
+    "division": "d2",
+    "season": 2026,
+    "refs": 79,
+    "new": 1
+  },
+  {
+    "team": "Colorado Mesa",
+    "division": "d2",
+    "season": 2026,
+    "refs": 132,
+    "new": 32
+  },
+  {
+    "team": "Colorado School of Mines",
+    "division": "d2",
+    "season": 2026,
+    "refs": 133,
+    "new": 33
+  },
+  {
+    "team": "Chadron State",
+    "division": "d2",
+    "season": 2026,
+    "refs": 129,
+    "new": 35
+  },
+  {
+    "team": "Adams State",
+    "division": "d2",
+    "season": 2026,
+    "refs": 81,
+    "new": 0
+  },
+  {
+    "team": "Benedict",
+    "division": "d2",
+    "season": 2026,
+    "refs": 87,
+    "new": 18
+  },
+  {
+    "team": "Edward Waters",
+    "division": "d2",
+    "season": 2026,
+    "refs": 121,
+    "new": 21
+  },
+  {
+    "team": "Kentucky State",
+    "division": "d2",
+    "season": 2026,
+    "refs": 82,
+    "new": 0
+  },
+  {
+    "team": "Albany State",
+    "division": "d2",
+    "season": 2026,
+    "refs": 138,
+    "new": 38
+  },
+  {
+    "team": "Allen",
+    "division": "d2",
+    "season": 2026,
+    "refs": 79,
+    "new": 0
+  },
+  {
+    "team": "Tuskegee",
+    "division": "d2",
+    "season": 2026,
+    "refs": 87,
+    "new": 0
+  },
+  {
+    "team": "Fort Valley State",
+    "division": "d2",
+    "season": 2026,
+    "refs": 93,
+    "new": 33
+  },
+  {
+    "team": "Central State (OH)",
+    "division": "d2",
+    "season": 2026,
+    "refs": 116,
+    "new": 16
+  },
+  {
+    "team": "Miles College",
+    "division": "d2",
+    "season": 2026,
+    "refs": 117,
+    "new": 17
+  },
+  {
+    "team": "Clark Atlanta",
+    "division": "d2",
+    "season": 2026,
+    "refs": 95,
+    "new": 0
+  },
+  {
+    "team": "Morehouse College",
+    "division": "d2",
+    "season": 2026,
+    "refs": 104,
+    "new": 4
+  },
+  {
+    "team": "Savannah State",
+    "division": "d2",
+    "season": 2026,
+    "refs": 95,
+    "new": 1
+  },
+  {
+    "team": "Lane",
+    "division": "d2",
+    "season": 2026,
+    "refs": 99,
+    "new": 1
+  },
+  {
+    "team": "Carson-Newman",
+    "division": "d2",
+    "season": 2026,
+    "refs": 132,
+    "new": 32
+  },
+  {
+    "team": "Mars Hill",
+    "division": "d2",
+    "season": 2026,
+    "refs": 114,
+    "new": 14
+  },
+  {
+    "team": "Anderson (SC)",
+    "division": "d2",
+    "season": 2026,
+    "refs": 186,
+    "new": 113
+  },
+  {
+    "team": "Newberry",
+    "division": "d2",
+    "season": 2026,
+    "refs": 131,
+    "new": 55
+  },
+  {
+    "team": "Lenoir-Rhyne",
+    "division": "d2",
+    "season": 2026,
+    "refs": 175,
+    "new": 100
+  },
+  {
+    "team": "Catawba",
+    "division": "d2",
+    "season": 2026,
+    "refs": 79,
+    "new": 18
+  },
+  {
+    "team": "Tusculum",
+    "division": "d2",
+    "season": 2026,
+    "refs": 183,
+    "new": 107
+  },
+  {
+    "team": "Emory & Henry College",
+    "division": "d2",
+    "season": 2026,
+    "refs": 161,
+    "new": 68
+  },
+  {
+    "team": "Wingate",
+    "division": "d2",
+    "season": 2026,
+    "refs": 36,
+    "new": 34
+  },
+  {
+    "team": "UVA Wise",
+    "division": "d2",
+    "season": 2026,
+    "refs": 109,
+    "new": 22
+  },
+  {
+    "team": "Central College",
+    "division": "d3",
+    "season": 2026,
+    "refs": 1,
+    "new": 0
+  },
+  {
+    "team": "Loras College",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Simpson College (IA)",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Buena Vista",
+    "division": "d3",
+    "season": 2026,
+    "refs": 1,
+    "new": 0
+  },
+  {
+    "team": "Coe College",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Wartburg College",
+    "division": "d3",
+    "season": 2026,
+    "refs": 1,
+    "new": 0
+  },
+  {
+    "team": "Dubuque",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Nebraska Wesleyan",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Hardin-Simmons",
+    "division": "d3",
+    "season": 2026,
+    "refs": 8,
+    "new": 7
+  },
+  {
+    "team": "Howard Payne",
+    "division": "d3",
+    "season": 2026,
+    "refs": 3,
+    "new": 2
+  },
+  {
+    "team": "East Texas Baptist",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Mary Hardin-Baylor",
+    "division": "d3",
+    "season": 2026,
+    "refs": 166,
+    "new": 66
+  },
+  {
+    "team": "McMurry",
+    "division": "d3",
+    "season": 2026,
+    "refs": 47,
+    "new": 2
+  },
+  {
+    "team": "Schreiner",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Illinois Wesleyan",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "North Central College",
+    "division": "d3",
+    "season": 2026,
+    "refs": 135,
+    "new": 35
+  },
+  {
+    "team": "Wheaton",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Carroll (WI)",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Carthage",
+    "division": "d3",
+    "season": 2026,
+    "refs": 1,
+    "new": 0
+  },
+  {
+    "team": "Augustana (IL)",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Elmhurst",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Millikin",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "North Park",
+    "division": "d3",
+    "season": 2026,
+    "refs": 2,
+    "new": 0
+  },
+  {
+    "team": "Franklin & Marshall",
+    "division": "d3",
+    "season": 2026,
+    "refs": 84,
+    "new": 69
+  },
+  {
+    "team": "Ursinus",
+    "division": "d3",
+    "season": 2026,
+    "refs": 156,
+    "new": 98
+  },
+  {
+    "team": "Dickinson (PA)",
+    "division": "d3",
+    "season": 2026,
+    "refs": 123,
+    "new": 53
+  },
+  {
+    "team": "Gettysburg",
+    "division": "d3",
+    "season": 2026,
+    "refs": 65,
+    "new": 65
+  },
+  {
+    "team": "Muhlenberg",
+    "division": "d3",
+    "season": 2026,
+    "refs": 38,
+    "new": 37
+  },
+  {
+    "team": "Carnegie Mellon",
+    "division": "d3",
+    "season": 2026,
+    "refs": 347,
+    "new": 303
+  },
+  {
+    "team": "Johns Hopkins",
+    "division": "d3",
+    "season": 2026,
+    "refs": 21,
+    "new": 20
+  },
+  {
+    "team": "McDaniel College",
+    "division": "d3",
+    "season": 2026,
+    "refs": 133,
+    "new": 118
+  },
+  {
+    "team": "Endicott College",
+    "division": "d3",
+    "season": 2026,
+    "refs": 43,
+    "new": 43
+  },
+  {
+    "team": "Curry College",
+    "division": "d3",
+    "season": 2026,
+    "refs": 35,
+    "new": 26
+  },
+  {
+    "team": "New England College",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Western New England",
+    "division": "d3",
+    "season": 2026,
+    "refs": 133,
+    "new": 33
+  },
+  {
+    "team": "Maine Maritime",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Husson",
+    "division": "d3",
+    "season": 2026,
+    "refs": 72,
+    "new": 67
+  },
+  {
+    "team": "University of New England",
+    "division": "d3",
+    "season": 2026,
+    "refs": 29,
+    "new": 28
+  },
+  {
+    "team": "Nichols College",
+    "division": "d3",
+    "season": 2026,
+    "refs": 62,
+    "new": 54
+  },
+  {
+    "team": "Cortland",
+    "division": "d3",
+    "season": 2026,
+    "refs": 118,
+    "new": 18
+  },
+  {
+    "team": "Alfred State College",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "St. John Fisher University",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Utica",
+    "division": "d3",
+    "season": 2026,
+    "refs": 34,
+    "new": 34
+  },
+  {
+    "team": "Brockport",
+    "division": "d3",
+    "season": 2026,
+    "refs": 1,
+    "new": 0
+  },
+  {
+    "team": "Alfred",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "SUNY Morrisville",
+    "division": "d3",
+    "season": 2026,
+    "refs": 28,
+    "new": 27
+  },
+  {
+    "team": "Hartwick",
+    "division": "d3",
+    "season": 2026,
+    "refs": 1,
+    "new": 0
+  },
+  {
+    "team": "Mount St. Joseph",
+    "division": "d3",
+    "season": 2026,
+    "refs": 124,
+    "new": 24
+  },
+  {
+    "team": "Hanover",
+    "division": "d3",
+    "season": 2026,
+    "refs": 126,
+    "new": 26
+  },
+  {
+    "team": "Rose-Hulman",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Anderson (IN)",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Franklin",
+    "division": "d3",
+    "season": 2026,
+    "refs": 105,
+    "new": 5
+  },
+  {
+    "team": "Manchester",
+    "division": "d3",
+    "season": 2026,
+    "refs": 124,
+    "new": 114
+  },
+  {
+    "team": "Bluffton",
+    "division": "d3",
+    "season": 2026,
+    "refs": 32,
+    "new": 31
+  },
+  {
+    "team": "Keystone",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Susquehanna",
+    "division": "d3",
+    "season": 2026,
+    "refs": 4,
+    "new": 4
+  },
+  {
+    "team": "Wilkes University",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Juniata",
+    "division": "d3",
+    "season": 2026,
+    "refs": 62,
+    "new": 62
+  },
+  {
+    "team": "Lycoming",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Western Connecticut State",
+    "division": "d3",
+    "season": 2026,
+    "refs": 148,
+    "new": 48
+  },
+  {
+    "team": "Catholic",
+    "division": "d3",
+    "season": 2026,
+    "refs": 108,
+    "new": 8
+  },
+  {
+    "team": "Moravian",
+    "division": "d3",
+    "season": 2026,
+    "refs": 15,
+    "new": 0
+  },
+  {
+    "team": "Ithaca",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Hobart",
+    "division": "d3",
+    "season": 2026,
+    "refs": 1,
+    "new": 0
+  },
+  {
+    "team": "Rensselaer",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "University of Rochester (NY)",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "St. Lawrence",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Union (NY)",
+    "division": "d3",
+    "season": 2026,
+    "refs": 1,
+    "new": 0
+  },
+  {
+    "team": "Buffalo State",
+    "division": "d3",
+    "season": 2026,
+    "refs": 116,
+    "new": 16
+  },
+  {
+    "team": "Hilbert College",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Bridgewater State",
+    "division": "d3",
+    "season": 2026,
+    "refs": 22,
+    "new": 21
+  },
+  {
+    "team": "Framingham State",
+    "division": "d3",
+    "season": 2026,
+    "refs": 30,
+    "new": 27
+  },
+  {
+    "team": "Mass Maritime",
+    "division": "d3",
+    "season": 2026,
+    "refs": 39,
+    "new": 34
+  },
+  {
+    "team": "Worcester State College",
+    "division": "d3",
+    "season": 2026,
+    "refs": 42,
+    "new": 41
+  },
+  {
+    "team": "UMass Dartmouth",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Fitchburg State",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Westfield State",
+    "division": "d3",
+    "season": 2026,
+    "refs": 20,
+    "new": 20
+  },
+  {
+    "team": "Plymouth State",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Dean College",
+    "division": "d3",
+    "season": 2026,
+    "refs": 1,
+    "new": 1
+  },
+  {
+    "team": "Calvin University",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Hope",
+    "division": "d3",
+    "season": 2026,
+    "refs": 1,
+    "new": 0
+  },
+  {
+    "team": "Olivet College",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Adrian",
+    "division": "d3",
+    "season": 2026,
+    "refs": 171,
+    "new": 72
+  },
+  {
+    "team": "Trine University",
+    "division": "d3",
+    "season": 2026,
+    "refs": 137,
+    "new": 123
+  },
+  {
+    "team": "Kalamazoo",
+    "division": "d3",
+    "season": 2026,
+    "refs": 57,
+    "new": 57
+  },
+  {
+    "team": "Albion",
+    "division": "d3",
+    "season": 2026,
+    "refs": 121,
+    "new": 21
+  },
+  {
+    "team": "Alma College",
+    "division": "d3",
+    "season": 2026,
+    "refs": 128,
+    "new": 116
+  },
+  {
+    "team": "Delaware Valley",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Eastern University",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Widener",
+    "division": "d3",
+    "season": 2026,
+    "refs": 2,
+    "new": 0
+  },
+  {
+    "team": "Misericordia",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Albright",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Stevenson",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Alvernia",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "King's College (PA)",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "FDU-Florham",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Lebanon Valley",
+    "division": "d3",
+    "season": 2026,
+    "refs": 9,
+    "new": 9
+  },
+  {
+    "team": "Lake Forest",
+    "division": "d3",
+    "season": 2026,
+    "refs": 27,
+    "new": 27
+  },
+  {
+    "team": "Luther",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Illinois College",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Chicago",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Monmouth (IL)",
+    "division": "d3",
+    "season": 2026,
+    "refs": 1,
+    "new": 0
+  },
+  {
+    "team": "Ripon",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Cornell (IA)",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Grinnell",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Beloit College",
+    "division": "d3",
+    "season": 2026,
+    "refs": 4,
+    "new": 4
+  },
+  {
+    "team": "Knox College",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Lawrence University",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Concordia-Moorhead",
+    "division": "d3",
+    "season": 2026,
+    "refs": 27,
+    "new": 27
+  },
+  {
+    "team": "Saint John's (MN)",
+    "division": "d3",
+    "season": 2026,
+    "refs": 4,
+    "new": 0
+  },
+  {
+    "team": "Augsburg",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Bethel (MN)",
+    "division": "d3",
+    "season": 2026,
+    "refs": 39,
+    "new": 38
+  },
+  {
+    "team": "Carleton College",
+    "division": "d3",
+    "season": 2026,
+    "refs": 54,
+    "new": 54
+  },
+  {
+    "team": "Gustavus Adolphus",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Hamline",
+    "division": "d3",
+    "season": 2026,
+    "refs": 28,
+    "new": 26
+  },
+  {
+    "team": "Macalester",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "St. Olaf",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "St. Scholastica",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Amherst",
+    "division": "d3",
+    "season": 2026,
+    "refs": 4,
+    "new": 0
+  },
+  {
+    "team": "Trinity (CT)",
+    "division": "d3",
+    "season": 2026,
+    "refs": 36,
+    "new": 28
+  },
+  {
+    "team": "Tufts",
+    "division": "d3",
+    "season": 2026,
+    "refs": 30,
+    "new": 25
+  },
+  {
+    "team": "Wesleyan University (CT)",
+    "division": "d3",
+    "season": 2026,
+    "refs": 36,
+    "new": 35
+  },
+  {
+    "team": "Williams",
+    "division": "d3",
+    "season": 2026,
+    "refs": 39,
+    "new": 35
+  },
+  {
+    "team": "Bates College",
+    "division": "d3",
+    "season": 2026,
+    "refs": 75,
+    "new": 70
+  },
+  {
+    "team": "Bowdoin",
+    "division": "d3",
+    "season": 2026,
+    "refs": 50,
+    "new": 50
+  },
+  {
+    "team": "Colby College",
+    "division": "d3",
+    "season": 2026,
+    "refs": 35,
+    "new": 35
+  },
+  {
+    "team": "Hamilton",
+    "division": "d3",
+    "season": 2026,
+    "refs": 28,
+    "new": 27
+  },
+  {
+    "team": "Middlebury",
+    "division": "d3",
+    "season": 2026,
+    "refs": 147,
+    "new": 142
+  },
+  {
+    "team": "Salve Regina",
+    "division": "d3",
+    "season": 2026,
+    "refs": 214,
+    "new": 168
+  },
+  {
+    "team": "MIT",
+    "division": "d3",
+    "season": 2026,
+    "refs": 31,
+    "new": 28
+  },
+  {
+    "team": "Merchant Marine",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Coast Guard",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "SUNY Maritime",
+    "division": "d3",
+    "season": 2026,
+    "refs": 97,
+    "new": 0
+  },
+  {
+    "team": "Springfield",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "WPI",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Norwich",
+    "division": "d3",
+    "season": 2026,
+    "refs": 1,
+    "new": 0
+  },
+  {
+    "team": "Christopher Newport",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Salisbury University",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Castleton",
+    "division": "d3",
+    "season": 2026,
+    "refs": 122,
+    "new": 36
+  },
+  {
+    "team": "Kean",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Montclair State",
+    "division": "d3",
+    "season": 2026,
+    "refs": 26,
+    "new": 26
+  },
+  {
+    "team": "Rowan",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "The College of New Jersey",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "William Paterson",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "John Carroll",
+    "division": "d3",
+    "season": 2026,
+    "refs": 2,
+    "new": 0
+  },
+  {
+    "team": "Wabash College",
+    "division": "d3",
+    "season": 2026,
+    "refs": 117,
+    "new": 17
+  },
+  {
+    "team": "Washington University-St. Louis",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Denison",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "DePauw",
+    "division": "d3",
+    "season": 2026,
+    "refs": 118,
+    "new": 26
+  },
+  {
+    "team": "Wooster",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Kenyon",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Ohio Wesleyan",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Oberlin",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Wittenberg",
+    "division": "d3",
+    "season": 2026,
+    "refs": 140,
+    "new": 40
+  },
+  {
+    "team": "Concordia-Wisconsin",
+    "division": "d3",
+    "season": 2026,
+    "refs": 37,
+    "new": 36
+  },
+  {
+    "team": "Concordia-Chicago",
+    "division": "d3",
+    "season": 2026,
+    "refs": 34,
+    "new": 34
+  },
+  {
+    "team": "Benedictine University (IL)",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Lakeland University",
+    "division": "d3",
+    "season": 2026,
+    "refs": 1,
+    "new": 0
+  },
+  {
+    "team": "Wisconsin Lutheran",
+    "division": "d3",
+    "season": 2026,
+    "refs": 35,
+    "new": 35
+  },
+  {
+    "team": "St. Norbert",
+    "division": "d3",
+    "season": 2026,
+    "refs": 30,
+    "new": 27
+  },
+  {
+    "team": "Aurora",
+    "division": "d3",
+    "season": 2026,
+    "refs": 53,
+    "new": 5
+  },
+  {
+    "team": "Eureka College",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Rockford",
+    "division": "d3",
+    "season": 2026,
+    "refs": 7,
+    "new": 7
+  },
+  {
+    "team": "Lewis & Clark",
+    "division": "d3",
+    "season": 2026,
+    "refs": 27,
+    "new": 26
+  },
+  {
+    "team": "George Fox",
+    "division": "d3",
+    "season": 2026,
+    "refs": 5,
+    "new": 4
+  },
+  {
+    "team": "Linfield",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Whitworth",
+    "division": "d3",
+    "season": 2026,
+    "refs": 37,
+    "new": 28
+  },
+  {
+    "team": "Willamette",
+    "division": "d3",
+    "season": 2026,
+    "refs": 120,
+    "new": 21
+  },
+  {
+    "team": "Pacific Lutheran",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Puget Sound",
+    "division": "d3",
+    "season": 2026,
+    "refs": 37,
+    "new": 36
+  },
+  {
+    "team": "Pacific (OR)",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Heidelberg",
+    "division": "d3",
+    "season": 2026,
+    "refs": 1,
+    "new": 0
+  },
+  {
+    "team": "Baldwin Wallace",
+    "division": "d3",
+    "season": 2026,
+    "refs": 1,
+    "new": 0
+  },
+  {
+    "team": "Ohio Northern",
+    "division": "d3",
+    "season": 2026,
+    "refs": 99,
+    "new": 0
+  },
+  {
+    "team": "Marietta",
+    "division": "d3",
+    "season": 2026,
+    "refs": 102,
+    "new": 2
+  },
+  {
+    "team": "Capital",
+    "division": "d3",
+    "season": 2026,
+    "refs": 2,
+    "new": 1
+  },
+  {
+    "team": "Otterbein",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Mount Union",
+    "division": "d3",
+    "season": 2026,
+    "refs": 177,
+    "new": 77
+  },
+  {
+    "team": "Wilmington (OH)",
+    "division": "d3",
+    "season": 2026,
+    "refs": 93,
+    "new": 0
+  },
+  {
+    "team": "Muskingum",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Roanoke College",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Averett",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Hampden-Sydney",
+    "division": "d3",
+    "season": 2026,
+    "refs": 2,
+    "new": 0
+  },
+  {
+    "team": "Randolph-Macon",
+    "division": "d3",
+    "season": 2026,
+    "refs": 29,
+    "new": 25
+  },
+  {
+    "team": "Shenandoah",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Washington and Lee",
+    "division": "d3",
+    "season": 2026,
+    "refs": 20,
+    "new": 2
+  },
+  {
+    "team": "Guilford",
+    "division": "d3",
+    "season": 2026,
+    "refs": 113,
+    "new": 13
+  },
+  {
+    "team": "Bridgewater (VA)",
+    "division": "d3",
+    "season": 2026,
+    "refs": 37,
+    "new": 37
+  },
+  {
+    "team": "Allegheny",
+    "division": "d3",
+    "season": 2026,
+    "refs": 27,
+    "new": 27
+  },
+  {
+    "team": "Case Western Reserve",
+    "division": "d3",
+    "season": 2026,
+    "refs": 76,
+    "new": 76
+  },
+  {
+    "team": "Hiram College",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Saint Vincent",
+    "division": "d3",
+    "season": 2026,
+    "refs": 65,
+    "new": 62
+  },
+  {
+    "team": "Bethany (WV)",
+    "division": "d3",
+    "season": 2026,
+    "refs": 96,
+    "new": 63
+  },
+  {
+    "team": "Geneva",
+    "division": "d3",
+    "season": 2026,
+    "refs": 97,
+    "new": 71
+  },
+  {
+    "team": "Washington & Jefferson",
+    "division": "d3",
+    "season": 2026,
+    "refs": 77,
+    "new": 63
+  },
+  {
+    "team": "Grove City College",
+    "division": "d3",
+    "season": 2026,
+    "refs": 21,
+    "new": 21
+  },
+  {
+    "team": "Westminster (PA)",
+    "division": "d3",
+    "season": 2026,
+    "refs": 87,
+    "new": 83
+  },
+  {
+    "team": "Thiel",
+    "division": "d3",
+    "season": 2026,
+    "refs": 117,
+    "new": 116
+  },
+  {
+    "team": "Waynesburg",
+    "division": "d3",
+    "season": 2026,
+    "refs": 119,
+    "new": 106
+  },
+  {
+    "team": "Saint Francis",
+    "division": "d3",
+    "season": 2026,
+    "refs": 81,
+    "new": 0
+  },
+  {
+    "team": "La Verne",
+    "division": "d3",
+    "season": 2026,
+    "refs": 115,
+    "new": 69
+  },
+  {
+    "team": "Azusa Pacific",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Cal Lutheran",
+    "division": "d3",
+    "season": 2026,
+    "refs": 22,
+    "new": 21
+  },
+  {
+    "team": "Chapman",
+    "division": "d3",
+    "season": 2026,
+    "refs": 70,
+    "new": 63
+  },
+  {
+    "team": "Claremont Mudd Scripps",
+    "division": "d3",
+    "season": 2026,
+    "refs": 102,
+    "new": 89
+  },
+  {
+    "team": "Pomona Pitzer",
+    "division": "d3",
+    "season": 2026,
+    "refs": 30,
+    "new": 0
+  },
+  {
+    "team": "Whittier College",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Redlands",
+    "division": "d3",
+    "season": 2026,
+    "refs": 101,
+    "new": 89
+  },
+  {
+    "team": "Berry College",
+    "division": "d3",
+    "season": 2026,
+    "refs": 117,
+    "new": 28
+  },
+  {
+    "team": "Trinity (TX)",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Millsaps",
+    "division": "d3",
+    "season": 2026,
+    "refs": 1,
+    "new": 0
+  },
+  {
+    "team": "Sewanee",
+    "division": "d3",
+    "season": 2026,
+    "refs": 19,
+    "new": 1
+  },
+  {
+    "team": "Centre College",
+    "division": "d3",
+    "season": 2026,
+    "refs": 1,
+    "new": 0
+  },
+  {
+    "team": "Rhodes College",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Maryville College (TN)",
+    "division": "d3",
+    "season": 2026,
+    "refs": 103,
+    "new": 4
+  },
+  {
+    "team": "Southwestern University",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Texas Lutheran",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Hendrix College",
+    "division": "d3",
+    "season": 2026,
+    "refs": 1,
+    "new": 0
+  },
+  {
+    "team": "Lyon College",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Austin",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Centenary",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Gallaudet",
+    "division": "d3",
+    "season": 2026,
+    "refs": 54,
+    "new": 50
+  },
+  {
+    "team": "Westminster (MO)",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Crown College",
+    "division": "d3",
+    "season": 2026,
+    "refs": 1,
+    "new": 1
+  },
+  {
+    "team": "Greenville",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Minnesota Morris",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Northwestern (MN)",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Martin Luther",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Brevard College",
+    "division": "d3",
+    "season": 2026,
+    "refs": 158,
+    "new": 95
+  },
+  {
+    "team": "LaGrange College",
+    "division": "d3",
+    "season": 2026,
+    "refs": 46,
+    "new": 40
+  },
+  {
+    "team": "North Carolina Wesleyan",
+    "division": "d3",
+    "season": 2026,
+    "refs": 161,
+    "new": 71
+  },
+  {
+    "team": "Belhaven",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Greensboro College",
+    "division": "d3",
+    "season": 2026,
+    "refs": 118,
+    "new": 19
+  },
+  {
+    "team": "Huntingdon College (AL)",
+    "division": "d3",
+    "season": 2026,
+    "refs": 2,
+    "new": 2
+  },
+  {
+    "team": "Southern Virginia",
+    "division": "d3",
+    "season": 2026,
+    "refs": 85,
+    "new": 0
+  },
+  {
+    "team": "Methodist",
+    "division": "d3",
+    "season": 2026,
+    "refs": 94,
+    "new": 21
+  },
+  {
+    "team": "Wisconsin-Eau Claire",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Wisconsin-Platteville",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Wisconsin-River Falls",
+    "division": "d3",
+    "season": 2026,
+    "refs": 2,
+    "new": 0
+  },
+  {
+    "team": "Wisconsin-Whitewater",
+    "division": "d3",
+    "season": 2026,
+    "refs": 108,
+    "new": 8
+  },
+  {
+    "team": "Wisconsin-Oshkosh",
+    "division": "d3",
+    "season": 2026,
+    "refs": 109,
+    "new": 9
+  },
+  {
+    "team": "Wisconsin-Stevens Pt",
+    "division": "d3",
+    "season": 2026,
+    "refs": 136,
+    "new": 39
+  },
+  {
+    "team": "Wisconsin-Stout",
+    "division": "d3",
+    "refs": 0,
+    "new": 0
+  },
+  {
+    "team": "Wisconsin-Lacrosse",
+    "division": "d3",
+    "season": 2026,
+    "refs": 1,
+    "new": 0
+  }
+]

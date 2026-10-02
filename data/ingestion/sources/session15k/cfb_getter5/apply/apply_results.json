@@ -1,0 +1,32 @@
+[
+  {
+    "file": "players_000.json",
+    "ok": true,
+    "resp": "50"
+  },
+  {
+    "file": "players_050.json",
+    "ok": true,
+    "resp": "50"
+  },
+  {
+    "file": "players_100.json",
+    "ok": true,
+    "resp": "50"
+  },
+  {
+    "file": "players_150.json",
+    "ok": true,
+    "resp": "50"
+  },
+  {
+    "file": "players_200.json",
+    "ok": true,
+    "resp": "50"
+  },
+  {
+    "file": "players_250.json",
+    "ok": false,
+    "resp": "{\"code\":\"23502\",\"details\":\"Failing row contains (dfcd90f8-ab0b-5c8d-9a96-63cebeabd834, Nebraska, nebraska-cfb, null, null, null, null, null, null, null, 2026-09-14 05:51:33.987774+00, 2026-09-14 05:51:33.987774+00, null, f, null, https://www.espn.com/college-football/story/_/id/47467021/2026-n..., media_public, ESPN Transfer Portal Rankings, 2026-09-14 05:51:33.987774+00).\",\"hint\":null,\"message\":\"null value in column \\\"state_code\\\" of relation \\\"schools\\\" violates not-null constraint\"}"
+  }
+]

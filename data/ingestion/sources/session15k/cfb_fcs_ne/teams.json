@@ -1,0 +1,672 @@
+[
+  {
+    "id": "119",
+    "name": "Towson Tigers",
+    "location": "Towson",
+    "nickname": "Towson",
+    "abbreviation": "TOW",
+    "conference": "CAA",
+    "conference_id": 48,
+    "state_code": "MD"
+  },
+  {
+    "id": "160",
+    "name": "New Hampshire Wildcats",
+    "location": "New Hampshire",
+    "nickname": "New Hampshire",
+    "abbreviation": "UNH",
+    "conference": "CAA",
+    "conference_id": 48,
+    "state_code": "NH"
+  },
+  {
+    "id": "222",
+    "name": "Villanova Wildcats",
+    "location": "Villanova",
+    "nickname": "Villanova",
+    "abbreviation": "VILL",
+    "conference": "CAA",
+    "conference_id": 48,
+    "state_code": "PA"
+  },
+  {
+    "id": "227",
+    "name": "Rhode Island Rams",
+    "location": "Rhode Island",
+    "nickname": "Rhode Island",
+    "abbreviation": "URI",
+    "conference": "CAA",
+    "conference_id": 48,
+    "state_code": "RI"
+  },
+  {
+    "id": "311",
+    "name": "Maine Black Bears",
+    "location": "Maine",
+    "nickname": "Maine",
+    "abbreviation": "ME",
+    "conference": "CAA",
+    "conference_id": 48,
+    "state_code": "ME"
+  },
+  {
+    "id": "399",
+    "name": "UAlbany Great Danes",
+    "location": "UAlbany",
+    "nickname": "UAlbany",
+    "abbreviation": "ALB",
+    "conference": "CAA",
+    "conference_id": 48,
+    "state_code": "NY"
+  },
+  {
+    "id": "2097",
+    "name": "Campbell Fighting Camels",
+    "location": "Campbell",
+    "nickname": "Campbell",
+    "abbreviation": "CAM",
+    "conference": "CAA",
+    "conference_id": 48,
+    "state_code": "NC"
+  },
+  {
+    "id": "2210",
+    "name": "Elon Phoenix",
+    "location": "Elon",
+    "nickname": "Elon",
+    "abbreviation": "ELON",
+    "conference": "CAA",
+    "conference_id": 48,
+    "state_code": "NC"
+  },
+  {
+    "id": "2261",
+    "name": "Hampton Pirates",
+    "location": "Hampton",
+    "nickname": "Hampton",
+    "abbreviation": "HAMP",
+    "conference": "CAA",
+    "conference_id": 48,
+    "state_code": "VA"
+  },
+  {
+    "id": "2405",
+    "name": "Monmouth Hawks",
+    "location": "Monmouth",
+    "nickname": "Monmouth",
+    "abbreviation": "MONM",
+    "conference": "CAA",
+    "conference_id": 48,
+    "state_code": "NJ"
+  },
+  {
+    "id": "2448",
+    "name": "North Carolina A&T Aggies",
+    "location": "North Carolina A&T",
+    "nickname": "NC A&T",
+    "abbreviation": "NCAT",
+    "conference": "CAA",
+    "conference_id": 48,
+    "state_code": "NC"
+  },
+  {
+    "id": "2619",
+    "name": "Stony Brook Seawolves",
+    "location": "Stony Brook",
+    "nickname": "Stony Brook",
+    "abbreviation": "STBK",
+    "conference": "CAA",
+    "conference_id": 48,
+    "state_code": "NY"
+  },
+  {
+    "id": "2729",
+    "name": "William & Mary Tribe",
+    "location": "William & Mary",
+    "nickname": "William & Mary",
+    "abbreviation": "W&M",
+    "conference": "CAA",
+    "conference_id": 48,
+    "state_code": "VA"
+  },
+  {
+    "id": "2803",
+    "name": "Bryant Bulldogs",
+    "location": "Bryant",
+    "nickname": "Bryant",
+    "abbreviation": "BRY",
+    "conference": "CAA",
+    "conference_id": 48,
+    "state_code": "RI"
+  },
+  {
+    "id": "43",
+    "name": "Yale Bulldogs",
+    "location": "Yale",
+    "nickname": "Yale",
+    "abbreviation": "YALE",
+    "conference": "Ivy",
+    "conference_id": 22,
+    "state_code": "CT"
+  },
+  {
+    "id": "108",
+    "name": "Harvard Crimson",
+    "location": "Harvard",
+    "nickname": "Harvard",
+    "abbreviation": "HARV",
+    "conference": "Ivy",
+    "conference_id": 22,
+    "state_code": "MA"
+  },
+  {
+    "id": "159",
+    "name": "Dartmouth Big Green",
+    "location": "Dartmouth",
+    "nickname": "Dartmouth",
+    "abbreviation": "DART",
+    "conference": "Ivy",
+    "conference_id": 22,
+    "state_code": "NH"
+  },
+  {
+    "id": "163",
+    "name": "Princeton Tigers",
+    "location": "Princeton",
+    "nickname": "Princeton",
+    "abbreviation": "PRIN",
+    "conference": "Ivy",
+    "conference_id": 22,
+    "state_code": "NJ"
+  },
+  {
+    "id": "171",
+    "name": "Columbia Lions",
+    "location": "Columbia",
+    "nickname": "Columbia",
+    "abbreviation": "COLU",
+    "conference": "Ivy",
+    "conference_id": 22,
+    "state_code": "NY"
+  },
+  {
+    "id": "172",
+    "name": "Cornell Big Red",
+    "location": "Cornell",
+    "nickname": "Cornell",
+    "abbreviation": "COR",
+    "conference": "Ivy",
+    "conference_id": 22,
+    "state_code": "NY"
+  },
+  {
+    "id": "219",
+    "name": "Pennsylvania Quakers",
+    "location": "Pennsylvania",
+    "nickname": "Penn",
+    "abbreviation": "PENN",
+    "conference": "Ivy",
+    "conference_id": 22,
+    "state_code": "PA"
+  },
+  {
+    "id": "225",
+    "name": "Brown Bears",
+    "location": "Brown",
+    "nickname": "Brown",
+    "abbreviation": "BRWN",
+    "conference": "Ivy",
+    "conference_id": 22,
+    "state_code": "RI"
+  },
+  {
+    "id": "46",
+    "name": "Georgetown Hoyas",
+    "location": "Georgetown",
+    "nickname": "Georgetown",
+    "abbreviation": "GTWN",
+    "conference": "Patriot",
+    "conference_id": 27,
+    "state_code": "DC"
+  },
+  {
+    "id": "107",
+    "name": "Holy Cross Crusaders",
+    "location": "Holy Cross",
+    "nickname": "Holy Cross",
+    "abbreviation": "HC",
+    "conference": "Patriot",
+    "conference_id": 27,
+    "state_code": "MA"
+  },
+  {
+    "id": "257",
+    "name": "Richmond Spiders",
+    "location": "Richmond",
+    "nickname": "Richmond",
+    "abbreviation": "RICH",
+    "conference": "Patriot",
+    "conference_id": 27,
+    "state_code": "VA"
+  },
+  {
+    "id": "322",
+    "name": "Lafayette Leopards",
+    "location": "Lafayette",
+    "nickname": "Lafayette",
+    "abbreviation": "LAF",
+    "conference": "Patriot",
+    "conference_id": 27,
+    "state_code": "PA"
+  },
+  {
+    "id": "2083",
+    "name": "Bucknell Bison",
+    "location": "Bucknell",
+    "nickname": "Bucknell",
+    "abbreviation": "BUCK",
+    "conference": "Patriot",
+    "conference_id": 27,
+    "state_code": "PA"
+  },
+  {
+    "id": "2142",
+    "name": "Colgate Raiders",
+    "location": "Colgate",
+    "nickname": "Colgate",
+    "abbreviation": "COLG",
+    "conference": "Patriot",
+    "conference_id": 27,
+    "state_code": "NY"
+  },
+  {
+    "id": "2230",
+    "name": "Fordham Rams",
+    "location": "Fordham",
+    "nickname": "Fordham",
+    "abbreviation": "FOR",
+    "conference": "Patriot",
+    "conference_id": 27,
+    "state_code": "NY"
+  },
+  {
+    "id": "2329",
+    "name": "Lehigh Mountain Hawks",
+    "location": "Lehigh",
+    "nickname": "Lehigh",
+    "abbreviation": "LEH",
+    "conference": "Patriot",
+    "conference_id": 27,
+    "state_code": "PA"
+  },
+  {
+    "id": "284",
+    "name": "Stonehill Skyhawks",
+    "location": "Stonehill",
+    "nickname": "Stonehill",
+    "abbreviation": "STO",
+    "conference": "NEC",
+    "conference_id": 25,
+    "state_code": "MA"
+  },
+  {
+    "id": "2115",
+    "name": "Central Connecticut Blue Devils",
+    "location": "Central Connecticut",
+    "nickname": "C Connecticut",
+    "abbreviation": "CCSU",
+    "conference": "NEC",
+    "conference_id": 25,
+    "state_code": "CT"
+  },
+  {
+    "id": "2184",
+    "name": "Duquesne Dukes",
+    "location": "Duquesne",
+    "nickname": "Duquesne",
+    "abbreviation": "DUQ",
+    "conference": "NEC",
+    "conference_id": 25,
+    "state_code": "PA"
+  },
+  {
+    "id": "2341",
+    "name": "Long Island University Sharks",
+    "location": "Long Island University",
+    "nickname": "Long Island",
+    "abbreviation": "LIU",
+    "conference": "NEC",
+    "conference_id": 25,
+    "state_code": "NY"
+  },
+  {
+    "id": "2385",
+    "name": "Mercyhurst Lakers",
+    "location": "Mercyhurst",
+    "nickname": "Mercyhurst",
+    "abbreviation": "MERC",
+    "conference": "NEC",
+    "conference_id": 25,
+    "state_code": "PA"
+  },
+  {
+    "id": "2441",
+    "name": "New Haven Chargers",
+    "location": "New Haven",
+    "nickname": "New Haven",
+    "abbreviation": "NH",
+    "conference": "NEC",
+    "conference_id": 25,
+    "state_code": "CT"
+  },
+  {
+    "id": "2523",
+    "name": "Robert Morris Colonials",
+    "location": "Robert Morris",
+    "nickname": "Robert Morris",
+    "abbreviation": "RMU",
+    "conference": "NEC",
+    "conference_id": 25,
+    "state_code": "PA"
+  },
+  {
+    "id": "2598",
+    "name": "Saint Francis Red Flash",
+    "location": "Saint Francis",
+    "nickname": "Saint Francis",
+    "abbreviation": "SFPA",
+    "conference": "NEC",
+    "conference_id": 25,
+    "state_code": "PA"
+  },
+  {
+    "id": "2681",
+    "name": "Wagner Seahawks",
+    "location": "Wagner",
+    "nickname": "Wagner",
+    "abbreviation": "WAG",
+    "conference": "NEC",
+    "conference_id": 25,
+    "state_code": "NY"
+  },
+  {
+    "id": "56",
+    "name": "Stetson Hatters",
+    "location": "Stetson",
+    "nickname": "Stetson",
+    "abbreviation": "STET",
+    "conference": "Pioneer",
+    "conference_id": 28,
+    "state_code": "FL"
+  },
+  {
+    "id": "301",
+    "name": "San Diego Toreros",
+    "location": "San Diego",
+    "nickname": "San Diego",
+    "abbreviation": "USD",
+    "conference": "Pioneer",
+    "conference_id": 28,
+    "state_code": "CA"
+  },
+  {
+    "id": "2086",
+    "name": "Butler Bulldogs",
+    "location": "Butler",
+    "nickname": "Butler",
+    "abbreviation": "BUT",
+    "conference": "Pioneer",
+    "conference_id": 28,
+    "state_code": "IN"
+  },
+  {
+    "id": "2166",
+    "name": "Davidson Wildcats",
+    "location": "Davidson",
+    "nickname": "Davidson",
+    "abbreviation": "DAV",
+    "conference": "Pioneer",
+    "conference_id": 28,
+    "state_code": "NC"
+  },
+  {
+    "id": "2168",
+    "name": "Dayton Flyers",
+    "location": "Dayton",
+    "nickname": "Dayton",
+    "abbreviation": "DAY",
+    "conference": "Pioneer",
+    "conference_id": 28,
+    "state_code": "OH"
+  },
+  {
+    "id": "2181",
+    "name": "Drake Bulldogs",
+    "location": "Drake",
+    "nickname": "Drake",
+    "abbreviation": "DRKE",
+    "conference": "Pioneer",
+    "conference_id": 28,
+    "state_code": "IA"
+  },
+  {
+    "id": "2368",
+    "name": "Marist Red Foxes",
+    "location": "Marist",
+    "nickname": "Marist",
+    "abbreviation": "MRST",
+    "conference": "Pioneer",
+    "conference_id": 28,
+    "state_code": "NY"
+  },
+  {
+    "id": "2413",
+    "name": "Morehead State Eagles",
+    "location": "Morehead State",
+    "nickname": "Morehead St",
+    "abbreviation": "MORE",
+    "conference": "Pioneer",
+    "conference_id": 28,
+    "state_code": "KY"
+  },
+  {
+    "id": "2506",
+    "name": "Presbyterian Blue Hose",
+    "location": "Presbyterian",
+    "nickname": "Presbyterian",
+    "abbreviation": "PRES",
+    "conference": "Pioneer",
+    "conference_id": 28,
+    "state_code": "SC"
+  },
+  {
+    "id": "2674",
+    "name": "Valparaiso Beacons",
+    "location": "Valparaiso",
+    "nickname": "Valparaiso",
+    "abbreviation": "VAL",
+    "conference": "Pioneer",
+    "conference_id": 28,
+    "state_code": "IN"
+  },
+  {
+    "id": "2900",
+    "name": "St. Thomas-Minnesota Tommies",
+    "location": "St. Thomas-Minnesota",
+    "nickname": "St Thomas (MN)",
+    "abbreviation": "STMN",
+    "conference": "Pioneer",
+    "conference_id": 28,
+    "state_code": "MN"
+  },
+  {
+    "id": "79",
+    "name": "Southern Illinois Salukis",
+    "location": "Southern Illinois",
+    "nickname": "S Illinois",
+    "abbreviation": "SIU",
+    "conference": "MVFC",
+    "conference_id": 21,
+    "state_code": "IL"
+  },
+  {
+    "id": "93",
+    "name": "Murray State Racers",
+    "location": "Murray State",
+    "nickname": "Murray St",
+    "abbreviation": "MUR",
+    "conference": "MVFC",
+    "conference_id": 21,
+    "state_code": "KY"
+  },
+  {
+    "id": "155",
+    "name": "North Dakota Fighting Hawks",
+    "location": "North Dakota",
+    "nickname": "North Dakota",
+    "abbreviation": "UND",
+    "conference": "MVFC",
+    "conference_id": 21,
+    "state_code": "ND"
+  },
+  {
+    "id": "233",
+    "name": "South Dakota Coyotes",
+    "location": "South Dakota",
+    "nickname": "South Dakota",
+    "abbreviation": "SDAK",
+    "conference": "MVFC",
+    "conference_id": 21,
+    "state_code": "SD"
+  },
+  {
+    "id": "282",
+    "name": "Indiana State Sycamores",
+    "location": "Indiana State",
+    "nickname": "Indiana St",
+    "abbreviation": "INST",
+    "conference": "MVFC",
+    "conference_id": 21,
+    "state_code": "IN"
+  },
+  {
+    "id": "2287",
+    "name": "Illinois State Redbirds",
+    "location": "Illinois State",
+    "nickname": "Illinois St",
+    "abbreviation": "ILST",
+    "conference": "MVFC",
+    "conference_id": 21,
+    "state_code": "IL"
+  },
+  {
+    "id": "2449",
+    "name": "North Dakota State Bison",
+    "location": "North Dakota State",
+    "nickname": "N Dakota St",
+    "abbreviation": "NDSU",
+    "conference": "MVFC",
+    "conference_id": 21,
+    "state_code": "ND"
+  },
+  {
+    "id": "2460",
+    "name": "Northern Iowa Panthers",
+    "location": "Northern Iowa",
+    "nickname": "Northern Iowa",
+    "abbreviation": "UNI",
+    "conference": "MVFC",
+    "conference_id": 21,
+    "state_code": "IA"
+  },
+  {
+    "id": "2571",
+    "name": "South Dakota State Jackrabbits",
+    "location": "South Dakota State",
+    "nickname": "S Dakota St",
+    "abbreviation": "SDST",
+    "conference": "MVFC",
+    "conference_id": 21,
+    "state_code": "SD"
+  },
+  {
+    "id": "2754",
+    "name": "Youngstown State Penguins",
+    "location": "Youngstown State",
+    "nickname": "Youngstown St",
+    "abbreviation": "YSU",
+    "conference": "MVFC",
+    "conference_id": 21,
+    "state_code": "OH"
+  },
+  {
+    "id": "70",
+    "name": "Idaho Vandals",
+    "location": "Idaho",
+    "nickname": "Idaho",
+    "abbreviation": "IDHO",
+    "conference": "Big Sky",
+    "conference_id": 20,
+    "state_code": "ID"
+  },
+  {
+    "id": "147",
+    "name": "Montana State Bobcats",
+    "location": "Montana State",
+    "nickname": "Montana St",
+    "abbreviation": "MTST",
+    "conference": "Big Sky",
+    "conference_id": 20,
+    "state_code": "MT"
+  },
+  {
+    "id": "149",
+    "name": "Montana Grizzlies",
+    "location": "Montana",
+    "nickname": "Montana",
+    "abbreviation": "MONT",
+    "conference": "Big Sky",
+    "conference_id": 20,
+    "state_code": "MT"
+  },
+  {
+    "id": "304",
+    "name": "Idaho State Bengals",
+    "location": "Idaho State",
+    "nickname": "Idaho St",
+    "abbreviation": "IDST",
+    "conference": "Big Sky",
+    "conference_id": 20,
+    "state_code": "ID"
+  },
+  {
+    "id": "331",
+    "name": "Eastern Washington Eagles",
+    "location": "Eastern Washington",
+    "nickname": "E Washington",
+    "abbreviation": "EWU",
+    "conference": "Big Sky",
+    "conference_id": 20,
+    "state_code": "WA"
+  },
+  {
+    "id": "2458",
+    "name": "Northern Colorado Bears",
+    "location": "Northern Colorado",
+    "nickname": "N Colorado",
+    "abbreviation": "UNCO",
+    "conference": "Big Sky",
+    "conference_id": 20,
+    "state_code": "CO"
+  },
+  {
+    "id": "2502",
+    "name": "Portland State Vikings",
+    "location": "Portland State",
+    "nickname": "Portland St",
+    "abbreviation": "PRST",
+    "conference": "Big Sky",
+    "conference_id": 20,
+    "state_code": "OR"
+  }
+]

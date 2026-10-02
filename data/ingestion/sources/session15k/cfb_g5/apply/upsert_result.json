@@ -1,0 +1,16 @@
+{
+  "ok_returned": 6590,
+  "fails": [
+    {
+      "i": 4000,
+      "code": 400,
+      "body": "{\"code\":\"23502\",\"details\":\"Failing row contains (110746ea-2a76-5916-8e0d-8267a9863660, James Madison, james-madison-cfb, null, null, null, null, null, null, null, 2026-09-14 05:46:56.023786+00, 2026-09-14 05:46:56.023786+00, null, f, null, https://www.espn.com/college-football/player/_/id/5083371, media_public, ESPN College Football Roster, 2026-09-14 05:46:56.023786+00).\",\"hint\":null,\"message\":\"n"
+    },
+    {
+      "i": 4000,
+      "code": 400,
+      "body": "{\"code\":\"23502\",\"details\":\"Failing row contains (110746ea-2a76-5916-8e0d-8267a9863660, James Madison, james-madison-cfb, null, null, null, null, null, null, null, 2026-09-14 05:46:56.245318+00, 2026-09-14 05:46:56.245318+00, null, f, null, https://www.espn.com/college-football/player/_/id/5083371, m"
+    }
+  ],
+  "total_payload": 6600
+}

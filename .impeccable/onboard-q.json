@@ -1,0 +1,32 @@
+{
+  "title": "New-user activation",
+  "question": "What should first-run success feel like for Takkle?",
+  "options": [
+    {
+      "id": "aha-claim-dossier",
+      "label": "Claim → live dossier",
+      "kicker": "PLAYERS FIRST",
+      "thesis": "Player aha = claimed profile with film and Tackle Score visible. Business aha = finding athletes via NIL Scores. Tutorials are short step paths that end in real product actions.",
+      "viewport": "Signed-in homepage shows role path + checklist. Tutorials: 4 steps each, skippable, deep-link into claim / NIL.",
+      "risk": "Business side stays thin until NIL product deepens."
+    },
+    {
+      "id": "aha-discovery",
+      "label": "Discovery first",
+      "kicker": "EXPLORE",
+      "thesis": "Everyone’s aha is seeing real players and scores immediately. Tutorials are lighter orientation; claim/NIL are secondary CTAs.",
+      "viewport": "New-user homepage leads with featured/trending like marketing home, plus a thin role strip.",
+      "risk": "Players may delay claiming if discovery feels like the product."
+    },
+    {
+      "id": "aha-role-gate",
+      "label": "Pick your lane",
+      "kicker": "CHOOSE PATH",
+      "thesis": "Anonymous and new users hit a role chooser (Player / Business / Recruiter) that routes into the matching tutorial before the product.",
+      "viewport": "Full-bleed path cards replace the current marketing hero for first visit.",
+      "risk": "Adds a gate before value; experienced users need a strong skip."
+    }
+  ],
+  "steer": true,
+  "canon": false
+}

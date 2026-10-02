@@ -6,11 +6,18 @@ import ts from 'typescript';
 import { createRequire } from 'node:module';
 import { normalizeStatsUrl, youtubeVideo, publicHttpsUrl } from '../src/lib/profile/links.ts';
 import * as collegeScores from '../src/lib/cfb-scores.ts';
-const require = createRequire(import.meta.url);
-function loadTs(file, mocks) {
-  const module = { exports: {} };
+const nodeRequire = createRequire(import.meta.url);
+function loadTs(file, mocks = {}) {  const module = { exports: {} };
   const code = ts.transpileModule(fs.readFileSync(new URL(file, import.meta.url), 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } }).outputText;
-  vm.runInNewContext(code, { module, exports: module.exports, require: id => mocks[id] ?? require(id), process, console, Date });
+  vm.runInNewContext(code, {
+    module,
+    exports: module.exports,
+    require: (id) => mocks[id] ?? nodeRequire(id),
+    process,
+    console,
+    Date,
+    Buffer,
+  });
   return module.exports;
 }
 const { formatHeight, formatWeight, playerSchoolName, playerDisplayName, playerClassLabel } = loadTs('../src/lib/player-display.ts', {
@@ -75,16 +82,128 @@ test('ownership requires verified, non-revoked grant for the exact signed-in use
 
 test('claim submission persists pending review using the session identity, ignoring client approval claims', async () => {
   let inserted;
-  const db={from:table=>{
-    const query={select:()=>query,eq:()=>query,maybeSingle:async()=>({data:{id:'player-id',status:'unclaimed'},error:null}),gte:async()=>({count:0,error:null}),insert:async fields=>{inserted=fields;return {error:null};}};
-    assert.ok(['players','player_claims'].includes(table));
-    return query;
-  }};
-  const route=loadTs('../src/app/api/claims/route.ts',{'@/lib/profile/access':{profileSession:async()=>({db,user:{id:'verified-session-user'}})}});
-  const response=await route.POST(new Request('http://localhost/api/claims',{method:'POST',body:JSON.stringify({playerSlug:'test-player',schoolEmail:'athlete@example.edu',notes:'Official roster and jersey number available for review.',userId:'attacker',status:'approved',signals:['school_email']})}));
-  assert.equal(response.status,200);
-  assert.equal(inserted.user_id,'verified-session-user');
-  assert.equal(inserted.status,'pending');
+  let events;
+  const user = { id: 'verified-session-user', email: 'athlete@school.edu', email_confirmed_at: '2026-01-01T00:00:00Z' };
+  const security = loadTs('../src/lib/claims/security.ts');
+  const db = {
+    from(table) {
+      if (table === 'players') {
+        const query = {
+          select: () => query,
+          eq: () => query,
+          maybeSingle: async () => ({
+            data: { id: 'player-id', status: 'unclaimed', jersey_number: 12, class_year: 2026 },
+            error: null,
+          }),
+        };
+        return query;
+      }
+      if (table === 'player_claims') {
+        return {
+          select: (_cols, opts) => {
+            if (opts?.head) {
+              return {
+                eq: () => ({
+                  gte: async () => ({ count: 0, error: null }),
+                }),
+              };
+            }
+            return {};
+          },
+          insert: (fields) => {
+            inserted = fields;
+            return {
+              select: () => ({
+                single: async () => ({ data: { id: 'claim-id' }, error: null }),
+              }),
+            };
+          },
+        };
+      }
+      if (table === 'verification_events') {
+        return {
+          insert: async (fields) => {
+            events = fields;
+            return { error: null };
+          },
+        };
+      }
+      throw new Error(`Unexpected table ${table}`);
+    },
+  };
+  const route = loadTs('../src/app/api/claims/route.ts', {
+    '@/lib/profile/access': { profileSession: async () => ({ db, user }) },
+    '@/lib/claims/email-proof': {
+      accountEmailProvesSchool: () => true,
+      consumeEmailProofToken: async () => ({ ok: false, error: 'unused' }),
+      domainIsVerified: async () => true,
+      normalizeEmail: (value) => String(value).trim().toLowerCase(),
+    },
+    '@/lib/claims/security': security,
+  });
+  const response = await route.POST(new Request('http://localhost/api/claims', {
+    method: 'POST',
+    body: JSON.stringify({
+      playerSlug: 'test-player',
+      schoolEmail: 'athlete@school.edu',
+      notes: 'Official roster and jersey number available for review.',
+      jerseyNumber: 12,
+      seasonYear: new Date().getFullYear(),
+      relationship: 'player',
+      userId: 'attacker',
+      status: 'approved',
+      signals: ['school_email'],
+    }),
+  }));
+  assert.equal(response.status, 200);
+  assert.equal(inserted.user_id, 'verified-session-user');
+  assert.equal(inserted.status, 'pending');
+  assert.equal(inserted.jersey_number, 12);
+  assert.equal(inserted.email_proof_method, 'account_email');
+  assert.ok(Array.isArray(inserted.signals));
+  assert.equal(events.claim_id, 'claim-id');
+});
+
+test('details updates reject identity rewrites and only persist measurements', async () => {
+  let saved;
+  const route = loadTs('../src/app/api/players/[id]/content/route.ts', {
+    '@/lib/profile/access': {
+      profileSession: async () => ({
+        user: { id: 'owner-id' },
+        db: {
+          from: (table) => {
+            assert.equal(table, 'players');
+            return {
+              update: (fields) => {
+                saved = fields;
+                return { eq: () => ({ select: () => ({ single: async () => ({ error: null }) }) }) };
+              },
+            };
+          },
+        },
+      }),
+      ownsProfile: async () => true,
+    },
+    '@/lib/profile/links': { normalizeStatsUrl, youtubeVideo },
+  });
+  const response = await route.POST(
+    new Request('http://localhost/api', {
+      method: 'POST',
+      body: JSON.stringify({
+        action: 'details',
+        firstName: 'Hacker',
+        lastName: 'McGee',
+        collegeName: 'Fake U',
+        heightInches: 74,
+        weightLbs: 210,
+      }),
+    }),
+    { params: Promise.resolve({ id: '11111111-1111-4111-8111-111111111111' }) },
+  );
+  assert.equal(response.status, 200);
+  assert.equal(saved.height_inches, 74);
+  assert.equal(saved.weight_lbs, 210);
+  assert.equal(Object.keys(saved).sort().join(','), 'height_inches,weight_lbs');
 });
 
 test('removing connected sources is scoped to the owned player and selected source', async () => {

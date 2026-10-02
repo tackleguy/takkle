@@ -1,0 +1,21 @@
+{
+  "getter": "5/5 portal+independents+leftovers",
+  "unique_upserted": 323,
+  "roster_independents": 227,
+  "portal": 98,
+  "portal_entered": 95,
+  "portal_committed": 3,
+  "notre_dame": 111,
+  "uconn": 116,
+  "leftover_fbs_teams": 0,
+  "db_college_total": 39771,
+  "db_fbs": 19775,
+  "db_fcs": 19996,
+  "ids_verified_in_db": 323,
+  "blocked": [
+    "CFBD_API_KEY missing",
+    "ESPN transfer-portal hub soft-blocked; used rankings story"
+  ],
+  "competition_level": "college",
+  "division": "fbs"
+}

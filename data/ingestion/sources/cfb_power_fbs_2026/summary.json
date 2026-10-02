@@ -1,0 +1,17 @@
+{
+  "players": 8627,
+  "by_conference": {
+    "ACC": 1943,
+    "Big 12": 1813,
+    "Big Ten": 2084,
+    "Pac-12": 922,
+    "SEC": 1865
+  },
+  "errors": 0,
+  "teams": 75,
+  "roster_sizes": {
+    "min": 102,
+    "max": 147,
+    "avg": 115.0
+  }
+}

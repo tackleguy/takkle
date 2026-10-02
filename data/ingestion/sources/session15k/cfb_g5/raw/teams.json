@@ -1,0 +1,596 @@
+[
+  {
+    "espn_id": "5",
+    "display_name": "UAB Blazers",
+    "location": "UAB",
+    "abbreviation": "UAB",
+    "conference": "AAC",
+    "conference_short": "American",
+    "group_id": 151
+  },
+  {
+    "espn_id": "58",
+    "display_name": "South Florida Bulls",
+    "location": "South Florida",
+    "abbreviation": "USF",
+    "conference": "AAC",
+    "conference_short": "American",
+    "group_id": 151
+  },
+  {
+    "espn_id": "151",
+    "display_name": "East Carolina Pirates",
+    "location": "East Carolina",
+    "abbreviation": "ECU",
+    "conference": "AAC",
+    "conference_short": "American",
+    "group_id": 151
+  },
+  {
+    "espn_id": "202",
+    "display_name": "Tulsa Golden Hurricane",
+    "location": "Tulsa",
+    "abbreviation": "TLSA",
+    "conference": "AAC",
+    "conference_short": "American",
+    "group_id": 151
+  },
+  {
+    "espn_id": "218",
+    "display_name": "Temple Owls",
+    "location": "Temple",
+    "abbreviation": "TEM",
+    "conference": "AAC",
+    "conference_short": "American",
+    "group_id": 151
+  },
+  {
+    "espn_id": "235",
+    "display_name": "Memphis Tigers",
+    "location": "Memphis",
+    "abbreviation": "MEM",
+    "conference": "AAC",
+    "conference_short": "American",
+    "group_id": 151
+  },
+  {
+    "espn_id": "242",
+    "display_name": "Rice Owls",
+    "location": "Rice",
+    "abbreviation": "RICE",
+    "conference": "AAC",
+    "conference_short": "American",
+    "group_id": 151
+  },
+  {
+    "espn_id": "249",
+    "display_name": "North Texas Mean Green",
+    "location": "North Texas",
+    "abbreviation": "UNT",
+    "conference": "AAC",
+    "conference_short": "American",
+    "group_id": 151
+  },
+  {
+    "espn_id": "349",
+    "display_name": "Army Black Knights",
+    "location": "Army",
+    "abbreviation": "ARMY",
+    "conference": "AAC",
+    "conference_short": "American",
+    "group_id": 151
+  },
+  {
+    "espn_id": "2226",
+    "display_name": "Florida Atlantic Owls",
+    "location": "Florida Atlantic",
+    "abbreviation": "FAU",
+    "conference": "AAC",
+    "conference_short": "American",
+    "group_id": 151
+  },
+  {
+    "espn_id": "2426",
+    "display_name": "Navy Midshipmen",
+    "location": "Navy",
+    "abbreviation": "NAVY",
+    "conference": "AAC",
+    "conference_short": "American",
+    "group_id": 151
+  },
+  {
+    "espn_id": "2429",
+    "display_name": "Charlotte 49ers",
+    "location": "Charlotte",
+    "abbreviation": "CLT",
+    "conference": "AAC",
+    "conference_short": "American",
+    "group_id": 151
+  },
+  {
+    "espn_id": "2636",
+    "display_name": "UTSA Roadrunners",
+    "location": "UTSA",
+    "abbreviation": "UTSA",
+    "conference": "AAC",
+    "conference_short": "American",
+    "group_id": 151
+  },
+  {
+    "espn_id": "2655",
+    "display_name": "Tulane Green Wave",
+    "location": "Tulane",
+    "abbreviation": "TULN",
+    "conference": "AAC",
+    "conference_short": "American",
+    "group_id": 151
+  },
+  {
+    "espn_id": "21",
+    "display_name": "San Diego State Aztecs",
+    "location": "San Diego State",
+    "abbreviation": "SDSU",
+    "conference": "Mountain West",
+    "conference_short": "Mountain West",
+    "group_id": 17
+  },
+  {
+    "espn_id": "23",
+    "display_name": "San Jos\u00e9 State Spartans",
+    "location": "San Jos\u00e9 State",
+    "abbreviation": "SJSU",
+    "conference": "Mountain West",
+    "conference_short": "Mountain West",
+    "group_id": 17
+  },
+  {
+    "espn_id": "36",
+    "display_name": "Colorado State Rams",
+    "location": "Colorado State",
+    "abbreviation": "CSU",
+    "conference": "Mountain West",
+    "conference_short": "Mountain West",
+    "group_id": 17
+  },
+  {
+    "espn_id": "62",
+    "display_name": "Hawai'i Rainbow Warriors",
+    "location": "Hawai'i",
+    "abbreviation": "HAW",
+    "conference": "Mountain West",
+    "conference_short": "Mountain West",
+    "group_id": 17
+  },
+  {
+    "espn_id": "68",
+    "display_name": "Boise State Broncos",
+    "location": "Boise State",
+    "abbreviation": "BOIS",
+    "conference": "Mountain West",
+    "conference_short": "Mountain West",
+    "group_id": 17
+  },
+  {
+    "espn_id": "167",
+    "display_name": "New Mexico Lobos",
+    "location": "New Mexico",
+    "abbreviation": "UNM",
+    "conference": "Mountain West",
+    "conference_short": "Mountain West",
+    "group_id": 17
+  },
+  {
+    "espn_id": "278",
+    "display_name": "Fresno State Bulldogs",
+    "location": "Fresno State",
+    "abbreviation": "FRES",
+    "conference": "Mountain West",
+    "conference_short": "Mountain West",
+    "group_id": 17
+  },
+  {
+    "espn_id": "328",
+    "display_name": "Utah State Aggies",
+    "location": "Utah State",
+    "abbreviation": "USU",
+    "conference": "Mountain West",
+    "conference_short": "Mountain West",
+    "group_id": 17
+  },
+  {
+    "espn_id": "2005",
+    "display_name": "Air Force Falcons",
+    "location": "Air Force",
+    "abbreviation": "AFA",
+    "conference": "Mountain West",
+    "conference_short": "Mountain West",
+    "group_id": 17
+  },
+  {
+    "espn_id": "2439",
+    "display_name": "UNLV Rebels",
+    "location": "UNLV",
+    "abbreviation": "UNLV",
+    "conference": "Mountain West",
+    "conference_short": "Mountain West",
+    "group_id": 17
+  },
+  {
+    "espn_id": "2440",
+    "display_name": "Nevada Wolf Pack",
+    "location": "Nevada",
+    "abbreviation": "NEV",
+    "conference": "Mountain West",
+    "conference_short": "Mountain West",
+    "group_id": 17
+  },
+  {
+    "espn_id": "2751",
+    "display_name": "Wyoming Cowboys",
+    "location": "Wyoming",
+    "abbreviation": "WYO",
+    "conference": "Mountain West",
+    "conference_short": "Mountain West",
+    "group_id": 17
+  },
+  {
+    "espn_id": "113",
+    "display_name": "Massachusetts Minutemen",
+    "location": "Massachusetts",
+    "abbreviation": "MASS",
+    "conference": "MAC",
+    "conference_short": "MAC",
+    "group_id": 15
+  },
+  {
+    "espn_id": "189",
+    "display_name": "Bowling Green Falcons",
+    "location": "Bowling Green",
+    "abbreviation": "BGSU",
+    "conference": "MAC",
+    "conference_short": "MAC",
+    "group_id": 15
+  },
+  {
+    "espn_id": "193",
+    "display_name": "Miami (OH) RedHawks",
+    "location": "Miami (OH)",
+    "abbreviation": "M-OH",
+    "conference": "MAC",
+    "conference_short": "MAC",
+    "group_id": 15
+  },
+  {
+    "espn_id": "195",
+    "display_name": "Ohio Bobcats",
+    "location": "Ohio",
+    "abbreviation": "OHIO",
+    "conference": "MAC",
+    "conference_short": "MAC",
+    "group_id": 15
+  },
+  {
+    "espn_id": "2006",
+    "display_name": "Akron Zips",
+    "location": "Akron",
+    "abbreviation": "AKR",
+    "conference": "MAC",
+    "conference_short": "MAC",
+    "group_id": 15
+  },
+  {
+    "espn_id": "2050",
+    "display_name": "Ball State Cardinals",
+    "location": "Ball State",
+    "abbreviation": "BALL",
+    "conference": "MAC",
+    "conference_short": "MAC",
+    "group_id": 15
+  },
+  {
+    "espn_id": "2084",
+    "display_name": "Buffalo Bulls",
+    "location": "Buffalo",
+    "abbreviation": "BUFF",
+    "conference": "MAC",
+    "conference_short": "MAC",
+    "group_id": 15
+  },
+  {
+    "espn_id": "2117",
+    "display_name": "Central Michigan Chippewas",
+    "location": "Central Michigan",
+    "abbreviation": "CMU",
+    "conference": "MAC",
+    "conference_short": "MAC",
+    "group_id": 15
+  },
+  {
+    "espn_id": "2199",
+    "display_name": "Eastern Michigan Eagles",
+    "location": "Eastern Michigan",
+    "abbreviation": "EMU",
+    "conference": "MAC",
+    "conference_short": "MAC",
+    "group_id": 15
+  },
+  {
+    "espn_id": "2309",
+    "display_name": "Kent State Golden Flashes",
+    "location": "Kent State",
+    "abbreviation": "KENT",
+    "conference": "MAC",
+    "conference_short": "MAC",
+    "group_id": 15
+  },
+  {
+    "espn_id": "2459",
+    "display_name": "Northern Illinois Huskies",
+    "location": "Northern Illinois",
+    "abbreviation": "NIU",
+    "conference": "MAC",
+    "conference_short": "MAC",
+    "group_id": 15
+  },
+  {
+    "espn_id": "2649",
+    "display_name": "Toledo Rockets",
+    "location": "Toledo",
+    "abbreviation": "TOL",
+    "conference": "MAC",
+    "conference_short": "MAC",
+    "group_id": 15
+  },
+  {
+    "espn_id": "2711",
+    "display_name": "Western Michigan Broncos",
+    "location": "Western Michigan",
+    "abbreviation": "WMU",
+    "conference": "MAC",
+    "conference_short": "MAC",
+    "group_id": 15
+  },
+  {
+    "espn_id": "6",
+    "display_name": "South Alabama Jaguars",
+    "location": "South Alabama",
+    "abbreviation": "USA",
+    "conference": "Sun Belt",
+    "conference_short": "Sun Belt",
+    "group_id": 37
+  },
+  {
+    "espn_id": "256",
+    "display_name": "James Madison Dukes",
+    "location": "James Madison",
+    "abbreviation": "JMU",
+    "conference": "Sun Belt",
+    "conference_short": "Sun Belt",
+    "group_id": 37
+  },
+  {
+    "espn_id": "276",
+    "display_name": "Marshall Thundering Herd",
+    "location": "Marshall",
+    "abbreviation": "MRSH",
+    "conference": "Sun Belt",
+    "conference_short": "Sun Belt",
+    "group_id": 37
+  },
+  {
+    "espn_id": "290",
+    "display_name": "Georgia Southern Eagles",
+    "location": "Georgia Southern",
+    "abbreviation": "GASO",
+    "conference": "Sun Belt",
+    "conference_short": "Sun Belt",
+    "group_id": 37
+  },
+  {
+    "espn_id": "295",
+    "display_name": "Old Dominion Monarchs",
+    "location": "Old Dominion",
+    "abbreviation": "ODU",
+    "conference": "Sun Belt",
+    "conference_short": "Sun Belt",
+    "group_id": 37
+  },
+  {
+    "espn_id": "309",
+    "display_name": "Louisiana Ragin' Cajuns",
+    "location": "Louisiana",
+    "abbreviation": "UL",
+    "conference": "Sun Belt",
+    "conference_short": "Sun Belt",
+    "group_id": 37
+  },
+  {
+    "espn_id": "324",
+    "display_name": "Coastal Carolina Chanticleers",
+    "location": "Coastal Carolina",
+    "abbreviation": "CCU",
+    "conference": "Sun Belt",
+    "conference_short": "Sun Belt",
+    "group_id": 37
+  },
+  {
+    "espn_id": "326",
+    "display_name": "Texas State Bobcats",
+    "location": "Texas State",
+    "abbreviation": "TXST",
+    "conference": "Sun Belt",
+    "conference_short": "Sun Belt",
+    "group_id": 37
+  },
+  {
+    "espn_id": "2026",
+    "display_name": "App State Mountaineers",
+    "location": "App State",
+    "abbreviation": "APP",
+    "conference": "Sun Belt",
+    "conference_short": "Sun Belt",
+    "group_id": 37
+  },
+  {
+    "espn_id": "2032",
+    "display_name": "Arkansas State Red Wolves",
+    "location": "Arkansas State",
+    "abbreviation": "ARST",
+    "conference": "Sun Belt",
+    "conference_short": "Sun Belt",
+    "group_id": 37
+  },
+  {
+    "espn_id": "2247",
+    "display_name": "Georgia State Panthers",
+    "location": "Georgia State",
+    "abbreviation": "GAST",
+    "conference": "Sun Belt",
+    "conference_short": "Sun Belt",
+    "group_id": 37
+  },
+  {
+    "espn_id": "2433",
+    "display_name": "UL Monroe Warhawks",
+    "location": "UL Monroe",
+    "abbreviation": "ULM",
+    "conference": "Sun Belt",
+    "conference_short": "Sun Belt",
+    "group_id": 37
+  },
+  {
+    "espn_id": "2572",
+    "display_name": "Southern Miss Golden Eagles",
+    "location": "Southern Miss",
+    "abbreviation": "USM",
+    "conference": "Sun Belt",
+    "conference_short": "Sun Belt",
+    "group_id": 37
+  },
+  {
+    "espn_id": "2653",
+    "display_name": "Troy Trojans",
+    "location": "Troy",
+    "abbreviation": "TROY",
+    "conference": "Sun Belt",
+    "conference_short": "Sun Belt",
+    "group_id": 37
+  },
+  {
+    "espn_id": "48",
+    "display_name": "Delaware Blue Hens",
+    "location": "Delaware",
+    "abbreviation": "DEL",
+    "conference": "Conference USA",
+    "conference_short": "CUSA",
+    "group_id": 12
+  },
+  {
+    "espn_id": "55",
+    "display_name": "Jacksonville State Gamecocks",
+    "location": "Jacksonville State",
+    "abbreviation": "JVST",
+    "conference": "Conference USA",
+    "conference_short": "CUSA",
+    "group_id": 12
+  },
+  {
+    "espn_id": "98",
+    "display_name": "Western Kentucky Hilltoppers",
+    "location": "Western Kentucky",
+    "abbreviation": "WKU",
+    "conference": "Conference USA",
+    "conference_short": "CUSA",
+    "group_id": 12
+  },
+  {
+    "espn_id": "166",
+    "display_name": "New Mexico State Aggies",
+    "location": "New Mexico State",
+    "abbreviation": "NMSU",
+    "conference": "Conference USA",
+    "conference_short": "CUSA",
+    "group_id": 12
+  },
+  {
+    "espn_id": "338",
+    "display_name": "Kennesaw State Owls",
+    "location": "Kennesaw State",
+    "abbreviation": "KENN",
+    "conference": "Conference USA",
+    "conference_short": "CUSA",
+    "group_id": 12
+  },
+  {
+    "espn_id": "2229",
+    "display_name": "Florida International Panthers",
+    "location": "Florida International",
+    "abbreviation": "FIU",
+    "conference": "Conference USA",
+    "conference_short": "CUSA",
+    "group_id": 12
+  },
+  {
+    "espn_id": "2335",
+    "display_name": "Liberty Flames",
+    "location": "Liberty",
+    "abbreviation": "LIB",
+    "conference": "Conference USA",
+    "conference_short": "CUSA",
+    "group_id": 12
+  },
+  {
+    "espn_id": "2348",
+    "display_name": "Louisiana Tech Bulldogs",
+    "location": "Louisiana Tech",
+    "abbreviation": "LT",
+    "conference": "Conference USA",
+    "conference_short": "CUSA",
+    "group_id": 12
+  },
+  {
+    "espn_id": "2393",
+    "display_name": "Middle Tennessee Blue Raiders",
+    "location": "Middle Tennessee",
+    "abbreviation": "MTSU",
+    "conference": "Conference USA",
+    "conference_short": "CUSA",
+    "group_id": 12
+  },
+  {
+    "espn_id": "2534",
+    "display_name": "Sam Houston Bearkats",
+    "location": "Sam Houston",
+    "abbreviation": "SHSU",
+    "conference": "Conference USA",
+    "conference_short": "CUSA",
+    "group_id": 12
+  },
+  {
+    "espn_id": "2623",
+    "display_name": "Missouri State Bears",
+    "location": "Missouri State",
+    "abbreviation": "MOST",
+    "conference": "Conference USA",
+    "conference_short": "CUSA",
+    "group_id": 12
+  },
+  {
+    "espn_id": "2638",
+    "display_name": "UTEP Miners",
+    "location": "UTEP",
+    "abbreviation": "UTEP",
+    "conference": "Conference USA",
+    "conference_short": "CUSA",
+    "group_id": 12
+  },
+  {
+    "espn_id": "41",
+    "display_name": "UConn Huskies",
+    "location": "UConn",
+    "abbreviation": "CONN",
+    "conference": "FBS Independents",
+    "conference_short": "FBS Independents",
+    "group_id": 18
+  }
+]

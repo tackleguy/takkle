@@ -1,0 +1,414 @@
+{
+  "errors": [
+    {
+      "school": "Oaks Christian",
+      "state": "CA",
+      "url": "https://www.oakschristianathletics.com/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "Orange Lutheran",
+      "state": "CA",
+      "url": "https://www.lhsathletics.org/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "JSerra Catholic",
+      "state": "CA",
+      "url": "https://www.jserraathletics.org/sports/football/roster",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "school": "Servite",
+      "state": "CA",
+      "url": "https://www.serviteathletics.com/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "St John Bosco",
+      "state": "CA",
+      "url": "https://www.boscobulls.com/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "Corona Centennial",
+      "state": "CA",
+      "url": "https://www.centennialhsports.com/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "Mission Viejo",
+      "state": "CA",
+      "url": "https://www.missionviejodiablos.com/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "San Clemente",
+      "state": "CA",
+      "url": "https://www.schstridents.com/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "Granite Bay",
+      "state": "CA",
+      "url": "https://www.granitebayathletics.com/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "De La Salle",
+      "state": "CA",
+      "url": "https://www.dlshsathletics.com/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "Bellarmine College Prep",
+      "state": "CA",
+      "url": "https://www.bcpathletics.org/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "Archbishop Mitty",
+      "state": "CA",
+      "url": "https://www.mittysports.com/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "Valley Christian SJ",
+      "state": "CA",
+      "url": "https://www.vcsathletics.org/sports/football/roster",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "school": "St Edward",
+      "state": "OH",
+      "url": "https://www.stedwardathletics.com/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 61] Connection refused>"
+    },
+    {
+      "school": "Hilliard Davidson",
+      "state": "OH",
+      "url": "https://www.davidsonathletics.org/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "Dublin Coffman",
+      "state": "OH",
+      "url": "https://www.coffmanathletics.com/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "Upper Arlington",
+      "state": "OH",
+      "url": "https://www.uagoldenbears.com/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "Centerville",
+      "state": "OH",
+      "url": "https://www.centervilleathletics.org/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "Brother Rice",
+      "state": "MI",
+      "url": "https://www.brbulldogs.com/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 54] Connection reset by peer>"
+    },
+    {
+      "school": "Detroit Catholic Central",
+      "state": "MI",
+      "url": "https://www.catholiccentralathletics.com/sports/football/roster",
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "school": "Saline",
+      "state": "MI",
+      "url": "https://www.salineathletics.com/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "Rockford",
+      "state": "MI",
+      "url": "https://www.rockfordramsathletics.com/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "Cathedral Indianapolis",
+      "state": "IN",
+      "url": "https://www.gocathedral.com/sports/football/roster",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "school": "Carmel",
+      "state": "IN",
+      "url": "https://www.carmelgreyhounds.com/sports/football/roster",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "school": "Center Grove",
+      "state": "IN",
+      "url": "https://www.centergroveathletics.com/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "Ben Davis",
+      "state": "IN",
+      "url": "https://www.bendavisathletics.com/sports/football/roster",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "school": "Loyola Academy",
+      "state": "IL",
+      "url": "https://www.goramblers.org/sports/football/roster",
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "school": "Mount Carmel Chicago",
+      "state": "IL",
+      "url": "https://www.mccaravan.org/sports/football/roster",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "school": "Naperville Central",
+      "state": "IL",
+      "url": "https://www.ncathletics.org/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "Hinsdale Central",
+      "state": "IL",
+      "url": "https://www.hcredrivers.com/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "Arrowhead",
+      "state": "WI",
+      "url": "https://www.arrowheadathletics.org/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "Kimberly",
+      "state": "WI",
+      "url": "https://www.kimberlyathletics.com/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "Muskego",
+      "state": "WI",
+      "url": "https://www.muskegoathletics.com/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "Wayzata",
+      "state": "MN",
+      "url": "https://www.wayzataathletics.com/sports/football/roster",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "school": "Eden Prairie",
+      "state": "MN",
+      "url": "https://www.epeagles.com/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "Lakeville South",
+      "state": "MN",
+      "url": "https://www.lakevillesouthathletics.com/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "Dowling Catholic",
+      "state": "IA",
+      "url": "https://www.dowlingcatholicathletics.com/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "Ankeny",
+      "state": "IA",
+      "url": "https://www.ankenysports.com/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "Waukee",
+      "state": "IA",
+      "url": "https://www.waukeeathletics.com/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "CBC St Louis",
+      "state": "MO",
+      "url": "https://www.cbchsathletics.org/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "SLUH",
+      "state": "MO",
+      "url": "https://www.sluhathletics.com/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "Liberty North",
+      "state": "MO",
+      "url": "https://www.lnathletics.com/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "Blue Valley West",
+      "state": "KS",
+      "url": "https://www.bvwathletics.com/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "Creighton Prep",
+      "state": "NE",
+      "url": "https://www.creightonprepathletics.com/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "Cherry Creek",
+      "state": "CO",
+      "url": "https://www.cherrycreekbruins.com/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "Ralston Valley",
+      "state": "CO",
+      "url": "https://www.rvathletics.com/sports/football/roster",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "school": "Grandview",
+      "state": "CO",
+      "url": "https://www.grandviewathletics.com/sports/football/roster",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "school": "Brophy College Prep",
+      "state": "AZ",
+      "url": "https://www.brophybroncos.org/sports/football/roster",
+      "error": "URLError: <urlopen error timed out>"
+    },
+    {
+      "school": "Hamilton Chandler",
+      "state": "AZ",
+      "url": "https://www.hamiltonhuskies.com/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "Chandler High",
+      "state": "AZ",
+      "url": "https://www.chandlerwolvesathletics.com/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "Perry",
+      "state": "AZ",
+      "url": "https://www.perryathletics.com/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "Skyridge",
+      "state": "UT",
+      "url": "https://www.skyridgeathletics.com/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "Bishop Gorman",
+      "state": "NV",
+      "url": "https://www.bishopgormanathletics.com/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "Liberty Henderson",
+      "state": "NV",
+      "url": "https://www.libertyathleticsnv.com/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "Jesuit Portland",
+      "state": "OR",
+      "url": "https://www.jesuitcrusaders.com/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "Central Catholic Portland",
+      "state": "OR",
+      "url": "https://www.centralcatholicsports.com/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "Gonzaga Prep",
+      "state": "WA",
+      "url": "https://www.gonzagaprepathletics.com/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "school": "Curtis",
+      "state": "WA",
+      "url": "https://www.curtisathletics.com/sports/football/roster",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    }
+  ],
+  "blocked": [
+    {
+      "school": "Santa Margarita",
+      "state": "CA",
+      "url": "https://www.smhsathletics.com/sports/football/roster",
+      "reason": "not_sidearm_or_empty"
+    },
+    {
+      "school": "Mater Dei Santa Ana",
+      "state": "CA",
+      "url": "https://www.materdeimonarchs.com/sports/football/roster",
+      "reason": "not_sidearm_or_empty"
+    },
+    {
+      "school": "Folsom",
+      "state": "CA",
+      "url": "https://www.folsomathletics.com/sports/football/roster",
+      "reason": "not_sidearm_or_empty"
+    },
+    {
+      "school": "Archbishop Moeller",
+      "state": "OH",
+      "url": "https://www.moellerathletics.org/sports/football/roster",
+      "reason": "not_sidearm_or_empty"
+    },
+    {
+      "school": "Pickerington Central",
+      "state": "OH",
+      "url": "https://www.pcathletics.org/sports/football/roster",
+      "reason": "not_sidearm_or_empty"
+    },
+    {
+      "school": "Millard South",
+      "state": "NE",
+      "url": "https://www.millardsouthathletics.com/sports/football/roster",
+      "reason": "not_sidearm_or_empty"
+    },
+    {
+      "school": "Valor Christian",
+      "state": "CO",
+      "url": "https://www.valorathletics.com/sports/football/roster",
+      "reason": "not_sidearm_or_empty"
+    },
+    {
+      "school": "Corner Canyon",
+      "state": "UT",
+      "url": "https://www.cornercanyonathletics.com/sports/football/roster",
+      "reason": "not_sidearm_or_empty"
+    },
+    {
+      "school": "Bingham",
+      "state": "UT",
+      "url": "https://www.binghamathletics.com/sports/football/roster",
+      "reason": "not_sidearm_or_empty"
+    },
+    {
+      "school": "Bellevue",
+      "state": "WA",
+      "url": "https://www.bellevueathletics.org/sports/football/roster",
+      "reason": "not_sidearm_or_empty"
+    }
+  ]
+}

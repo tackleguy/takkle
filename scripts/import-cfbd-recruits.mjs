@@ -418,6 +418,7 @@ async function fetchYear(year, apiKey, classification) {
 
   console.log(`Fetching CFBD recruits year=${year} classification=${classification}`);
   const res = await fetch(url, {
+    signal: AbortSignal.timeout(120_000),
     headers: {
       Authorization: `Bearer ${apiKey}`,
       Accept: "application/json",

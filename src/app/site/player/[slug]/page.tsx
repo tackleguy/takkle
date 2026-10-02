@@ -6,6 +6,7 @@ import { getAllPlayerSlugs } from "@/lib/players";
 import { getLivePlayerBySlug } from "@/lib/live-players";
 import { playerSchoolLine, playerSchoolName } from "@/lib/player-display";
 import PlayerProfileSections from "@/components/player/PlayerProfileSections";
+import DisputeClaimForm from "@/components/player/DisputeClaimForm";
 import TackleScoreDisplay from "@/components/ui/TackleScoreDisplay";
 import FilmWindow from "@/components/film/FilmWindow";
 import Badge from "@/components/ui/Badge";
@@ -85,8 +86,15 @@ export default async function PlayerProfilePage({ params }: PageProps) {
 
         <div className="mt-4 flex flex-wrap gap-4 text-sm">
           <Link href={`/site/player/${player.slug}/edit`} className="text-accent hover:underline">Manage profile, stats & film</Link>
-          <Link href={`/onboarding?player=${encodeURIComponent(player.slug)}`} className="text-accent hover:underline">Claim this profile</Link>
+          {player.status === "unclaimed" ? (
+            <Link href={`/onboarding?player=${encodeURIComponent(player.slug)}`} className="text-accent hover:underline">Claim this profile</Link>
+          ) : (
+            <span className="text-text-muted">Ownership verified or under claim — dispute below if wrong</span>
+          )}
         </div>
+        {player.status !== "unclaimed" && !player.isSynthetic && (
+          <DisputeClaimForm playerSlug={player.slug} />
+        )}
 
         {/* Share */}
         <div className="mt-4 flex flex-wrap items-center gap-3 text-sm">

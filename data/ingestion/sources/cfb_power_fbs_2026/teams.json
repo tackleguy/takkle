@@ -1,0 +1,677 @@
+[
+  {
+    "conference": "ACC",
+    "espn_id": "2390",
+    "displayName": "Miami Hurricanes",
+    "location": "Miami",
+    "name": "Hurricanes",
+    "abbreviation": "MIA",
+    "slug": null
+  },
+  {
+    "conference": "ACC",
+    "espn_id": "2567",
+    "displayName": "SMU Mustangs",
+    "location": "SMU",
+    "name": "Mustangs",
+    "abbreviation": "SMU",
+    "slug": null
+  },
+  {
+    "conference": "ACC",
+    "espn_id": "258",
+    "displayName": "Virginia Cavaliers",
+    "location": "Virginia",
+    "name": "Cavaliers",
+    "abbreviation": "UVA",
+    "slug": null
+  },
+  {
+    "conference": "ACC",
+    "espn_id": "150",
+    "displayName": "Duke Blue Devils",
+    "location": "Duke",
+    "name": "Blue Devils",
+    "abbreviation": "DUKE",
+    "slug": null
+  },
+  {
+    "conference": "ACC",
+    "espn_id": "153",
+    "displayName": "North Carolina Tar Heels",
+    "location": "North Carolina",
+    "name": "Tar Heels",
+    "abbreviation": "UNC",
+    "slug": null
+  },
+  {
+    "conference": "ACC",
+    "espn_id": "221",
+    "displayName": "Pittsburgh Panthers",
+    "location": "Pittsburgh",
+    "name": "Panthers",
+    "abbreviation": "PITT",
+    "slug": null
+  },
+  {
+    "conference": "ACC",
+    "espn_id": "259",
+    "displayName": "Virginia Tech Hokies",
+    "location": "Virginia Tech",
+    "name": "Hokies",
+    "abbreviation": "VT",
+    "slug": null
+  },
+  {
+    "conference": "ACC",
+    "espn_id": "154",
+    "displayName": "Wake Forest Demon Deacons",
+    "location": "Wake Forest",
+    "name": "Demon Deacons",
+    "abbreviation": "WAKE",
+    "slug": null
+  },
+  {
+    "conference": "ACC",
+    "espn_id": "25",
+    "displayName": "California Golden Bears",
+    "location": "California",
+    "name": "Golden Bears",
+    "abbreviation": "CAL",
+    "slug": null
+  },
+  {
+    "conference": "ACC",
+    "espn_id": "103",
+    "displayName": "Boston College Eagles",
+    "location": "Boston College",
+    "name": "Eagles",
+    "abbreviation": "BC",
+    "slug": null
+  },
+  {
+    "conference": "ACC",
+    "espn_id": "228",
+    "displayName": "Clemson Tigers",
+    "location": "Clemson",
+    "name": "Tigers",
+    "abbreviation": "CLEM",
+    "slug": null
+  },
+  {
+    "conference": "ACC",
+    "espn_id": "97",
+    "displayName": "Louisville Cardinals",
+    "location": "Louisville",
+    "name": "Cardinals",
+    "abbreviation": "LOU",
+    "slug": null
+  },
+  {
+    "conference": "ACC",
+    "espn_id": "52",
+    "displayName": "Florida State Seminoles",
+    "location": "Florida State",
+    "name": "Seminoles",
+    "abbreviation": "FSU",
+    "slug": null
+  },
+  {
+    "conference": "ACC",
+    "espn_id": "152",
+    "displayName": "NC State Wolfpack",
+    "location": "NC State",
+    "name": "Wolfpack",
+    "abbreviation": "NCSU",
+    "slug": null
+  },
+  {
+    "conference": "ACC",
+    "espn_id": "24",
+    "displayName": "Stanford Cardinal",
+    "location": "Stanford",
+    "name": "Cardinal",
+    "abbreviation": "STAN",
+    "slug": null
+  },
+  {
+    "conference": "ACC",
+    "espn_id": "183",
+    "displayName": "Syracuse Orange",
+    "location": "Syracuse",
+    "name": "Orange",
+    "abbreviation": "SYR",
+    "slug": null
+  },
+  {
+    "conference": "ACC",
+    "espn_id": "59",
+    "displayName": "Georgia Tech Yellow Jackets",
+    "location": "Georgia Tech",
+    "name": "Yellow Jackets",
+    "abbreviation": "GT",
+    "slug": null
+  },
+  {
+    "conference": "Big 12",
+    "espn_id": "252",
+    "displayName": "BYU Cougars",
+    "location": "BYU",
+    "name": "Cougars",
+    "abbreviation": "BYU",
+    "slug": null
+  },
+  {
+    "conference": "Big 12",
+    "espn_id": "2132",
+    "displayName": "Cincinnati Bearcats",
+    "location": "Cincinnati",
+    "name": "Bearcats",
+    "abbreviation": "CIN",
+    "slug": null
+  },
+  {
+    "conference": "Big 12",
+    "espn_id": "38",
+    "displayName": "Colorado Buffaloes",
+    "location": "Colorado",
+    "name": "Buffaloes",
+    "abbreviation": "COLO",
+    "slug": null
+  },
+  {
+    "conference": "Big 12",
+    "espn_id": "248",
+    "displayName": "Houston Cougars",
+    "location": "Houston",
+    "name": "Cougars",
+    "abbreviation": "HOU",
+    "slug": null
+  },
+  {
+    "conference": "Big 12",
+    "espn_id": "2306",
+    "displayName": "Kansas State Wildcats",
+    "location": "Kansas State",
+    "name": "Wildcats",
+    "abbreviation": "KSU",
+    "slug": null
+  },
+  {
+    "conference": "Big 12",
+    "espn_id": "2641",
+    "displayName": "Texas Tech Red Raiders",
+    "location": "Texas Tech",
+    "name": "Red Raiders",
+    "abbreviation": "TTU",
+    "slug": null
+  },
+  {
+    "conference": "Big 12",
+    "espn_id": "254",
+    "displayName": "Utah Utes",
+    "location": "Utah",
+    "name": "Utes",
+    "abbreviation": "UTAH",
+    "slug": null
+  },
+  {
+    "conference": "Big 12",
+    "espn_id": "277",
+    "displayName": "West Virginia Mountaineers",
+    "location": "West Virginia",
+    "name": "Mountaineers",
+    "abbreviation": "WVU",
+    "slug": null
+  },
+  {
+    "conference": "Big 12",
+    "espn_id": "9",
+    "displayName": "Arizona State Sun Devils",
+    "location": "Arizona State",
+    "name": "Sun Devils",
+    "abbreviation": "ASU",
+    "slug": null
+  },
+  {
+    "conference": "Big 12",
+    "espn_id": "239",
+    "displayName": "Baylor Bears",
+    "location": "Baylor",
+    "name": "Bears",
+    "abbreviation": "BAY",
+    "slug": null
+  },
+  {
+    "conference": "Big 12",
+    "espn_id": "66",
+    "displayName": "Iowa State Cyclones",
+    "location": "Iowa State",
+    "name": "Cyclones",
+    "abbreviation": "ISU",
+    "slug": null
+  },
+  {
+    "conference": "Big 12",
+    "espn_id": "2305",
+    "displayName": "Kansas Jayhawks",
+    "location": "Kansas",
+    "name": "Jayhawks",
+    "abbreviation": "KU",
+    "slug": null
+  },
+  {
+    "conference": "Big 12",
+    "espn_id": "197",
+    "displayName": "Oklahoma State Cowboys",
+    "location": "Oklahoma State",
+    "name": "Cowboys",
+    "abbreviation": "OKST",
+    "slug": null
+  },
+  {
+    "conference": "Big 12",
+    "espn_id": "2628",
+    "displayName": "TCU Horned Frogs",
+    "location": "TCU",
+    "name": "Horned Frogs",
+    "abbreviation": "TCU",
+    "slug": null
+  },
+  {
+    "conference": "Big 12",
+    "espn_id": "2116",
+    "displayName": "UCF Knights",
+    "location": "UCF",
+    "name": "Knights",
+    "abbreviation": "UCF",
+    "slug": null
+  },
+  {
+    "conference": "Big 12",
+    "espn_id": "12",
+    "displayName": "Arizona Wildcats",
+    "location": "Arizona",
+    "name": "Wildcats",
+    "abbreviation": "ARIZ",
+    "slug": null
+  },
+  {
+    "conference": "Big Ten",
+    "espn_id": "30",
+    "displayName": "USC Trojans",
+    "location": "USC",
+    "name": "Trojans",
+    "abbreviation": "USC",
+    "slug": null
+  },
+  {
+    "conference": "Big Ten",
+    "espn_id": "84",
+    "displayName": "Indiana Hoosiers",
+    "location": "Indiana",
+    "name": "Hoosiers",
+    "abbreviation": "IU",
+    "slug": null
+  },
+  {
+    "conference": "Big Ten",
+    "espn_id": "2294",
+    "displayName": "Iowa Hawkeyes",
+    "location": "Iowa",
+    "name": "Hawkeyes",
+    "abbreviation": "IOWA",
+    "slug": null
+  },
+  {
+    "conference": "Big Ten",
+    "espn_id": "120",
+    "displayName": "Maryland Terrapins",
+    "location": "Maryland",
+    "name": "Terrapins",
+    "abbreviation": "MD",
+    "slug": null
+  },
+  {
+    "conference": "Big Ten",
+    "espn_id": "130",
+    "displayName": "Michigan Wolverines",
+    "location": "Michigan",
+    "name": "Wolverines",
+    "abbreviation": "MICH",
+    "slug": null
+  },
+  {
+    "conference": "Big Ten",
+    "espn_id": "127",
+    "displayName": "Michigan State Spartans",
+    "location": "Michigan State",
+    "name": "Spartans",
+    "abbreviation": "MSU",
+    "slug": null
+  },
+  {
+    "conference": "Big Ten",
+    "espn_id": "158",
+    "displayName": "Nebraska Cornhuskers",
+    "location": "Nebraska",
+    "name": "Cornhuskers",
+    "abbreviation": "NEB",
+    "slug": null
+  },
+  {
+    "conference": "Big Ten",
+    "espn_id": "213",
+    "displayName": "Penn State Nittany Lions",
+    "location": "Penn State",
+    "name": "Nittany Lions",
+    "abbreviation": "PSU",
+    "slug": null
+  },
+  {
+    "conference": "Big Ten",
+    "espn_id": "26",
+    "displayName": "UCLA Bruins",
+    "location": "UCLA",
+    "name": "Bruins",
+    "abbreviation": "UCLA",
+    "slug": null
+  },
+  {
+    "conference": "Big Ten",
+    "espn_id": "264",
+    "displayName": "Washington Huskies",
+    "location": "Washington",
+    "name": "Huskies",
+    "abbreviation": "WASH",
+    "slug": null
+  },
+  {
+    "conference": "Big Ten",
+    "espn_id": "77",
+    "displayName": "Northwestern Wildcats",
+    "location": "Northwestern",
+    "name": "Wildcats",
+    "abbreviation": "NU",
+    "slug": null
+  },
+  {
+    "conference": "Big Ten",
+    "espn_id": "356",
+    "displayName": "Illinois Fighting Illini",
+    "location": "Illinois",
+    "name": "Fighting Illini",
+    "abbreviation": "ILL",
+    "slug": null
+  },
+  {
+    "conference": "Big Ten",
+    "espn_id": "135",
+    "displayName": "Minnesota Golden Gophers",
+    "location": "Minnesota",
+    "name": "Golden Gophers",
+    "abbreviation": "MINN",
+    "slug": null
+  },
+  {
+    "conference": "Big Ten",
+    "espn_id": "194",
+    "displayName": "Ohio State Buckeyes",
+    "location": "Ohio State",
+    "name": "Buckeyes",
+    "abbreviation": "OSU",
+    "slug": null
+  },
+  {
+    "conference": "Big Ten",
+    "espn_id": "2483",
+    "displayName": "Oregon Ducks",
+    "location": "Oregon",
+    "name": "Ducks",
+    "abbreviation": "ORE",
+    "slug": null
+  },
+  {
+    "conference": "Big Ten",
+    "espn_id": "2509",
+    "displayName": "Purdue Boilermakers",
+    "location": "Purdue",
+    "name": "Boilermakers",
+    "abbreviation": "PUR",
+    "slug": null
+  },
+  {
+    "conference": "Big Ten",
+    "espn_id": "275",
+    "displayName": "Wisconsin Badgers",
+    "location": "Wisconsin",
+    "name": "Badgers",
+    "abbreviation": "WIS",
+    "slug": null
+  },
+  {
+    "conference": "Big Ten",
+    "espn_id": "164",
+    "displayName": "Rutgers Scarlet Knights",
+    "location": "Rutgers",
+    "name": "Scarlet Knights",
+    "abbreviation": "RUTG",
+    "slug": null
+  },
+  {
+    "conference": "Pac-12",
+    "espn_id": "36",
+    "displayName": "Colorado State Rams",
+    "location": "Colorado State",
+    "name": "Rams",
+    "abbreviation": "CSU",
+    "slug": null
+  },
+  {
+    "conference": "Pac-12",
+    "espn_id": "68",
+    "displayName": "Boise State Broncos",
+    "location": "Boise State",
+    "name": "Broncos",
+    "abbreviation": "BOIS",
+    "slug": null
+  },
+  {
+    "conference": "Pac-12",
+    "espn_id": "278",
+    "displayName": "Fresno State Bulldogs",
+    "location": "Fresno State",
+    "name": "Bulldogs",
+    "abbreviation": "FRES",
+    "slug": null
+  },
+  {
+    "conference": "Pac-12",
+    "espn_id": "21",
+    "displayName": "San Diego State Aztecs",
+    "location": "San Diego State",
+    "name": "Aztecs",
+    "abbreviation": "SDSU",
+    "slug": null
+  },
+  {
+    "conference": "Pac-12",
+    "espn_id": "204",
+    "displayName": "Oregon State Beavers",
+    "location": "Oregon State",
+    "name": "Beavers",
+    "abbreviation": "ORST",
+    "slug": null
+  },
+  {
+    "conference": "Pac-12",
+    "espn_id": "326",
+    "displayName": "Texas State Bobcats",
+    "location": "Texas State",
+    "name": "Bobcats",
+    "abbreviation": "TXST",
+    "slug": null
+  },
+  {
+    "conference": "Pac-12",
+    "espn_id": "328",
+    "displayName": "Utah State Aggies",
+    "location": "Utah State",
+    "name": "Aggies",
+    "abbreviation": "USU",
+    "slug": null
+  },
+  {
+    "conference": "Pac-12",
+    "espn_id": "265",
+    "displayName": "Washington State Cougars",
+    "location": "Washington State",
+    "name": "Cougars",
+    "abbreviation": "WSU",
+    "slug": null
+  },
+  {
+    "conference": "SEC",
+    "espn_id": "333",
+    "displayName": "Alabama Crimson Tide",
+    "location": "Alabama",
+    "name": "Crimson Tide",
+    "abbreviation": "ALA",
+    "slug": null
+  },
+  {
+    "conference": "SEC",
+    "espn_id": "2",
+    "displayName": "Auburn Tigers",
+    "location": "Auburn",
+    "name": "Tigers",
+    "abbreviation": "AUB",
+    "slug": null
+  },
+  {
+    "conference": "SEC",
+    "espn_id": "57",
+    "displayName": "Florida Gators",
+    "location": "Florida",
+    "name": "Gators",
+    "abbreviation": "FLA",
+    "slug": null
+  },
+  {
+    "conference": "SEC",
+    "espn_id": "61",
+    "displayName": "Georgia Bulldogs",
+    "location": "Georgia",
+    "name": "Bulldogs",
+    "abbreviation": "UGA",
+    "slug": null
+  },
+  {
+    "conference": "SEC",
+    "espn_id": "99",
+    "displayName": "LSU Tigers",
+    "location": "LSU",
+    "name": "Tigers",
+    "abbreviation": "LSU",
+    "slug": null
+  },
+  {
+    "conference": "SEC",
+    "espn_id": "344",
+    "displayName": "Mississippi State Bulldogs",
+    "location": "Mississippi State",
+    "name": "Bulldogs",
+    "abbreviation": "MSST",
+    "slug": null
+  },
+  {
+    "conference": "SEC",
+    "espn_id": "142",
+    "displayName": "Missouri Tigers",
+    "location": "Missouri",
+    "name": "Tigers",
+    "abbreviation": "MIZ",
+    "slug": null
+  },
+  {
+    "conference": "SEC",
+    "espn_id": "145",
+    "displayName": "Ole Miss Rebels",
+    "location": "Ole Miss",
+    "name": "Rebels",
+    "abbreviation": "MISS",
+    "slug": null
+  },
+  {
+    "conference": "SEC",
+    "espn_id": "2579",
+    "displayName": "South Carolina Gamecocks",
+    "location": "South Carolina",
+    "name": "Gamecocks",
+    "abbreviation": "SC",
+    "slug": null
+  },
+  {
+    "conference": "SEC",
+    "espn_id": "2633",
+    "displayName": "Tennessee Volunteers",
+    "location": "Tennessee",
+    "name": "Volunteers",
+    "abbreviation": "TENN",
+    "slug": null
+  },
+  {
+    "conference": "SEC",
+    "espn_id": "251",
+    "displayName": "Texas Longhorns",
+    "location": "Texas",
+    "name": "Longhorns",
+    "abbreviation": "TEX",
+    "slug": null
+  },
+  {
+    "conference": "SEC",
+    "espn_id": "245",
+    "displayName": "Texas A&M Aggies",
+    "location": "Texas A&M",
+    "name": "Aggies",
+    "abbreviation": "TA&M",
+    "slug": null
+  },
+  {
+    "conference": "SEC",
+    "espn_id": "238",
+    "displayName": "Vanderbilt Commodores",
+    "location": "Vanderbilt",
+    "name": "Commodores",
+    "abbreviation": "VAN",
+    "slug": null
+  },
+  {
+    "conference": "SEC",
+    "espn_id": "8",
+    "displayName": "Arkansas Razorbacks",
+    "location": "Arkansas",
+    "name": "Razorbacks",
+    "abbreviation": "ARK",
+    "slug": null
+  },
+  {
+    "conference": "SEC",
+    "espn_id": "201",
+    "displayName": "Oklahoma Sooners",
+    "location": "Oklahoma",
+    "name": "Sooners",
+    "abbreviation": "OU",
+    "slug": null
+  },
+  {
+    "conference": "SEC",
+    "espn_id": "96",
+    "displayName": "Kentucky Wildcats",
+    "location": "Kentucky",
+    "name": "Wildcats",
+    "abbreviation": "UK",
+    "slug": null
+  }
+]

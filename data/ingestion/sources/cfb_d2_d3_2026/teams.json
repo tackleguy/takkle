@@ -1,0 +1,3377 @@
+[
+  {
+    "id": "2304",
+    "name": "Johnson C Smith",
+    "displayName": "Johnson C Smith Golden Bulls",
+    "conference": "CIAA",
+    "conferenceId": 104,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "330",
+    "name": "Virginia State",
+    "displayName": "Virginia State Trojans",
+    "conference": "CIAA",
+    "conferenceId": 104,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2676",
+    "name": "Virginia Union",
+    "displayName": "Virginia Union Panthers",
+    "conference": "CIAA",
+    "conferenceId": 104,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2551",
+    "name": "Shaw",
+    "displayName": "Shaw Bears",
+    "conference": "CIAA",
+    "conferenceId": 104,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2940",
+    "name": "Livingstone",
+    "displayName": "Livingstone Blue Bears",
+    "conference": "CIAA",
+    "conferenceId": 104,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2220",
+    "name": "Fayetteville State",
+    "displayName": "Fayetteville State Broncos",
+    "conference": "CIAA",
+    "conferenceId": 104,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2075",
+    "name": "Bowie State",
+    "displayName": "Bowie State Bulldogs",
+    "conference": "CIAA",
+    "conferenceId": 104,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2207",
+    "name": "Elizabeth City State",
+    "displayName": "Elizabeth City State Vikings",
+    "conference": "CIAA",
+    "conferenceId": 104,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2339",
+    "name": "Lincoln (PA)",
+    "displayName": "Lincoln (PA) Lions",
+    "conference": "CIAA",
+    "conferenceId": 104,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "124180",
+    "name": "Bluefield State University",
+    "displayName": "Bluefield State University Big Blue",
+    "conference": "CIAA",
+    "conferenceId": 104,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2736",
+    "name": "Winston-Salem",
+    "displayName": "Winston-Salem Rams",
+    "conference": "CIAA",
+    "conferenceId": 104,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2822",
+    "name": "North Greenville",
+    "displayName": "North Greenville Trailblazers",
+    "conference": "Conference Carolinas",
+    "conferenceId": 187,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2882",
+    "name": "UNC Pembroke",
+    "displayName": "UNC Pembroke Braves",
+    "conference": "Conference Carolinas",
+    "conferenceId": 187,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "101784",
+    "name": "Erskine",
+    "displayName": "Erskine Flying Fleet",
+    "conference": "Conference Carolinas",
+    "conferenceId": 187,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2804",
+    "name": "Chowan",
+    "displayName": "Chowan Hawks",
+    "conference": "Conference Carolinas",
+    "conferenceId": 187,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2560",
+    "name": "Shorter",
+    "displayName": "Shorter Hawks",
+    "conference": "Conference Carolinas",
+    "conferenceId": 187,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "122666",
+    "name": "Barton",
+    "displayName": "Barton Bulldogs",
+    "conference": "Conference Carolinas",
+    "conferenceId": 187,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "366",
+    "name": "Ferrum",
+    "displayName": "Ferrum Panthers",
+    "conference": "Conference Carolinas",
+    "conferenceId": 187,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "110254",
+    "name": "Davenport",
+    "displayName": "Davenport Panthers",
+    "conference": "GLIAC",
+    "conferenceId": 107,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "125",
+    "name": "Grand Valley State",
+    "displayName": "Grand Valley State Lakers",
+    "conference": "GLIAC",
+    "conferenceId": 107,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "127991",
+    "name": "Roosevelt",
+    "displayName": "Roosevelt Lakers",
+    "conference": "GLIAC",
+    "conferenceId": 107,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2222",
+    "name": "Ferris State",
+    "displayName": "Ferris State Bulldogs",
+    "conference": "GLIAC",
+    "conferenceId": 107,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2392",
+    "name": "Michigan Tech",
+    "displayName": "Michigan Tech Huskies",
+    "conference": "GLIAC",
+    "conferenceId": 107,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "129",
+    "name": "Saginaw Valley State",
+    "displayName": "Saginaw Valley State Cardinals",
+    "conference": "GLIAC",
+    "conferenceId": 107,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "131",
+    "name": "Wayne State (MI)",
+    "displayName": "Wayne State (MI) Warriors",
+    "conference": "GLIAC",
+    "conferenceId": 107,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "128",
+    "name": "Northern Michigan",
+    "displayName": "Northern Michigan Wildcats",
+    "conference": "GLIAC",
+    "conferenceId": 107,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2191",
+    "name": "East Central (OK)",
+    "displayName": "East Central (OK) Tigers",
+    "conference": "GAC",
+    "conferenceId": 146,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2264",
+    "name": "Harding University",
+    "displayName": "Harding University Bisons",
+    "conference": "GAC",
+    "conferenceId": 146,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2271",
+    "name": "Henderson State",
+    "displayName": "Henderson State Reddies",
+    "conference": "GAC",
+    "conferenceId": 146,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2888",
+    "name": "Ouachita Baptist",
+    "displayName": "Ouachita Baptist Tigers",
+    "conference": "GAC",
+    "conferenceId": 146,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2033",
+    "name": "Arkansas Tech",
+    "displayName": "Arkansas Tech Wonder Boys",
+    "conference": "GAC",
+    "conferenceId": 146,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "319",
+    "name": "Oklahoma Baptist",
+    "displayName": "Oklahoma Baptist Bison",
+    "conference": "GAC",
+    "conferenceId": 146,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "199",
+    "name": "Southeastern Oklahoma State",
+    "displayName": "Southeastern Oklahoma State Savage Storm",
+    "conference": "GAC",
+    "conferenceId": 146,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2568",
+    "name": "Southern Arkansas",
+    "displayName": "Southern Arkansas Muleriders",
+    "conference": "GAC",
+    "conferenceId": 146,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2028",
+    "name": "Arkansas-Monticello",
+    "displayName": "Arkansas-Monticello Boll Weevils",
+    "conference": "GAC",
+    "conferenceId": 146,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2823",
+    "name": "Northwestern Oklahoma State",
+    "displayName": "Northwestern Oklahoma State Rangers",
+    "conference": "GAC",
+    "conferenceId": 146,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "200",
+    "name": "Southern Nazarene",
+    "displayName": "Southern Nazarene Crimson Storm",
+    "conference": "GAC",
+    "conferenceId": 146,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2927",
+    "name": "Southwestern Oklahoma State",
+    "displayName": "Southwestern Oklahoma State Bulldogs",
+    "conference": "GAC",
+    "conferenceId": 146,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2911",
+    "name": "William Jewell",
+    "displayName": "William Jewell Cardinals",
+    "conference": "GLVC",
+    "conferenceId": 108,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2816",
+    "name": "McKendree",
+    "displayName": "McKendree Bearcats",
+    "conference": "GLVC",
+    "conferenceId": 108,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2825",
+    "name": "Quincy",
+    "displayName": "Quincy Hawks",
+    "conference": "GLVC",
+    "conferenceId": 108,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "389",
+    "name": "Upper Iowa",
+    "displayName": "Upper Iowa Peacocks",
+    "conference": "GLVC",
+    "conferenceId": 108,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2876",
+    "name": "Lincoln (MO)",
+    "displayName": "Lincoln (MO) Blue Tigers",
+    "conference": "GLVC",
+    "conferenceId": 108,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2654",
+    "name": "Truman State",
+    "displayName": "Truman State Bulldogs",
+    "conference": "GLVC",
+    "conferenceId": 108,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2292",
+    "name": "Indianapolis",
+    "displayName": "Indianapolis Greyhounds",
+    "conference": "GLVC",
+    "conferenceId": 108,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2586",
+    "name": "Southwest Baptist",
+    "displayName": "Southwest Baptist Bearcats",
+    "conference": "GLVC",
+    "conferenceId": 108,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2402",
+    "name": "Missouri S&T",
+    "displayName": "Missouri S&T Miners",
+    "conference": "GLVC",
+    "conferenceId": 108,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2224",
+    "name": "Findlay",
+    "displayName": "Findlay Oilers",
+    "conference": "G-MAC",
+    "conferenceId": 165,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2886",
+    "name": "Northwood (MI)",
+    "displayName": "Northwood (MI) Timberwolves",
+    "conference": "G-MAC",
+    "conferenceId": 165,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2682",
+    "name": "Walsh",
+    "displayName": "Walsh Cavaliers",
+    "conference": "G-MAC",
+    "conferenceId": 165,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2838",
+    "name": "Tiffin",
+    "displayName": "Tiffin Dragons",
+    "conference": "G-MAC",
+    "conferenceId": 165,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2273",
+    "name": "Hillsdale",
+    "displayName": "Hillsdale Chargers",
+    "conference": "G-MAC",
+    "conferenceId": 165,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "437",
+    "name": "Lake Erie",
+    "displayName": "Lake Erie Storm",
+    "conference": "G-MAC",
+    "conferenceId": 165,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "308",
+    "name": "Ashland",
+    "displayName": "Ashland Eagles",
+    "conference": "G-MAC",
+    "conferenceId": 165,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2477",
+    "name": "Ohio Dominican",
+    "displayName": "Ohio Dominican Panthers",
+    "conference": "G-MAC",
+    "conferenceId": 165,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2316",
+    "name": "Kentucky Wesleyan",
+    "displayName": "Kentucky Wesleyan Panthers",
+    "conference": "G-MAC",
+    "conferenceId": 165,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2646",
+    "name": "Thomas More College",
+    "displayName": "Thomas More College Saints",
+    "conference": "G-MAC",
+    "conferenceId": 165,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2673",
+    "name": "Valdosta State",
+    "displayName": "Valdosta State Blazers",
+    "conference": "GSC",
+    "conferenceId": 110,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2695",
+    "name": "West Alabama",
+    "displayName": "West Alabama Tigers",
+    "conference": "GSC",
+    "conferenceId": 110,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2170",
+    "name": "Delta State",
+    "displayName": "Delta State Statesmen",
+    "conference": "GSC",
+    "conferenceId": 110,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "196",
+    "name": "Northeastern State",
+    "displayName": "Northeastern State RiverHawks",
+    "conference": "DII Independents",
+    "conferenceId": 112,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "110243",
+    "name": "UT Permian Basin",
+    "displayName": "UT Permian Basin Falcons",
+    "conference": "Lone Star",
+    "conferenceId": 116,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2395",
+    "name": "Midwestern State",
+    "displayName": "Midwestern State Mustangs",
+    "conference": "Lone Star",
+    "conferenceId": 116,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2848",
+    "name": "Western Oregon",
+    "displayName": "Western Oregon Wolves",
+    "conference": "Lone Star",
+    "conferenceId": 116,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2120",
+    "name": "Central Washington",
+    "displayName": "Central Washington Wildcats",
+    "conference": "Lone Star",
+    "conferenceId": 116,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2658",
+    "name": "Texas A&M-Kingsville",
+    "displayName": "Texas A&M-Kingsville Javelinas",
+    "conference": "Lone Star",
+    "conferenceId": 116,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2704",
+    "name": "West Texas A&M",
+    "displayName": "West Texas A&M Buffaloes",
+    "conference": "Lone Star",
+    "conferenceId": 116,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2834",
+    "name": "Sul Ross State",
+    "displayName": "Sul Ross State Lobos",
+    "conference": "Lone Star",
+    "conferenceId": 116,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2703",
+    "name": "Western New Mexico",
+    "displayName": "Western New Mexico Mustangs",
+    "conference": "Lone Star",
+    "conferenceId": 116,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2025",
+    "name": "Angelo State",
+    "displayName": "Angelo State Rams",
+    "conference": "Lone Star",
+    "conferenceId": 116,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2201",
+    "name": "Eastern New Mexico",
+    "displayName": "Eastern New Mexico Greyhounds",
+    "conference": "Lone Star",
+    "conferenceId": 116,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2214",
+    "name": "Emporia State",
+    "displayName": "Emporia State Hornets",
+    "conference": "MIAA",
+    "conferenceId": 118,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "138",
+    "name": "Northwest Missouri State",
+    "displayName": "Northwest Missouri State Bearcats",
+    "conference": "MIAA",
+    "conferenceId": 118,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2118",
+    "name": "Central Missouri",
+    "displayName": "Central Missouri Mules",
+    "conference": "MIAA",
+    "conferenceId": 118,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2231",
+    "name": "Fort Hays State",
+    "displayName": "Fort Hays State Tigers",
+    "conference": "MIAA",
+    "conferenceId": 118,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2687",
+    "name": "Washburn",
+    "displayName": "Washburn Ichabods",
+    "conference": "MIAA",
+    "conferenceId": 118,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2122",
+    "name": "Central Oklahoma",
+    "displayName": "Central Oklahoma Bronchos",
+    "conference": "MIAA",
+    "conferenceId": 118,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2403",
+    "name": "Missouri Southern State",
+    "displayName": "Missouri Southern State Lions",
+    "conference": "MIAA",
+    "conferenceId": 118,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "137",
+    "name": "Missouri Western",
+    "displayName": "Missouri Western Griffons",
+    "conference": "MIAA",
+    "conferenceId": 118,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2438",
+    "name": "Nebraska-Kearney",
+    "displayName": "Nebraska-Kearney Lopers",
+    "conference": "MIAA",
+    "conferenceId": 118,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "90",
+    "name": "Pittsburg State",
+    "displayName": "Pittsburg State Gorillas",
+    "conference": "MIAA",
+    "conferenceId": 118,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2699",
+    "name": "West Liberty",
+    "displayName": "West Liberty Hilltoppers",
+    "conference": "MEC",
+    "conferenceId": 144,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2148",
+    "name": "Concord",
+    "displayName": "Concord Mountain Lions",
+    "conference": "MEC",
+    "conferenceId": 144,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "455",
+    "name": "West Virginia Wesleyan",
+    "displayName": "West Virginia Wesleyan Bobcats",
+    "conference": "MEC",
+    "conferenceId": 144,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "112335",
+    "name": "Wheeling",
+    "displayName": "Wheeling Cardinals",
+    "conference": "MEC",
+    "conferenceId": 144,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2249",
+    "name": "Glenville State",
+    "displayName": "Glenville State Pioneers",
+    "conference": "MEC",
+    "conferenceId": 144,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "341",
+    "name": "Frostburg State",
+    "displayName": "Frostburg State Bobcats",
+    "conference": "MEC",
+    "conferenceId": 144,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2707",
+    "name": "West Virginia State",
+    "displayName": "West Virginia State Yellow Jackets",
+    "conference": "MEC",
+    "conferenceId": 144,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2128",
+    "name": "University Of Charleston (WV)",
+    "displayName": "University Of Charleston (WV) Golden Eagles",
+    "conference": "MEC",
+    "conferenceId": 144,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2986",
+    "name": "Fairmont State",
+    "displayName": "Fairmont State Falcons",
+    "conference": "MEC",
+    "conferenceId": 144,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2060",
+    "name": "Bentley",
+    "displayName": "Bentley Falcons",
+    "conference": "NE10",
+    "conferenceId": 127,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2022",
+    "name": "American International",
+    "displayName": "American International Yellow Jackets",
+    "conference": "NE10",
+    "conferenceId": 127,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "112334",
+    "name": "Franklin Pierce",
+    "displayName": "Franklin Pierce Ravens",
+    "conference": "NE10",
+    "conferenceId": 127,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2583",
+    "name": "Southern Connecticut State",
+    "displayName": "Southern Connecticut State Owls",
+    "conference": "NE10",
+    "conferenceId": 127,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2038",
+    "name": "Assumption",
+    "displayName": "Assumption Greyhounds",
+    "conference": "NE10",
+    "conferenceId": 127,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2487",
+    "name": "Pace",
+    "displayName": "Pace Setters",
+    "conference": "NE10",
+    "conferenceId": 127,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "126086",
+    "name": "Post University",
+    "displayName": "Post University Eagles",
+    "conference": "NE10",
+    "conferenceId": 127,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2830",
+    "name": "St. Anselm",
+    "displayName": "St. Anselm Hawks",
+    "conference": "NE10",
+    "conferenceId": 127,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2570",
+    "name": "CSU Pueblo",
+    "displayName": "CSU Pueblo ThunderWolves",
+    "conference": "RMAC",
+    "conferenceId": 135,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2714",
+    "name": "Western Colorado",
+    "displayName": "Western Colorado Mountaineers",
+    "conference": "RMAC",
+    "conferenceId": 135,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2424",
+    "name": "New Mexico Highlands",
+    "displayName": "New Mexico Highlands Cowboys",
+    "conference": "RMAC",
+    "conferenceId": 135,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2069",
+    "name": "Black Hills State",
+    "displayName": "Black Hills State Yellow Jackets",
+    "conference": "RMAC",
+    "conferenceId": 135,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "613",
+    "name": "South Dakota Mines",
+    "displayName": "South Dakota Mines Hardrockers",
+    "conference": "RMAC",
+    "conferenceId": 135,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2237",
+    "name": "Fort Lewis",
+    "displayName": "Fort Lewis Skyhawks",
+    "conference": "RMAC",
+    "conferenceId": 135,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "11",
+    "name": "Colorado Mesa",
+    "displayName": "Colorado Mesa Mavericks",
+    "conference": "RMAC",
+    "conferenceId": 135,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2146",
+    "name": "Colorado School of Mines",
+    "displayName": "Colorado School of Mines Orediggers",
+    "conference": "RMAC",
+    "conferenceId": 135,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2123",
+    "name": "Chadron State",
+    "displayName": "Chadron State Eagles",
+    "conference": "RMAC",
+    "conferenceId": 135,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2001",
+    "name": "Adams State",
+    "displayName": "Adams State Grizzlies",
+    "conference": "RMAC",
+    "conferenceId": 135,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "490",
+    "name": "Benedict",
+    "displayName": "Benedict Tigers",
+    "conference": "SIAC",
+    "conferenceId": 136,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2206",
+    "name": "Edward Waters",
+    "displayName": "Edward Waters Tigers",
+    "conference": "SIAC",
+    "conferenceId": 136,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2310",
+    "name": "Kentucky State",
+    "displayName": "Kentucky State Thorobreds",
+    "conference": "SIAC",
+    "conferenceId": 136,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2013",
+    "name": "Albany State",
+    "displayName": "Albany State Golden Rams",
+    "conference": "SIAC",
+    "conferenceId": 136,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2019",
+    "name": "Allen",
+    "displayName": "Allen Yellow Jackets",
+    "conference": "SIAC",
+    "conferenceId": 136,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2657",
+    "name": "Tuskegee",
+    "displayName": "Tuskegee Golden Tigers",
+    "conference": "SIAC",
+    "conferenceId": 136,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2232",
+    "name": "Fort Valley State",
+    "displayName": "Fort Valley State Wildcats",
+    "conference": "SIAC",
+    "conferenceId": 136,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2119",
+    "name": "Central State (OH)",
+    "displayName": "Central State (OH) Marauders",
+    "conference": "SIAC",
+    "conferenceId": 136,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2396",
+    "name": "Miles College",
+    "displayName": "Miles College Golden Bears",
+    "conference": "SIAC",
+    "conferenceId": 136,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2805",
+    "name": "Clark Atlanta",
+    "displayName": "Clark Atlanta Panthers",
+    "conference": "SIAC",
+    "conferenceId": 136,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "60",
+    "name": "Morehouse College",
+    "displayName": "Morehouse College Maroon Tigers",
+    "conference": "SIAC",
+    "conferenceId": 136,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2542",
+    "name": "Savannah State",
+    "displayName": "Savannah State Tigers",
+    "conference": "SIAC",
+    "conferenceId": 136,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2323",
+    "name": "Lane",
+    "displayName": "Lane Dragons",
+    "conference": "SIAC",
+    "conferenceId": 136,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2105",
+    "name": "Carson-Newman",
+    "displayName": "Carson-Newman Eagles",
+    "conference": "SAC",
+    "conferenceId": 139,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2369",
+    "name": "Mars Hill",
+    "displayName": "Mars Hill Lions",
+    "conference": "SAC",
+    "conferenceId": 139,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "129469",
+    "name": "Anderson (SC)",
+    "displayName": "Anderson (SC) Trojans",
+    "conference": "SAC",
+    "conferenceId": 139,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2444",
+    "name": "Newberry",
+    "displayName": "Newberry Wolves",
+    "conference": "SAC",
+    "conferenceId": 139,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2331",
+    "name": "Lenoir-Rhyne",
+    "displayName": "Lenoir-Rhyne Bears",
+    "conference": "SAC",
+    "conferenceId": 139,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2107",
+    "name": "Catawba",
+    "displayName": "Catawba Indians",
+    "conference": "SAC",
+    "conferenceId": 139,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2839",
+    "name": "Tusculum",
+    "displayName": "Tusculum Pioneers",
+    "conference": "SAC",
+    "conferenceId": 139,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2213",
+    "name": "Emory & Henry College",
+    "displayName": "Emory & Henry College Wasps",
+    "conference": "SAC",
+    "conferenceId": 139,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "351",
+    "name": "Wingate",
+    "displayName": "Wingate Bulldogs",
+    "conference": "SAC",
+    "conferenceId": 139,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2842",
+    "name": "UVA Wise",
+    "displayName": "UVA Wise Cavaliers",
+    "conference": "SAC",
+    "conferenceId": 139,
+    "division": "d2",
+    "state_code": "US"
+  },
+  {
+    "id": "2964",
+    "name": "Central College",
+    "displayName": "Central College Dutch",
+    "conference": "ARC",
+    "conferenceId": 114,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "263",
+    "name": "Loras College",
+    "displayName": "Loras College Duhawks",
+    "conference": "ARC",
+    "conferenceId": 114,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2564",
+    "name": "Simpson College (IA)",
+    "displayName": "Simpson College (IA) Storm",
+    "conference": "ARC",
+    "conferenceId": 114,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "63",
+    "name": "Buena Vista",
+    "displayName": "Buena Vista Beavers",
+    "conference": "ARC",
+    "conferenceId": 114,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2141",
+    "name": "Coe College",
+    "displayName": "Coe College Kohawks",
+    "conference": "ARC",
+    "conferenceId": 114,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2685",
+    "name": "Wartburg College",
+    "displayName": "Wartburg College Knights",
+    "conference": "ARC",
+    "conferenceId": 114,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "49",
+    "name": "Dubuque",
+    "displayName": "Dubuque Spartans",
+    "conference": "ARC",
+    "conferenceId": 114,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "6845",
+    "name": "Nebraska Wesleyan",
+    "displayName": "Nebraska Wesleyan Prairie Wolves",
+    "conference": "ARC",
+    "conferenceId": 114,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2810",
+    "name": "Hardin-Simmons",
+    "displayName": "Hardin-Simmons Cowboys",
+    "conference": "ASC",
+    "conferenceId": 100,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2758",
+    "name": "Howard Payne",
+    "displayName": "Howard Payne Yellow Jackets",
+    "conference": "ASC",
+    "conferenceId": 100,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2194",
+    "name": "East Texas Baptist",
+    "displayName": "East Texas Baptist Tigers",
+    "conference": "ASC",
+    "conferenceId": 100,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2371",
+    "name": "Mary Hardin-Baylor",
+    "displayName": "Mary Hardin-Baylor Crusaders",
+    "conference": "ASC",
+    "conferenceId": 100,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "241",
+    "name": "McMurry",
+    "displayName": "McMurry War Hawks",
+    "conference": "ASC",
+    "conferenceId": 100,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "102549",
+    "name": "Schreiner",
+    "displayName": "Schreiner Mountaineers",
+    "conference": "ASC",
+    "conferenceId": 100,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "306",
+    "name": "Illinois Wesleyan",
+    "displayName": "Illinois Wesleyan Titans",
+    "conference": "CCIW",
+    "conferenceId": 102,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "3071",
+    "name": "North Central College",
+    "displayName": "North Central College Cardinals",
+    "conference": "CCIW",
+    "conferenceId": 102,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "396",
+    "name": "Wheaton",
+    "displayName": "Wheaton Thunder",
+    "conference": "CCIW",
+    "conferenceId": 102,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "32",
+    "name": "Carroll (WI)",
+    "displayName": "Carroll (WI) Pioneers",
+    "conference": "CCIW",
+    "conferenceId": 102,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2106",
+    "name": "Carthage",
+    "displayName": "Carthage Firebirds",
+    "conference": "CCIW",
+    "conferenceId": 102,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2042",
+    "name": "Augustana (IL)",
+    "displayName": "Augustana (IL) Vikings",
+    "conference": "CCIW",
+    "conferenceId": 102,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "72",
+    "name": "Elmhurst",
+    "displayName": "Elmhurst Bluejays",
+    "conference": "CCIW",
+    "conferenceId": 102,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "74",
+    "name": "Millikin",
+    "displayName": "Millikin Big Blue",
+    "conference": "CCIW",
+    "conferenceId": 102,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "75",
+    "name": "North Park",
+    "displayName": "North Park Vikings",
+    "conference": "CCIW",
+    "conferenceId": 102,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2234",
+    "name": "Franklin & Marshall",
+    "displayName": "Franklin & Marshall Diplomats",
+    "conference": "Centennial",
+    "conferenceId": 103,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2667",
+    "name": "Ursinus",
+    "displayName": "Ursinus Bears",
+    "conference": "Centennial",
+    "conferenceId": 103,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2175",
+    "name": "Dickinson (PA)",
+    "displayName": "Dickinson (PA) Red Devils",
+    "conference": "Centennial",
+    "conferenceId": 103,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2248",
+    "name": "Gettysburg",
+    "displayName": "Gettysburg Bullets",
+    "conference": "Centennial",
+    "conferenceId": 103,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2422",
+    "name": "Muhlenberg",
+    "displayName": "Muhlenberg Mules",
+    "conference": "Centennial",
+    "conferenceId": 103,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2102",
+    "name": "Carnegie Mellon",
+    "displayName": "Carnegie Mellon Tartans",
+    "conference": "Centennial",
+    "conferenceId": 103,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "118",
+    "name": "Johns Hopkins",
+    "displayName": "Johns Hopkins Blue Jays",
+    "conference": "Centennial",
+    "conferenceId": 103,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2700",
+    "name": "McDaniel College",
+    "displayName": "McDaniel College Green Terror",
+    "conference": "Centennial",
+    "conferenceId": 103,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "452",
+    "name": "Endicott College",
+    "displayName": "Endicott College Gulls",
+    "conference": "CNE",
+    "conferenceId": 123,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "40",
+    "name": "Curry College",
+    "displayName": "Curry College Colonels",
+    "conference": "CNE",
+    "conferenceId": 123,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "131108",
+    "name": "New England College",
+    "displayName": "New England College Pilgrims",
+    "conference": "CNE",
+    "conferenceId": 123,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2702",
+    "name": "Western New England",
+    "displayName": "Western New England Golden Bears",
+    "conference": "CNE",
+    "conferenceId": 123,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "274",
+    "name": "Maine Maritime",
+    "displayName": "Maine Maritime Mariners",
+    "conference": "CNE",
+    "conferenceId": 123,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2280",
+    "name": "Husson",
+    "displayName": "Husson Eagles",
+    "conference": "CNE",
+    "conferenceId": 123,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "111675",
+    "name": "University of New England",
+    "displayName": "University of New England Nor'easters",
+    "conference": "CNE",
+    "conferenceId": 123,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2884",
+    "name": "Nichols College",
+    "displayName": "Nichols College Bison",
+    "conference": "CNE",
+    "conferenceId": 123,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2782",
+    "name": "Cortland",
+    "displayName": "Cortland Red Dragons",
+    "conference": "Empire 8",
+    "conferenceId": 106,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "3162",
+    "name": "Alfred State College",
+    "displayName": "Alfred State College Pioneers",
+    "conference": "Empire 8",
+    "conferenceId": 106,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "374",
+    "name": "St. John Fisher University",
+    "displayName": "St. John Fisher University Cardinals",
+    "conference": "Empire 8",
+    "conferenceId": 106,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "390",
+    "name": "Utica",
+    "displayName": "Utica Pioneers",
+    "conference": "Empire 8",
+    "conferenceId": 106,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2781",
+    "name": "Brockport",
+    "displayName": "Brockport Golden Eagles",
+    "conference": "Empire 8",
+    "conferenceId": 106,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "365",
+    "name": "Alfred",
+    "displayName": "Alfred Saxons",
+    "conference": "Empire 8",
+    "conferenceId": 106,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "3110",
+    "name": "SUNY Morrisville",
+    "displayName": "SUNY Morrisville Mustangs",
+    "conference": "Empire 8",
+    "conferenceId": 106,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "173",
+    "name": "Hartwick",
+    "displayName": "Hartwick Hawks",
+    "conference": "Empire 8",
+    "conferenceId": 106,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2419",
+    "name": "Mount St. Joseph",
+    "displayName": "Mount St. Joseph Lions",
+    "conference": "Heartland",
+    "conferenceId": 111,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2262",
+    "name": "Hanover",
+    "displayName": "Hanover Panthers",
+    "conference": "Heartland",
+    "conferenceId": 111,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "86",
+    "name": "Rose-Hulman",
+    "displayName": "Rose-Hulman Fightin' Engineers",
+    "conference": "Heartland",
+    "conferenceId": 111,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2023",
+    "name": "Anderson (IN)",
+    "displayName": "Anderson (IN) Ravens",
+    "conference": "Heartland",
+    "conferenceId": 111,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2233",
+    "name": "Franklin",
+    "displayName": "Franklin Grizzlies",
+    "conference": "Heartland",
+    "conferenceId": 111,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2362",
+    "name": "Manchester",
+    "displayName": "Manchester Spartans",
+    "conference": "Heartland",
+    "conferenceId": 111,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2074",
+    "name": "Bluffton",
+    "displayName": "Bluffton Beavers",
+    "conference": "Heartland",
+    "conferenceId": 111,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "122774",
+    "name": "Keystone",
+    "displayName": "Keystone Giants",
+    "conference": "DIII Independents",
+    "conferenceId": 113,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "216",
+    "name": "Susquehanna",
+    "displayName": "Susquehanna River Hawks",
+    "conference": "Landmark",
+    "conferenceId": 178,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "398",
+    "name": "Wilkes University",
+    "displayName": "Wilkes University Colonels",
+    "conference": "Landmark",
+    "conferenceId": 178,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "246",
+    "name": "Juniata",
+    "displayName": "Juniata Eagles",
+    "conference": "Landmark",
+    "conferenceId": 178,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2354",
+    "name": "Lycoming",
+    "displayName": "Lycoming Warriors",
+    "conference": "Landmark",
+    "conferenceId": 178,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2843",
+    "name": "Western Connecticut State",
+    "displayName": "Western Connecticut State Wolves",
+    "conference": "Landmark",
+    "conferenceId": 178,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2108",
+    "name": "Catholic",
+    "displayName": "Catholic Cardinals",
+    "conference": "Landmark",
+    "conferenceId": 178,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "323",
+    "name": "Moravian",
+    "displayName": "Moravian Greyhounds",
+    "conference": "Landmark",
+    "conferenceId": 178,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "175",
+    "name": "Ithaca",
+    "displayName": "Ithaca Bombers",
+    "conference": "Liberty League",
+    "conferenceId": 115,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "174",
+    "name": "Hobart",
+    "displayName": "Hobart Statesmen",
+    "conference": "Liberty League",
+    "conferenceId": 115,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2528",
+    "name": "Rensselaer",
+    "displayName": "Rensselaer Engineers",
+    "conference": "Liberty League",
+    "conferenceId": 115,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "184",
+    "name": "University of Rochester (NY)",
+    "displayName": "University of Rochester (NY) Yellow Jackets",
+    "conference": "Liberty League",
+    "conferenceId": 115,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2779",
+    "name": "St. Lawrence",
+    "displayName": "St. Lawrence Saints",
+    "conference": "Liberty League",
+    "conferenceId": 115,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "237",
+    "name": "Union (NY)",
+    "displayName": "Union (NY) Garnet Chargers",
+    "conference": "Liberty League",
+    "conferenceId": 115,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2085",
+    "name": "Buffalo State",
+    "displayName": "Buffalo State Bengals",
+    "conference": "Liberty League",
+    "conferenceId": 115,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "125974",
+    "name": "Hilbert College",
+    "displayName": "Hilbert College Hawks",
+    "conference": "Liberty League",
+    "conferenceId": 115,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "18",
+    "name": "Bridgewater State",
+    "displayName": "Bridgewater State Bears",
+    "conference": "MSCAC",
+    "conferenceId": 160,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2967",
+    "name": "Framingham State",
+    "displayName": "Framingham State Rams",
+    "conference": "MSCAC",
+    "conferenceId": 160,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "110",
+    "name": "Mass Maritime",
+    "displayName": "Mass Maritime Buccaneers",
+    "conference": "MSCAC",
+    "conferenceId": 160,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "402",
+    "name": "Worcester State College",
+    "displayName": "Worcester State College Lancers",
+    "conference": "MSCAC",
+    "conferenceId": 160,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "379",
+    "name": "UMass Dartmouth",
+    "displayName": "UMass Dartmouth Corsairs",
+    "conference": "MSCAC",
+    "conferenceId": 160,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "114",
+    "name": "Fitchburg State",
+    "displayName": "Fitchburg State Falcons",
+    "conference": "MSCAC",
+    "conferenceId": 160,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2909",
+    "name": "Westfield State",
+    "displayName": "Westfield State Owls",
+    "conference": "MSCAC",
+    "conferenceId": 160,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2972",
+    "name": "Plymouth State",
+    "displayName": "Plymouth State Panthers",
+    "conference": "MSCAC",
+    "conferenceId": 160,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "110438",
+    "name": "Dean College",
+    "displayName": "Dean College Bulldogs",
+    "conference": "MSCAC",
+    "conferenceId": 160,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "129738",
+    "name": "Calvin University",
+    "displayName": "Calvin University Knights",
+    "conference": "MIAA D3",
+    "conferenceId": 117,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2812",
+    "name": "Hope",
+    "displayName": "Hope Flying Dutchmen",
+    "conference": "MIAA D3",
+    "conferenceId": 117,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "354",
+    "name": "Olivet College",
+    "displayName": "Olivet College Comets",
+    "conference": "MIAA D3",
+    "conferenceId": 117,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2003",
+    "name": "Adrian",
+    "displayName": "Adrian Bulldogs",
+    "conference": "MIAA D3",
+    "conferenceId": 117,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2651",
+    "name": "Trine University",
+    "displayName": "Trine University Thunder",
+    "conference": "MIAA D3",
+    "conferenceId": 117,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "126",
+    "name": "Kalamazoo",
+    "displayName": "Kalamazoo Hornets",
+    "conference": "MIAA D3",
+    "conferenceId": 117,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2790",
+    "name": "Albion",
+    "displayName": "Albion Britons",
+    "conference": "MIAA D3",
+    "conferenceId": 117,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2800",
+    "name": "Alma College",
+    "displayName": "Alma College Scots",
+    "conference": "MIAA D3",
+    "conferenceId": 117,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2808",
+    "name": "Delaware Valley",
+    "displayName": "Delaware Valley Aggies",
+    "conference": "MAC D3",
+    "conferenceId": 119,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "127954",
+    "name": "Eastern University",
+    "displayName": "Eastern University Eagles",
+    "conference": "MAC D3",
+    "conferenceId": 119,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2725",
+    "name": "Widener",
+    "displayName": "Widener Pride",
+    "conference": "MAC D3",
+    "conferenceId": 119,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2969",
+    "name": "Misericordia",
+    "displayName": "Misericordia Cougars",
+    "conference": "MAC D3",
+    "conferenceId": 119,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2015",
+    "name": "Albright",
+    "displayName": "Albright Lions",
+    "conference": "MAC D3",
+    "conferenceId": 119,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "471",
+    "name": "Stevenson",
+    "displayName": "Stevenson Mustangs",
+    "conference": "MAC D3",
+    "conferenceId": 119,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "111674",
+    "name": "Alvernia",
+    "displayName": "Alvernia Golden Wolves",
+    "conference": "MAC D3",
+    "conferenceId": 119,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "247",
+    "name": "King's College (PA)",
+    "displayName": "King's College (PA) Monarchs",
+    "conference": "MAC D3",
+    "conferenceId": 119,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2221",
+    "name": "FDU-Florham",
+    "displayName": "FDU-Florham Devils",
+    "conference": "MAC D3",
+    "conferenceId": 119,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "388",
+    "name": "Lebanon Valley",
+    "displayName": "Lebanon Valley Flying Dutchmen",
+    "conference": "MAC D3",
+    "conferenceId": 119,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "262",
+    "name": "Lake Forest",
+    "displayName": "Lake Forest Foresters",
+    "conference": "Midwest",
+    "conferenceId": 120,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "67",
+    "name": "Luther",
+    "displayName": "Luther Norse",
+    "conference": "Midwest",
+    "conferenceId": 120,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2286",
+    "name": "Illinois College",
+    "displayName": "Illinois College Blueboys",
+    "conference": "Midwest",
+    "conferenceId": 120,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "80",
+    "name": "Chicago",
+    "displayName": "Chicago Maroons",
+    "conference": "Midwest",
+    "conferenceId": 120,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2919",
+    "name": "Monmouth (IL)",
+    "displayName": "Monmouth (IL) Fighting Scots",
+    "conference": "Midwest",
+    "conferenceId": 120,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2891",
+    "name": "Ripon",
+    "displayName": "Ripon Red Hawks",
+    "conference": "Midwest",
+    "conferenceId": 120,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2155",
+    "name": "Cornell (IA)",
+    "displayName": "Cornell (IA) Rams",
+    "conference": "Midwest",
+    "conferenceId": 120,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "65",
+    "name": "Grinnell",
+    "displayName": "Grinnell Pioneers",
+    "conference": "Midwest",
+    "conferenceId": 120,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "266",
+    "name": "Beloit College",
+    "displayName": "Beloit College Buccaneers",
+    "conference": "Midwest",
+    "conferenceId": 120,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "255",
+    "name": "Knox College",
+    "displayName": "Knox College Prairie Fire",
+    "conference": "Midwest",
+    "conferenceId": 120,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "268",
+    "name": "Lawrence University",
+    "displayName": "Lawrence University Vikings",
+    "conference": "Midwest",
+    "conferenceId": 120,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2152",
+    "name": "Concordia-Moorhead",
+    "displayName": "Concordia-Moorhead Cobbers",
+    "conference": "MIAC",
+    "conferenceId": 121,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2600",
+    "name": "Saint John's (MN)",
+    "displayName": "Saint John's (MN) Johnnies",
+    "conference": "MIAC",
+    "conferenceId": 121,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "124",
+    "name": "Augsburg",
+    "displayName": "Augsburg Auggies",
+    "conference": "MIAC",
+    "conferenceId": 121,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2802",
+    "name": "Bethel (MN)",
+    "displayName": "Bethel (MN) Royals",
+    "conference": "MIAC",
+    "conferenceId": 121,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2101",
+    "name": "Carleton College",
+    "displayName": "Carleton College Knights",
+    "conference": "MIAC",
+    "conferenceId": 121,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2968",
+    "name": "Gustavus Adolphus",
+    "displayName": "Gustavus Adolphus Golden Gusties",
+    "conference": "MIAC",
+    "conferenceId": 121,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "162",
+    "name": "Hamline",
+    "displayName": "Hamline Pipers",
+    "conference": "MIAC",
+    "conferenceId": 121,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2359",
+    "name": "Macalester",
+    "displayName": "Macalester Scots",
+    "conference": "MIAC",
+    "conferenceId": 121,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "133",
+    "name": "St. Olaf",
+    "displayName": "St. Olaf Oles",
+    "conference": "MIAC",
+    "conferenceId": 121,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "375",
+    "name": "St. Scholastica",
+    "displayName": "St. Scholastica Saints",
+    "conference": "MIAC",
+    "conferenceId": 121,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "7",
+    "name": "Amherst",
+    "displayName": "Amherst Mammoths",
+    "conference": "NESCAC",
+    "conferenceId": 122,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2977",
+    "name": "Trinity (CT)",
+    "displayName": "Trinity (CT) Bantams",
+    "conference": "NESCAC",
+    "conferenceId": 122,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "112",
+    "name": "Tufts",
+    "displayName": "Tufts Jumbos",
+    "conference": "NESCAC",
+    "conferenceId": 122,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "336",
+    "name": "Wesleyan University (CT)",
+    "displayName": "Wesleyan University (CT) Cardinals",
+    "conference": "NESCAC",
+    "conferenceId": 122,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2731",
+    "name": "Williams",
+    "displayName": "Williams Ephs",
+    "conference": "NESCAC",
+    "conferenceId": 122,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "121",
+    "name": "Bates College",
+    "displayName": "Bates College Bobcats",
+    "conference": "NESCAC",
+    "conferenceId": 122,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "340",
+    "name": "Bowdoin",
+    "displayName": "Bowdoin Polar Bears",
+    "conference": "NESCAC",
+    "conferenceId": 122,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "33",
+    "name": "Colby College",
+    "displayName": "Colby College White Mules",
+    "conference": "NESCAC",
+    "conferenceId": 122,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "348",
+    "name": "Hamilton",
+    "displayName": "Hamilton Continentals",
+    "conference": "NESCAC",
+    "conferenceId": 122,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2394",
+    "name": "Middlebury",
+    "displayName": "Middlebury Panthers",
+    "conference": "NESCAC",
+    "conferenceId": 122,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2776",
+    "name": "Salve Regina",
+    "displayName": "Salve Regina Seahawks",
+    "conference": "NEWMAC",
+    "conferenceId": 166,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "109",
+    "name": "MIT",
+    "displayName": "MIT Engineers",
+    "conference": "NEWMAC",
+    "conferenceId": 166,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2383",
+    "name": "Merchant Marine",
+    "displayName": "Merchant Marine Mariners",
+    "conference": "NEWMAC",
+    "conferenceId": 166,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2557",
+    "name": "Coast Guard",
+    "displayName": "Coast Guard Bears",
+    "conference": "NEWMAC",
+    "conferenceId": 166,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2951",
+    "name": "SUNY Maritime",
+    "displayName": "SUNY Maritime Privateers",
+    "conference": "NEWMAC",
+    "conferenceId": 166,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "81",
+    "name": "Springfield",
+    "displayName": "Springfield Pride",
+    "conference": "NEWMAC",
+    "conferenceId": 166,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2749",
+    "name": "WPI",
+    "displayName": "WPI Engineers",
+    "conference": "NEWMAC",
+    "conferenceId": 166,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2467",
+    "name": "Norwich",
+    "displayName": "Norwich Cadets",
+    "conference": "NEWMAC",
+    "conferenceId": 166,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "3112",
+    "name": "Christopher Newport",
+    "displayName": "Christopher Newport Captains",
+    "conference": "NJAC",
+    "conferenceId": 124,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2532",
+    "name": "Salisbury University",
+    "displayName": "Salisbury University Sea Gulls",
+    "conference": "NJAC",
+    "conferenceId": 124,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "293",
+    "name": "Castleton",
+    "displayName": "Castleton Spartans",
+    "conference": "NJAC",
+    "conferenceId": 124,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2871",
+    "name": "Kean",
+    "displayName": "Kean Cougars",
+    "conference": "NJAC",
+    "conferenceId": 124,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2818",
+    "name": "Montclair State",
+    "displayName": "Montclair State Red Hawks",
+    "conference": "NJAC",
+    "conferenceId": 124,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2827",
+    "name": "Rowan",
+    "displayName": "Rowan Profs",
+    "conference": "NJAC",
+    "conferenceId": 124,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2442",
+    "name": "The College of New Jersey",
+    "displayName": "The College of New Jersey Lions",
+    "conference": "NJAC",
+    "conferenceId": 124,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2970",
+    "name": "William Paterson",
+    "displayName": "William Paterson Pioneers",
+    "conference": "NJAC",
+    "conferenceId": 124,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2302",
+    "name": "John Carroll",
+    "displayName": "John Carroll Blue Streaks",
+    "conference": "NCAC",
+    "conferenceId": 126,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "89",
+    "name": "Wabash College",
+    "displayName": "Wabash College Little Giants",
+    "conference": "NCAC",
+    "conferenceId": 126,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "143",
+    "name": "Washington University-St. Louis",
+    "displayName": "Washington University-St. Louis Bears",
+    "conference": "NCAC",
+    "conferenceId": 126,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2171",
+    "name": "Denison",
+    "displayName": "Denison Big Red",
+    "conference": "NCAC",
+    "conferenceId": 126,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "83",
+    "name": "DePauw",
+    "displayName": "DePauw Tigers",
+    "conference": "NCAC",
+    "conferenceId": 126,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2748",
+    "name": "Wooster",
+    "displayName": "Wooster Fighting Scots",
+    "conference": "NCAC",
+    "conferenceId": 126,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "352",
+    "name": "Kenyon",
+    "displayName": "Kenyon Owls",
+    "conference": "NCAC",
+    "conferenceId": 126,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2980",
+    "name": "Ohio Wesleyan",
+    "displayName": "Ohio Wesleyan Battling Bishops",
+    "conference": "NCAC",
+    "conferenceId": 126,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "391",
+    "name": "Oberlin",
+    "displayName": "Oberlin Yeomen",
+    "conference": "NCAC",
+    "conferenceId": 126,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2746",
+    "name": "Wittenberg",
+    "displayName": "Wittenberg Tigers",
+    "conference": "NCAC",
+    "conferenceId": 126,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "409",
+    "name": "Concordia-Wisconsin",
+    "displayName": "Concordia-Wisconsin Falcons",
+    "conference": "NACC",
+    "conferenceId": 128,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2151",
+    "name": "Concordia-Chicago",
+    "displayName": "Concordia-Chicago Cougars",
+    "conference": "NACC",
+    "conferenceId": 128,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2283",
+    "name": "Benedictine University (IL)",
+    "displayName": "Benedictine University (IL) Eagles",
+    "conference": "NACC",
+    "conferenceId": 128,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "6353",
+    "name": "Lakeland University",
+    "displayName": "Lakeland University Muskies",
+    "conference": "NACC",
+    "conferenceId": 128,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2741",
+    "name": "Wisconsin Lutheran",
+    "displayName": "Wisconsin Lutheran Warriors",
+    "conference": "NACC",
+    "conferenceId": 128,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2832",
+    "name": "St. Norbert",
+    "displayName": "St. Norbert Green Knights",
+    "conference": "NACC",
+    "conferenceId": 128,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2044",
+    "name": "Aurora",
+    "displayName": "Aurora Spartans",
+    "conference": "NACC",
+    "conferenceId": 128,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "101",
+    "name": "Eureka College",
+    "displayName": "Eureka College Red Devils",
+    "conference": "NACC",
+    "conferenceId": 128,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2524",
+    "name": "Rockford",
+    "displayName": "Rockford Regents",
+    "conference": "NACC",
+    "conferenceId": 128,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2333",
+    "name": "Lewis & Clark",
+    "displayName": "Lewis & Clark River Otters",
+    "conference": "NWC",
+    "conferenceId": 130,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "415",
+    "name": "George Fox",
+    "displayName": "George Fox Bruins",
+    "conference": "NWC",
+    "conferenceId": 130,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "203",
+    "name": "Linfield",
+    "displayName": "Linfield Wildcats",
+    "conference": "NWC",
+    "conferenceId": 130,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2721",
+    "name": "Whitworth",
+    "displayName": "Whitworth Pirates",
+    "conference": "NWC",
+    "conferenceId": 130,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2930",
+    "name": "Willamette",
+    "displayName": "Willamette Bearcats",
+    "conference": "NWC",
+    "conferenceId": 130,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2486",
+    "name": "Pacific Lutheran",
+    "displayName": "Pacific Lutheran Lutes",
+    "conference": "NWC",
+    "conferenceId": 130,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2508",
+    "name": "Puget Sound",
+    "displayName": "Puget Sound Loggers",
+    "conference": "NWC",
+    "conferenceId": 130,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "205",
+    "name": "Pacific (OR)",
+    "displayName": "Pacific (OR) Boxers",
+    "conference": "NWC",
+    "conferenceId": 130,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "191",
+    "name": "Heidelberg",
+    "displayName": "Heidelberg Student Princes",
+    "conference": "OAC",
+    "conferenceId": 131,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "188",
+    "name": "Baldwin Wallace",
+    "displayName": "Baldwin Wallace Yellow Jackets",
+    "conference": "OAC",
+    "conferenceId": 131,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "427",
+    "name": "Ohio Northern",
+    "displayName": "Ohio Northern Polar Bears",
+    "conference": "OAC",
+    "conferenceId": 131,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "317",
+    "name": "Marietta",
+    "displayName": "Marietta Pioneers",
+    "conference": "OAC",
+    "conferenceId": 131,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "424",
+    "name": "Capital",
+    "displayName": "Capital Comets",
+    "conference": "OAC",
+    "conferenceId": 131,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "359",
+    "name": "Otterbein",
+    "displayName": "Otterbein Cardinals",
+    "conference": "OAC",
+    "conferenceId": 131,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "426",
+    "name": "Mount Union",
+    "displayName": "Mount Union Purple Raiders",
+    "conference": "OAC",
+    "conferenceId": 131,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2733",
+    "name": "Wilmington (OH)",
+    "displayName": "Wilmington (OH) Fightin' Quakers",
+    "conference": "OAC",
+    "conferenceId": 131,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "332",
+    "name": "Muskingum",
+    "displayName": "Muskingum Fighting Muskies",
+    "conference": "OAC",
+    "conferenceId": 131,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "131109",
+    "name": "Roanoke College",
+    "displayName": "Roanoke College Maroons",
+    "conference": "ODAC",
+    "conferenceId": 132,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2047",
+    "name": "Averett",
+    "displayName": "Averett Cougars",
+    "conference": "ODAC",
+    "conferenceId": 132,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "297",
+    "name": "Hampden-Sydney",
+    "displayName": "Hampden-Sydney Tigers",
+    "conference": "ODAC",
+    "conferenceId": 132,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2516",
+    "name": "Randolph-Macon",
+    "displayName": "Randolph-Macon Yellow Jackets",
+    "conference": "ODAC",
+    "conferenceId": 132,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2828",
+    "name": "Shenandoah",
+    "displayName": "Shenandoah Hornets",
+    "conference": "ODAC",
+    "conferenceId": 132,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2688",
+    "name": "Washington and Lee",
+    "displayName": "Washington and Lee Generals",
+    "conference": "ODAC",
+    "conferenceId": 132,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2258",
+    "name": "Guilford",
+    "displayName": "Guilford Quakers",
+    "conference": "ODAC",
+    "conferenceId": 132,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2079",
+    "name": "Bridgewater (VA)",
+    "displayName": "Bridgewater (VA) Eagles",
+    "conference": "ODAC",
+    "conferenceId": 132,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2018",
+    "name": "Allegheny",
+    "displayName": "Allegheny Gators",
+    "conference": "PAC",
+    "conferenceId": 134,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2963",
+    "name": "Case Western Reserve",
+    "displayName": "Case Western Reserve Spartans",
+    "conference": "PAC",
+    "conferenceId": 134,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2274",
+    "name": "Hiram College",
+    "displayName": "Hiram College Terriers",
+    "conference": "PAC",
+    "conferenceId": 134,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2614",
+    "name": "Saint Vincent",
+    "displayName": "Saint Vincent Bearcats",
+    "conference": "PAC",
+    "conferenceId": 134,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2062",
+    "name": "Bethany (WV)",
+    "displayName": "Bethany (WV) Bison",
+    "conference": "PAC",
+    "conferenceId": 134,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2242",
+    "name": "Geneva",
+    "displayName": "Geneva Golden Tornadoes",
+    "conference": "PAC",
+    "conferenceId": 134,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2686",
+    "name": "Washington & Jefferson",
+    "displayName": "Washington & Jefferson Presidents",
+    "conference": "PAC",
+    "conferenceId": 134,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "146",
+    "name": "Grove City College",
+    "displayName": "Grove City College Wolverines",
+    "conference": "PAC",
+    "conferenceId": 134,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2849",
+    "name": "Westminster (PA)",
+    "displayName": "Westminster (PA) Titans",
+    "conference": "PAC",
+    "conferenceId": 134,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2644",
+    "name": "Thiel",
+    "displayName": "Thiel Tomcats",
+    "conference": "PAC",
+    "conferenceId": 134,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2845",
+    "name": "Waynesburg",
+    "displayName": "Waynesburg Yellow Jackets",
+    "conference": "PAC",
+    "conferenceId": 134,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2598",
+    "name": "Saint Francis",
+    "displayName": "Saint Francis Red Flash",
+    "conference": "PAC",
+    "conferenceId": 134,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2318",
+    "name": "La Verne",
+    "displayName": "La Verne Leopards",
+    "conference": "SCIAC",
+    "conferenceId": 138,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2049",
+    "name": "Azusa Pacific",
+    "displayName": "Azusa Pacific Cougars",
+    "conference": "SCIAC",
+    "conferenceId": 138,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2094",
+    "name": "Cal Lutheran",
+    "displayName": "Cal Lutheran Kingsmen",
+    "conference": "SCIAC",
+    "conferenceId": 138,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "411",
+    "name": "Chapman",
+    "displayName": "Chapman Panthers",
+    "conference": "SCIAC",
+    "conferenceId": 138,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "17",
+    "name": "Claremont Mudd Scripps",
+    "displayName": "Claremont Mudd Scripps Stags",
+    "conference": "SCIAC",
+    "conferenceId": 138,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2923",
+    "name": "Pomona Pitzer",
+    "displayName": "Pomona Pitzer Sagehens",
+    "conference": "SCIAC",
+    "conferenceId": 138,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2850",
+    "name": "Whittier College",
+    "displayName": "Whittier College Poets",
+    "conference": "SCIAC",
+    "conferenceId": 138,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "29",
+    "name": "Redlands",
+    "displayName": "Redlands Bulldogs",
+    "conference": "SCIAC",
+    "conferenceId": 138,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2757",
+    "name": "Berry College",
+    "displayName": "Berry College Vikings",
+    "conference": "SAA",
+    "conferenceId": 147,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "386",
+    "name": "Trinity (TX)",
+    "displayName": "Trinity (TX) Tigers",
+    "conference": "SAA",
+    "conferenceId": 147,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2398",
+    "name": "Millsaps",
+    "displayName": "Millsaps Majors",
+    "conference": "SAA",
+    "conferenceId": 147,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2553",
+    "name": "Sewanee",
+    "displayName": "Sewanee Tigers",
+    "conference": "SAA",
+    "conferenceId": 147,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2121",
+    "name": "Centre College",
+    "displayName": "Centre College Colonels",
+    "conference": "SAA",
+    "conferenceId": 147,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2519",
+    "name": "Rhodes College",
+    "displayName": "Rhodes College Lynx",
+    "conference": "SAA",
+    "conferenceId": 147,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2373",
+    "name": "Maryville College (TN)",
+    "displayName": "Maryville College (TN) Scots",
+    "conference": "SAA",
+    "conferenceId": 147,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2588",
+    "name": "Southwestern University",
+    "displayName": "Southwestern University Pirates",
+    "conference": "SAA",
+    "conferenceId": 147,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2639",
+    "name": "Texas Lutheran",
+    "displayName": "Texas Lutheran Bulldogs",
+    "conference": "SCAC",
+    "conferenceId": 148,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "418",
+    "name": "Hendrix College",
+    "displayName": "Hendrix College Warriors",
+    "conference": "SCAC",
+    "conferenceId": 148,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "101161",
+    "name": "Lyon College",
+    "displayName": "Lyon College Scots",
+    "conference": "SCAC",
+    "conferenceId": 148,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2045",
+    "name": "Austin",
+    "displayName": "Austin 'Roos",
+    "conference": "SCAC",
+    "conferenceId": 148,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "101442",
+    "name": "Centenary",
+    "displayName": "Centenary Gentlemen",
+    "conference": "SCAC",
+    "conferenceId": 148,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "417",
+    "name": "Gallaudet",
+    "displayName": "Gallaudet Bison",
+    "conference": "SCAC",
+    "conferenceId": 148,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "433",
+    "name": "Westminster (MO)",
+    "displayName": "Westminster (MO) Blue Jays",
+    "conference": "UMAC",
+    "conferenceId": 142,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "509",
+    "name": "Crown College",
+    "displayName": "Crown College Polars",
+    "conference": "UMAC",
+    "conferenceId": 142,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2257",
+    "name": "Greenville",
+    "displayName": "Greenville Panthers",
+    "conference": "UMAC",
+    "conferenceId": 142,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2399",
+    "name": "Minnesota Morris",
+    "displayName": "Minnesota Morris Cougars",
+    "conference": "UMAC",
+    "conferenceId": 142,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "583",
+    "name": "Northwestern (MN)",
+    "displayName": "Northwestern (MN) Eagles",
+    "conference": "UMAC",
+    "conferenceId": 142,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "446",
+    "name": "Martin Luther",
+    "displayName": "Martin Luther Knights",
+    "conference": "UMAC",
+    "conferenceId": 142,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2913",
+    "name": "Brevard College",
+    "displayName": "Brevard College Tornados",
+    "conference": "USA South",
+    "conferenceId": 143,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "548",
+    "name": "LaGrange College",
+    "displayName": "LaGrange College Panthers",
+    "conference": "USA South",
+    "conferenceId": 143,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "286",
+    "name": "North Carolina Wesleyan",
+    "displayName": "North Carolina Wesleyan Battling Bishops",
+    "conference": "USA South",
+    "conferenceId": 143,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2056",
+    "name": "Belhaven",
+    "displayName": "Belhaven Blazers",
+    "conference": "USA South",
+    "conferenceId": 143,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2256",
+    "name": "Greensboro College",
+    "displayName": "Greensboro College Pride",
+    "conference": "USA South",
+    "conferenceId": 143,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2938",
+    "name": "Huntingdon College (AL)",
+    "displayName": "Huntingdon College (AL) Hawks",
+    "conference": "USA South",
+    "conferenceId": 143,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2896",
+    "name": "Southern Virginia",
+    "displayName": "Southern Virginia Knights",
+    "conference": "USA South",
+    "conferenceId": 143,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "291",
+    "name": "Methodist",
+    "displayName": "Methodist Monarchs",
+    "conference": "USA South",
+    "conferenceId": 143,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2738",
+    "name": "Wisconsin-Eau Claire",
+    "displayName": "Wisconsin-Eau Claire Blugolds",
+    "conference": "WIAC",
+    "conferenceId": 145,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "272",
+    "name": "Wisconsin-Platteville",
+    "displayName": "Wisconsin-Platteville Pioneers",
+    "conference": "WIAC",
+    "conferenceId": 145,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2723",
+    "name": "Wisconsin-River Falls",
+    "displayName": "Wisconsin-River Falls Falcons",
+    "conference": "WIAC",
+    "conferenceId": 145,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2745",
+    "name": "Wisconsin-Whitewater",
+    "displayName": "Wisconsin-Whitewater Warhawks",
+    "conference": "WIAC",
+    "conferenceId": 145,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "271",
+    "name": "Wisconsin-Oshkosh",
+    "displayName": "Wisconsin-Oshkosh Titans",
+    "conference": "WIAC",
+    "conferenceId": 145,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2743",
+    "name": "Wisconsin-Stevens Pt",
+    "displayName": "Wisconsin-Stevens Pt Pointers",
+    "conference": "WIAC",
+    "conferenceId": 145,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2744",
+    "name": "Wisconsin-Stout",
+    "displayName": "Wisconsin-Stout Blue Devils",
+    "conference": "WIAC",
+    "conferenceId": 145,
+    "division": "d3",
+    "state_code": "US"
+  },
+  {
+    "id": "2740",
+    "name": "Wisconsin-Lacrosse",
+    "displayName": "Wisconsin-Lacrosse Eagles",
+    "conference": "WIAC",
+    "conferenceId": 145,
+    "division": "d3",
+    "state_code": "US"
+  }
+]

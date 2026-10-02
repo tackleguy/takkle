@@ -1,0 +1,62 @@
+[
+  {
+    "id": "b9c27c92-cf15-5cd7-96ef-20dd31a7a59d",
+    "name": "Miramonte High School",
+    "slug": "miramonte-high-school-ca",
+    "city": null,
+    "state_code": "CA",
+    "nces_id": null,
+    "website_url": null,
+    "source_url": "https://gomats.org/sports/varsity-football/roster",
+    "source_type": "school_site",
+    "source_name": "Miramonte High School Athletics Football Roster"
+  },
+  {
+    "id": "7086b53d-22aa-5b36-84b3-433c144e71d7",
+    "name": "Loyola High School",
+    "slug": "loyola-high-school-ca",
+    "city": null,
+    "state_code": "CA",
+    "nces_id": null,
+    "website_url": null,
+    "source_url": "https://athletics.loyolahs.edu/sports/varsity-football/roster",
+    "source_type": "school_site",
+    "source_name": "Loyola High School Athletics Football Roster"
+  },
+  {
+    "id": "9004327a-f478-5835-8c9f-b3eb3bb1b2a7",
+    "name": "Oak Park High School",
+    "slug": "oak-park-high-school-ca",
+    "city": null,
+    "state_code": "CA",
+    "nces_id": null,
+    "website_url": null,
+    "source_url": "https://gonorthmen.org/sports/football/roster",
+    "source_type": "school_site",
+    "source_name": "Oak Park High School Athletics Football Roster"
+  },
+  {
+    "id": "d7b84683-6cda-5188-9a59-de6f392e399c",
+    "name": "Saint Francis High School",
+    "slug": "saint-francis-high-school-ca",
+    "city": null,
+    "state_code": "CA",
+    "nces_id": null,
+    "website_url": null,
+    "source_url": "https://sfhsathletics.com/sports/football/roster",
+    "source_type": "school_site",
+    "source_name": "Saint Francis High School Athletics Football Roster"
+  },
+  {
+    "id": "e6e2a22b-41d8-5540-b441-62f3d0f20693",
+    "name": "St Ignatius Cleveland",
+    "slug": "st-ignatius-cleveland-oh",
+    "city": null,
+    "state_code": "OH",
+    "nces_id": null,
+    "website_url": null,
+    "source_url": "https://www.ignatiuswildcats.com/sports/football/roster",
+    "source_type": "school_site",
+    "source_name": "St Ignatius Cleveland Athletics Football Roster"
+  }
+]

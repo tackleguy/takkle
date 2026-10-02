@@ -1,0 +1,170 @@
+[
+  {
+    "state": "OH",
+    "year": 2029,
+    "url": "https://prepredzone.com/ohio/rankings/ohio-high-school-football-2029-class-player-rankings/",
+    "len": 682394,
+    "tips": 0,
+    "file": "/Users/maxr/takkle-1/data/ingestion/sources/session15k/getter_b/raw/prz_OH_2029.html"
+  },
+  {
+    "state": "OH",
+    "year": 2028,
+    "url": "https://prepredzone.com/2026/02/stock-watch-2028-rankings-ohio-top-250/",
+    "len": 579040,
+    "tips": 0,
+    "file": "/Users/maxr/takkle-1/data/ingestion/sources/session15k/getter_b/raw/prz_OH_2028.html"
+  },
+  {
+    "state": "MI",
+    "year": 2029,
+    "url": "https://prepredzone.com/michigan/rankings/2029-rankings/",
+    "len": 688174,
+    "tips": 0,
+    "file": "/Users/maxr/takkle-1/data/ingestion/sources/session15k/getter_b/raw/prz_MI_2029.html"
+  },
+  {
+    "state": "MI",
+    "year": 2028,
+    "url": "https://prepredzone.com/2025/12/updated-2028-michigan-rankings/",
+    "len": 606686,
+    "tips": 0,
+    "file": "/Users/maxr/takkle-1/data/ingestion/sources/session15k/getter_b/raw/prz_MI_2028.html"
+  },
+  {
+    "state": "IL",
+    "year": 2028,
+    "url": "https://prepredzone.com/illinois/rankings/2028-rankings/",
+    "len": 723258,
+    "tips": 0,
+    "file": "/Users/maxr/takkle-1/data/ingestion/sources/session15k/getter_b/raw/prz_IL_2028.html"
+  },
+  {
+    "state": "IL",
+    "year": 2029,
+    "url": "https://prepredzone.com/illinois/rankings/2029-rankings/",
+    "len": 646804,
+    "tips": 0,
+    "file": "/Users/maxr/takkle-1/data/ingestion/sources/session15k/getter_b/raw/prz_IL_2029.html"
+  },
+  {
+    "state": "IN",
+    "year": 2028,
+    "url": "https://prepredzone.com/indiana/rankings/2028-rankings/",
+    "len": 660949,
+    "tips": 0,
+    "file": "/Users/maxr/takkle-1/data/ingestion/sources/session15k/getter_b/raw/prz_IN_2028.html"
+  },
+  {
+    "state": "IN",
+    "year": 2029,
+    "url": "https://prepredzone.com/indiana/rankings/2029-rankings/",
+    "len": 657862,
+    "tips": 0,
+    "file": "/Users/maxr/takkle-1/data/ingestion/sources/session15k/getter_b/raw/prz_IN_2029.html"
+  },
+  {
+    "state": "MO",
+    "year": 2028,
+    "url": "https://prepredzone.com/missouri/rankings/2028-rankings/",
+    "len": 676939,
+    "tips": 0,
+    "file": "/Users/maxr/takkle-1/data/ingestion/sources/session15k/getter_b/raw/prz_MO_2028.html"
+  },
+  {
+    "state": "MO",
+    "year": 2029,
+    "url": "https://prepredzone.com/missouri/rankings/2029-rankings/",
+    "len": 641031,
+    "tips": 0,
+    "file": "/Users/maxr/takkle-1/data/ingestion/sources/session15k/getter_b/raw/prz_MO_2029.html"
+  },
+  {
+    "state": "KS",
+    "year": 2028,
+    "url": "https://prepredzone.com/kansas/rankings/2028-rankings/",
+    "len": 661405,
+    "tips": 0,
+    "file": "/Users/maxr/takkle-1/data/ingestion/sources/session15k/getter_b/raw/prz_KS_2028.html"
+  },
+  {
+    "state": "KS",
+    "year": 2029,
+    "url": "https://prepredzone.com/kansas/rankings/2029-rankings/",
+    "len": 640861,
+    "tips": 0,
+    "file": "/Users/maxr/takkle-1/data/ingestion/sources/session15k/getter_b/raw/prz_KS_2029.html"
+  },
+  {
+    "state": "AZ",
+    "year": 2028,
+    "url": "https://prepredzone.com/arizona/rankings/2028-rankings/",
+    "len": 701178,
+    "tips": 0,
+    "file": "/Users/maxr/takkle-1/data/ingestion/sources/session15k/getter_b/raw/prz_AZ_2028.html"
+  },
+  {
+    "state": "CA",
+    "year": 2028,
+    "url": "https://prepredzone.com/california/rankings/2028-rankings/",
+    "len": 2914723,
+    "tips": 0,
+    "file": "/Users/maxr/takkle-1/data/ingestion/sources/session15k/getter_b/raw/prz_CA_2028.html"
+  },
+  {
+    "state": "OR",
+    "year": 2028,
+    "url": "https://prepredzone.com/oregon/rankings/2028-rankings/",
+    "len": 693087,
+    "tips": 0,
+    "file": "/Users/maxr/takkle-1/data/ingestion/sources/session15k/getter_b/raw/prz_OR_2028.html"
+  },
+  {
+    "state": "WI",
+    "year": 2028,
+    "url": "https://prepredzone.com/wisconsin/rankings/2028-rankings/",
+    "len": 744697,
+    "tips": 0,
+    "file": "/Users/maxr/takkle-1/data/ingestion/sources/session15k/getter_b/raw/prz_WI_2028.html"
+  },
+  {
+    "state": "MN",
+    "year": 2028,
+    "url": "https://prepredzone.com/minnesota/rankings/2028-rankings/",
+    "len": 736155,
+    "tips": 0,
+    "file": "/Users/maxr/takkle-1/data/ingestion/sources/session15k/getter_b/raw/prz_MN_2028.html"
+  },
+  {
+    "state": "IA",
+    "year": 2028,
+    "url": "https://prepredzone.com/iowa/rankings/2028-rankings/",
+    "len": 741387,
+    "tips": 0,
+    "file": "/Users/maxr/takkle-1/data/ingestion/sources/session15k/getter_b/raw/prz_IA_2028.html"
+  },
+  {
+    "state": "NE",
+    "year": 2028,
+    "url": "https://prepredzone.com/nebraska/rankings/2028-rankings/",
+    "len": 692950,
+    "tips": 0,
+    "file": "/Users/maxr/takkle-1/data/ingestion/sources/session15k/getter_b/raw/prz_NE_2028.html"
+  },
+  {
+    "state": "NV",
+    "year": 2028,
+    "url": "https://prepredzone.com/nevada/rankings/2028-rankings/",
+    "len": 669044,
+    "tips": 0,
+    "file": "/Users/maxr/takkle-1/data/ingestion/sources/session15k/getter_b/raw/prz_NV_2028.html"
+  },
+  {
+    "state": "UT",
+    "year": 2028,
+    "url": "https://prepredzone.com/utah/rankings/2028-rankings/",
+    "len": 681780,
+    "tips": 0,
+    "file": "/Users/maxr/takkle-1/data/ingestion/sources/session15k/getter_b/raw/prz_UT_2028.html"
+  }
+]

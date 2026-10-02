@@ -1,0 +1,422 @@
+[
+  {
+    "url": "https://prepredzone.com/maryland/rankings/2027-rankings/",
+    "n": 10,
+    "year": 2027,
+    "state": "MD"
+  },
+  {
+    "url": "https://prepredzone.com/maryland/rankings/2028-rankings/",
+    "n": 10,
+    "year": 2028,
+    "state": "MD"
+  },
+  {
+    "url": "https://prepredzone.com/maryland/rankings/2029-rankings/",
+    "n": 10,
+    "year": 2029,
+    "state": "MD"
+  },
+  {
+    "url": "https://prepredzone.com/new-jersey/rankings/2027-rankings/",
+    "n": 10,
+    "year": 2027,
+    "state": "NJ"
+  },
+  {
+    "url": "https://prepredzone.com/new-jersey/rankings/2028-watch-list/",
+    "n": 10,
+    "year": 2028,
+    "state": "NJ"
+  },
+  {
+    "url": "https://prepredzone.com/new-jersey/rankings/2029-watch-list/",
+    "n": 5,
+    "year": 2029,
+    "state": "NJ"
+  },
+  {
+    "url": "https://prepredzone.com/new-jersey/rankings/2030-watch-list/",
+    "n": 8,
+    "year": 2030,
+    "state": "NJ"
+  },
+  {
+    "url": "https://prepredzone.com/new-york/rankings/2027-rankings/",
+    "n": 10,
+    "year": 2027,
+    "state": "NY"
+  },
+  {
+    "url": "https://prepredzone.com/new-york/rankings/2028-rankings-2/",
+    "n": 8,
+    "year": 2028,
+    "state": "NY"
+  },
+  {
+    "url": "https://prepredzone.com/new-york/rankings/new-york-high-school-football-2029-class-player-rankings/",
+    "n": 10,
+    "year": 2029,
+    "state": "NY"
+  },
+  {
+    "url": "https://prepredzone.com/pennsylvania/rankings/2027-rankings/",
+    "n": 10,
+    "year": 2027,
+    "state": "PA"
+  },
+  {
+    "url": "https://prepredzone.com/pennsylvania/rankings/2028-rankings/",
+    "n": 9,
+    "year": 2028,
+    "state": "PA"
+  },
+  {
+    "url": "https://prepredzone.com/pennsylvania/rankings/2029-rankings/",
+    "n": 8,
+    "year": 2029,
+    "state": "PA"
+  },
+  {
+    "url": "https://prepredzone.com/pennsylvania/rankings/2030-rankings/",
+    "n": 7,
+    "year": 2030,
+    "state": "PA"
+  },
+  {
+    "url": "https://prepredzone.com/virginia/rankings/2027-rankings-2/",
+    "n": 10,
+    "year": 2027,
+    "state": "VA"
+  },
+  {
+    "url": "https://prepredzone.com/virginia/rankings/2028-watch-list/",
+    "n": 10,
+    "year": 2028,
+    "state": "VA"
+  },
+  {
+    "url": "https://prepredzone.com/virginia/rankings/2029-watch-list/",
+    "n": 10,
+    "year": 2029,
+    "state": "VA"
+  },
+  {
+    "url": "https://prepredzone.com/west-virginia/rankings/2027-rankings/",
+    "n": 10,
+    "year": 2027,
+    "state": "WV"
+  },
+  {
+    "url": "https://prepredzone.com/west-virginia/rankings/2028-rankings/",
+    "n": 10,
+    "year": 2028,
+    "state": "WV"
+  },
+  {
+    "url": "https://prepredzone.com/west-virginia/rankings/west-virginia-high-school-football-2029-class-player-rankings/",
+    "n": 10,
+    "year": 2029,
+    "state": "WV"
+  },
+  {
+    "url": "https://prepredzone.com/alabama/rankings/2027-rankings/",
+    "n": 5,
+    "year": 2027,
+    "state": "AL"
+  },
+  {
+    "url": "https://prepredzone.com/alabama/rankings/2028-rankings/",
+    "n": 9,
+    "year": 2028,
+    "state": "AL"
+  },
+  {
+    "url": "https://prepredzone.com/alabama/rankings/2031-rankings/",
+    "n": 5,
+    "year": 2031,
+    "state": "AL"
+  },
+  {
+    "url": "https://prepredzone.com/arizona/rankings/2027-rankings/",
+    "n": 9,
+    "year": 2027,
+    "state": "AZ"
+  },
+  {
+    "url": "https://prepredzone.com/arizona/rankings/2028-rankings/",
+    "n": 10,
+    "year": 2028,
+    "state": "AZ"
+  },
+  {
+    "url": "https://prepredzone.com/arkansas/rankings/2027-rankings/",
+    "n": 5,
+    "year": 2027,
+    "state": "AR"
+  },
+  {
+    "url": "https://prepredzone.com/arkansas/rankings/2028-rankings/",
+    "n": 5,
+    "year": 2028,
+    "state": "AR"
+  },
+  {
+    "url": "https://prepredzone.com/arkansas/rankings/2030-rankings/",
+    "n": 5,
+    "year": 2030,
+    "state": "AR"
+  },
+  {
+    "url": "https://prepredzone.com/california/rankings/2027-rankings/",
+    "n": 696,
+    "year": 2027,
+    "state": "CA"
+  },
+  {
+    "url": "https://prepredzone.com/california/rankings/2028-rankings/",
+    "n": 572,
+    "year": 2028,
+    "state": "CA"
+  },
+  {
+    "url": "https://prepredzone.com/canada/rankings/2027-rankings/",
+    "n": 0,
+    "year": 2027,
+    "state": null
+  },
+  {
+    "url": "https://prepredzone.com/colorado/rankings/2027-watch-list/",
+    "n": 437,
+    "year": 2027,
+    "state": "CO"
+  },
+  {
+    "url": "https://prepredzone.com/colorado/rankings/2028-watch-list/",
+    "n": 395,
+    "year": 2028,
+    "state": "CO"
+  },
+  {
+    "url": "https://prepredzone.com/dakotas/rankings/north-dakota-rankings/2027-rankings/",
+    "n": 0,
+    "year": 2027,
+    "state": null
+  },
+  {
+    "url": "https://prepredzone.com/dakotas/rankings/north-dakota-rankings/2028-rankings/",
+    "n": 0,
+    "year": 2028,
+    "state": null
+  },
+  {
+    "url": "https://prepredzone.com/dakotas/rankings/south-dakota-rankings/2027-rankings/",
+    "n": 0,
+    "year": 2027,
+    "state": null
+  },
+  {
+    "url": "https://prepredzone.com/dakotas/rankings/south-dakota-rankings/2028-rankings/",
+    "n": 0,
+    "year": 2028,
+    "state": null
+  },
+  {
+    "url": "https://prepredzone.com/florida/rankings/2027-rankings/",
+    "n": 10,
+    "year": 2027,
+    "state": "FL"
+  },
+  {
+    "url": "https://prepredzone.com/florida/rankings/2028-rankings/",
+    "n": 10,
+    "year": 2028,
+    "state": "FL"
+  },
+  {
+    "url": "https://prepredzone.com/georgia/rankings/2027-rankings/",
+    "n": 10,
+    "year": 2027,
+    "state": "GA"
+  },
+  {
+    "url": "https://prepredzone.com/georgia/rankings/2028-rankings/",
+    "n": 9,
+    "year": 2028,
+    "state": "GA"
+  },
+  {
+    "url": "https://prepredzone.com/georgia/rankings/2030-rankings/",
+    "n": 5,
+    "year": 2030,
+    "state": "GA"
+  },
+  {
+    "url": "https://prepredzone.com/idaho/rankings/2027-rankings/",
+    "n": 10,
+    "year": 2027,
+    "state": "ID"
+  },
+  {
+    "url": "https://prepredzone.com/idaho/rankings/2028-rankings/",
+    "n": 10,
+    "year": 2028,
+    "state": "ID"
+  },
+  {
+    "url": "https://prepredzone.com/illinois/rankings/2027-rankings/",
+    "n": 10,
+    "year": 2027,
+    "state": "IL"
+  },
+  {
+    "url": "https://prepredzone.com/illinois/rankings/2028-rankings/",
+    "n": 10,
+    "year": 2028,
+    "state": "IL"
+  },
+  {
+    "url": "https://prepredzone.com/indiana/rankings/2027-rankings/",
+    "n": 10,
+    "year": 2027,
+    "state": "IN"
+  },
+  {
+    "url": "https://prepredzone.com/indiana/rankings/2028-rankings/",
+    "n": 5,
+    "year": 2028,
+    "state": "IN"
+  },
+  {
+    "url": "https://prepredzone.com/iowa/rankings/2027-rankings/",
+    "n": 10,
+    "year": 2027,
+    "state": "IA"
+  },
+  {
+    "url": "https://prepredzone.com/iowa/rankings/2028-rankings/",
+    "n": 10,
+    "year": 2028,
+    "state": "IA"
+  },
+  {
+    "url": "https://prepredzone.com/kansas/rankings/2027-rankings/",
+    "n": 5,
+    "year": 2027,
+    "state": "KS"
+  },
+  {
+    "url": "https://prepredzone.com/kansas/rankings/2028-rankings/",
+    "n": 5,
+    "year": 2028,
+    "state": "KS"
+  },
+  {
+    "url": "https://prepredzone.com/kentucky/rankings/2027-rankings/",
+    "n": 10,
+    "year": 2027,
+    "state": "KY"
+  },
+  {
+    "url": "https://prepredzone.com/kentucky/rankings/2028-rankings/",
+    "n": 9,
+    "year": 2028,
+    "state": "KY"
+  },
+  {
+    "url": "https://prepredzone.com/louisiana/rankings/2027-rankings/",
+    "n": 10,
+    "year": 2027,
+    "state": "LA"
+  },
+  {
+    "url": "https://prepredzone.com/louisiana/rankings/2028-rankings/",
+    "n": 10,
+    "year": 2028,
+    "state": "LA"
+  },
+  {
+    "url": "https://prepredzone.com/michigan/rankings/2027-rankings/",
+    "n": 10,
+    "year": 2027,
+    "state": "MI"
+  },
+  {
+    "url": "https://prepredzone.com/michigan/rankings/2028-rankings/",
+    "n": 10,
+    "year": 2028,
+    "state": "MI"
+  },
+  {
+    "url": "https://prepredzone.com/minnesota/rankings/2027-rankings/",
+    "n": 10,
+    "year": 2027,
+    "state": "MN"
+  },
+  {
+    "url": "https://prepredzone.com/minnesota/rankings/2028-rankings/",
+    "n": 10,
+    "year": 2028,
+    "state": "MN"
+  },
+  {
+    "url": "https://prepredzone.com/mississippi/rankings/2027-rankings/",
+    "n": 10,
+    "year": 2027,
+    "state": "MS"
+  },
+  {
+    "url": "https://prepredzone.com/mississippi/rankings/2028-rankings/",
+    "n": 10,
+    "year": 2028,
+    "state": "MS"
+  },
+  {
+    "url": "https://prepredzone.com/missouri/rankings/2027-rankings/",
+    "n": 10,
+    "year": 2027,
+    "state": "MO"
+  },
+  {
+    "url": "https://prepredzone.com/missouri/rankings/2028-rankings/",
+    "n": 6,
+    "year": 2028,
+    "state": "MO"
+  },
+  {
+    "url": "https://prepredzone.com/nebraska/rankings/2027-rankings/",
+    "n": 10,
+    "year": 2027,
+    "state": "NE"
+  },
+  {
+    "url": "https://prepredzone.com/nebraska/rankings/2028-rankings/",
+    "n": 10,
+    "year": 2028,
+    "state": "NE"
+  },
+  {
+    "url": "https://prepredzone.com/nevada/rankings/2027-rankings/",
+    "n": 10,
+    "year": 2027,
+    "state": "NV"
+  },
+  {
+    "url": "https://prepredzone.com/nevada/rankings/2028-rankings/",
+    "n": 10,
+    "year": 2028,
+    "state": "NV"
+  },
+  {
+    "url": "https://prepredzone.com/new-england/rankings/2027-rankings/",
+    "n": 0,
+    "year": 2027,
+    "state": null
+  },
+  {
+    "url": "https://prepredzone.com/new-england/rankings/2028-rankings/",
+    "n": 0,
+    "year": 2028,
+    "state": null
+  }
+]

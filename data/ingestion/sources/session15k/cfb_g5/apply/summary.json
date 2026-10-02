@@ -1,0 +1,15 @@
+{
+  "teams": 66,
+  "players": 6600,
+  "by_conference": {
+    "AAC": 1400,
+    "Mountain West": 1200,
+    "MAC": 1300,
+    "Sun Belt": 1400,
+    "Conference USA": 1200,
+    "FBS Independents": 100
+  },
+  "errors": [],
+  "source_id": "b48acc8f-3c36-5514-bdbb-d776c8a5e33e",
+  "source_name": "ESPN College Football Roster"
+}
